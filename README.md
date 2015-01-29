@@ -1,4 +1,3 @@
-[![Stories in Ready](https://badge.waffle.io/asu-cis-capstone/wodstar.png?label=ready&title=Ready)](https://waffle.io/asu-cis-capstone/wodstar)
 # wodstar
 repo for project wodstar
 
@@ -13,3 +12,4 @@ Laura Gagliano | laura.k.gagliano@gmail.com
 Steven Beverly | steven.beverly@asu.edu  
 Tyler Daulton | tdaulton@asu.edu  
 
+[![Stories in Ready](https://badge.waffle.io/asu-cis-capstone/wodstar.png?label=ready&title=Ready)](https://waffle.io/asu-cis-capstone/wodstar)
