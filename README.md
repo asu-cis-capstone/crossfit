@@ -11,6 +11,4 @@ Kevin Risser | krisser@asu.edu
 Laura Gagliano | laura.k.gagliano@gmail.com  
 Steven Beverly | steven.beverly@asu.edu  
 Tyler Daulton | tdaulton@asu.edu  
-
-
-Did I make it work?
+S
