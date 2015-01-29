@@ -1,10 +1,9 @@
-[![Stories in Ready](https://badge.waffle.io/asu-cis-capstone/wodstar.png?label=ready&title=Ready)](https://waffle.io/asu-cis-capstone/wodstar)
 # wodstar
 repo for project wodstar
 
 ##wodstar mobile appliction
 
-The mobile application designed for Wodstar is intended for the CrossFit community to track their results in completing the Workout-Of-the-Day (wod).
+The mobile application designed for Wodstar is intended for the CrossFit community to track their results in completing the Workout-Of-the-Day (wod). This application application will include a leaderboard, user profiles and a customizable workout exeprience.  
 
 ##Project team
 
