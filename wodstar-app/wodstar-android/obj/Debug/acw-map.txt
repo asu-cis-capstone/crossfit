@@ -1,0 +1,2 @@
+wodstarandroid.MainActivity;wodstarandroid.MainActivity
+wodstarandroid.SplashActivity;wodstarandroid.SplashActivity
