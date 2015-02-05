@@ -1,9 +1,9 @@
-# wodstar
-repo for project wodstar
+# Crossfit
+repo for project crossfit
 
-##wodstar mobile appliction
+##crossfit mobile appliction
 
-The mobile application designed for Wodstar is intended for the CrossFit community to track their results in completing the Workout-Of-the-Day (wod). This application application will include a leaderboard, user profiles and a customizable workout experience.  
+The mobile application designed for a CrossFit resource company is intended for the CrossFit community to track their results in completing the Workout-Of-the-Day (WOD). This application application will include a leaderboard, user profiles and a customizable workout experience.  
 
 ##Project team
 
