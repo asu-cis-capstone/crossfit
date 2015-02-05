@@ -1,0 +1,19 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "WodstarMobileApp", "WodstarMobileApp\WodstarMobileApp.shproj", "{E0752859-9DE5-4C5A-A585-EAC3B5CE3913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WodstarMobileApp.Droid", "Droid\WodstarMobileApp.Droid.csproj", "{CA7F40A4-2604-4EBE-B353-D05B7099A49B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
