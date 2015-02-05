@@ -1,1 +1,0 @@
-<ImageView p1:src="@drawable/loginsplash" p1:layout_width="match_parent" p1:layout_height="match_parent" p1:id="@+id/imageLogin" xmlns:p1="http://schemas.android.com/apk/res/android" />
