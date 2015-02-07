@@ -1,5 +1,5 @@
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4" />
   <MonoDevelop.Ide.Workbench ActiveDocument="WodstarMobileApp\WodstarMobileApp.cs">
     <Files>
       <File FileName="WodstarMobileApp\WodstarMobileApp.cs" Line="1" Column="1" />
