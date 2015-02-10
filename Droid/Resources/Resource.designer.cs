@@ -509,8 +509,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080024
 			public const int com_facebook_usersettingsfragment_profile_name = 2131230756;
 			
-			// aapt resource value: 0x7f080026
-			public const int imageView1 = 2131230758;
+			// aapt resource value: 0x7f08002a
+			public const int fragment_container = 2131230762;
+			
+			// aapt resource value: 0x7f080028
+			public const int greeting = 2131230760;
 			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
@@ -521,11 +524,20 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08000a
 			public const int left = 2131230730;
 			
+			// aapt resource value: 0x7f080027
+			public const int login_button = 2131230759;
+			
+			// aapt resource value: 0x7f080026
+			public const int main_ui_container = 2131230758;
+			
 			// aapt resource value: 0x7f080001
 			public const int normal = 2131230721;
 			
 			// aapt resource value: 0x7f08001b
 			public const int picker_subtitle = 2131230747;
+			
+			// aapt resource value: 0x7f080029
+			public const int profilePicture = 2131230761;
 			
 			// aapt resource value: 0x7f08000b
 			public const int right = 2131230731;
@@ -612,6 +624,9 @@ namespace WodstarMobileApp.Droid
 		
 		public partial class String
 		{
+			
+			// aapt resource value: 0x7f06001d
+			public const int app_name = 2131099677;
 			
 			// aapt resource value: 0x7f060011
 			public const int com_facebook_choose_friends = 2131099665;
@@ -700,8 +715,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f06000c
 			public const int com_facebook_usersettingsfragment_not_logged_in = 2131099660;
 			
-			// aapt resource value: 0x7f06001d
-			public const int facebook_app_id = 2131099677;
+			// aapt resource value: 0x7f06001e
+			public const int facebook_app_id = 2131099678;
 			
 			static String()
 			{

@@ -19,7 +19,7 @@ using Xamarin.Facebook.Widget;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "WodstarMobileApp.Droid", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Theme="@android:style/Theme.Black.NoTitleBar", Label = "WodstarMobileApp.Droid", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
