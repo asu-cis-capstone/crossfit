@@ -86,6 +86,8 @@
     <Compile Include="MovementDOM.cs" />
     <Compile Include="WorkoutDOM.cs" />
     <Compile Include="StartScreenActivity.cs" />
+    <Compile Include="MovementLibraryActivity.cs" />
+    <Compile Include="UserProfileActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
