@@ -119,6 +119,10 @@
     <AndroidResource Include="Resources\layout\UserProfile.axml" />
     <AndroidResource Include="Resources\layout\PersonalRecord.axml" />
     <AndroidResource Include="Resources\layout\Diary.axml" />
+    <AndroidResource Include="Resources\layout\CalcTable.axml" />
+    <AndroidResource Include="Resources\layout\Leaderboard.axml" />
+    <AndroidResource Include="Resources\layout\SignUp.axml" />
+    <AndroidResource Include="Resources\layout\MovementLibrary.axml" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
