@@ -1,14 +1,17 @@
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid\Resources\values\Strings.xml">
-    <Files>
-      <File FileName="Droid\Resources\values\Strings.xml" Line="1" Column="1" />
-    </Files>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4" />
+  <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
+        <State expanded="True" selected="True">
           <Node name="WodstarMobileApp" expanded="True" />
-          <Node name="WodstarMobileApp.Droid" selected="True" />
+          <Node name="WodstarMobileApp.Droid" expanded="True">
+            <Node name="ComponentReferenceFolder" expanded="True" />
+            <Node name="Packages" expanded="True" />
+            <Node name="Resources" expanded="True">
+              <Node name="values" expanded="True" />
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
