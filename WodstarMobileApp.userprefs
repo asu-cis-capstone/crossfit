@@ -1,14 +1,15 @@
-﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4" />
+﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Android" />
   <MonoDevelop.Ide.Workbench>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True" selected="True">
-          <Node name="WodstarMobileApp" expanded="True" />
+        <State expanded="True">
           <Node name="WodstarMobileApp.Droid" expanded="True">
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="Packages" expanded="True" />
             <Node name="Resources" expanded="True">
+              <Node name="drawable" expanded="True" />
+              <Node name="layout" expanded="True">
+                <Node name="Login.axml" selected="True" />
+              </Node>
               <Node name="values" expanded="True" />
             </Node>
           </Node>
@@ -20,4 +21,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>
