@@ -31,7 +31,7 @@ namespace WodstarMobileApp.Droid
 			// Set our view from the "Login" layout resource
 			SetContentView (Resource.Layout.Login);
 		}
-
+		//Github comment
 		public static MobileServiceClient MobileService = new MobileServiceClient (
 			"https://wodstar-helloworld.azure-mobile.net/",
 			"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
