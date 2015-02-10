@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component format="1" id="facebookandroid" is-shell="true">
+  <name>Facebook Android SDK</name>
+  <publisher>Xamarin Inc.</publisher>
+  <publisher-url>https://developers.facebook.com/docs/android/</publisher-url>
+  <version>3.22.0.0</version>
+  <summary>Integrate with Facebook to help you build engaging social apps and get more installs.</summary>
+  <packages>
+    <package id="Xamarin.Android.Support.v4" version="21.0.3.0" framework="android" />
+    <package id="Xamarin.Facebook" version="3.22.0.0" framework="android" />
+  </packages>
+  <samples>
+    <sample id="HelloFacebookSample">
+      <name>Facebook Android Sample</name>
+      <summary>Facebook Android Sample</summary>
+    </sample>
+  </samples>
+</component>
