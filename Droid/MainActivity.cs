@@ -12,7 +12,7 @@ using Xamarin.Facebook;
 using Xamarin.Facebook.Model;
 using Xamarin.Facebook.Widget;
 using Microsoft.WindowsAzure.MobileServices;
-
+using System.Net.Http;
 
 [assembly:Permission (Name = Android.Manifest.Permission.Internet)]
 [assembly:Permission (Name = Android.Manifest.Permission.WriteExternalStorage)]
@@ -32,10 +32,9 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.Login);
 		}
 
-		//public static MobileServiceClient MobileService = new MobileServiceClient (
-		//	"https://wodstar-helloworld.azure-mobile.net/",
-		//	"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
-
-		//);
+		public static MobileServiceClient MobileService = new MobileServiceClient (
+			"https://wodstar-helloworld.azure-mobile.net/",
+			"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
+		);
 	}
 }
