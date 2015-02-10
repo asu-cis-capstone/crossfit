@@ -24,17 +24,15 @@ namespace WodstarMobileApp.Droid
 	[Activity (Theme="@android:style/Theme.Black.NoTitleBar", Label = "WodstarMobileApp.Droid", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : Activity
 	{
-		protected override void OnCreate (Bundle bundle)
-		{
-			base.OnCreate (bundle);
-
-			// Set our view from the "Login" layout resource
-			SetContentView (Resource.Layout.Login);
-		}
-		//Github comment
 		public static MobileServiceClient MobileService = new MobileServiceClient (
 			"https://wodstar-helloworld.azure-mobile.net/",
 			"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
 		);
+		protected override void OnCreate (Bundle bundle)
+		{
+			base.OnCreate (bundle);
+			// Set our view from the "Login" layout resource
+			SetContentView (Resource.Layout.Login);
+		}
 	}
 }

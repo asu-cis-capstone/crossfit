@@ -12,9 +12,12 @@ namespace WodstarMobileApp.Droid
 
 		//Etc on levels.
 
-		public MovementDOM (String rxName)
+		public MovementDOM (String rxName, Uri rxLink, String blueDiamondName, Uri blueDiamondLink)
 		{
 			this.rxName = rxName;
+			this.rxLink = rxLink;
+			this.blueDiamondName = blueDiamondName;
+			this.blueDiamondLink = blueDiamondLink;
 		}
 	}
 }

@@ -85,6 +85,7 @@
     <Compile Include="SplashActivity.cs" />
     <Compile Include="MovementDOM.cs" />
     <Compile Include="WorkoutDOM.cs" />
+    <Compile Include="StartScreenActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
