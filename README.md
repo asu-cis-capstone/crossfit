@@ -7,7 +7,7 @@ The mobile application designed for a CrossFit resource company is intended for 
 
 ##Project team
 
-Kevin Risser | krisser@asu.edu  
+Kevin Risser |  See profile
 Laura Gagliano | laura.k.gagliano@gmail.com  
 Steven Beverly | steven.beverly@asu.edu  
 Tyler Daulton | tdaulton@asu.edu  
