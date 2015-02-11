@@ -14,7 +14,7 @@ using Android.Widget;
 namespace WodstarMobileApp.Droid
 {
 	//Class file for start page
-	[Activity (Label = "StartScreenActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]			
+	[Activity (Label = "StartScreenActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon")]			
 	public class StartScreenActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

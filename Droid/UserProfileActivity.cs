@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "UserProfileActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]			
+	[Activity (Label = "UserProfileActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon")]			
 	public class UserProfileActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
