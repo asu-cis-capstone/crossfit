@@ -22,17 +22,46 @@ using System.Net.Http;
 namespace WodstarMobileApp.Droid
 {
 	[Activity (Theme="@android:style/Theme.Black.NoTitleBar", Label = "WodstarMobileApp.Droid", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-	public class MainActivity : Activity
+	public class MainActivity : Activity, Session.IStatusCallback, Request.IGraphUserCallback
 	{
 		public static MobileServiceClient MobileService = new MobileServiceClient (
 			"https://wodstar-helloworld.azure-mobile.net/",
 			"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
 		);
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
+
 			// Set our view from the "Login" layout resource
 			SetContentView (Resource.Layout.Login);
+
+			// Open a FB Session and show login if necessary
+			Session.OpenActiveSession (this, true, this);
+		}
+
+		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
+		{
+			base.OnActivityResult (requestCode, resultCode, data);
+
+			// Relay the result to our FB Session
+			Session.ActiveSession.OnActivityResult (this, requestCode, (int)resultCode, data);
+		}
+
+		public void Call (Session session, SessionState state, Java.Lang.Exception exception)
+		{
+			// Make a request for 'Me' information about the current user
+			if (session.IsOpened)
+				Request.ExecuteMeRequestAsync (session, this);
+		}
+
+		public void OnCompleted (Xamarin.Facebook.Model.IGraphUser user, Response response)
+		{
+			// 'Me' request callback
+			if (user != null)
+				Console.WriteLine ("GOT USER: " + user.Name);
+			else
+				Console.WriteLine ("Failed to get 'me'!");
 		}
 	}
 }
