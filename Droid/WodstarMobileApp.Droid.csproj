@@ -88,6 +88,7 @@
     <Compile Include="StartScreenActivity.cs" />
     <Compile Include="MovementLibraryActivity.cs" />
     <Compile Include="UserProfileActivity.cs" />
+    <Compile Include="MenuUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

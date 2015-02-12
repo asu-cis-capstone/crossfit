@@ -1,6 +1,21 @@
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid\StartScreenActivity.cs">
+    <Files>
+      <File FileName="Droid\MainActivity.cs" Line="4" Column="4" />
+      <File FileName="Droid\MovementDOM.cs" Line="1" Column="1" />
+      <File FileName="Droid\WorkoutDOM.cs" Line="1" Column="1" />
+      <File FileName="Droid\StartScreenActivity.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True">
+          <Node name="WodstarMobileApp" expanded="True" />
+          <Node name="WodstarMobileApp.Droid" expanded="True" />
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>

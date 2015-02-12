@@ -33,6 +33,15 @@ namespace WodstarMobileApp.Droid
 			base.OnCreate (bundle);
 			// Set our view from the "Login" layout resource
 			SetContentView (Resource.Layout.Login);
+			Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
+			fbLoginButton.Click += delegate {
+				fbLoginClickHandler();
+			};
 		}
-	}
-}
+
+		private void fbLoginClickHandler() {
+			StartActivity(typeof(StartScreenActivity));
+		}
+
+	} //end class
+} //end namespace

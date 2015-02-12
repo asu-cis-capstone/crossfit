@@ -19,7 +19,8 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             facebook:confirm_logout="false"
-            facebook:fetch_user_info="true" />
+            facebook:fetch_user_info="true"
+            android:isScrollContainer="false" />
         <LinearLayout
             android:layout_width="150dp"
             android:layout_height="wrap_content"
@@ -40,7 +41,8 @@
                 android:layout_width="wrap_content"
                 android:gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
-                facebook:preset_size="normal" />
+                facebook:preset_size="normal"
+                android:layout_marginRight="0.0dp" />
         </LinearLayout>
     </LinearLayout>
     <FrameLayout
