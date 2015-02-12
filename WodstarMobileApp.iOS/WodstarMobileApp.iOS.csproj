@@ -107,6 +107,9 @@
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
     <InterfaceDefinition Include="SignUp.xib" />
+    <InterfaceDefinition Include="Calc.xib" />
+    <InterfaceDefinition Include="Diary.xib" />
+    <InterfaceDefinition Include="Leaderboard.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
