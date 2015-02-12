@@ -1,0 +1,11 @@
+Quick Start Guide
+
+1. Download Xamarin Studio to your machine. It’s necessary that you use their “Indie” subscription. In many cases, the Xamarin download will take a few tries. It’s important to make sure that the Android SDK is fully downloaded, which you may have to do separately. 
+
+2. Connect Xamarin to the repo at the following address: https://github.com/asu-cis-capstone/crossfit/
+
+3. Within the entire WodstarMobileApp .sln file you will find two separate projects WodstarMobileApp.Droid & WodstarMobileApp.iOS. Unless you are working on a Mac, you will not be able to render any of the iOS layouts. 
+
+General Notes: 
+This application is being developed under the MVC design principles, 
+please take that into consideration if committing any changes.
