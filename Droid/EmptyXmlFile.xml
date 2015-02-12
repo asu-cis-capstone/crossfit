@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
@@ -14,13 +14,13 @@
             android:layout_height="45.6dp"
             android:id="@+id/button1" />
         <TextView
-            android:text="Movements"
+            android:text="Calculator"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/textView1"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp" />
+            android:layout_marginLeft="85dp"
+            android:layout_marginRight="85dp" />
         <Button
             android:text="Home"
             android:layout_width="wrap_content"
@@ -35,26 +35,12 @@
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/imageButton1"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_height="490.5dp"
+            android:id="@+id/imageButton1" />
+        <Button
+            android:text="Click to return to Calculator"
             android:layout_width="match_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/imageButton1"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="match_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/imageButton1"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
+            android:layout_height="73.4dp"
+            android:id="@+id/button3" />
     </LinearLayout>
 </LinearLayout>

@@ -1,8 +1,95 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:orientation="vertical"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/linearLayout1">
+    <TextView
+        p1:text="*WODSTAR*"
+        p1:textAppearance="?android:attr/textAppearanceLarge"
+        p1:layout_width="123.6dp"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView1"
+        p1:layout_marginLeft="130dp"
+        p1:layout_marginRight="150dp" />
+    <TextView
+        p1:text="Create an Account"
+        p1:textAppearance="?android:attr/textAppearanceMedium"
+        p1:layout_width="151.6dp"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/textView2"
+        p1:layout_marginLeft="115dp"
+        p1:layout_marginRight="110dp"
+        p1:layout_marginTop="20dp"
+        p1:layout_marginBottom="10dp" />
+    <EditText
+        p1:inputType="textPersonName"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/editText1"
+        p1:text="First Name" />
+    <EditText
+        p1:inputType="textPersonName"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/editText2"
+        p1:text="Last Name" />
+    <EditText
+        p1:inputType="textEmailAddress"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/editText3"
+        p1:text="Email Address" />
+    <RadioGroup
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/radioGroup1">
+        <RadioButton
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:checked="true"
+            p1:text="Male"
+            p1:id="@+id/radioButton1" />
+        <RadioButton
+            p1:layout_width="wrap_content"
+            p1:layout_height="wrap_content"
+            p1:text="Female"
+            p1:id="@+id/radioButton2" />
+    </RadioGroup>
+<!-- Spinner for age to eliminate possibilty of typo. Could not edit "Item 1" But will have age options" -->
+    <Spinner
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/spinner1" />
+    <EditText
+        p1:inputType="textPassword"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/editText4"
+        p1:text="SamplePassword" />
+    <EditText
+        p1:inputType="textPassword"
+        p1:layout_width="match_parent"
+        p1:layout_height="wrap_content"
+        p1:id="@+id/editText5"
+        p1:text="ConfirmPassword" />
+    <Button
+        p1:text="Sign Up *"
+        p1:layout_width="match_parent"
+        p1:layout_height="55.0dp"
+        p1:id="@+id/button1"
+        p1:background="#ff10ebee"
+        p1:layout_marginLeft="5dp"
+        p1:layout_marginRight="5dp"
+        p1:layout_marginBottom="5dp"
+        p1:layout_marginTop="20dp" />
+    <Button
+        p1:text="Return"
+        p1:layout_width="match_parent"
+        p1:layout_height="56.1dp"
+        p1:id="@+id/button2"
+        p1:background="#ffec780f"
+        p1:layout_marginLeft="5dp"
+        p1:layout_marginRight="5dp"
+        p1:textColor="#ffffffff" />
 </LinearLayout>
-
