@@ -33,7 +33,6 @@
         android:layout_height="fill_parent"
         android:layout_weight="1">
         <TextView
-            android:text="Dan &quot;The Man&quot; Pronvenzano"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="65.6dp"
