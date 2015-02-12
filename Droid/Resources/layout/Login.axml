@@ -41,6 +41,14 @@
                 android:gravity="center_horizontal"
                 android:layout_marginBottom="10dp"
                 facebook:preset_size="normal" />
+            <TextView
+                android:id="@+id/selection_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:textColor="#333"
+                android:textSize="18sp" />
         </LinearLayout>
     </LinearLayout>
     <FrameLayout
