@@ -1,8 +1,53 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="88.3dp"
+        android:layout_weight="1">
+        <Button
+            android:text="|||"
+            android:layout_width="49.1dp"
+            android:layout_height="45.6dp"
+            android:id="@+id/button1" />
+        <TextView
+            android:text="WOD Board"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/textView1"
+            android:layout_marginLeft="80dp"
+            android:layout_marginRight="80dp" />
+        <Button
+            android:text="Home"
+            android:layout_width="wrap_content"
+            android:layout_height="40.4dp"
+            android:id="@+id/button2" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1">
+        <TextView
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="65.6dp"
+            android:id="@+id/textView2"
+            android:padding="20dp" />
+        <ImageButton
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageButton1"
+            android:layout_marginLeft="85dp"
+            android:paddingRight="90dp"
+            android:paddingLeft="90dp"
+            android:baselineAlignBottom="false"
+            android:paddingTop="70dp"
+            android:paddingBottom="70dp" />
+    </LinearLayout>
 </LinearLayout>
-

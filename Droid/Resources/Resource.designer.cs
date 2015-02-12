@@ -536,8 +536,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08003f
 			public const int editText5 = 2131230783;
 			
-			// aapt resource value: 0x7f080031
-			public const int fragment_container = 2131230769;
+			// aapt resource value: 0x7f08003b
+			public const int editText5 = 2131230779;
+			
+			// aapt resource value: 0x7f080032
+			public const int fragment_container = 2131230770;
 			
 			// aapt resource value: 0x7f08002f
 			public const int greeting = 2131230767;
@@ -577,7 +580,7 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f080030
 			public const int profilePicture = 2131230768;
-			
+
 			// aapt resource value: 0x7f08003b
 			public const int radioButton1 = 2131230779;
 			
@@ -590,12 +593,15 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08000b
 			public const int right = 2131230731;
 			
+			// aapt resource value: 0x7f080031
+			public const int selection_user_name = 2131230769;
+			
 			// aapt resource value: 0x7f080002
 			public const int small = 2131230722;
 			
 			// aapt resource value: 0x7f08003d
 			public const int spinner1 = 2131230781;
-			
+
 			// aapt resource value: 0x7f080005
 			public const int standard = 2131230725;
 			
