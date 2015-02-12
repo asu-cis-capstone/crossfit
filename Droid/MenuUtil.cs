@@ -23,6 +23,10 @@ namespace WodstarMobileApp.Droid
 		public void hideMenu() {
 				
 		}
+		//Tyler's github contribution
+		public void navigate() {
+		
+		}
 
 	} //end class
 }//end namespace
