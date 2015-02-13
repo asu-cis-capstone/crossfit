@@ -25,7 +25,7 @@
             android:text="Home"
             android:layout_width="wrap_content"
             android:layout_height="40.4dp"
-            android:id="@+id/button2" />
+            android:id="@+id/homeButton" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -36,7 +36,7 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/imageButton"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
