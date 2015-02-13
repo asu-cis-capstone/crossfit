@@ -36,6 +36,9 @@ namespace WodstarMobileApp.Droid
 			// Set our view from the "Login" layout resource
 			SetContentView (Resource.Layout.Login);
 
+			//Connect to Azure and instantiate tables
+			Util.initializeTables();
+
 			Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
 			fbLoginButton.Click += delegate {
 				fbLoginClickHandler();
