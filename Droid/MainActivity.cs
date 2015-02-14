@@ -25,8 +25,7 @@ namespace WodstarMobileApp.Droid
 	public class MainActivity : Activity, Session.IStatusCallback, Request.IGraphUserCallback
 	{
 		public static MobileServiceClient MobileService = new MobileServiceClient(
-			"https://wodstar.azure-mobile.net/",
-			"kQKEljOALXgvBQWocFdYxXYaHlfAYB80"
+			"@string/azure_url", "@string/azure_id"
 		);
 
 		protected override void OnCreate (Bundle bundle)
