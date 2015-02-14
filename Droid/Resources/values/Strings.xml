@@ -9,6 +9,4 @@ DO NOT UPLOAD THIS FILE TO GITHUB WHEN IT CONTAINS PRODUCTION CREDENTIALS!
 <resources>
 	<string name="app_name">Wodstar Mobile App</string>
 	<string name="facebook_app_id">656993924411544</string>
-	<string name="azure_url">https://wodstar.azure-mobile.net/</string>
-	<string name="azure_id">kQKEljOALXgvBQWocFdYxXYaHlfAYB80</string>
 </resources>

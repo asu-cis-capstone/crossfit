@@ -24,8 +24,9 @@ namespace WodstarMobileApp.Droid
 	[Activity (Theme="@android:style/Theme.Black.NoTitleBar", Label = "WodstarMobileApp.Droid", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : Activity, Session.IStatusCallback, Request.IGraphUserCallback
 	{
-		public static MobileServiceClient MobileService = new MobileServiceClient(
-			"@string/azure_url", "@string/azure_id"
+		public static MobileServiceClient MobileService = new MobileServiceClient (
+			"https://wodstar-helloworld.azure-mobile.net/",
+			"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
 		);
 
 		protected override void OnCreate (Bundle bundle)

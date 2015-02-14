@@ -11,8 +11,8 @@ namespace WodstarMobileApp.Droid
 		static IMobileServiceTable<UserDOM> userTable;
 
 		public static void initializeTables() {
-			workoutTable = MainActivity.MobileService.GetTable<WorkoutDOM>();
-			userTable = MainActivity.MobileService.GetTable<UserDOM> ();
+			//workoutTable = MainActivity.MobileService.GetTable<WorkoutDOM>();
+			//userTable = MainActivity.MobileService.GetTable<UserDOM> ();
 		}
 
 	}
