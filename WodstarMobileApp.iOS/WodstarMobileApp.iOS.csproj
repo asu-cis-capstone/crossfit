@@ -117,6 +117,10 @@
     <InterfaceDefinition Include="Diary.xib" />
     <InterfaceDefinition Include="Leaderboard.xib" />
     <InterfaceDefinition Include="Resources\StartUp.storyboard" />
+    <InterfaceDefinition Include="Resources\MovLibrary.xib" />
+    <InterfaceDefinition Include="Resources\WODboard.xib" />
+    <InterfaceDefinition Include="Resources\Main.xib" />
+    <InterfaceDefinition Include="Resources\StartScreen.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
