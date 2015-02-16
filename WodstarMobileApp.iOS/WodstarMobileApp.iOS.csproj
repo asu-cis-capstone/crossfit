@@ -21,6 +21,8 @@
     <MtouchArch>i386</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -43,6 +45,10 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
@@ -110,6 +116,11 @@
     <InterfaceDefinition Include="Calc.xib" />
     <InterfaceDefinition Include="Diary.xib" />
     <InterfaceDefinition Include="Leaderboard.xib" />
+    <InterfaceDefinition Include="Resources\StartUp.storyboard" />
+    <InterfaceDefinition Include="Resources\MovLibrary.xib" />
+    <InterfaceDefinition Include="Resources\WODboard.xib" />
+    <InterfaceDefinition Include="Resources\Main.xib" />
+    <InterfaceDefinition Include="Resources\StartScreen.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

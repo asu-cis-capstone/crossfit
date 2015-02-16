@@ -1,5 +1,4 @@
 ﻿using System;
-
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -21,60 +20,64 @@ using System.Net.Http;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Theme="@android:style/Theme.Black.NoTitleBar", Label = "WodstarMobileApp.Droid", Icon = "@drawable/icon", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Theme="@android:style/Theme.Black.NoTitleBar", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 	public class MainActivity : Activity, Session.IStatusCallback, Request.IGraphUserCallback
 	{
-		public static MobileServiceClient MobileService = new MobileServiceClient(
-			"https://wodstar.azure-mobile.net/",
-			"kQKEljOALXgvBQWocFdYxXYaHlfAYB80"
-		);
-
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 
-			// Set our view from the "Login" layout resource
+			//Set our view from the "Login" layout resource
+			//Need to load this first in order to get Facebook session status from the button
 			SetContentView (Resource.Layout.Login);
 
 			//Connect to Azure and instantiate tables
 			Util.initializeTables();
 
-			Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
-			fbLoginButton.Click += delegate {
-				fbLoginClickHandler();
-			};
+			//Get Facebook button object
+			//Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
 
-			// Open a FB Session and show login if necessary
-			Session.OpenActiveSession (this, true, this);
-		}
+			//If Facebook session is already open from a previous login, then load the Main layout
+			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
+				// Set our view from the "Main" layout resource
+				SetContentView (Resource.Layout.Main);
+			}
+		}//end OnCreate method
 
+		public static MobileServiceClient MobileService = new MobileServiceClient (
+			"https://wodstar-helloworld.azure-mobile.net/",
+			"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
+		);
+
+		//This method is required by Request.IGraphUserCallback
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
 			base.OnActivityResult (requestCode, resultCode, data);
 
-			// Relay the result to our FB Session
+			//Relay the result to our FB Session
 			Session.ActiveSession.OnActivityResult (this, requestCode, (int)resultCode, data);
-		}
 
+			//If a Facebook session is open, request the user's information
+			if (Session.ActiveSession.IsOpened) {
+				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
+			}
+		}//end OnActivityResult method
+
+		//This method is required by Session.IStatusCallback
 		public void Call (Session session, SessionState state, Java.Lang.Exception exception)
 		{
-			// Make a request for 'Me' information about the current user
-			if (session.IsOpened)
-				Request.ExecuteMeRequestAsync (session, this);
-		}
+			
+		}//end Call method
 
+		//This method is called after the Facebook user information is fetched
 		public void OnCompleted (Xamarin.Facebook.Model.IGraphUser user, Response response)
 		{
-			// 'Me' request callback
-			if (user != null)
-				Console.WriteLine ("GOT USER: " + user.Name);
-			else
-				Console.WriteLine ("Failed to get 'me'!");
-		}
-
-		private void fbLoginClickHandler() {
-			StartActivity(typeof(StartScreenActivity));
-		}
+			// If Facebook session is open, then load the Main layout
+			if (user != null) {
+				// Set our view from the "Main" layout resource
+				SetContentView (Resource.Layout.Main);
+			}
+		}//end OnCompleted method
 
 	} //end class
 } //end namespace
