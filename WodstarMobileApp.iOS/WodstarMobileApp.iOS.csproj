@@ -122,6 +122,8 @@
     <InterfaceDefinition Include="Resources\Main.xib" />
     <InterfaceDefinition Include="Resources\StartScreen.xib" />
     <InterfaceDefinition Include="Resources\MovLibrarySearch.xib" />
+    <InterfaceDefinition Include="MovLibrary.xib" />
+    <InterfaceDefinition Include="MovLibrarySearch.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
