@@ -14,13 +14,13 @@
             android:layout_height="45.6dp"
             android:id="@+id/hamburgerButton" />
         <TextView
-            android:text="Movements"
+            android:text="WODs"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/movementsHeaderText"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp" />
+            android:id="@+id/wodsHeaderText"
+            android:layout_marginLeft="110dp"
+            android:layout_marginRight="100dp" />
         <Button
             android:text="Home"
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/movement1ImgButton"
+            android:id="@+id/wod1imgButton"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
@@ -44,7 +44,7 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/movement2ImgButton"
+            android:id="@+id/wod2ImgButton"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
@@ -52,7 +52,7 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/movement3ImgButton"
+            android:id="@+id/wod3ImgButton"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
