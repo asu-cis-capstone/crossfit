@@ -38,10 +38,12 @@
                 </button>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9G-Qg-9bh">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
-                    <items>
-                        <barButtonItem title="Search" id="T70-tD-Frg"/>
-                    </items>
+                    <items/>
                 </toolbar>
+                <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kJb-ha-CNf">
+                    <rect key="frame" x="0.0" y="44" width="320" height="44"/>
+                    <textInputTraits key="textInputTraits"/>
+                </searchBar>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
