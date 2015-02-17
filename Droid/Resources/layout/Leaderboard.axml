@@ -12,20 +12,20 @@
             android:text="|||"
             android:layout_width="49.1dp"
             android:layout_height="45.6dp"
-            android:id="@+id/button1" />
+            android:id="@+id/hamburgerButton" />
         <TextView
             android:text="Leaderboards"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView1"
+            android:id="@+id/lboardsHeaderText"
             android:layout_marginLeft="65dp"
             android:layout_marginRight="70dp" />
         <Button
             android:text="Home"
             android:layout_width="wrap_content"
             android:layout_height="40.4dp"
-            android:id="@+id/button2" />
+            android:id="@+id/homeButton" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -38,7 +38,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView2"
+            android:id="@+id/wodColumnText"
             android:textStyle="bold"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="30dp" />
@@ -47,7 +47,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="60.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/leaderColumnText"
             android:layout_marginLeft="70dp"
             android:layout_marginRight="50dp"
             android:textStyle="bold" />
@@ -61,14 +61,14 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="150.7dp"
             android:layout_height="101.8dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/sampWod1ImageButton"
             android:layout_marginLeft="20dp" />
         <TextView
             android:text="Kevin Risser"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="153.0dp"
             android:layout_height="47.6dp"
-            android:id="@+id/textView1"
+            android:id="@+id/wod1LeaderText"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="30dp" />
     </LinearLayout>
@@ -81,14 +81,14 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="150.7dp"
             android:layout_height="101.8dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/sampWod2ImgButton"
             android:layout_marginLeft="20dp" />
         <TextView
             android:text="Dan the Man"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="153.0dp"
             android:layout_height="47.6dp"
-            android:id="@+id/textView1"
+            android:id="@+id/wod2LeaderText"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="30dp" />
     </LinearLayout>
@@ -101,14 +101,14 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="150.7dp"
             android:layout_height="101.8dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/sampWod3ImgButton"
             android:layout_marginLeft="20dp" />
         <TextView
             android:text="Tyler Daulton"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="153.0dp"
             android:layout_height="47.6dp"
-            android:id="@+id/textView1"
+            android:id="@+id/wod3LeaderText"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="30dp" />
     </LinearLayout>
@@ -121,14 +121,14 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="150.7dp"
             android:layout_height="101.8dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/sampWod4ImgButton"
             android:layout_marginLeft="20dp" />
         <TextView
             android:text="Oliver Queen"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="153.0dp"
             android:layout_height="47.6dp"
-            android:id="@+id/textView1"
+            android:id="@+id/wod4LeaderText"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="30dp" />
     </LinearLayout>

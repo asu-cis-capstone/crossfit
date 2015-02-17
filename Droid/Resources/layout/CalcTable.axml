@@ -12,7 +12,7 @@
             android:text="|||"
             android:layout_width="49.1dp"
             android:layout_height="45.6dp"
-            android:id="@+id/button1" />
+            android:id="@+id/hamburgerButton" />
         <TextView
             android:text="Calculator"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -25,7 +25,7 @@
             android:text="Home"
             android:layout_width="wrap_content"
             android:layout_height="40.4dp"
-            android:id="@+id/button2" />
+            android:id="@+id/homeButton" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -36,11 +36,11 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="match_parent"
             android:layout_height="490.5dp"
-            android:id="@+id/imageButton1" />
+            android:id="@+id/calcTableImageButton" />
         <Button
             android:text="Click to return to Calculator"
             android:layout_width="match_parent"
             android:layout_height="73.4dp"
-            android:id="@+id/button3" />
+            android:id="@+id/calcReturnButton" />
     </LinearLayout>
 </LinearLayout>

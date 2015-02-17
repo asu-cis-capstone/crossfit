@@ -66,13 +66,13 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="145.5dp"
             android:layout_height="145.5dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/wodsMainImgButton"
             android:layout_marginLeft="20dp" />
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="145.5dp"
             android:layout_height="145.5dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/statsMainImgButton"
             android:layout_marginLeft="20dp" />
     </LinearLayout>
     <LinearLayout
@@ -85,7 +85,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="94.6dp"
             android:layout_height="47.6dp"
-            android:id="@+id/textView1"
+            android:id="@+id/formsTextView"
             android:layout_marginLeft="40dp"
             android:layout_marginTop="30dp"
             android:textStyle="bold"
@@ -95,7 +95,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="108.9dp"
             android:layout_height="47.6dp"
-            android:id="@+id/textView1"
+            android:id="@+id/leadersTextView"
             android:layout_marginTop="30dp"
             android:textStyle="bold"
             android:textSize="27dp"
@@ -110,13 +110,13 @@
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="145.5dp"
             android:layout_height="145.5dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/forumsMainImgButton"
             android:layout_marginLeft="20dp" />
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
             android:layout_width="145.5dp"
             android:layout_height="145.5dp"
-            android:id="@+id/imageButton1"
+            android:id="@+id/leadersMainImgButton"
             android:layout_marginLeft="20dp" />
     </LinearLayout>
 </LinearLayout>
