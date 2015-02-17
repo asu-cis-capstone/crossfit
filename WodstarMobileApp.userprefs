@@ -1,6 +1,11 @@
 ﻿<Properties StartupItem="Droid/WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WodstarMobileApp.iOS/ModelController.cs">
+    <Files>
+      <File FileName="WodstarMobileApp.iOS/Main.cs" Line="1" Column="1" />
+      <File FileName="WodstarMobileApp.iOS/ModelController.cs" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
