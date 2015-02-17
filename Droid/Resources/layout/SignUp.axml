@@ -9,7 +9,7 @@
         p1:textAppearance="?android:attr/textAppearanceLarge"
         p1:layout_width="123.6dp"
         p1:layout_height="wrap_content"
-        p1:id="@+id/textView1"
+        p1:id="@+id/signUpHeaderText"
         p1:layout_marginLeft="130dp"
         p1:layout_marginRight="150dp" />
     <TextView
@@ -17,7 +17,7 @@
         p1:textAppearance="?android:attr/textAppearanceMedium"
         p1:layout_width="151.6dp"
         p1:layout_height="wrap_content"
-        p1:id="@+id/textView2"
+        p1:id="@+id/createAccountTitleText"
         p1:layout_marginLeft="115dp"
         p1:layout_marginRight="110dp"
         p1:layout_marginTop="20dp"
@@ -26,19 +26,19 @@
         p1:inputType="textPersonName"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/editText1"
+        p1:id="@+id/fNameEditText"
         p1:text="First Name" />
     <EditText
         p1:inputType="textPersonName"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/editText2"
+        p1:id="@+id/lNameEditText"
         p1:text="Last Name" />
     <EditText
         p1:inputType="textEmailAddress"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/editText3"
+        p1:id="@+id/emailEditText"
         p1:text="Email Address" />
     <RadioGroup
         p1:layout_width="match_parent"
@@ -49,35 +49,35 @@
             p1:layout_height="wrap_content"
             p1:checked="true"
             p1:text="Male"
-            p1:id="@+id/radioButton1" />
+            p1:id="@+id/mRadioButton" />
         <RadioButton
             p1:layout_width="wrap_content"
             p1:layout_height="wrap_content"
             p1:text="Female"
-            p1:id="@+id/radioButton2" />
+            p1:id="@+id/fRadioButton" />
     </RadioGroup>
 <!-- Spinner for age to eliminate possibilty of typo. Could not edit "Item 1" But will have age options" -->
     <Spinner
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/spinner1" />
+        p1:id="@+id/ageSpinner" />
     <EditText
         p1:inputType="textPassword"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/editText4"
+        p1:id="@+id/pWordEditText"
         p1:text="SamplePassword" />
     <EditText
         p1:inputType="textPassword"
         p1:layout_width="match_parent"
         p1:layout_height="wrap_content"
-        p1:id="@+id/editText5"
+        p1:id="@+id/confirmPwordEditText"
         p1:text="ConfirmPassword" />
     <Button
         p1:text="Sign Up *"
         p1:layout_width="match_parent"
         p1:layout_height="55.0dp"
-        p1:id="@+id/button1"
+        p1:id="@+id/signUpButton"
         p1:background="#ff10ebee"
         p1:layout_marginLeft="5dp"
         p1:layout_marginRight="5dp"
@@ -87,7 +87,7 @@
         p1:text="Return"
         p1:layout_width="match_parent"
         p1:layout_height="56.1dp"
-        p1:id="@+id/button2"
+        p1:id="@+id/returnButton"
         p1:background="#ffec780f"
         p1:layout_marginLeft="5dp"
         p1:layout_marginRight="5dp"

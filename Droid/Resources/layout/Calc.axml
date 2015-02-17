@@ -12,20 +12,20 @@
             android:text="|||"
             android:layout_width="49.1dp"
             android:layout_height="45.6dp"
-            android:id="@+id/button1" />
+            android:id="@+id/hamburgerButton" />
         <TextView
-            android:text="Leaderboards"
+            android:text="Calculator"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/textView1"
-            android:layout_marginLeft="65dp"
-            android:layout_marginRight="70dp" />
+            android:id="@+id/calcHeaderText"
+            android:layout_marginLeft="90dp"
+            android:layout_marginRight="85dp" />
         <Button
             android:text="Home"
             android:layout_width="wrap_content"
             android:layout_height="40.4dp"
-            android:id="@+id/button2" />
+            android:id="@+id/homeButton" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -37,14 +37,14 @@
             android:inputType="numberDecimal"
             android:layout_width="122.7dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/oneRmCalc"
             android:layout_marginLeft="50dp" />
         <TextView
             android:text="= One Rep Max"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="180.0dp"
             android:layout_height="60.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/OneRmLabelText"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="50dp"
             android:textStyle="bold" />
@@ -61,14 +61,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/ninetyFiveCalc"
             android:layout_marginLeft="25.0dp" />
         <TextView
             android:text="95% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/ninetyFiveLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -77,14 +77,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/seventyCalc"
             android:layout_marginLeft="0dp" />
         <TextView
             android:text="70% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/seventyLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -102,14 +102,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/ninetyCalc"
             android:layout_marginLeft="25.0dp" />
         <TextView
             android:text="90% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/ninetyLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -118,14 +118,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/sixtyFiveCalc"
             android:layout_marginLeft="0dp" />
         <TextView
             android:text="65% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/sixtyFiveLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -143,14 +143,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/eightyFiveCalc"
             android:layout_marginLeft="25.0dp" />
         <TextView
             android:text="85% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/eightyFiveLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -159,14 +159,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/sixtyCalc"
             android:layout_marginLeft="0dp" />
         <TextView
             android:text="60% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/sixtyLabeltext"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -184,14 +184,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/eightyCalc"
             android:layout_marginLeft="25.0dp" />
         <TextView
             android:text="80% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/eightyLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -200,14 +200,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/fiftyFiveCalc"
             android:layout_marginLeft="0dp" />
         <TextView
             android:text="55% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/fiftyFiveLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -225,14 +225,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/seventyFiveCalc"
             android:layout_marginLeft="25.0dp" />
         <TextView
             android:text="75% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/seventyFiveLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -241,14 +241,14 @@
             android:inputType="numberDecimal"
             android:layout_width="65.4dp"
             android:layout_height="wrap_content"
-            android:id="@+id/editText1"
+            android:id="@+id/fiftyCalc"
             android:layout_marginLeft="0dp" />
         <TextView
             android:text="50% 1RM"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="92.5dp"
             android:layout_height="31.8dp"
-            android:id="@+id/textView1"
+            android:id="@+id/fiftyLabelText"
             android:layout_marginLeft="5dp"
             android:layout_marginRight="5.0dp"
             android:textStyle="bold"
@@ -266,7 +266,7 @@
             android:text="Calculate"
             android:layout_width="151.7dp"
             android:layout_height="match_parent"
-            android:id="@+id/button3"
+            android:id="@+id/calculateButton"
             android:layout_marginLeft="30dp"
             android:layout_marginBottom="20dp"
             android:textSize="20dp"
@@ -276,7 +276,7 @@
             android:text="Reset"
             android:layout_width="151.7dp"
             android:layout_height="match_parent"
-            android:id="@+id/button3"
+            android:id="@+id/resetButton"
             android:layout_marginLeft="15dp"
             android:layout_marginBottom="20dp"
             android:textSize="20dp"
