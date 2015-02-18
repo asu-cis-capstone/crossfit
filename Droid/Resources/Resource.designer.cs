@@ -328,8 +328,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f020016
 			public const int com_facebook_logo = 2130837526;
 			
-			// aapt resource value: 0x7f020031
-			public const int com_facebook_picker_default_separator_color = 2130837553;
+			// aapt resource value: 0x7f020032
+			public const int com_facebook_picker_default_separator_color = 2130837554;
 			
 			// aapt resource value: 0x7f020017
 			public const int com_facebook_picker_item_background = 2130837527;
@@ -407,7 +407,10 @@ namespace WodstarMobileApp.Droid
 			public const int icon = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int splash = 2130837552;
+			public const int monoandroidsplash = 2130837552;
+			
+			// aapt resource value: 0x7f020031
+			public const int splash = 2130837553;
 			
 			static Drawable()
 			{
@@ -1051,6 +1054,9 @@ namespace WodstarMobileApp.Droid
 		
 		public partial class Style
 		{
+			
+			// aapt resource value: 0x7f070004
+			public const int Mono_Android_Theme_Splash = 2131165188;
 			
 			// aapt resource value: 0x7f070003
 			public const int Theme_Splash = 2131165187;
