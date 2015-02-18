@@ -1,21 +1,23 @@
 ﻿using System;
+using Newtonsoft.Json;
 
 namespace WodstarMobileApp.Droid
 {
 	public class UserDOM
 	{
-		private String fName;
-		private String lName;
-		private String gender;
-		private int age;
+		[JsonProperty(PropertyName = "id")]
+		public string id { get; set; }
 
-		public UserDOM (String fname, String lname, String gender, Int16 age) {
-			this.fName = fname;
-			this.lName = lname;
-			this.gender = gender;
-			this.age = age;
-		}
+		[JsonProperty(PropertyName = "first_name")]
+		public String fName { get; set; }
 
+		[JsonProperty(PropertyName = "last_name")]
+		public String lName { get; set; }
+
+		[JsonProperty(PropertyName = "gender")]
+		public String gender { get; set; }
+
+		[JsonProperty(PropertyName = "age")]
+		public String age { get; set; }
 	}
 }
-
