@@ -16,6 +16,7 @@ namespace WodstarMobileApp.Droid
 	[Activity (Label = "UserProfileActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon")]			
 	public class UserProfileActivity : Activity
 	{
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -24,6 +25,8 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.UserProfile);
 
 			//Code to go get Azure data - should be housed in non-OS specific code. 
+
+
 		}
 	}
 }

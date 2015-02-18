@@ -91,6 +91,7 @@
     <Compile Include="MenuUtil.cs" />
     <Compile Include="UserDOM.cs" />
     <Compile Include="Util.cs" />
+    <Compile Include="TimerUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
