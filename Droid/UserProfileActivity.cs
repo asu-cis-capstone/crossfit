@@ -26,7 +26,12 @@ namespace WodstarMobileApp.Droid
 
 			//Code to go get Azure data - should be housed in non-OS specific code. 
 
+			var hamburgerButton = FindViewById<Button> (Resource.Id.hamburgerButton);
+			hamburgerButton.Click +=goToHomeScreen;
+		}
 
+		void goToHomeScreen(object sender, EventArgs e) {
+			StartActivity (typeof(StartScreenActivity));
 		}
 	}
 }

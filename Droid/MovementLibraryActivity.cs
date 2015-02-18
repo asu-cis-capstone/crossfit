@@ -33,6 +33,21 @@ namespace WodstarMobileApp.Droid
 			hangPowerCleanVideoView.Start ();
 
 			var burpeeVideoView = FindViewById<VideoView> (Resource.Id.burpeeVideoView);
+
+			var hamburgerButton = FindViewById<Button> (Resource.Id.hamburgerButton);
+			hamburgerButton.Click += goToHomeScreen;
+		}
+
+		void goToUserProfile(object sender, EventArgs e) {
+			StartActivity (typeof(UserProfileActivity));
+		}
+
+		void goToHomeScreen(object sender, EventArgs e) {
+			StartActivity (typeof(StartScreenActivity));
+		}
+
+		void goToMovementLibrary(object sender, EventArgs e) {
+			StartActivity(typeof(MovementLibraryActivity));
 		}
 	}
 }

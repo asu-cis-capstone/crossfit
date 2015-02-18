@@ -26,12 +26,27 @@ namespace WodstarMobileApp.Droid
 
 			var wodsTextView = FindViewById<TextView> (Resource.Id.wodsTextView);
 			wodsTextView.Click += goToMovementLibrary;
+
+			var statsTextView = FindViewById<TextView> (Resource.Id.statsTextView);
+			statsTextView.Click += goToUserProfile;
+
+			var hamburgerButton = FindViewById<Button> (Resource.Id.hamburgerButton);
+			hamburgerButton.Click += goToHomeScreen;
+
 		}
 
-		//Goes to library for testing purposes, wods text view should go to wods.
+		void goToUserProfile(object sender, EventArgs e) {
+			StartActivity (typeof(UserProfileActivity));
+		}
+
+		void goToHomeScreen(object sender, EventArgs e) {
+			StartActivity (typeof(StartScreenActivity));
+		}
+
 		void goToMovementLibrary(object sender, EventArgs e) {
 			StartActivity(typeof(MovementLibraryActivity));
 		}
+			
 	}
 }
 

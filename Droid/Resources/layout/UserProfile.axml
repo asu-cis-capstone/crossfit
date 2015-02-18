@@ -12,7 +12,7 @@
             android:text="|||"
             android:layout_width="49.1dp"
             android:layout_height="45.6dp"
-            android:id="@+id/button1" />
+            android:id="@+id/hamburgerButton" />
         <TextView
             android:text="My Profile"
             android:textAppearance="?android:attr/textAppearanceLarge"
