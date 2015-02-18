@@ -32,27 +32,24 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1">
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="match_parent"
+        <VideoView
+            android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/movement1ImgButton"
+            android:id="@+id/hangPowerCleanVideoView"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="match_parent"
+        <VideoView
+            android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/movement2ImgButton"
+            android:id="@+id/burpeeVideoView"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="match_parent"
+        <VideoView
+            android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/movement3ImgButton"
+            android:id="@+id/backSquatVideoView"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />

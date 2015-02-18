@@ -23,6 +23,14 @@ namespace WodstarMobileApp.Droid
 
 			// Create your application here
 			SetContentView (Resource.Layout.Main);
+
+			var wodsTextView = FindViewById<TextView> (Resource.Id.wodsTextView);
+			wodsTextView.Click += goToMovementLibrary;
+		}
+
+		//Goes to library for testing purposes, wods text view should go to wods.
+		void goToMovementLibrary(object sender, EventArgs e) {
+			StartActivity(typeof(MovementLibraryActivity));
 		}
 	}
 }

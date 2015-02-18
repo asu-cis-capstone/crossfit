@@ -42,7 +42,14 @@ namespace WodstarMobileApp.Droid
 				// Set our view from the "Main" layout resource
 				SetContentView (Resource.Layout.Main);
 			}
+
+			var skipButton = FindViewById<Button> (Resource.Id.startScreenButton);
+			skipButton.Click += goToStart;
 		}//end OnCreate method
+
+		void goToStart(object sender, EventArgs e) {
+			StartActivity (typeof(StartScreenActivity));
+		}
 
 		public static MobileServiceClient MobileService = new MobileServiceClient (
 			"https://wodstar-helloworld.azure-mobile.net/",
