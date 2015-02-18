@@ -34,6 +34,28 @@ namespace WodstarMobileApp.Droid
 			//Connect to Azure and instantiate tables
 			Util.initializeTables();
 
+			//set alert for executing the task
+			AlertDialog.Builder alert = new AlertDialog.Builder (this);
+
+			alert.SetTitle("Azure");
+			alert.SetMessage ("Connected to Azure");
+
+			alert.SetPositiveButton ("OK", (senderAlert, args) => {
+				//change value write your own set of instructions
+				//you can also create an event for the same in xamarin
+				//instead of writing things here
+			} );
+
+			//alert.SetNegativeButton ("Not doing great", (senderAlert, args) => {
+				//perform your own task for this conditional button click
+			//} );
+			//run the alert in UI thread to display in the screen
+				alert.Show();
+
+
+
+
+
 			//Get Facebook button object
 			//Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
 
@@ -43,11 +65,6 @@ namespace WodstarMobileApp.Droid
 				SetContentView (Resource.Layout.Main);
 			}
 		}//end OnCreate method
-
-		public static MobileServiceClient MobileService = new MobileServiceClient (
-			"https://wodstar-helloworld.azure-mobile.net/",
-			"VESEBrXxDLeGQSOwHEqnNxtKmYyQDJ98"
-		);
 
 		//This method is required by Request.IGraphUserCallback
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
@@ -78,6 +95,11 @@ namespace WodstarMobileApp.Droid
 				SetContentView (Resource.Layout.Main);
 			}
 		}//end OnCompleted method
+
+		public void showUserProfiles (View v) {
+			// Set our view from the "UserProfile" layout resource
+			SetContentView (Resource.Layout.UserProfile);
+		}
 
 	} //end class
 } //end namespace
