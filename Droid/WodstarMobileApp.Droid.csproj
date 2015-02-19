@@ -144,4 +144,10 @@
       <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\YoutubeJavaBindings\YoutubeJavaBindings.csproj">
+      <Project>{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}</Project>
+      <Name>YoutubeJavaBindings</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

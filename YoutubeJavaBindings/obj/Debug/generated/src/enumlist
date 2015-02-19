@@ -1,0 +1,4 @@
+com.google.android.youtube.player.YouTubeInitializationResult:Google.YouTube.Player:YouTubeInitializationResult
+com.google.android.youtube.player.YouTubePlayer$ErrorReason:Google.YouTube.Player:YouTubePlayer.ErrorReason
+com.google.android.youtube.player.YouTubePlayer$PlayerStyle:Google.YouTube.Player:YouTubePlayer.PlayerStyle
+com.google.android.youtube.player.YouTubeThumbnailLoader$ErrorReason:Google.YouTube.Player:YouTubeThumbnailLoader.ErrorReason

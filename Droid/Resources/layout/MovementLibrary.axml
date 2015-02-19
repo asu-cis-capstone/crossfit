@@ -32,7 +32,7 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:layout_weight="1">
-        <VideoView
+        <com.google.android.youtube.player.YouTubePlayerView
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
             android:id="@+id/hangPowerCleanVideoView"

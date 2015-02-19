@@ -2,7 +2,7 @@ package wodstarmobileapp.droid;
 
 
 public class MovementLibraryActivity
-	extends android.app.Activity
+	extends wodstarmobileapp.YouTubeFailureRecoveryActivity
 	implements
 		mono.android.IGCUserPeer
 {

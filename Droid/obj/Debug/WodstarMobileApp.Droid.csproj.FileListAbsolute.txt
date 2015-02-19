@@ -58,3 +58,6 @@ C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\upload
 C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\bin\Debug\com.wodstar.mobile.apk
 C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\bin\Debug\com.wodstar.mobile-Signed.apk
 C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\android\bin\com.wodstar.mobile.apk
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\bin\Debug\YoutubeJavaBindings.dll
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\bin\Debug\YoutubeJavaBindings.pdb
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\bin\Debug\YoutubeJavaBindings.dll.mdb

@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WodstarMobileApp.Droid", "D
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WodstarMobileApp.iOS", "WodstarMobileApp.iOS\WodstarMobileApp.iOS.csproj", "{A020443F-2322-4EB0-BD3A-DB04CFB63D15}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YoutubeJavaBindings", "YoutubeJavaBindings\YoutubeJavaBindings.csproj", "{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -51,5 +53,21 @@ Global
 		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|iPhone.Build.0 = Release|Any CPU
 		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.AppStore|iPhone.Build.0 = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Release|iPhone.Build.0 = Release|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
