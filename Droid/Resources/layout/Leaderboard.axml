@@ -21,11 +21,6 @@
             android:id="@+id/lboardsHeaderText"
             android:layout_marginLeft="65dp"
             android:layout_marginRight="70dp" />
-        <Button
-            android:text="Home"
-            android:layout_width="wrap_content"
-            android:layout_height="40.4dp"
-            android:id="@+id/homeButton" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
