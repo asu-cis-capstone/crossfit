@@ -13,20 +13,24 @@
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OME-Lf-Vbz">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <items>
-                        <navigationItem title="Dear Diary" id="lK4-6T-1XY"/>
+                        <navigationItem title="Diary" id="lK4-6T-1XY"/>
                     </items>
                 </navigationBar>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ayV-Wx-4B1">
                     <rect key="frame" x="0.0" y="227" width="160" height="45"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="Button">
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <state key="normal" title="WODs">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MQg-lk-haE">
                     <rect key="frame" x="160" y="227" width="160" height="45"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    <state key="normal" title="Button">
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="21"/>
+                    <state key="normal" title="PRs">
+                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
