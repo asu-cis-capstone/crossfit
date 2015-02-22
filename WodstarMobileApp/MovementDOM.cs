@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace WodstarMobileApp.Droid
+namespace WodstarMobileApp
 {
 	public class MovementDOM
 	{

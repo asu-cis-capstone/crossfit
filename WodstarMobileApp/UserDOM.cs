@@ -1,15 +1,15 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace WodstarMobileApp.Droid
+namespace WodstarMobileApp
 {
 	public class UserDOM
 	{
 		[JsonProperty(PropertyName = "id")]
 		public int id { get; set; }
 
-		[JsonProperty(PropertyName = "user_id")]
-		public string userId { get; set; }
+		[JsonProperty(PropertyName = "username")]
+		public string username { get; set; }
 
 		[JsonProperty(PropertyName = "account_type")]
 		public string accountType { get; set; }

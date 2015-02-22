@@ -12,5 +12,9 @@
     <Compile Include="$(MSBuildThisFileDirectory)WodstarMobileApp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DeveloperKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)YouTubeFailureRecoveryActivity.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Azure.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserDOM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MovementDOM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WorkoutDOM.cs" />
   </ItemGroup>
 </Project>

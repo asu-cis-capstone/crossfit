@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WodstarMobileApp.Droid
+namespace WodstarMobileApp
 {
 	public class WorkoutDOM
 	{
