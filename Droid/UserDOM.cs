@@ -6,18 +6,24 @@ namespace WodstarMobileApp.Droid
 	public class UserDOM
 	{
 		[JsonProperty(PropertyName = "id")]
-		public string id { get; set; }
+		public int id { get; set; }
+
+		[JsonProperty(PropertyName = "user_id")]
+		public string userId { get; set; }
+
+		[JsonProperty(PropertyName = "account_type")]
+		public string accountType { get; set; }
 
 		[JsonProperty(PropertyName = "first_name")]
-		public String fName { get; set; }
+		public string firstName { get; set; }
 
 		[JsonProperty(PropertyName = "last_name")]
-		public String lName { get; set; }
+		public string lastName { get; set; }
 
 		[JsonProperty(PropertyName = "gender")]
-		public String gender { get; set; }
+		public string gender { get; set; }
 
 		[JsonProperty(PropertyName = "age")]
-		public String age { get; set; }
+		public string age { get; set; }
 	}
 }
