@@ -21,18 +21,21 @@ namespace WodstarMobileApp.Droid
 		{
 			base.OnCreate (bundle);
 
-			// Create your application here
+			//Show the Main layout
 			SetContentView (Resource.Layout.Main);
 
 			var wodsTextView = FindViewById<TextView> (Resource.Id.wodsTextView);
 			wodsTextView.Click += goToMovementLibrary;
+			var wodsMainImgButton = FindViewById<ImageButton> (Resource.Id.wodsMainImgButton);
+			wodsMainImgButton.Click += goToMovementLibrary;
 
 			var statsTextView = FindViewById<TextView> (Resource.Id.statsTextView);
 			statsTextView.Click += goToUserProfile;
+			var statsMainImgButton = FindViewById<ImageButton> (Resource.Id.statsMainImgButton);
+			statsMainImgButton.Click += goToUserProfile;
 
 			var hamburgerButton = FindViewById<Button> (Resource.Id.hamburgerButton);
 			hamburgerButton.Click += goToHomeScreen;
-
 		}
 
 		void goToUserProfile(object sender, EventArgs e) {
