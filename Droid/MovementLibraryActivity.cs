@@ -19,7 +19,7 @@ namespace WodstarMobileApp.Droid
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			// Create your application here
+			//Show the MovementLibrary layout
 			SetContentView (Resource.Layout.MovementLibrary);
 
 			YouTubePlayerView playerView = FindViewById<YouTubePlayerView>(Resource.Id.hangPowerCleanVideoView);
@@ -43,14 +43,17 @@ namespace WodstarMobileApp.Droid
 		}
 
 		void goToUserProfile(object sender, EventArgs e) {
+			//Start a new Activity for the UserProfile layout
 			StartActivity (typeof(UserProfileActivity));
 		}
 
 		void goToHomeScreen(object sender, EventArgs e) {
+			//Start a new Activity for the Main layout
 			StartActivity (typeof(StartScreenActivity));
 		}
 
 		void goToMovementLibrary(object sender, EventArgs e) {
+			//Start a new Activity for the MovementLibrary layout
 			StartActivity(typeof(MovementLibraryActivity));
 		}
 	}

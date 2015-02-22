@@ -39,14 +39,17 @@ namespace WodstarMobileApp.Droid
 		}
 
 		void goToUserProfile(object sender, EventArgs e) {
+			//Start a new Activity for the UserProfile layout
 			StartActivity (typeof(UserProfileActivity));
 		}
 
 		void goToHomeScreen(object sender, EventArgs e) {
+			//Start a new Activity for the Main layout
 			StartActivity (typeof(StartScreenActivity));
 		}
 
 		void goToMovementLibrary(object sender, EventArgs e) {
+			//Start a new Activity for the MovementLibrary layout
 			StartActivity(typeof(MovementLibraryActivity));
 		}
 			
