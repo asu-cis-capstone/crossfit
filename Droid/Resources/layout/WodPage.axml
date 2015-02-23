@@ -10,10 +10,10 @@
         android:layout_weight="1"
         android:layout_marginBottom="7.9dp">
         <Button
-            android:text="|||"
             android:layout_width="49.1dp"
             android:layout_height="45.6dp"
-            android:id="@+id/hamburgerButton" />
+            android:id="@+id/hamburgerButton"
+            android:background="@drawable/hamburger" />
         <TextView
             android:text="MARY"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -22,11 +22,6 @@
             android:id="@+id/maryWodHeaderText"
             android:layout_marginLeft="110dp"
             android:layout_marginRight="105dp" />
-        <Button
-            android:text="Home"
-            android:layout_width="wrap_content"
-            android:layout_height="40.4dp"
-            android:id="@+id/homeButton" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

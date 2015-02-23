@@ -10,10 +10,10 @@
         android:layout_weight="1"
         android:layout_marginBottom="7.9dp">
         <Button
-            android:text="|||"
             android:layout_width="49.1dp"
             android:layout_height="45.6dp"
-            android:id="@+id/hamburgerButton" />
+            android:id="@+id/hamburgerButton"
+            android:background="@drawable/hamburger" />
         <TextView
             android:text="Diary"
             android:textAppearance="?android:attr/textAppearanceLarge"
@@ -22,28 +22,6 @@
             android:id="@+id/diaryHeaderButton"
             android:layout_marginLeft="110dp"
             android:layout_marginRight="115dp" />
-        <Button
-            android:text="Home"
-            android:layout_width="wrap_content"
-            android:layout_height="40.4dp"
-            android:id="@+id/homeButton" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="0.0dp">
-        <Spinner
-            android:layout_width="145.5dp"
-            android:layout_height="match_parent"
-            android:id="@+id/categorySpinner"
-            android:layout_marginRight="32.4dp"
-            android:layout_marginLeft="6.1dp" />
-        <Spinner
-            android:layout_width="192.0dp"
-            android:layout_height="match_parent"
-            android:id="@+id/detailSpinner" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -51,40 +29,264 @@
         android:layout_height="65.1dp"
         android:layout_weight="1"
         android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/linearLayout1">
+        <ImageView
+            android:src="@android:drawable/ic_menu_gallery"
+            android:layout_width="132.7dp"
+            android:layout_height="match_parent"
+            android:id="@+id/profilePictureImageView"
+            android:layout_marginLeft="9.6dp" />
+        <TextView
+            android:text="Dan &quot;The Man&quot; Provenzano"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/bioTextView"
+            android:layout_marginLeft="8.8dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="38.3dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
         android:minHeight="25px">
         <Button
-            android:text="6 Months"
-            android:layout_width="110dp"
+            android:text="Calculator"
+            android:layout_width="118.8dp"
             android:layout_height="70dp"
-            android:id="@+id/sixMonthButton"
+            android:id="@+id/calculatorButton"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="24.5dp"
+            android:layout_marginLeft="86.7dp"
             android:textSize="20dp" />
         <Button
-            android:text="Year"
+            android:text="Graph"
             android:layout_width="110dp"
             android:layout_height="70dp"
-            android:id="@+id/yearButton"
-            android:layout_marginTop="15dp"
-            android:textSize="20dp" />
-        <Button
-            android:text="All Time"
-            android:layout_width="110dp"
-            android:layout_height="70dp"
-            android:id="@+id/allTimeButton"
+            android:id="@+id/graphViewButton"
             android:layout_marginTop="15dp"
             android:textSize="20dp" />
     </LinearLayout>
     <LinearLayout
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0.0dp"
         android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_marginBottom="0.0dp">
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="match_parent"
-            android:layout_height="384.8dp"
-            android:id="@+id/diaryGraphButton" />
+        <TextView
+            android:text="WODs"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/wodHeader"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp" />
+        <TextView
+            android:text="PRs"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/textView1"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ffffffff">
+        <TextView
+            android:text="Mary"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/maryWodText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="80 reps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="121.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/maryPrText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ffffffff">
+        <TextView
+            android:text="War Frank"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="132.4dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/warFrankWodText"
+            android:layout_marginRight="10dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="100 reps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="121.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/warFrankPrText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ffffffff">
+        <TextView
+            android:text="Fran"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/frankWodText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="90 reps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="121.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/franPrText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ffffffff">
+        <TextView
+            android:text="Annie"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/annieWodText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="83 reps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="121.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/anniePrText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ffffffff">
+        <TextView
+            android:text="Eva"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/evaWodText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="89 reps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="121.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/evaPrText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ffffffff">
+        <TextView
+            android:text="Rosa"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/rosaWodText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="97 reps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="121.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/rosaPrText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ffffffff">
+        <TextView
+            android:text="Nate"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/nateWodText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
+        <TextView
+            android:text="101reps"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="121.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/natePrText"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:textColor="#ff000000" />
     </LinearLayout>
 </LinearLayout>

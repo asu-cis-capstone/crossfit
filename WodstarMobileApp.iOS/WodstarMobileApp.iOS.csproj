@@ -114,7 +114,6 @@
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
     <InterfaceDefinition Include="SignUp.xib" />
     <InterfaceDefinition Include="Calc.xib" />
-    <InterfaceDefinition Include="Diary.xib" />
     <InterfaceDefinition Include="Leaderboard.xib" />
     <InterfaceDefinition Include="Resources\StartUp.storyboard" />
     <InterfaceDefinition Include="Resources\MovLibrary.xib" />
@@ -125,6 +124,7 @@
     <InterfaceDefinition Include="MovLibrary.xib" />
     <InterfaceDefinition Include="MovLibrarySearch.xib" />
     <InterfaceDefinition Include="UserProfile.xib" />
+    <InterfaceDefinition Include="Diary.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>

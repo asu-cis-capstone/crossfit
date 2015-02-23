@@ -31,6 +31,7 @@ namespace WodstarMobileApp.Droid
 		}
 
 		void goToHomeScreen(object sender, EventArgs e) {
+			//Start a new Activity for the Main layout
 			StartActivity (typeof(StartScreenActivity));
 		}
 	}
