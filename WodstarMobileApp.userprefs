@@ -1,15 +1,14 @@
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Emulator_API21" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid\MovementLibraryActivity.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="WodstarMobileApp\MovementLinks.cs">
     <Files>
-      <File FileName="Droid\MovementLibraryActivity.cs" Line="47" Column="47" />
-      <File FileName="WodstarMobileApp\DeveloperKey.cs" Line="1" Column="1" />
+      <File FileName="Droid\MovementLibraryActivity.cs" Line="4" Column="4" />
+      <File FileName="WodstarMobileApp\YouTubeFailureRecoveryActivity.cs" Line="4" Column="4" />
+      <File FileName="WodstarMobileApp\MovementLinks.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\WodstarMobileApp\DeveloperKey.cs" line="9" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" />

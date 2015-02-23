@@ -40,6 +40,7 @@ namespace WodstarMobileApp.Droid
 		{
 			if (!wasRestored) {
 				player.CueVideo("FfcU7GIboKI"); }
+			player.
 		}
 
 		void goToUserProfile(object sender, EventArgs e) {
