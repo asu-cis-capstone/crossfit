@@ -28,26 +28,27 @@
         android:layout_height="fill_parent"
         android:layout_weight="1">
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@drawable/amanda"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/wod1imgButton"
+            android:id="@+id/amandaButton"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp"
+            android:cropToPadding="false" />
+        <ImageButton
+            android:src="@drawable/jackie"
+            android:layout_width="match_parent"
+            android:layout_height="169.1dp"
+            android:id="@+id/jackieButton"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/wod2ImgButton"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="match_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/wod3ImgButton"
+            android:id="@+id/kellyButton"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />

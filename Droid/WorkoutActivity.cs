@@ -17,7 +17,7 @@ namespace WodstarMobileApp.Droid
 	public class WorkoutActivity : Activity
 	{
 		String [] thisWodInfo;
-		WorkoutDOM thisWorkout;
+		private WorkoutDOM thisWorkout;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -25,7 +25,9 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.WodPage);
 
 			//Captures data from starting activity, loads the proper data to the page.
-			//thisWodInfo = Intent.GetStringArrayExtra ();
+			thisWodInfo = Intent.GetStringArrayExtra ("workoutId", "workoutName");
+			//TODO: Constructor corresponds to name, type, need to change somewhere.
+			thisWorkout = new WorkoutDOM (thisWodInfo [1], thisWodInfo [1]);		
 
 			//parse thisWod for Id of workout
 			//Call Azure to retrieve workout object based on Id
