@@ -689,9 +689,6 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08009f
 			public const int maryWodDescriptionText = 2131230879;
 			
-			// aapt resource value: 0x7f08009a
-			public const int maryWodHeaderText = 2131230874;
-			
 			// aapt resource value: 0x7f08004e
 			public const int maryWodText = 2131230798;
 			
@@ -868,6 +865,9 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f08004d
 			public const int wodHeader = 2131230797;
+			
+			// aapt resource value: 0x7f08009a
+			public const int wodHeaderText = 2131230874;
 			
 			// aapt resource value: 0x7f080096
 			public const int wodsHeaderText = 2131230870;

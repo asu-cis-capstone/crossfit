@@ -19,7 +19,7 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
-            android:id="@+id/maryWodHeaderText"
+            android:id="@+id/wodHeaderText"
             android:layout_marginLeft="110dp"
             android:layout_marginRight="105dp" />
     </LinearLayout>
@@ -33,15 +33,17 @@
         android:id="@+id/linearLayout1">
         <ImageButton
             android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="365.6dp"
-            android:layout_height="146.0dp"
+            android:layout_width="386.3dp"
+            android:layout_height="219.0dp"
             android:id="@+id/maryImgButton"
-            android:layout_marginLeft="13.1dp" />
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            android:layout_marginBottom="0.0dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="16.2dp"
+        android:layout_height="30.1dp"
         android:layout_weight="1"
         android:layout_marginBottom="7.9dp"
         android:layout_marginTop="5.3dp">

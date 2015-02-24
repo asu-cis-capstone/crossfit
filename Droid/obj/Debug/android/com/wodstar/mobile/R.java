@@ -389,7 +389,6 @@ containing a value of this type.
         public static final int maryPrText=0x7f08004f;
         public static final int maryTitleText=0x7f08008e;
         public static final int maryWodDescriptionText=0x7f08009f;
-        public static final int maryWodHeaderText=0x7f08009a;
         public static final int maryWodText=0x7f08004e;
         public static final int movementsHeaderText=0x7f080074;
         public static final int natePrText=0x7f08005b;
@@ -449,6 +448,7 @@ containing a value of this type.
         public static final int wod4LeaderText=0x7f080066;
         public static final int wodColumnText=0x7f08005d;
         public static final int wodHeader=0x7f08004d;
+        public static final int wodHeaderText=0x7f08009a;
         public static final int wodsHeaderText=0x7f080096;
         public static final int wodsMainImgButton=0x7f08006e;
         public static final int wodsTextView=0x7f08006c;

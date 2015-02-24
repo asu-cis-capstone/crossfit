@@ -90,6 +90,8 @@
     <Compile Include="Util.cs" />
     <Compile Include="TimerUtil.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="WorkoutActivity.cs" />
+    <Compile Include="WorkoutLibraryActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

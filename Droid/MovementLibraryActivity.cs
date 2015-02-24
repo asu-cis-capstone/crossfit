@@ -58,9 +58,28 @@ namespace WodstarMobileApp.Droid
 
 		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
 		{
-		
-			return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);	
-			return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer2);	
+			if (!firstPlayer) {
+				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
+			} else if (!secondPlayer) {
+				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer2);
+			} else if (!thirdPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer3);
+			} else if (!fourthPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer4);
+			} else if (!fifthPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
+			} else if (!sixthPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer6);
+			} else if (!seventhPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer7);
+			} else if (!eighthPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer8);
+			} else if (!ninthPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer9);
+			} else if (!tenthPlayer) {
+				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer10);
+			}
+
 			return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer3);
 		}
 
