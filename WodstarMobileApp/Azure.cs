@@ -24,6 +24,15 @@ namespace WodstarMobileApp
 				//do nothing yet
 			}
 		}//end userAccount method
+
+		public static WorkoutDom getWorkout(string id) {
+
+			return new WorkoutDOM ();
+		}
+
+		public static MovementDOM getMovement(string id) {
+			return new MovementDOM ();
+		}
 	}
 }
 

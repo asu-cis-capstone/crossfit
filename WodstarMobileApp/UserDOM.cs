@@ -8,6 +8,10 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "id")]
 		public int id { get; set; }
 
+		[JsonProperty(PropertyName = "userImage")] {
+			public Image userImage { get; set; }
+		}
+
 		[JsonProperty(PropertyName = "username")]
 		public string username { get; set; }
 
