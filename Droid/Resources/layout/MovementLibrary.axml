@@ -26,172 +26,92 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1">
-        <com.google.android.youtube.player.YouTubePlayerView
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:scrollbarStyle="outsideInset"
+        android:overScrollMode="always"
+        android:verticalScrollbarPosition="right"
+        android:scrollX="0dp"
+        android:scrollY=" 0dp"
+        android:scrollbarAlwaysDrawHorizontalTrack="true"
+        android:scrollbarAlwaysDrawVerticalTrack="true">
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/hangPowerCleanVideo"
+            android:id="@+id/youtubePlayer1"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/burpeeVideo"
+            android:id="@+id/youtubePlayer2"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/backSquatVideo"
+            android:id="@+id/youtubePlayer3"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/hangSnatchVideo"
+            android:id="@+id/youtubePlayer4"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/squatCleanVideo"
+            android:id="@+id/youtubePlayer5"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/powerCleanVideo"
+            android:id="@+id/youtubePlayer6"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/hangSquatCleanVideo"
+            android:id="@+id/youtubePlayer7"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/boxJumpVideo"
+            android:id="@+id/youtubePlayer8"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/airSquatVideo"
+            android:id="@+id/youtubePlayer8"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
             android:layout_width="fill_parent"
             android:layout_height="169.1dp"
-            android:id="@+id/deadliftVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/doubleUndersVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/frontSquatVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/splitJerkVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/ringMuscleUpVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/pistolSquatVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/powerSnatchVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/sumoDeadliftHighPullVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/thrusterVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/americanKettlebellSwingVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/strictPressVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/pushPressVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/strictRingMuscleUpVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/russianKettlebellSwingVideo"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <com.google.android.youtube.player.YouTubePlayerView
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/rowingVideo"
+            android:id="@+id/youtubePlayer10"
             android:layout_marginRight="30dp"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />

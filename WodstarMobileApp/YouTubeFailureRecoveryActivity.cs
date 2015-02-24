@@ -19,6 +19,7 @@ namespace WodstarMobileApp
 				String errorMessage = "There was an error initializing the YouTubePlayer";
 				Toast.MakeText(this, errorMessage, ToastLength.Long).Show();
 			}
+			Console.WriteLine ("Failed to initialize video player");
 		}
 
 		public virtual void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)

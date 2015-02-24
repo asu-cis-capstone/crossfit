@@ -1,21 +1,19 @@
-<<<<<<< HEAD
-﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Emulator_API21" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WodstarMobileApp\MovementLinks.cs">
+﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid\MovementLibraryActivity.cs">
     <Files>
-      <File FileName="Droid\MovementLibraryActivity.cs" Line="4" Column="4" />
-      <File FileName="WodstarMobileApp\YouTubeFailureRecoveryActivity.cs" Line="4" Column="4" />
-      <File FileName="WodstarMobileApp\MovementLinks.cs" Line="1" Column="1" />
+      <File FileName="Droid\MovementLibraryActivity.cs" Line="41" Column="41" />
+      <File FileName="WodstarMobileApp\YouTubeFailureRecoveryActivity.cs" Line="60" Column="60" />
     </Files>
   </MonoDevelop.Ide.Workbench>
-=======
-﻿<Properties StartupItem="Droid/WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench />
->>>>>>> 392fc2e05a3296a9e3af5fea4038d04654cdc4f0
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="28" column="1" />
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="30" column="1" />
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="32" column="1" />
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="34" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" />
+  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>

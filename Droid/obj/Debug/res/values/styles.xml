@@ -1,8 +1,1 @@
-﻿<?xml version="1.0" encoding="UTF-8" ?>
-
-<resources>
-  <style name="Theme.Splash" parent="android:Theme">
-    <item name="android:windowBackground">@drawable/splash</item>
-    <item name="android:windowNoTitle">true</item>
-  </style>
-</resources>
+<resources><style name="Theme.Splash" parent="android:Theme"><item name="android:windowBackground">@drawable/splash</item><item name="android:windowNoTitle">true</item></style><style name="Mono.Android.Theme.Splash" parent="android:Theme"><item name="android:windowNoTitle">true</item></style></resources>

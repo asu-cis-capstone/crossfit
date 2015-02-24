@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
     Copyright 2010-present Facebook.
 
@@ -13,15 +12,4 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
--->
-
-<selector xmlns:android="http://schemas.android.com/apk/res/android">
-    <item android:state_pressed="true"
-          android:drawable="@drawable/com_facebook_picker_top_button" />
-    <item android:state_focused="true"
-          android:drawable="@drawable/com_facebook_picker_top_button" />
-    <item android:state_selected="true"
-          android:drawable="@drawable/com_facebook_picker_top_button" />
-    <item
-            android:drawable="@drawable/com_facebook_top_background" />
-</selector>
+--><selector xmlns:android="http://schemas.android.com/apk/res/android"><item android:state_pressed="true" android:drawable="@drawable/com_facebook_picker_top_button" /><item android:state_focused="true" android:drawable="@drawable/com_facebook_picker_top_button" /><item android:state_selected="true" android:drawable="@drawable/com_facebook_picker_top_button" /><item android:drawable="@drawable/com_facebook_top_background" /></selector>

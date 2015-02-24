@@ -131,6 +131,7 @@
     <AndroidResource Include="Resources\layout\MovementLibrary.axml" />
     <AndroidResource Include="Resources\layout\WodLibrary.axml" />
     <AndroidResource Include="Resources\layout\WodPage.axml" />
+    <AndroidResource Include="Resources\drawable\hamburger.png" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
