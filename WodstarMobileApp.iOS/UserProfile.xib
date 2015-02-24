@@ -14,7 +14,7 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <items>
                         <navigationItem title="My Profile" id="47o-Q9-Xeo">
-                            <barButtonItem key="leftBarButtonItem" id="vb9-Iz-dfx"/>
+                            <barButtonItem key="leftBarButtonItem" title="MENU" id="sMG-aR-cb2"/>
                         </navigationItem>
                     </items>
                 </navigationBar>
