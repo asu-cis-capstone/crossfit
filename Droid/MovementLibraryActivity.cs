@@ -16,14 +16,18 @@ namespace WodstarMobileApp.Droid
 	[Activity (Label = "MovementLibraryActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon")]			
 	public class MovementLibraryActivity : YouTubeFailureRecoveryActivity
 	{
+		int videoCount=0;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			//Show the MovementLibrary layout
 			SetContentView (Resource.Layout.MovementLibrary);
 
-			YouTubePlayerView playerView = FindViewById<YouTubePlayerView>(Resource.Id.hangPowerCleanVideoView);
-			playerView.Initialize (DeveloperKey.key, this);
+			YouTubePlayerView hangPowerClean = FindViewById<YouTubePlayerView>(Resource.Id.hangPowerCleanVideo);
+			hangPowerClean.Initialize (DeveloperKey.key, this);
+			YouTubePlayerView hangPowerClean = FindViewById<YouTubePlayerView>(Resource.Id.hangPowerCleanVideo);
+			hangPowerClean.Initialize (DeveloperKey.key, this);
 
 			//TODO: Get URIs from local file/azure source
 
@@ -39,8 +43,30 @@ namespace WodstarMobileApp.Droid
 		public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 		{
 			if (!wasRestored) {
-				player.CueVideo("FfcU7GIboKI"); }
-			player.
+				switch(videoCount) {
+				case 0:
+					//Hang Power Clean Video View
+					player.CueVideo ("FfcU7GIboKI");
+					videoCount++;
+					break;
+				case 1:
+					player.CueVideo ();
+					videoCount++;
+					break;
+				case 1:
+					player.CueVideo ();
+					videoCount++;
+					break;
+				case 1:
+					player.CueVideo ();
+					videoCount++;
+					break;
+				case 1:
+					player.CueVideo ();
+					videoCount++;
+					break;
+				}
+			}
 		}
 
 		void goToUserProfile(object sender, EventArgs e) {

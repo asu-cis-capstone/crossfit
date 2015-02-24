@@ -7,7 +7,7 @@ using Google.YouTube.Player;
 
 namespace WodstarMobileApp
 {
-	//[Activity (Label = "YouTubeFailureRecoveryActivity")]			
+	[Activity (Label = "YouTubeFailureRecoveryActivity")]			
 	public abstract class YouTubeFailureRecoveryActivity : YouTubeBaseActivity, IYouTubePlayerOnInitializedListener
 	{
 		private static int RECOVERY_DIALOG_REQUEST = 1;
