@@ -56,3 +56,6 @@ C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\res\dr
 C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\R.cs.flag
 C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\uploadflags.txt
 C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\bin\Debug\YoutubeJavaBindings.dll.mdb
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\res\drawable\amanda.png
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\res\drawable\jackie.png
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\res\drawable\kelly.png
