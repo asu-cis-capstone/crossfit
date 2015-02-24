@@ -1,4 +1,4 @@
-﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj">
+﻿<Properties StartupItem="Droid/WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Droid\MovementLibraryActivity.cs">
     <Files>
