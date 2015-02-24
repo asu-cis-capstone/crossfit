@@ -1,11 +1,6 @@
 ﻿<Properties StartupItem="Droid/WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid\MovementLibraryActivity.cs">
-    <Files>
-      <File FileName="Droid\MovementLibraryActivity.cs" Line="41" Column="41" />
-      <File FileName="WodstarMobileApp\YouTubeFailureRecoveryActivity.cs" Line="60" Column="60" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="28" column="1" />
