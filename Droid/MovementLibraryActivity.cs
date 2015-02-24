@@ -47,8 +47,8 @@ namespace WodstarMobileApp.Droid
 				youtubePlayer7.Initialize (DeveloperKey.key, this);
 			YouTubePlayerFragment youtubePlayer8 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer8);
 				youtubePlayer8.Initialize (DeveloperKey.key, this);
-			YouTubePlayerFragment youtubePlayer9 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer9);
-				youtubePlayer9.Initialize (DeveloperKey.key, this);
+		//	YouTubePlayerFragment youtubePlayer9 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer9);
+		//		youtubePlayer9.Initialize (DeveloperKey.key, this);
 			YouTubePlayerFragment youtubePlayer10 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer10);
 				youtubePlayer10.Initialize (DeveloperKey.key, this);
 
@@ -110,7 +110,7 @@ namespace WodstarMobileApp.Droid
 				player.CueVideo (MovementLinks.MovementUrls [startIndex], 50);
 				firstVideo = true;
 			} else if (!secondVideo) {
-				player.CueVideo (MovementLinks.MovementUrls[startIndex+1] 50);
+				player.CueVideo (MovementLinks.MovementUrls[startIndex+1], 50);
 				secondVideo=true;
 			} else if (!thirdVideo) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+2], 50);

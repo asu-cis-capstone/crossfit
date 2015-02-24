@@ -25,8 +25,7 @@ namespace WodstarMobileApp
 			}
 		}//end userAccount method
 
-		public static WorkoutDom getWorkout(string id) {
-
+		public static WorkoutDOM getWorkout(string id) {
 			return new WorkoutDOM ();
 		}
 
