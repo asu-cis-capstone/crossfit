@@ -128,6 +128,7 @@
     <InterfaceDefinition Include="Login.xib" />
     <InterfaceDefinition Include="WODpage.xib" />
     <InterfaceDefinition Include="PersonalRecord.xib" />
+    <InterfaceDefinition Include="WODlibrary.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
