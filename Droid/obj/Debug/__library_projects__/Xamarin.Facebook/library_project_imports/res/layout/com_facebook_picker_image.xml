@@ -12,4 +12,4 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
---><ImageView android:id="@+id/com_facebook_picker_image" android:layout_width="50dip" android:layout_height="50dip" android:layout_gravity="center_vertical" android:src="@drawable/com_facebook_profile_default_icon" xmlns:android="http://schemas.android.com/apk/res/android" />
+--><ImageView xmlns:android="http://schemas.android.com/apk/res/android" android:id="@+id/com_facebook_picker_image" android:layout_width="50dip" android:layout_height="50dip" android:layout_gravity="center_vertical" android:src="@drawable/com_facebook_profile_default_icon" />
