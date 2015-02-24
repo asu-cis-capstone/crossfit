@@ -25,7 +25,7 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.WodPage);
 
 			//Captures data from starting activity, loads the proper data to the page.
-			thisWodInfo = Intent.GetStringArrayExtra ();
+			//thisWodInfo = Intent.GetStringArrayExtra ();
 
 			//parse thisWod for Id of workout
 			//Call Azure to retrieve workout object based on Id

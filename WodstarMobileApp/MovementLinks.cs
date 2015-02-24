@@ -4,7 +4,7 @@ namespace WodstarMobileApp
 {
 	public class MovementLinks
 	{
-		public String[] MovementUrls = new String[] {hangPowerClean, burpee, backSquat, hangSnatch, squatClean, powerClean, hangSquatClean,
+		public static String[] MovementUrls = new String[] {hangPowerClean, burpee, backSquat, hangSnatch, squatClean, powerClean, hangSquatClean,
 			boxJump, airSquat, deadlift, doubleUnders, frontSquat, splitJerk, ringMuscleUp, pistolSquat, powerSnatch, sumoDeadliftHighPull, thruster, 
 			americanKettlebellSwing, strictPress, pushPress, strictRingMuscleUp, russianKettlebellSwing, rowing
 		};

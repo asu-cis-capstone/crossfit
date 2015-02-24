@@ -11,16 +11,16 @@ namespace WodstarMobileApp.Droid
 	public class MovementLibraryActivity : YouTubeFailureRecoveryActivity
 	{
 		public int startIndex;
-		Boolean firstPlayer=false;
-		Boolean secondPlayer=false;
-		Boolean thirdPlayer=false;
-		Boolean fourthPlayer=false;
-		Boolean fifthPlayer=false;
-		Boolean sixthPlayer=false;
-		Boolean seventhPlayer=false;
-		Boolean eighthPlayer=false;
-		Boolean ninthPlayer=false;
-		Boolean tenthPlayer=false;
+		public Boolean firstPlayer=false;
+		public Boolean secondPlayer=false;
+		public Boolean thirdPlayer=false;
+		public Boolean fourthPlayer=false;
+		public Boolean fifthPlayer=false;
+		public Boolean sixthPlayer=false;
+		public Boolean seventhPlayer=false;
+		public Boolean eighthPlayer=false;
+		public Boolean ninthPlayer=false;
+		public Boolean tenthPlayer=false;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -75,7 +75,7 @@ namespace WodstarMobileApp.Droid
 			} else if (!eighthPlayer) {
 				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer8);
 			} else if (!ninthPlayer) {
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer9);
+	//			return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer9);
 			} else if (!tenthPlayer) {
 				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer10);
 			}
@@ -106,50 +106,50 @@ namespace WodstarMobileApp.Droid
 		}
 
 		private void loadVideos(IYouTubePlayer player) {
-			if (!firstVideo) {
+			if (!firstPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls [startIndex], 50);
-				firstVideo = true;
-			} else if (!secondVideo) {
+				firstPlayer = true;
+			} else if (!secondPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+1], 50);
-				secondVideo=true;
-			} else if (!thirdVideo) {
+				secondPlayer=true;
+			} else if (!thirdPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+2], 50);
-				thirdVideo=true;
-			} else if (!fourthVideo) {
+				thirdPlayer=true;
+			} else if (!fourthPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+3], 50);
-				fourthVideo=true;
-			} else if (!fifthVideo) {
+				fourthPlayer=true;
+			} else if (!fifthPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+4], 50);
-				fifthVideo=true;
-			} else if (!sixthVideo) {
+				fifthPlayer=true;
+			} else if (!sixthPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+5], 50);
-				sixthVideo=true;
-			} else if (!seventhVideo) {
+				sixthPlayer=true;
+			} else if (!seventhPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+6], 50);
-				seventhVideo=true;
-			} else if (!eighthVideo) {
+				seventhPlayer=true;
+			} else if (!eighthPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+7], 50);
-				eighthVideo=true;
-			} else if (!ninthVideo) {
+				eighthPlayer=true;
+			} else if (!ninthPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+8], 50);
-				ninthVideo=true;
-			} else if (!tenthVideo) {
+				ninthPlayer=true;
+			} else if (!tenthPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+9], 50);
-				tenthVideo=true;
+				tenthPlayer=true;
 			} 
 		}
 
 		private void resetBools() {
-			Boolean firstPlayer=false;
-			Boolean secondPlayer=false;
-			Boolean thirdPlayer=false;
-			Boolean fourthPlayer=false;
-			Boolean fifthPlayer=false;
-			Boolean sixthPlayer=false;
-			Boolean seventhPlayer=false;
-			Boolean eighthPlayer=false;
-			Boolean ninthPlayer=false;
-			Boolean tenthPlayer=false;
+			firstPlayer=false;
+			secondPlayer=false;
+			thirdPlayer=false;
+			fourthPlayer=false;
+			fifthPlayer=false;
+			sixthPlayer=false;
+			seventhPlayer=false;
+			eighthPlayer=false;
+			ninthPlayer=false;
+			tenthPlayer=false;
 		}
 
 	} //End class
