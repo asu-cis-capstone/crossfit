@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace WodstarMobileApp
 {
-	public class UserDOM
+	public class Users
 	{
 		[JsonProperty(PropertyName = "id")]
 		public int id { get; set; }
