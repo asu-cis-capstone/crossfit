@@ -4,7 +4,7 @@ using Microsoft.WindowsAzure.MobileServices.Sync;
 
 namespace WodstarMobileApp
 {
-	public class Azure
+	public static class Azure
 	{
 		private static MobileServiceClient azureClient;
 		public static Users thisUser;
