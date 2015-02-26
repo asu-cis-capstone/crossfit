@@ -92,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\WodstarMobileApp.iOS\Images.xcassets\AppIcon.appiconset\Contents.json" />
+    <BundleResource Include="Resources\WodstarMobileApp.iOS\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <BundleResource Include="Resources\WodstarMobileApp.iOS\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -100,10 +103,14 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="StartScreen.xib" />
     <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Calc.xib" />
   </ItemGroup>
 </Project>
