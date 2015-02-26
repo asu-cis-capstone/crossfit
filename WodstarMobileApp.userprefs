@@ -1,5 +1,5 @@
-﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.DemoAndroid" />
+﻿<Properties StartupItem="Droid/WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
   <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
@@ -10,5 +10,5 @@
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" />
+  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" />
 </Properties>
