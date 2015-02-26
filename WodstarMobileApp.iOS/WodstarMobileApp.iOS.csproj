@@ -104,5 +104,6 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
     <InterfaceDefinition Include="StartScreen.xib" />
+    <InterfaceDefinition Include="Main.storyboard" />
   </ItemGroup>
 </Project>
