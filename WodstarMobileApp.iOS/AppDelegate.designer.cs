@@ -9,8 +9,7 @@ using System.CodeDom.Compiler;
 
 namespace WodstarMobileApp.iOS
 {
-	[Register ("MasterViewController")]
-	partial class MasterViewController
+	partial class AppDelegate
 	{
 		
 		void ReleaseDesignerOutlets ()
