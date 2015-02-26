@@ -259,188 +259,191 @@ namespace WodstarMobileApp.Droid
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7f020034
-			public const int Danim1 = 2130837556;
-			
-			// aapt resource value: 0x7f020033
-			public const int IMG_6063 = 2130837555;
-			
-			// aapt resource value: 0x7f020035
-			public const int amanda = 2130837557;
-			
-			// aapt resource value: 0x7f020039
-			public const int camillePNG = 2130837561;
-			
 			// aapt resource value: 0x7f020038
-			public const int cindy = 2130837560;
-			
-			// aapt resource value: 0x7f020000
-			public const int com_facebook_button_blue = 2130837504;
-			
-			// aapt resource value: 0x7f020001
-			public const int com_facebook_button_blue_focused = 2130837505;
-			
-			// aapt resource value: 0x7f020002
-			public const int com_facebook_button_blue_normal = 2130837506;
-			
-			// aapt resource value: 0x7f020003
-			public const int com_facebook_button_blue_pressed = 2130837507;
-			
-			// aapt resource value: 0x7f020004
-			public const int com_facebook_button_check = 2130837508;
-			
-			// aapt resource value: 0x7f020005
-			public const int com_facebook_button_check_off = 2130837509;
-			
-			// aapt resource value: 0x7f020006
-			public const int com_facebook_button_check_on = 2130837510;
-			
-			// aapt resource value: 0x7f020007
-			public const int com_facebook_button_grey_focused = 2130837511;
-			
-			// aapt resource value: 0x7f020008
-			public const int com_facebook_button_grey_normal = 2130837512;
-			
-			// aapt resource value: 0x7f020009
-			public const int com_facebook_button_grey_pressed = 2130837513;
-			
-			// aapt resource value: 0x7f02000a
-			public const int com_facebook_button_like = 2130837514;
-			
-			// aapt resource value: 0x7f02000b
-			public const int com_facebook_button_like_background = 2130837515;
-			
-			// aapt resource value: 0x7f02000c
-			public const int com_facebook_button_like_background_selected = 2130837516;
-			
-			// aapt resource value: 0x7f02000d
-			public const int com_facebook_button_like_icon = 2130837517;
-			
-			// aapt resource value: 0x7f02000e
-			public const int com_facebook_button_like_icon_selected = 2130837518;
-			
-			// aapt resource value: 0x7f02000f
-			public const int com_facebook_button_like_pressed = 2130837519;
-			
-			// aapt resource value: 0x7f020010
-			public const int com_facebook_button_like_selected = 2130837520;
-			
-			// aapt resource value: 0x7f020011
-			public const int com_facebook_close = 2130837521;
-			
-			// aapt resource value: 0x7f020012
-			public const int com_facebook_inverse_icon = 2130837522;
-			
-			// aapt resource value: 0x7f020013
-			public const int com_facebook_list_divider = 2130837523;
-			
-			// aapt resource value: 0x7f020014
-			public const int com_facebook_list_section_header_background = 2130837524;
-			
-			// aapt resource value: 0x7f020015
-			public const int com_facebook_loginbutton_silver = 2130837525;
-			
-			// aapt resource value: 0x7f020016
-			public const int com_facebook_logo = 2130837526;
-			
-			// aapt resource value: 0x7f020032
-			public const int com_facebook_picker_default_separator_color = 2130837554;
-			
-			// aapt resource value: 0x7f020017
-			public const int com_facebook_picker_item_background = 2130837527;
-			
-			// aapt resource value: 0x7f020018
-			public const int com_facebook_picker_list_focused = 2130837528;
-			
-			// aapt resource value: 0x7f020019
-			public const int com_facebook_picker_list_longpressed = 2130837529;
-			
-			// aapt resource value: 0x7f02001a
-			public const int com_facebook_picker_list_pressed = 2130837530;
-			
-			// aapt resource value: 0x7f02001b
-			public const int com_facebook_picker_list_selector = 2130837531;
-			
-			// aapt resource value: 0x7f02001c
-			public const int com_facebook_picker_list_selector_background_transition = 2130837532;
-			
-			// aapt resource value: 0x7f02001d
-			public const int com_facebook_picker_list_selector_disabled = 2130837533;
-			
-			// aapt resource value: 0x7f02001e
-			public const int com_facebook_picker_magnifier = 2130837534;
-			
-			// aapt resource value: 0x7f02001f
-			public const int com_facebook_picker_top_button = 2130837535;
-			
-			// aapt resource value: 0x7f020020
-			public const int com_facebook_place_default_icon = 2130837536;
-			
-			// aapt resource value: 0x7f020021
-			public const int com_facebook_profile_default_icon = 2130837537;
-			
-			// aapt resource value: 0x7f020022
-			public const int com_facebook_profile_picture_blank_portrait = 2130837538;
-			
-			// aapt resource value: 0x7f020023
-			public const int com_facebook_profile_picture_blank_square = 2130837539;
-			
-			// aapt resource value: 0x7f020024
-			public const int com_facebook_tooltip_black_background = 2130837540;
-			
-			// aapt resource value: 0x7f020025
-			public const int com_facebook_tooltip_black_bottomnub = 2130837541;
-			
-			// aapt resource value: 0x7f020026
-			public const int com_facebook_tooltip_black_topnub = 2130837542;
-			
-			// aapt resource value: 0x7f020027
-			public const int com_facebook_tooltip_black_xout = 2130837543;
-			
-			// aapt resource value: 0x7f020028
-			public const int com_facebook_tooltip_blue_background = 2130837544;
-			
-			// aapt resource value: 0x7f020029
-			public const int com_facebook_tooltip_blue_bottomnub = 2130837545;
-			
-			// aapt resource value: 0x7f02002a
-			public const int com_facebook_tooltip_blue_topnub = 2130837546;
-			
-			// aapt resource value: 0x7f02002b
-			public const int com_facebook_tooltip_blue_xout = 2130837547;
-			
-			// aapt resource value: 0x7f02002c
-			public const int com_facebook_top_background = 2130837548;
-			
-			// aapt resource value: 0x7f02002d
-			public const int com_facebook_top_button = 2130837549;
-			
-			// aapt resource value: 0x7f02002e
-			public const int com_facebook_usersettingsfragment_background_gradient = 2130837550;
-			
-			// aapt resource value: 0x7f02003b
-			public const int forums = 2130837563;
-			
-			// aapt resource value: 0x7f02003a
-			public const int graph = 2130837562;
-			
-			// aapt resource value: 0x7f02002f
-			public const int hamburger = 2130837551;
-			
-			// aapt resource value: 0x7f020030
-			public const int icon = 2130837552;
-			
-			// aapt resource value: 0x7f020036
-			public const int jackie = 2130837558;
+			public const int Danim1 = 2130837560;
 			
 			// aapt resource value: 0x7f020037
-			public const int kelly = 2130837559;
+			public const int IMG_6063 = 2130837559;
+			
+			// aapt resource value: 0x7f020000
+			public const int amanda = 2130837504;
+			
+			// aapt resource value: 0x7f02003a
+			public const int camillePNG = 2130837562;
+			
+			// aapt resource value: 0x7f020039
+			public const int cindy = 2130837561;
+			
+			// aapt resource value: 0x7f020001
+			public const int com_facebook_button_blue = 2130837505;
+			
+			// aapt resource value: 0x7f020002
+			public const int com_facebook_button_blue_focused = 2130837506;
+			
+			// aapt resource value: 0x7f020003
+			public const int com_facebook_button_blue_normal = 2130837507;
+			
+			// aapt resource value: 0x7f020004
+			public const int com_facebook_button_blue_pressed = 2130837508;
+			
+			// aapt resource value: 0x7f020005
+			public const int com_facebook_button_check = 2130837509;
+			
+			// aapt resource value: 0x7f020006
+			public const int com_facebook_button_check_off = 2130837510;
+			
+			// aapt resource value: 0x7f020007
+			public const int com_facebook_button_check_on = 2130837511;
+			
+			// aapt resource value: 0x7f020008
+			public const int com_facebook_button_grey_focused = 2130837512;
+			
+			// aapt resource value: 0x7f020009
+			public const int com_facebook_button_grey_normal = 2130837513;
+			
+			// aapt resource value: 0x7f02000a
+			public const int com_facebook_button_grey_pressed = 2130837514;
+			
+			// aapt resource value: 0x7f02000b
+			public const int com_facebook_button_like = 2130837515;
+			
+			// aapt resource value: 0x7f02000c
+			public const int com_facebook_button_like_background = 2130837516;
+			
+			// aapt resource value: 0x7f02000d
+			public const int com_facebook_button_like_background_selected = 2130837517;
+			
+			// aapt resource value: 0x7f02000e
+			public const int com_facebook_button_like_icon = 2130837518;
+			
+			// aapt resource value: 0x7f02000f
+			public const int com_facebook_button_like_icon_selected = 2130837519;
+			
+			// aapt resource value: 0x7f020010
+			public const int com_facebook_button_like_pressed = 2130837520;
+			
+			// aapt resource value: 0x7f020011
+			public const int com_facebook_button_like_selected = 2130837521;
+			
+			// aapt resource value: 0x7f020012
+			public const int com_facebook_close = 2130837522;
+			
+			// aapt resource value: 0x7f020013
+			public const int com_facebook_inverse_icon = 2130837523;
+			
+			// aapt resource value: 0x7f020014
+			public const int com_facebook_list_divider = 2130837524;
+			
+			// aapt resource value: 0x7f020015
+			public const int com_facebook_list_section_header_background = 2130837525;
+			
+			// aapt resource value: 0x7f020016
+			public const int com_facebook_loginbutton_silver = 2130837526;
+			
+			// aapt resource value: 0x7f020017
+			public const int com_facebook_logo = 2130837527;
+			
+			// aapt resource value: 0x7f020036
+			public const int com_facebook_picker_default_separator_color = 2130837558;
+			
+			// aapt resource value: 0x7f020018
+			public const int com_facebook_picker_item_background = 2130837528;
+			
+			// aapt resource value: 0x7f020019
+			public const int com_facebook_picker_list_focused = 2130837529;
+			
+			// aapt resource value: 0x7f02001a
+			public const int com_facebook_picker_list_longpressed = 2130837530;
+			
+			// aapt resource value: 0x7f02001b
+			public const int com_facebook_picker_list_pressed = 2130837531;
+			
+			// aapt resource value: 0x7f02001c
+			public const int com_facebook_picker_list_selector = 2130837532;
+			
+			// aapt resource value: 0x7f02001d
+			public const int com_facebook_picker_list_selector_background_transition = 2130837533;
+			
+			// aapt resource value: 0x7f02001e
+			public const int com_facebook_picker_list_selector_disabled = 2130837534;
+			
+			// aapt resource value: 0x7f02001f
+			public const int com_facebook_picker_magnifier = 2130837535;
+			
+			// aapt resource value: 0x7f020020
+			public const int com_facebook_picker_top_button = 2130837536;
+			
+			// aapt resource value: 0x7f020021
+			public const int com_facebook_place_default_icon = 2130837537;
+			
+			// aapt resource value: 0x7f020022
+			public const int com_facebook_profile_default_icon = 2130837538;
+			
+			// aapt resource value: 0x7f020023
+			public const int com_facebook_profile_picture_blank_portrait = 2130837539;
+			
+			// aapt resource value: 0x7f020024
+			public const int com_facebook_profile_picture_blank_square = 2130837540;
+			
+			// aapt resource value: 0x7f020025
+			public const int com_facebook_tooltip_black_background = 2130837541;
+			
+			// aapt resource value: 0x7f020026
+			public const int com_facebook_tooltip_black_bottomnub = 2130837542;
+			
+			// aapt resource value: 0x7f020027
+			public const int com_facebook_tooltip_black_topnub = 2130837543;
+			
+			// aapt resource value: 0x7f020028
+			public const int com_facebook_tooltip_black_xout = 2130837544;
+			
+			// aapt resource value: 0x7f020029
+			public const int com_facebook_tooltip_blue_background = 2130837545;
+			
+			// aapt resource value: 0x7f02002a
+			public const int com_facebook_tooltip_blue_bottomnub = 2130837546;
+			
+			// aapt resource value: 0x7f02002b
+			public const int com_facebook_tooltip_blue_topnub = 2130837547;
+			
+			// aapt resource value: 0x7f02002c
+			public const int com_facebook_tooltip_blue_xout = 2130837548;
+			
+			// aapt resource value: 0x7f02002d
+			public const int com_facebook_top_background = 2130837549;
+			
+			// aapt resource value: 0x7f02002e
+			public const int com_facebook_top_button = 2130837550;
+			
+			// aapt resource value: 0x7f02002f
+			public const int com_facebook_usersettingsfragment_background_gradient = 2130837551;
 			
 			// aapt resource value: 0x7f02003c
-			public const int mary = 2130837564;
+			public const int forums = 2130837564;
+			
+			// aapt resource value: 0x7f02003b
+			public const int graph = 2130837563;
+			
+			// aapt resource value: 0x7f020030
+			public const int hamburger = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int splash = 2130837553;
+			public const int icon = 2130837553;
+			
+			// aapt resource value: 0x7f020032
+			public const int jackie = 2130837554;
+			
+			// aapt resource value: 0x7f020033
+			public const int kelly = 2130837555;
+			
+			// aapt resource value: 0x7f02003d
+			public const int mary = 2130837565;
+			
+			// aapt resource value: 0x7f020034
+			public const int monoandroidsplash = 2130837556;
+			
+			// aapt resource value: 0x7f020035
+			public const int splash = 2130837557;
 			
 			static Drawable()
 			{
@@ -455,35 +458,35 @@ namespace WodstarMobileApp.Droid
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f080074
-			public const int FlyOutContainer = 2131230836;
+			// aapt resource value: 0x7f08007a
+			public const int FlyOutContainer = 2131230842;
 			
-			// aapt resource value: 0x7f08007d
-			public const int FlyOutContent = 2131230845;
+			// aapt resource value: 0x7f080083
+			public const int FlyOutContent = 2131230851;
 			
 			// aapt resource value: 0x7f080015
 			public const int OneRmLabelText = 2131230741;
-
-			// aapt resource value: 0x7f08008d
-			public const int ageSpinner = 2131230861;
 			
-			// aapt resource value: 0x7f08009c
-			public const int amandaButton = 2131230876;
+			// aapt resource value: 0x7f080093
+			public const int ageSpinner = 2131230867;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int angieButton = 2131230891;
+			// aapt resource value: 0x7f0800a2
+			public const int amandaButton = 2131230882;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int annieButton = 2131230888;
-	
-			// aapt resource value: 0x7f0800aa
-			public const int barbaraButton = 2131230890;
+			// aapt resource value: 0x7f0800b1
+			public const int angieButton = 2131230897;
+			
+			// aapt resource value: 0x7f0800ae
+			public const int annieButton = 2131230894;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int barbaraButton = 2131230896;
 			
 			// aapt resource value: 0x7f08004b
 			public const int bioTextView = 2131230795;
 			
-			// aapt resource value: 0x7f0800b2
-			public const int blueSquareButton = 2131230898;
+			// aapt resource value: 0x7f0800b6
+			public const int blueSquareButton = 2131230902;
 			
 			// aapt resource value: 0x7f080006
 			public const int bottom = 2131230726;
@@ -494,8 +497,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080004
 			public const int button = 2131230724;
 			
-`	// aapt resource value: 0x7f080085
-			public const int button1 = 2131230853;
+			// aapt resource value: 0x7f08008a
+			public const int button1 = 2131230858;
 			
 			// aapt resource value: 0x7f08000d
 			public const int calcHeaderText = 2131230733;
@@ -514,15 +517,15 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f080009
 			public const int center = 2131230729;
-
-			// aapt resource value: 0x7f0800a9
-			public const int chelseaButton = 2131230889;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int christineButton = 2131230891;
+			// aapt resource value: 0x7f0800ad
+			public const int chelseaButton = 2131230893;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int cindyButton = 2131230888;
+			// aapt resource value: 0x7f0800af
+			public const int christineButton = 2131230895;
+			
+			// aapt resource value: 0x7f0800ac
+			public const int cindyButton = 2131230892;
 			
 			// aapt resource value: 0x7f08006b
 			public const int cindyImgButton = 2131230827;
@@ -598,18 +601,18 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f080045
 			public const int com_facebook_usersettingsfragment_logo_image = 2131230789;
-
+			
 			// aapt resource value: 0x7f080046
 			public const int com_facebook_usersettingsfragment_profile_name = 2131230790;
 			
-			// aapt resource value: 0x7f080091
-			public const int confirmPwordEditText = 2131230865;
+			// aapt resource value: 0x7f080095
+			public const int confirmPwordEditText = 2131230869;
 			
-			// aapt resource value: 0x7f080088
-			public const int createAccountTitleText = 2131230856;
+			// aapt resource value: 0x7f08008c
+			public const int createAccountTitleText = 2131230860;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int dianeButton = 2131230887;
+			// aapt resource value: 0x7f0800ab
+			public const int dianeButton = 2131230891;
 			
 			// aapt resource value: 0x7f080048
 			public const int diaryHeaderButton = 2131230792;
@@ -626,25 +629,20 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080023
 			public const int eightyLabelText = 2131230755;
 			
-			// aapt resource value: 0x7f080089
-			public const int emailEditText = 2131230857;
+			// aapt resource value: 0x7f0800aa
+			public const int elizabethButton = 2131230890;
 			
-			// aapt resource value: 0x7f080057
-			public const int evaPrText = 2131230807;
-			// aapt resource value: 0x7f0800a6
-			public const int elizabethButton = 2131230886;
+			// aapt resource value: 0x7f08008f
+			public const int emailEditText = 2131230863;
 			
-			// aapt resource value: 0x7f08008b
-			public const int emailEditText = 2131230859;
+			// aapt resource value: 0x7f08008d
+			public const int fNameEditText = 2131230861;
 			
-			// aapt resource value: 0x7f080089
-			public const int fNameEditText = 2131230857;
+			// aapt resource value: 0x7f080092
+			public const int fRadioButton = 2131230866;
 			
-			// aapt resource value: 0x7f08008e
-			public const int fRadioButton = 2131230862;
-			
-			// aapt resource value: 0x7f08009c
-			public const int fifthPlaceUserText = 2131230876;
+			// aapt resource value: 0x7f0800a0
+			public const int fifthPlaceUserText = 2131230880;
 			
 			// aapt resource value: 0x7f080028
 			public const int fiftyCalc = 2131230760;
@@ -658,103 +656,77 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080029
 			public const int fiftyLabelText = 2131230761;
 			
-			// aapt resource value: 0x7f080096
-			public const int firstPlaceDetailText = 2131230870;
+			// aapt resource value: 0x7f08009c
+			public const int firstPlaceDetailText = 2131230876;
 			
-			// aapt resource value: 0x7f080095
-			public const int firstPlaceUserText = 2131230869;
+			// aapt resource value: 0x7f08009b
+			public const int firstPlaceUserText = 2131230875;
 			
-			// aapt resource value: 0x7f080070
-			public const int formsTextView = 2131230832;
-
-			// aapt resource value: 0x7f080099
-			public const int fourthPlaceUserText = 2131230873;
+			// aapt resource value: 0x7f080076
+			public const int formsTextView = 2131230838;
 			
 			// aapt resource value: 0x7f080078
 			public const int forumsMainImgButton = 2131230840;
-		
-			// aapt resource value: 0x7f0800a3
-			public const int franButton = 2131230883;
+			
+			// aapt resource value: 0x7f08009f
+			public const int fourthPlaceUserText = 2131230879;
 			
 			// aapt resource value: 0x7f080070
 			public const int fragment_container = 2131230832;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int franButton = 2131230885;
+			// aapt resource value: 0x7f0800a9
+			public const int franButton = 2131230889;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int graceButton = 2131230884;
+			// aapt resource value: 0x7f0800a8
+			public const int graceButton = 2131230888;
 			
 			// aapt resource value: 0x7f08004d
 			public const int graphViewButton = 2131230797;
-
-			// aapt resource value: 0x7f0800b1
-			public const int greenCircleButton = 2131230897;
+			
+			// aapt resource value: 0x7f0800b5
+			public const int greenCircleButton = 2131230901;
 			
 			// aapt resource value: 0x7f08000c
 			public const int hamburgerButton = 2131230732;
 			
-			// aapt resource value: 0x7f08009f
-			public const int helenButton = 2131230879;
+			// aapt resource value: 0x7f0800a5
+			public const int helenButton = 2131230885;
 			
-			// aapt resource value: 0x7f080092
-			public const int imageButton1 = 2131230866;
+			// aapt resource value: 0x7f080098
+			public const int imageButton1 = 2131230872;
 			
-			// aapt resource value: 0x7f080076
-			public const int imageView1 = 2131230838;
+			// aapt resource value: 0x7f08007c
+			public const int imageView1 = 2131230844;
 			
-			// aapt resource value: 0x7f08007a
-			public const int imageView2 = 2131230842;
-			
-			// aapt resource value: 0x7f0800a1
-			public const int helenButton = 2131230881;
-			
-			// aapt resource value: 0x7f080094
-			public const int imageButton1 = 2131230868;
+			// aapt resource value: 0x7f080080
+			public const int imageView2 = 2131230848;
 			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
 			
-// aapt resource value: 0x7f0800a1
-			public const int isabelButton = 2131230881;
+			// aapt resource value: 0x7f0800a7
+			public const int isabelButton = 2131230887;
 			
-			// aapt resource value: 0x7f08009d
-			public const int jackieButton = 2131230877;
-			
-			// aapt resource value: 0x7f0800ad
-			public const int joshuaButton = 2131230893;
-			
-			// aapt resource value: 0x7f0800a0
-			public const int karenButton = 2131230880;
-			
-			// aapt resource value: 0x7f08009e
-			public const int kellyButton = 2131230878;
-			
-			// aapt resource value: 0x7f080088
-			public const int lNameEditText = 2131230856;
 			// aapt resource value: 0x7f0800a3
-			public const int isabelButton = 2131230883;
-			
-			// aapt resource value: 0x7f08009f
-			public const int jackieButton = 2131230879;
+			public const int jackieButton = 2131230883;
 			
 			// aapt resource value: 0x7f080067
 			public const int jackieimgButton = 2131230823;
 			
-			// aapt resource value: 0x7f0800af
-			public const int joshuaButton = 2131230895;
+			// aapt resource value: 0x7f0800b3
+			public const int joshuaButton = 2131230899;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int karenButton = 2131230882;
+			// aapt resource value: 0x7f0800a6
+			public const int karenButton = 2131230886;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int kellyButton = 2131230880;
+			// aapt resource value: 0x7f0800a4
+			public const int kellyButton = 2131230884;
 			
 			// aapt resource value: 0x7f080069
 			public const int kellyImgButton = 2131230825;
 			
-			// aapt resource value: 0x7f08008a
-			public const int lNameEditText = 2131230858;
+			// aapt resource value: 0x7f08008e
+			public const int lNameEditText = 2131230862;
 			
 			// aapt resource value: 0x7f080000
 			public const int large = 2131230720;
@@ -774,66 +746,38 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08000a
 			public const int left = 2131230730;
 			
-			// aapt resource value: 0x7f080048
-			public const int linearLayout1 = 2131230792;
-			
-			// aapt resource value: 0x7f080079
-			public const int linearLayout2 = 2131230841;
-			
-			// aapt resource value: 0x7f080068
-			public const int login_button = 2131230824;
-			
-			// aapt resource value: 0x7f08008b
-			public const int mRadioButton = 2131230859;
-			
-			// aapt resource value: 0x7f080067
-			public const int main_ui_container = 2131230823;
-			
-			// aapt resource value: 0x7f0800ac
-			public const int maryButton = 2131230892;
-			
-			// aapt resource value: 0x7f0800b2
-			public const int maryEditText = 2131230898;
-			
-			// aapt resource value: 0x7f080094
-			public const int maryImgButton = 2131230868;
 			// aapt resource value: 0x7f080049
 			public const int linearLayout1 = 2131230793;
+			
+			// aapt resource value: 0x7f08007f
+			public const int linearLayout2 = 2131230847;
 			
 			// aapt resource value: 0x7f08006e
 			public const int login_button = 2131230830;
 			
-			// aapt resource value: 0x7f08008d
-			public const int mRadioButton = 2131230861;
+			// aapt resource value: 0x7f080091
+			public const int mRadioButton = 2131230865;
 			
-			// aapt resource value: 0x7f080093
-			public const int maryTitleText = 2131230867;
-			
-			// aapt resource value: 0x7f0800b3
-			public const int maryWodDescriptionText = 2131230899;
 			// aapt resource value: 0x7f08006d
 			public const int main_ui_container = 2131230829;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int maryButton = 2131230894;
+			// aapt resource value: 0x7f0800b2
+			public const int maryButton = 2131230898;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int maryEditText = 2131230900;
+			// aapt resource value: 0x7f0800b8
+			public const int maryEditText = 2131230904;
 			
-			// aapt resource value: 0x7f08007e
-			public const int movementsHeaderText = 2131230846;
-
-			// aapt resource value: 0x7f080096
-			public const int maryImage = 2131230870;
+			// aapt resource value: 0x7f08009a
+			public const int maryImage = 2131230874;
 			
-			// aapt resource value: 0x7f080095
-			public const int maryTitleText = 2131230869;
+			// aapt resource value: 0x7f080099
+			public const int maryTitleText = 2131230873;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int maryWodDescriptionText = 2131230901;
+			// aapt resource value: 0x7f0800b9
+			public const int maryWodDescriptionText = 2131230905;
 			
-			// aapt resource value: 0x7f08007a
-			public const int movementsHeaderText = 2131230842;
+			// aapt resource value: 0x7f080084
+			public const int movementsHeaderText = 2131230852;
 			
 			// aapt resource value: 0x7f08001a
 			public const int ninetyCalc = 2131230746;
@@ -853,8 +797,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080014
 			public const int oneRmCalc = 2131230740;
 			
-			// aapt resource value: 0x7f080090
-			public const int pWordEditText = 2131230864;
+			// aapt resource value: 0x7f080094
+			public const int pWordEditText = 2131230868;
 			
 			// aapt resource value: 0x7f08003d
 			public const int picker_subtitle = 2131230781;
@@ -862,8 +806,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08004a
 			public const int profilePictureImageView = 2131230794;
 			
-			// aapt resource value: 0x7f08008c
-			public const int radioGroup1 = 2131230860;
+			// aapt resource value: 0x7f080090
+			public const int radioGroup1 = 2131230864;
 			
 			// aapt resource value: 0x7f080011
 			public const int repsDoneLabel = 2131230737;
@@ -873,39 +817,22 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f080013
 			public const int resetButton = 2131230739;
-
-			// aapt resource value: 0x7f080093
-			public const int returnButton = 2131230867;
-
+			
+			// aapt resource value: 0x7f080097
+			public const int returnButton = 2131230871;
+			
 			// aapt resource value: 0x7f08000b
 			public const int right = 2131230731;
 			
-
-			// aapt resource value: 0x7f080059
-			public const int rosaPrText = 2131230809;
-			
-			// aapt resource value: 0x7f080058
-			public const int rosaWodText = 2131230808;
-			
-			// aapt resource value: 0x7f0800b1
-			public const int rxButton = 2131230897;
-			
-			// aapt resource value: 0x7f08005f
-			public const int sampWod1ImageButton = 2131230815;
-			
-			// aapt resource value: 0x7f080061
-			public const int sampWod2ImgButton = 2131230817;
-			
-			// aapt resource value: 0x7f080063
-			public const int sampWod3ImgButton = 2131230819;
-
+			// aapt resource value: 0x7f0800b7
+			public const int rxButton = 2131230903;
 			
 			// aapt resource value: 0x7f080065
 			public const int sampWod1ImageButton = 2131230821;
 			
-			// aapt resource value: 0x7f080097
-			public const int secondPlaceUserText = 2131230871;
-
+			// aapt resource value: 0x7f08009d
+			public const int secondPlaceUserText = 2131230877;
+			
 			// aapt resource value: 0x7f080018
 			public const int seventyCalc = 2131230744;
 			
@@ -918,12 +845,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080019
 			public const int seventyLabelText = 2131230745;
 			
-			// aapt resource value: 0x7f080090
-			public const int signUpButton = 2131230864;
+			// aapt resource value: 0x7f080096
+			public const int signUpButton = 2131230870;
 			
-			// aapt resource value: 0x7f080085
-			public const int signUpHeaderText = 2131230853;
-
+			// aapt resource value: 0x7f08008b
+			public const int signUpHeaderText = 2131230859;
 			
 			// aapt resource value: 0x7f080020
 			public const int sixtyCalc = 2131230752;
@@ -975,35 +901,19 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f08002a
 			public const int textView1 = 2131230762;
-
-			// aapt resource value: 0x7f080077
-			public const int textView2 = 2131230839;
 			
-			// aapt resource value: 0x7f08007b
-			public const int textView3 = 2131230843;
-			
-			// aapt resource value: 0x7f080098
-			public const int thirdPlaceUserText = 2131230872;
 			// aapt resource value: 0x7f080051
 			public const int textView10 = 2131230801;
 			
-			// aapt resource value: 0x7f080086
-			public const int textView2 = 2131230854;
+			// aapt resource value: 0x7f08007d
+			public const int textView2 = 2131230845;
 			
 			// aapt resource value: 0x7f080052
 			public const int textView22 = 2131230802;
-
-			// aapt resource value: 0x7f080075
-			public const int view1 = 2131230837;
 			
-			// aapt resource value: 0x7f080078
-			public const int view2 = 2131230840;
+			// aapt resource value: 0x7f080081
+			public const int textView3 = 2131230849;
 			
-			// aapt resource value: 0x7f08007c
-			public const int view3 = 2131230844;
-			
-			// aapt resource value: 0x7f080051
-			public const int warFrankPrText = 2131230801;
 			// aapt resource value: 0x7f080054
 			public const int textView33 = 2131230804;
 			
@@ -1034,16 +944,20 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080061
 			public const int textView42 = 2131230817;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int wodHeaderText = 2131230894;
-			
-			// aapt resource value: 0x7f08009b
-			public const int wodsHeaderText = 2131230875;
-			// aapt resource value: 0x7f08009a
-			public const int thirdPlaceUserText = 2131230874;
+			// aapt resource value: 0x7f08009e
+			public const int thirdPlaceUserText = 2131230878;
 			
 			// aapt resource value: 0x7f080008
 			public const int top = 2131230728;
+			
+			// aapt resource value: 0x7f08007b
+			public const int view1 = 2131230843;
+			
+			// aapt resource value: 0x7f08007e
+			public const int view2 = 2131230846;
+			
+			// aapt resource value: 0x7f080082
+			public const int view3 = 2131230850;
 			
 			// aapt resource value: 0x7f08000f
 			public const int weightLiftedLabel = 2131230735;
@@ -1065,21 +979,42 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f080063
 			public const int wodColumnText = 2131230819;
-
-			// aapt resource value: 0x7f08007f
-			public const int youtubePlayer1 = 2131230847;
 			
-			// aapt resource value: 0x7f080080
-			public const int youtubePlayer2 = 2131230848;
+			// aapt resource value: 0x7f08004e
+			public const int wodHeader = 2131230798;
 			
-			// aapt resource value: 0x7f080081
-			public const int youtubePlayer3 = 2131230849;
+			// aapt resource value: 0x7f0800b4
+			public const int wodHeaderText = 2131230900;
 			
-			// aapt resource value: 0x7f080082
-			public const int youtubePlayer4 = 2131230850;
+			// aapt resource value: 0x7f0800a1
+			public const int wodsHeaderText = 2131230881;
 			
-			// aapt resource value: 0x7f080083
-			public const int youtubePlayer5 = 2131230851;
+			// aapt resource value: 0x7f080074
+			public const int wodsMainImgButton = 2131230836;
+			
+			// aapt resource value: 0x7f080072
+			public const int wodsTextView = 2131230834;
+			
+			// aapt resource value: 0x7f08002b
+			public const int wodstarImage = 2131230763;
+			
+			// aapt resource value: 0x7f080071
+			public const int wodstarTextView = 2131230833;
+			
+			// aapt resource value: 0x7f080085
+			public const int youtubePlayer1 = 2131230853;
+			
+			// aapt resource value: 0x7f080086
+			public const int youtubePlayer2 = 2131230854;
+			
+			// aapt resource value: 0x7f080087
+			public const int youtubePlayer3 = 2131230855;
+			
+			// aapt resource value: 0x7f080088
+			public const int youtubePlayer4 = 2131230856;
+			
+			// aapt resource value: 0x7f080089
+			public const int youtubePlayer5 = 2131230857;
 			
 			static Id()
 			{
@@ -1299,6 +1234,9 @@ namespace WodstarMobileApp.Droid
 		
 		public partial class Style
 		{
+			
+			// aapt resource value: 0x7f070004
+			public const int Mono_Android_Theme_Splash = 2131165188;
 			
 			// aapt resource value: 0x7f070003
 			public const int Theme_Splash = 2131165187;

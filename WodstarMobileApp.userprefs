@@ -1,6 +1,5 @@
-
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
   <MonoDevelop.Ide.Workbench>
     <Files>
       <File FileName="Droid\MainActivity.cs" Line="45" Column="45" />
@@ -9,17 +8,7 @@
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
-        <State expanded="True">
-          <Node name="WodstarMobileApp" expanded="True" />
-          <Node name="WodstarMobileApp.Droid" expanded="True">
-            <Node name="ComponentReferenceFolder" expanded="True" />
-            <Node name="Properties" expanded="True" />
-            <Node name="Resources" expanded="True">
-              <Node name="drawable" expanded="True" />
-            </Node>
-            <Node name="MovementLibraryActivity.cs" selected="True" />
-          </Node>
-        </State>
+        <State expanded="True" selected="True" />
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
@@ -27,5 +16,5 @@
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" />
+  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" />
 </Properties>
