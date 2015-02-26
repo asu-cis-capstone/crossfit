@@ -24,13 +24,18 @@ namespace WodstarMobileApp.Droid
 	public class MainActivity : Activity, Request.IGraphUserCallback
 	{
 		//Class variables
-		public static string accountType { get; set; }
-		public static string email { get; set; }
-		public static string firstName { get; set; }
-		public static string gender { get; set; }
-		public static string lastName { get; set; }
-		public static string userId { get; set; }
-		public static string username { get; set; }
+		public static string accountType;
+		public static string email;
+		public static string firstName;
+		public static string gender;
+		public static string lastName;
+		public static string userId;
+		public static string username;
+		public static MobileServiceClient MobileService = new MobileServiceClient(
+			"https://wodstar.azure-mobile.net/",
+			"kQKEljOALXgvBQWocFdYxXYaHlfAYB80"
+		);
+		private IMobileServiceTable<User> userTable;
 
 		//First method that is executed
 		protected override void OnCreate (Bundle bundle)
@@ -42,8 +47,17 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.Login);
 
 			//Connect to Azure and instantiate tables
-			Azure.initializeAzure ();
-
+		//	Azure.initializeAzure ();
+			try {
+				User exampleUser = new User();
+				exampleUser.firstName="Laura";
+				exampleUser.lastName="Gagliano";
+				exampleUser.username="lgagliano";
+				userTable = MobileService.GetTable<User> ();
+				Console.WriteLine(userTable.ToString());
+			} catch( Exception e) {
+				Console.WriteLine(e);
+			}
 			//Get Facebook button object
 			//Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
 
@@ -104,11 +118,12 @@ namespace WodstarMobileApp.Droid
 				alert.Show ();
 
 				//Get or create user account in Azure
-				Azure.userAccount (username);
+			//	Azure.userAccount (username);
 
 				//Start a new Activity for the Main layout
 				StartActivity (typeof(StartScreenActivity));
 			}
 		}//end OnCompleted method
+
 	}	//end class
 } //end namespace

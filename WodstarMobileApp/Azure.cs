@@ -7,8 +7,8 @@ namespace WodstarMobileApp
 	public static class Azure
 	{
 		private static MobileServiceClient azureClient;
-		public static Users thisUser;
-		private static IMobileServiceTableQuery<Users> userTable;
+		public static User thisUser;
+		private static IMobileServiceTableQuery<User> userTable;
 
 		public static void initializeAzure() {
 			//connect to Azure
@@ -18,7 +18,7 @@ namespace WodstarMobileApp
 
 		public static void userAccount(string username) {
 			//fetch the user details from the database
-			userTable = azureClient.GetTable<Users>().Where(user => user.username == username);
+			userTable = azureClient.GetTable<User>().Where(user => user.username == username);
 
 			if (userTable != null) {
 				//do nothing yet

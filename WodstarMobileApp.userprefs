@@ -1,6 +1,23 @@
-﻿<Properties StartupItem="Droid/WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Emulator_API21" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="WodstarMobileApp\UserDOM.cs">
+    <Files>
+      <File FileName="WodstarMobileApp\Azure.cs" Line="1" Column="1" />
+      <File FileName="Droid\MainActivity.cs" Line="39" Column="39" />
+      <File FileName="WodstarMobileApp\UserDOM.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True" selected="True">
+          <Node name="WodstarMobileApp" expanded="True" />
+          <Node name="WodstarMobileApp.Droid" expanded="True">
+            <Node name="ComponentReferenceFolder" expanded="True" />
+            <Node name="Assets" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
       <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="28" column="1" />

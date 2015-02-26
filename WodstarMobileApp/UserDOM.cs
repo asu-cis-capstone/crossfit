@@ -3,7 +3,7 @@ using Newtonsoft.Json;
 
 namespace WodstarMobileApp
 {
-	public class Users
+	public class User
 	{
 		[JsonProperty(PropertyName = "id")]
 		public int id { get; set; }
@@ -28,5 +28,9 @@ namespace WodstarMobileApp
 
 		[JsonProperty(PropertyName = "age")]
 		public string age { get; set; }
+
+		public User() {
+
+		}
 	}
 }
