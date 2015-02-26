@@ -2,6 +2,10 @@
 using System;
 using Android.App;
 using Android.OS;
+using Android.Content;
+using Android.Views;
+using Android.Widget;
+using Android.Runtime;
 using Android.Widget;
 using Google.YouTube.Player;
 
@@ -16,11 +20,6 @@ namespace WodstarMobileApp.Droid
 		public Boolean thirdPlayer=false;
 		public Boolean fourthPlayer=false;
 		public Boolean fifthPlayer=false;
-		public Boolean sixthPlayer=false;
-		public Boolean seventhPlayer=false;
-		public Boolean eighthPlayer=false;
-		public Boolean ninthPlayer=false;
-		public Boolean tenthPlayer=false;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -41,19 +40,12 @@ namespace WodstarMobileApp.Droid
 				youtubePlayer4.Initialize (DeveloperKey.key, this);
 			YouTubePlayerFragment youtubePlayer5 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
 				youtubePlayer5.Initialize (DeveloperKey.key, this);
-			YouTubePlayerFragment youtubePlayer6 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer6);
-				youtubePlayer6.Initialize (DeveloperKey.key, this);
-			YouTubePlayerFragment youtubePlayer7 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer7);
-				youtubePlayer7.Initialize (DeveloperKey.key, this);
-			YouTubePlayerFragment youtubePlayer8 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer8);
-				youtubePlayer8.Initialize (DeveloperKey.key, this);
-		//	YouTubePlayerFragment youtubePlayer9 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer9);
-		//		youtubePlayer9.Initialize (DeveloperKey.key, this);
-			YouTubePlayerFragment youtubePlayer10 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer10);
-				youtubePlayer10.Initialize (DeveloperKey.key, this);
 
+			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			Button hamburgerButton = FindViewById<Button> (Resource.Id.hamburgerButton);
-			hamburgerButton.Click += goToHomeScreen;
+			hamburgerButton.Click += (sender, e) => {
+				menu.AnimatedOpened = !menu.AnimatedOpened;
+			};
 		}
 
 		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
@@ -68,19 +60,8 @@ namespace WodstarMobileApp.Droid
 				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer4);
 			} else if (!fifthPlayer) {
 				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
-			} else if (!sixthPlayer) {
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer6);
-			} else if (!seventhPlayer) {
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer7);
-			} else if (!eighthPlayer) {
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer8);
-			} else if (!ninthPlayer) {
-	//			return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer9);
-			} else if (!tenthPlayer) {
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer10);
 			}
-
-			return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer3);
+			return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
 		}
 
 		public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
@@ -118,24 +99,9 @@ namespace WodstarMobileApp.Droid
 			} else if (!fourthPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+3], 50);
 				fourthPlayer=true;
-			} else if (!fifthPlayer) {
+			} else {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+4], 50);
 				fifthPlayer=true;
-			} else if (!sixthPlayer) {
-				player.CueVideo (MovementLinks.MovementUrls[startIndex+5], 50);
-				sixthPlayer=true;
-			} else if (!seventhPlayer) {
-				player.CueVideo (MovementLinks.MovementUrls[startIndex+6], 50);
-				seventhPlayer=true;
-			} else if (!eighthPlayer) {
-				player.CueVideo (MovementLinks.MovementUrls[startIndex+7], 50);
-				eighthPlayer=true;
-			} else if (!ninthPlayer) {
-				player.CueVideo (MovementLinks.MovementUrls[startIndex+8], 50);
-				ninthPlayer=true;
-			} else if (!tenthPlayer) {
-				player.CueVideo (MovementLinks.MovementUrls[startIndex+9], 50);
-				tenthPlayer=true;
 			} 
 		}
 
@@ -145,11 +111,6 @@ namespace WodstarMobileApp.Droid
 			thirdPlayer=false;
 			fourthPlayer=false;
 			fifthPlayer=false;
-			sixthPlayer=false;
-			seventhPlayer=false;
-			eighthPlayer=false;
-			ninthPlayer=false;
-			tenthPlayer=false;
 		}
 
 	} //End class

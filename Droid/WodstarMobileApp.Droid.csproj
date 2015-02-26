@@ -92,6 +92,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="WorkoutActivity.cs" />
     <Compile Include="WorkoutLibraryActivity.cs" />
+    <Compile Include="FlyOutMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -139,6 +140,7 @@
     <AndroidResource Include="Resources\drawable\amanda.png" />
     <AndroidResource Include="Resources\drawable\jackie.png" />
     <AndroidResource Include="Resources\drawable\kelly.png" />
+    <AndroidResource Include="Resources\layout\MenuLayout.axml" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

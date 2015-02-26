@@ -1,119 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<wodstarmobileapp.droid.FlyOutContainer xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="88.3dp"
-        android:layout_weight="1">
-        <Button
-            android:layout_width="49.1dp"
-            android:layout_height="45.6dp"
-            android:id="@+id/hamburgerButton"
-            android:background="@drawable/hamburger" />
-        <TextView
-            android:text="Movements"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/movementsHeaderText"
-            android:layout_marginLeft="80dp"
-            android:layout_marginRight="80dp" />
-    </LinearLayout>
+    android:layout_height="fill_parent"
+    android:id="@+id/FlyOutContainer">
+    <include
+        layout="@layout/MenuLayout" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_weight="1"
-        android:scrollbars="vertical"
-        android:scrollbarStyle="outsideInset"
-        android:overScrollMode="always"
-        android:verticalScrollbarPosition="right"
-        android:scrollX="0dp"
-        android:scrollY=" 0dp"
-        android:scrollbarAlwaysDrawHorizontalTrack="true"
-        android:scrollbarAlwaysDrawVerticalTrack="true">
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+        android:id="@+id/FlyOutContent">
+        <LinearLayout
+            android:orientation="horizontal"
             android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer1"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+            android:layout_height="88.3dp"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="49.1dp"
+                android:layout_height="45.6dp"
+                android:id="@+id/hamburgerButton"
+                android:background="@drawable/hamburger" />
+            <TextView
+                android:text="Movements"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/movementsHeaderText"
+                android:layout_marginLeft="80dp"
+                android:layout_marginRight="80dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer2"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer3"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer4"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer5"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer6"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer7"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer8"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer9"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
-        <fragment
-            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-            android:layout_width="fill_parent"
-            android:layout_height="169.1dp"
-            android:id="@+id/youtubePlayer10"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="30dp"
-            android:layout_marginLeft="30dp" />
+            android:layout_height="fill_parent"
+            android:layout_weight="1"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideInset"
+            android:overScrollMode="always"
+            android:verticalScrollbarPosition="right"
+            android:scrollX="0dp"
+            android:scrollY=" 0dp"
+            android:scrollbarAlwaysDrawHorizontalTrack="true"
+            android:scrollbarAlwaysDrawVerticalTrack="true">
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="169.1dp"
+                android:id="@+id/youtubePlayer1"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp" />
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="169.1dp"
+                android:id="@+id/youtubePlayer2"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp" />
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="169.1dp"
+                android:id="@+id/youtubePlayer3"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp" />
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="169.1dp"
+                android:id="@+id/youtubePlayer4"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp" />
+            <fragment
+                android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+                android:layout_width="fill_parent"
+                android:layout_height="169.1dp"
+                android:id="@+id/youtubePlayer5"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginLeft="30dp" />
+        </LinearLayout>
     </LinearLayout>
-</LinearLayout>
+</wodstarmobileapp.droid.FlyOutContainer>
