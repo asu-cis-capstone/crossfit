@@ -19,8 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="41.2dp"
             android:id="@+id/wodstarTextView"
-            android:layout_marginLeft="85dp"
+            android:layout_marginLeft="98.1dp"
             android:layout_marginRight="85dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="50.4dp"
+            android:layout_height="50.1dp"
+            android:id="@+id/wodstarImage"
+            android:layout_marginRight="0.0dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -59,17 +65,19 @@
         android:layout_weight="1"
         android:layout_marginBottom="0.0dp">
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@+drawable/camillePNG"
             android:layout_width="145.5dp"
             android:layout_height="145.5dp"
             android:id="@+id/wodsMainImgButton"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:background="@android:color/black" />
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@+drawable/graph"
             android:layout_width="145.5dp"
             android:layout_height="145.5dp"
             android:id="@+id/statsMainImgButton"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:background="@android:color/black" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -103,7 +111,7 @@
         android:layout_height="88.3dp"
         android:layout_weight="1">
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
+            android:src="@+drawable/forums"
             android:layout_width="145.5dp"
             android:layout_height="145.5dp"
             android:id="@+id/forumsMainImgButton"
