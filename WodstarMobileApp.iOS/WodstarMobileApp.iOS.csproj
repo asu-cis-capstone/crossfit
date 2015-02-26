@@ -102,4 +102,7 @@
     <Compile Include="AppDelegate.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <InterfaceDefinition Include="StartScreen.xib" />
+  </ItemGroup>
 </Project>
