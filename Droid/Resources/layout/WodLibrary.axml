@@ -19,8 +19,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/wodsHeaderText"
-            android:layout_marginLeft="110dp"
+            android:layout_marginLeft="122.2dp"
             android:layout_marginRight="100dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="50.4dp"
+            android:layout_height="match_parent"
+            android:id="@+id/wodstarImage"
+            android:layout_marginRight="0.0dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="vertical"
@@ -28,7 +34,7 @@
         android:layout_height="fill_parent"
         android:layout_weight="1">
         <ImageButton
-            android:src="@drawable/amanda"
+            android:src="@+drawable/amanda"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/amandaButton"
@@ -37,7 +43,7 @@
             android:layout_marginLeft="30dp"
             android:cropToPadding="false" />
         <ImageButton
-            android:src="@drawable/jackie"
+            android:src="@+drawable/jackie"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/jackieButton"
@@ -45,7 +51,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/kellyButton"
@@ -53,7 +59,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/helenButton"
@@ -61,7 +67,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/karenButton"
@@ -69,7 +75,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/isabelButton"
@@ -77,7 +83,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/graceButton"
@@ -85,7 +91,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/franButton"
@@ -93,7 +99,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/elizabethButton"
@@ -101,7 +107,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/dianeButton"
@@ -109,7 +115,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/cindyButton"
@@ -117,7 +123,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/chelseaButton"
@@ -125,7 +131,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/annieButton"
@@ -133,7 +139,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/christineButton"
@@ -141,7 +147,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/barbaraButton"
@@ -149,7 +155,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/angieButton"
@@ -157,7 +163,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/maryButton"
@@ -165,7 +171,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginLeft="30dp" />
         <ImageButton
-            android:src="@drawable/kelly"
+            android:src="@+drawable/kelly"
             android:layout_width="match_parent"
             android:layout_height="169.1dp"
             android:id="@+id/joshuaButton"

@@ -29,6 +29,12 @@
                 android:id="@+id/movementsHeaderText"
                 android:layout_marginLeft="80dp"
                 android:layout_marginRight="80dp" />
+			<ImageView
+				android:src="@drawable/icon"
+				android:layout_width="50.4dp"
+				android:layout_height="match_parent"
+				android:id="@+id/wodstarImage"
+				android:layout_marginRight="0.0dp" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"

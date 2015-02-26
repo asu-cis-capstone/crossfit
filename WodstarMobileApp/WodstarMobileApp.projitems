@@ -17,6 +17,5 @@
     <Compile Include="$(MSBuildThisFileDirectory)UserDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MovementDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutDOM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)WorkoutLinks.cs" />
   </ItemGroup>
 </Project>

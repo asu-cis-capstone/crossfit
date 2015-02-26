@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{A020443F-2322-4EB0-BD3A-DB04CFB63D15}</ProjectGuid>
+    <ProjectGuid>{31C64D0F-401C-4B67-A64F-6C662E7ED83B}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <RootNamespace>WodstarMobileApp.iOS</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
@@ -16,18 +16,18 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>i386</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchI18n>
-    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <MtouchArch>i386</MtouchArch>
     <ConsolePause>false</ConsolePause>
@@ -39,21 +39,19 @@
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhone\Debug</OutputPath>
     <DefineConstants>DEBUG;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7</MtouchArch>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <CodesignKey>iPhone Developer</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
-    <IpaPackageName>
-    </IpaPackageName>
-    <MtouchI18n>
-    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
     <MtouchArch>ARMv7</MtouchArch>
@@ -64,6 +62,7 @@
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\Ad-Hoc</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7</MtouchArch>
@@ -77,6 +76,7 @@
     <DebugType>full</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\iPhone\AppStore</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7</MtouchArch>
@@ -92,6 +92,9 @@
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\WodstarMobileApp.iOS\Images.xcassets\AppIcon.appiconset\Contents.json" />
+    <BundleResource Include="Resources\WodstarMobileApp.iOS\Images.xcassets\LaunchImage.launchimage\Contents.json" />
+    <BundleResource Include="Resources\WodstarMobileApp.iOS\Images.xcassets\LaunchImage.launchimage\Default-568h%402x.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
@@ -100,34 +103,14 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="RootViewController.cs" />
-    <Compile Include="RootViewController.designer.cs">
-      <DependentUpon>RootViewController.cs</DependentUpon>
+    <Compile Include="AppDelegate.designer.cs">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
     </Compile>
-    <Compile Include="DataViewController.cs" />
-    <Compile Include="DataViewController.designer.cs">
-      <DependentUpon>DataViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ModelController.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <InterfaceDefinition Include="MainStoryboard.storyboard" />
-    <InterfaceDefinition Include="SignUp.xib" />
-    <InterfaceDefinition Include="Calc.xib" />
-    <InterfaceDefinition Include="Leaderboard.xib" />
-    <InterfaceDefinition Include="Resources\StartUp.storyboard" />
-    <InterfaceDefinition Include="Resources\MovLibrary.xib" />
-    <InterfaceDefinition Include="Resources\WODboard.xib" />
-    <InterfaceDefinition Include="Resources\Main.xib" />
-    <InterfaceDefinition Include="Resources\StartScreen.xib" />
-    <InterfaceDefinition Include="Resources\MovLibrarySearch.xib" />
-    <InterfaceDefinition Include="MovLibrary.xib" />
-    <InterfaceDefinition Include="MovLibrarySearch.xib" />
-    <InterfaceDefinition Include="UserProfile.xib" />
-    <InterfaceDefinition Include="Diary.xib" />
-    <InterfaceDefinition Include="Login.xib" />
-    <InterfaceDefinition Include="WODpage.xib" />
-    <InterfaceDefinition Include="PersonalRecord.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
+  <ItemGroup>
+    <InterfaceDefinition Include="StartScreen.xib" />
+    <InterfaceDefinition Include="Main.storyboard" />
+    <InterfaceDefinition Include="Calc.xib" />
+  </ItemGroup>
 </Project>

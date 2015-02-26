@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:p1="http://schemas.android.com/apk/res/android"
+    p1:layout_width="match_parent"
+    p1:layout_height="match_parent"
+    p1:id="@+id/tableLayout1">
+    <TableRow
+        p1:id="@+id/tableRow1">
+        <TextView
+            p1:text="Mary"
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:layout_column="0"
+            p1:id="@+id/textView10" />
+        <TextView
+            p1:text="80 reps"
+            p1:textAppearance="?android:attr/textAppearanceLarge"
+            p1:layout_column="1"
+            p1:id="@+id/textView22" />
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow2">
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow3">
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow6">
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow5">
+    </TableRow>
+    <TableRow
+        p1:id="@+id/tableRow4">
+    </TableRow>
+</TableLayout>

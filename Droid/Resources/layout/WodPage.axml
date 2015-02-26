@@ -20,8 +20,14 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:id="@+id/wodHeaderText"
-            android:layout_marginLeft="110dp"
+            android:layout_marginLeft="124.0dp"
             android:layout_marginRight="105dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="50.4dp"
+            android:layout_height="match_parent"
+            android:id="@+id/wodstarImage"
+            android:layout_marginRight="0.0dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -31,14 +37,11 @@
         android:minWidth="25px"
         android:minHeight="25px"
         android:id="@+id/linearLayout1">
-        <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="386.3dp"
-            android:layout_height="219.0dp"
-            android:id="@+id/maryImgButton"
-            android:layout_marginLeft="0dp"
-            android:layout_marginRight="0dp"
-            android:layout_marginBottom="0.0dp" />
+        <ImageView
+            android:src="@+drawable/mary"
+            android:layout_width="382.8dp"
+            android:layout_height="match_parent"
+            android:id="@+id/maryImage" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
