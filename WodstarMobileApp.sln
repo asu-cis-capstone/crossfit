@@ -12,8 +12,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		WodstarMobileApp.sln = WodstarMobileApp.sln
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "iOSWodstar", "iOSWodstar\iOSWodstar.csproj", "{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WodstarMobileApp.iOS", "WodstarMobileApp.iOS\WodstarMobileApp.iOS.csproj", "{31C64D0F-401C-4B67-A64F-6C662E7ED83B}"
 EndProject
 Global
@@ -60,22 +58,6 @@ Global
 		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|iPhone.Build.0 = Release|Any CPU
 		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{CA7F40A4-2604-4EBE-B353-D05B7099A49B}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Ad-Hoc|iPhone.ActiveCfg = Ad-Hoc|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Ad-Hoc|iPhone.Build.0 = Ad-Hoc|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.AppStore|iPhone.ActiveCfg = AppStore|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.AppStore|iPhone.Build.0 = AppStore|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Debug|Any CPU.ActiveCfg = Debug|iPhoneSimulator
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Debug|Any CPU.Build.0 = Debug|iPhoneSimulator
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Debug|iPhone.ActiveCfg = Debug|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Debug|iPhone.Build.0 = Debug|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Release|Any CPU.ActiveCfg = Release|iPhoneSimulator
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Release|Any CPU.Build.0 = Release|iPhoneSimulator
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Release|iPhone.ActiveCfg = Release|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Release|iPhone.Build.0 = Release|iPhone
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
-		{E2791F3F-5643-4E62-BAC1-660BADF2F3C1}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
 		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Ad-Hoc|iPhone.ActiveCfg = Debug|Any CPU
 		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.Ad-Hoc|iPhone.Build.0 = Debug|Any CPU
 		{EF1EE6AB-AF08-417D-B3E3-7F5A57ED32D3}.AppStore|iPhone.ActiveCfg = Debug|Any CPU
