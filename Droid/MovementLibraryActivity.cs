@@ -6,7 +6,6 @@ using Android.Content;
 using Android.Views;
 using Android.Widget;
 using Android.Runtime;
-using Android.Widget;
 using Google.YouTube.Player;
 
 namespace WodstarMobileApp.Droid
