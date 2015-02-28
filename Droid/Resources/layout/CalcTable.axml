@@ -35,13 +35,21 @@
         android:layout_weight="1">
         <ImageButton
             android:src="@+drawable/IMG_6063"
-            android:layout_width="match_parent"
-            android:layout_height="490.5dp"
-            android:id="@+id/calcTableImageButton" />
+            android:layout_width="370dp"
+            android:layout_height="489.6dp"
+            android:id="@+id/calcTableImageButton"
+            android:layout_marginLeft="7dp"
+            android:layout_marginRight="7dp" />
         <Button
             android:text="Click to return to Calculator"
-            android:layout_width="match_parent"
+            android:layout_width="371dp"
             android:layout_height="73.4dp"
-            android:id="@+id/calcReturnButton" />
+            android:id="@+id/calcReturnButton"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="2dp"
+            android:textColor="#ffffffff"
+            android:background="#ff4baab1"
+            android:textSize="18dp" />
     </LinearLayout>
 </LinearLayout>

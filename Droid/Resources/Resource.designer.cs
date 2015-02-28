@@ -259,20 +259,20 @@ namespace WodstarMobileApp.Droid
 		public partial class Drawable
 		{
 			
-			// aapt resource value: 0x7f020038
-			public const int Danim1 = 2130837560;
-			
 			// aapt resource value: 0x7f020037
-			public const int IMG_6063 = 2130837559;
+			public const int Danim1 = 2130837559;
+			
+			// aapt resource value: 0x7f020036
+			public const int IMG_6063 = 2130837558;
 			
 			// aapt resource value: 0x7f020000
 			public const int amanda = 2130837504;
 			
-			// aapt resource value: 0x7f02003a
-			public const int camillePNG = 2130837562;
-			
 			// aapt resource value: 0x7f020039
-			public const int cindy = 2130837561;
+			public const int camillePNG = 2130837561;
+			
+			// aapt resource value: 0x7f020038
+			public const int cindy = 2130837560;
 			
 			// aapt resource value: 0x7f020001
 			public const int com_facebook_button_blue = 2130837505;
@@ -343,8 +343,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f020017
 			public const int com_facebook_logo = 2130837527;
 			
-			// aapt resource value: 0x7f020036
-			public const int com_facebook_picker_default_separator_color = 2130837558;
+			// aapt resource value: 0x7f020035
+			public const int com_facebook_picker_default_separator_color = 2130837557;
 			
 			// aapt resource value: 0x7f020018
 			public const int com_facebook_picker_item_background = 2130837528;
@@ -418,11 +418,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f02002f
 			public const int com_facebook_usersettingsfragment_background_gradient = 2130837551;
 			
-			// aapt resource value: 0x7f02003c
-			public const int forums = 2130837564;
-			
 			// aapt resource value: 0x7f02003b
-			public const int graph = 2130837563;
+			public const int forums = 2130837563;
+			
+			// aapt resource value: 0x7f02003a
+			public const int graph = 2130837562;
 			
 			// aapt resource value: 0x7f020030
 			public const int hamburger = 2130837552;
@@ -436,14 +436,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f020033
 			public const int kelly = 2130837555;
 			
-			// aapt resource value: 0x7f02003d
-			public const int mary = 2130837565;
+			// aapt resource value: 0x7f02003c
+			public const int mary = 2130837564;
 			
 			// aapt resource value: 0x7f020034
-			public const int monoandroidsplash = 2130837556;
-			
-			// aapt resource value: 0x7f020035
-			public const int splash = 2130837557;
+			public const int splash = 2130837556;
 			
 			static Drawable()
 			{
@@ -484,6 +481,9 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f08004b
 			public const int bioTextView = 2131230795;
+			
+			// aapt resource value: 0x7f0800b7
+			public const int blackDiamondButton = 2131230903;
 			
 			// aapt resource value: 0x7f0800b6
 			public const int blueSquareButton = 2131230902;
@@ -764,17 +764,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f0800b2
 			public const int maryButton = 2131230898;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int maryEditText = 2131230904;
-			
 			// aapt resource value: 0x7f08009a
 			public const int maryImage = 2131230874;
 			
 			// aapt resource value: 0x7f080099
 			public const int maryTitleText = 2131230873;
-			
-			// aapt resource value: 0x7f0800b9
-			public const int maryWodDescriptionText = 2131230905;
 			
 			// aapt resource value: 0x7f080084
 			public const int movementsHeaderText = 2131230852;
@@ -824,8 +818,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08000b
 			public const int right = 2131230731;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int rxButton = 2131230903;
+			// aapt resource value: 0x7f0800b8
+			public const int rxButton = 2131230904;
 			
 			// aapt resource value: 0x7f080065
 			public const int sampWod1ImageButton = 2131230821;
@@ -904,6 +898,9 @@ namespace WodstarMobileApp.Droid
 			
 			// aapt resource value: 0x7f080051
 			public const int textView10 = 2131230801;
+			
+			// aapt resource value: 0x7f0800b9
+			public const int textView11 = 2131230905;
 			
 			// aapt resource value: 0x7f08007d
 			public const int textView2 = 2131230845;
@@ -1234,9 +1231,6 @@ namespace WodstarMobileApp.Droid
 		
 		public partial class Style
 		{
-			
-			// aapt resource value: 0x7f070004
-			public const int Mono_Android_Theme_Splash = 2131165188;
 			
 			// aapt resource value: 0x7f070003
 			public const int Theme_Splash = 2131165187;

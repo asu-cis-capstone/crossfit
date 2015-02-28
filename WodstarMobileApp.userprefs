@@ -1,19 +1,13 @@
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="Droid\MainActivity.cs" Line="45" Column="45" />
-      <File FileName="Droid\FlyOutMenu.cs" Line="18" Column="18" />
-      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" Line="48" Column="48" />
-    </Files>
-    <Pads>
-      <Pad Id="ProjectPad">
-        <State expanded="True" selected="True" />
-      </Pad>
-    </Pads>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.DemoAndroid" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="28" column="1" />
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="30" column="1" />
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="32" column="1" />
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="34" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" />
