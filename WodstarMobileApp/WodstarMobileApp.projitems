@@ -14,9 +14,10 @@
     <Compile Include="$(MSBuildThisFileDirectory)YouTubeFailureRecoveryActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MovementLinks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Azure.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UserDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MovementDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutLinks.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)TodoItem.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserAccountDOM.cs" />
   </ItemGroup>
 </Project>

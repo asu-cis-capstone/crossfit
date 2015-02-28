@@ -3,13 +3,10 @@ using Newtonsoft.Json;
 
 namespace WodstarMobileApp
 {
-	public class User
+	public class UserAccount
 	{
 		[JsonProperty(PropertyName = "id")]
-		public int id { get; set; }
-
-		[JsonProperty(PropertyName = "userImage")] 
-		public Android.Media.Image userImage { get; set; }
+		public int id { get; private set; }
 
 		[JsonProperty(PropertyName = "username")]
 		public string username { get; set; }
@@ -29,8 +26,7 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "age")]
 		public string age { get; set; }
 
-		public User() {
-
-		}
+		[JsonProperty(PropertyName = "userImage")] 
+		public Android.Media.Image userImage { get; set; }
 	}
 }

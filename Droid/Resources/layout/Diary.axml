@@ -38,7 +38,7 @@
         android:minHeight="25px"
         android:id="@+id/linearLayout1">
         <ImageView
-            android:src="@+drawable/Danim1"
+            android:src="@+drawable/danim1"
             android:layout_width="140dp"
             android:layout_height="140dp"
             android:id="@+id/profilePictureImageView"

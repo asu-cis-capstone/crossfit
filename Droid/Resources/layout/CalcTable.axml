@@ -34,7 +34,7 @@
         android:layout_height="fill_parent"
         android:layout_weight="1">
         <ImageButton
-            android:src="@+drawable/IMG_6063"
+            android:src="@+drawable/img_6063"
             android:layout_width="370dp"
             android:layout_height="489.6dp"
             android:id="@+id/calcTableImageButton"

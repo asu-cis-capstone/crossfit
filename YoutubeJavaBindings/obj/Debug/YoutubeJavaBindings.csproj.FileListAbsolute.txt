@@ -1,4 +1,0 @@
-C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\YoutubeJavaBindings\bin\Debug\YoutubeJavaBindings.dll
-C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\YoutubeJavaBindings\bin\Debug\YoutubeJavaBindings.pdb
-C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\YoutubeJavaBindings\obj\Debug\YoutubeJavaBindings.dll
-C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\YoutubeJavaBindings\obj\Debug\YoutubeJavaBindings.pdb
