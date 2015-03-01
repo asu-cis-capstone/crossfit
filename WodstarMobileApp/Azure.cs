@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.Sync;
 
@@ -7,23 +8,45 @@ namespace WodstarMobileApp
 	public static class Azure
 	{
 		private static MobileServiceClient azureClient;
-		public static UserAccount thisUser;
-		private static IMobileServiceTableQuery<UserAccount> userTable;
+		//public static UserAccount thisUser;
+		private static IMobileServiceTable<UserAccount> userAccountTable;
 
-		public static void initializeAzure() {
+		public static void InitializeAzure() {
 			//connect to Azure
-			CurrentPlatform.Init();
 			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "kQKEljOALXgvBQWocFdYxXYaHlfAYB80");
+			CurrentPlatform.Init();
 		}//end initializeAzure method
 
-		public static void userAccount(string username) {
-			//fetch the user details from the database
-			userTable = azureClient.GetTable<UserAccount>().Where(u => u.username == username);
+		public async static void GetUserAccount(UserAccount thisUser) {
+			//Set UserAccount table object
+			userAccountTable = azureClient.GetTable<UserAccount>();
 
-			if (userTable != null) {
-				//do nothing yet
+			//Query the UserAccount table for the logged in user
+			List<UserAccount> users = await userAccountTable
+				.Where(u => u.Username == thisUser.Username)
+				.ToListAsync();
+
+			//Create the record in UserAccount table if no records are found
+			if (users.Count == 0) {
+				CreateUserAccount (thisUser);
+			//Otherwise populate thisUser object with the fetched details
+			} else {
+				thisUser.Id = users [0].Id;
+				thisUser.Gender = users [0].Gender;
+				thisUser.Age = users [0].Age;
 			}
 		}//end userAccount method
+
+		public async static void CreateUserAccount(UserAccount thisUser) {
+			//Set UserAccount table object
+			userAccountTable = azureClient.GetTable<UserAccount>();
+
+			//Insert new record
+			await userAccountTable.InsertAsync(thisUser);
+
+			//Call GetUserAccount to fetch the Id from Azure
+			GetUserAccount (thisUser);
+		}
 
 /*		public static WorkoutDOM getWorkout(string id) {
 			return new WorkoutDOM ();

@@ -5,28 +5,33 @@ namespace WodstarMobileApp
 {
 	public class UserAccount
 	{
-		[JsonProperty(PropertyName = "id")]
-		public int id { get; private set; }
+		[JsonProperty(PropertyName = "Id")]
+		public string Id { get; set; }
 
-		[JsonProperty(PropertyName = "username")]
-		public string username { get; set; }
+		[JsonProperty(PropertyName = "Username")]
+		public string Username { get; set; }
 
-		[JsonProperty(PropertyName = "account_type")]
-		public string accountType { get; set; }
+		[JsonProperty(PropertyName = "AccountType")]
+		public string AccountType { get; set; }
 
-		[JsonProperty(PropertyName = "first_name")]
-		public string firstName { get; set; }
+		[JsonProperty(PropertyName = "FirstName")]
+		public string FirstName { get; set; }
 
-		[JsonProperty(PropertyName = "last_name")]
-		public string lastName { get; set; }
+		[JsonProperty(PropertyName = "LastName")]
+		public string LastName { get; set; }
 
-		[JsonProperty(PropertyName = "gender")]
-		public string gender { get; set; }
+		[JsonProperty(PropertyName = "Gender")]
+		public string Gender { get; set; }
 
-		[JsonProperty(PropertyName = "age")]
-		public string age { get; set; }
+		[JsonProperty(PropertyName = "Age")]
+		public int Age { get; set; }
 
 		[JsonProperty(PropertyName = "userImage")] 
 		public Android.Media.Image userImage { get; set; }
+
+		//Default constructor
+		public UserAccount () {
+
+		}
 	}
 }

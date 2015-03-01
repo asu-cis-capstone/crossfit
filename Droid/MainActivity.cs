@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Net.Http;
 using Android.App;
 using Android.Content;
 using Android.Content.PM;
@@ -11,10 +12,8 @@ using Xamarin.Facebook;
 using Xamarin.Facebook.Model;
 using Xamarin.Facebook.Widget;
 using Microsoft.WindowsAzure.MobileServices;
-using System.Net.Http;
 
-[assembly:Permission (Name = Android.Manifest.Permission.Internet)]
-[assembly:Permission (Name = Android.Manifest.Permission.WriteExternalStorage)]
+
 [assembly:MetaData ("com.facebook.sdk.ApplicationId", Value = "@string/facebook_app_id")]
 
 
@@ -24,20 +23,10 @@ namespace WodstarMobileApp.Droid
 	public class MainActivity : Activity, Request.IGraphUserCallback
 	{
 		//Class variables
-		public static string accountType;
-		public static string email;
-		public static string firstName;
-		public static string gender;
-		public static string lastName;
-		public static string userId;
-		public static string username;
-		public static MobileServiceClient MobileService = new MobileServiceClient(
-			"https://wodstar.azure-mobile.net/",
-			"kQKEljOALXgvBQWocFdYxXYaHlfAYB80"
-		);
-		private IMobileServiceTable<User> userTable;
+		public static UserAccount ThisUser = new UserAccount();
 
-		//First method that is executed
+
+		//First method that is executed on app start
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
@@ -46,18 +35,13 @@ namespace WodstarMobileApp.Droid
 			//Need to load this first in order to get Facebook session status from the button
 			SetContentView (Resource.Layout.Login);
 
-			//Connect to Azure and instantiate tables
-		//	Azure.initializeAzure ();
+			//Connect to Azure
 			try {
-				User exampleUser = new User();
-				exampleUser.firstName="Laura";
-				exampleUser.lastName="Gagliano";
-				exampleUser.username="lgagliano";
-				userTable = MobileService.GetTable<User> ();
-				Console.WriteLine(userTable.ToString());
+				Azure.InitializeAzure ();
 			} catch( Exception e) {
 				Console.WriteLine(e);
 			}
+
 			//Get Facebook button object
 			//Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
 
@@ -77,7 +61,7 @@ namespace WodstarMobileApp.Droid
 			StartActivity (typeof(StartScreenActivity));
 		}
 
-		//This method is required by Request.IGraphUserCallback
+		//This method is required by Facebook SDK Request.IGraphUserCallback, handles callback from the Facebook button
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
 		{
 			base.OnActivityResult (requestCode, resultCode, data);
@@ -91,34 +75,31 @@ namespace WodstarMobileApp.Droid
 			}
 		}//end OnActivityResult method
 
-		//This method is called after the Facebook user information is fetched
+		//This method is required by Facebook SDK, is called after the Facebook user information is fetched
 		public void OnCompleted (Xamarin.Facebook.Model.IGraphUser user, Response response)
 		{
 			// If Facebook session is open, then load the Main layout
 			if (user != null) {
 				//Get user information from the Facebook session
-				accountType = "Facebook";
-				username = user.Id;
-				firstName = user.FirstName;
-				lastName = user.LastName;
+				ThisUser.AccountType = "Facebook";
+				ThisUser.Username = user.Id;
+				ThisUser.FirstName = user.FirstName;
+				ThisUser.LastName = user.LastName;
 
-				//set alert for executing the task
-				AlertDialog.Builder alert = new AlertDialog.Builder (this);
-				alert.SetTitle ("Facebook session");
-				alert.SetMessage (string.Format ("User ID: {0}\nFirst name: {1}\nLast name: {2}", username, firstName, lastName));
-				alert.SetPositiveButton ("OK", (senderAlert, args) => {
+				//Show popup containing Facebook user info
+				//AlertDialog.Builder alert = new AlertDialog.Builder (this);
+				//alert.SetTitle ("Facebook session");
+				//alert.SetMessage (string.Format ("User ID: {0}\nFirst name: {1}\nLast name: {2}", ThisUser.Username, ThisUser.FirstName, ThisUser.LastName));
+				//alert.SetPositiveButton ("OK", (senderAlert, args) => {
 					//change value write your own set of instructions
 					//you can also create an event for the same in xamarin
 					//instead of writing things here
-				});
-				//alert.SetNegativeButton ("Not doing great", (senderAlert, args) => {
-				//perform your own task for this conditional button click
-				//} );
+				//});
 				//run the alert in UI thread to display in the screen
-				alert.Show ();
+				//alert.Show ();
 
 				//Get or create user account in Azure
-			//	Azure.userAccount (username);
+				Azure.GetUserAccount (ThisUser);
 
 				//Start a new Activity for the Main layout
 				StartActivity (typeof(StartScreenActivity));
