@@ -24,6 +24,7 @@ namespace WodstarMobileApp
 			//Query the UserAccount table for the logged in user
 			List<UserAccount> users = await userAccountTable
 				.Where(u => u.Username == thisUser.Username)
+				.Where(u => u.AccountType == thisUser.AccountType)
 				.ToListAsync();
 
 			//Create the record in UserAccount table if no records are found
