@@ -17,6 +17,7 @@ namespace WodstarMobileApp
 			CurrentPlatform.Init();
 		}//end initializeAzure method
 
+		//Query UserAccount table for the authenticated user
 		public async static void GetUserAccount(UserAccount thisUser) {
 			//Set UserAccount table object
 			userAccountTable = azureClient.GetTable<UserAccount>();
@@ -36,8 +37,9 @@ namespace WodstarMobileApp
 				thisUser.Gender = users [0].Gender;
 				thisUser.Age = users [0].Age;
 			}
-		}//end userAccount method
+		}//end UserAccount method
 
+		//Create UserAccount record, called automatically by GetUserAccount when no account exists
 		public async static void CreateUserAccount(UserAccount thisUser) {
 			//Set UserAccount table object
 			userAccountTable = azureClient.GetTable<UserAccount>();
@@ -45,9 +47,9 @@ namespace WodstarMobileApp
 			//Insert new record
 			await userAccountTable.InsertAsync(thisUser);
 
-			//Call GetUserAccount to fetch the Id from Azure
+			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 			GetUserAccount (thisUser);
-		}
+		}//end CreateUserAccount method
 
 /*		public static WorkoutDOM getWorkout(string id) {
 			return new WorkoutDOM ();
