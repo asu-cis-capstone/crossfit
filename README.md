@@ -5,6 +5,10 @@ repo for project crossfit
 
 The mobile application designed for a CrossFit resource company is intended for the CrossFit community to track their results in completing the Workout-Of-the-Day (WOD). This application application will include a leaderboard, user profiles and a customizable workout experience.  
 
+##waffle.io status
+[![Stories in Ready](https://badge.waffle.io/asu-cis-capstone/crossfit.svg?label=ready&title=Ready)](http://waffle.io/asu-cis-capstone/crossfit) 
+[![Stories in Progress](https://badge.waffle.io/asu-cis-capstone/crossfit.svg?label=in progress&title=In Progress)](http://waffle.io/asu-cis-capstone/crossfit) 
+
 ##Project team
 
 Kevin Risser |  See profile  
@@ -48,8 +52,3 @@ Tyler Daulton | tdaulton@asu.edu
 * Youtube Player Added
 * Android Slide-In Menu Added
 * Azure Integration Begins
-
-
-
-[![Stories in Ready](https://badge.waffle.io/asu-cis-capstone/crossfit.svg?label=ready&title=Ready)](http://waffle.io/asu-cis-capstone/crossfit) 
-[![Stories in Progress](https://badge.waffle.io/asu-cis-capstone/crossfit.svg?label=in progress&title=In Progress)](http://waffle.io/asu-cis-capstone/crossfit) 
