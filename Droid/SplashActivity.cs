@@ -7,11 +7,12 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Content.PM;
 
 //Create splash screen activity as the MainLauncher, then call MainActivity
 namespace WodstarMobileApp.Droid
 {
-	[Activity(Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true, Label = "Wodstar", Icon = "@drawable/icon")]
+	[Activity(Theme = "@style/Theme.Splash", MainLauncher = true, NoHistory = true, Label = "Wodstar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]
 	public class SplashActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

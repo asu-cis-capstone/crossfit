@@ -10,10 +10,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Content.PM;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "WorkoutLibraryActivity")]			
+	[Activity (Label = "WorkoutLibraryActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class WorkoutLibraryActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
