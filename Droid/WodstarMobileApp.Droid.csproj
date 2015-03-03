@@ -91,7 +91,7 @@
     <Compile Include="MainActivity.cs" />
     <Compile Include="WorkoutActivity.cs" />
     <Compile Include="WorkoutLibraryActivity.cs" />
-    <Compile Include="FlyOutMenu.cs" />
+    <Compile Include="FlyOutContainer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -150,6 +150,9 @@
     <AndroidResource Include="Resources\drawable\grace.png" />
     <AndroidResource Include="Resources\drawable\img_6063.png" />
     <AndroidResource Include="Resources\drawable\mary.png" />
+    <AndroidResource Include="Resources\layout\MovementLibraryContent.axml">
+      <DependentUpon>MovementLibrary.axml</DependentUpon>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

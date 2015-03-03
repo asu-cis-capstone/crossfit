@@ -30,21 +30,30 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.MovementLibrary);
 
 			YouTubePlayerFragment youtubePlayer1 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
-				youtubePlayer1.Initialize (DeveloperKey.key, this);
+			youtubePlayer1.Initialize (DeveloperKey.key, this);
 			YouTubePlayerFragment youtubePlayer2 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer2);
-				youtubePlayer2.Initialize (DeveloperKey.key, this);
+			youtubePlayer2.Initialize (DeveloperKey.key, this);
 			YouTubePlayerFragment youtubePlayer3 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer3);
-				youtubePlayer3.Initialize (DeveloperKey.key, this);
+			youtubePlayer3.Initialize (DeveloperKey.key, this);
 			YouTubePlayerFragment youtubePlayer4 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer4);
-				youtubePlayer4.Initialize (DeveloperKey.key, this);
+			youtubePlayer4.Initialize (DeveloperKey.key, this);
 			YouTubePlayerFragment youtubePlayer5 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
-				youtubePlayer5.Initialize (DeveloperKey.key, this);
+			youtubePlayer5.Initialize (DeveloperKey.key, this);
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
-			Button hamburgerButton = FindViewById<Button> (Resource.Id.hamburgerButton);
+			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
 			hamburgerButton.Click += (sender, e) => {
 				menu.AnimatedOpened = !menu.AnimatedOpened;
 			};
+
+			var titleButton = FindViewById (Resource.Id.titleTextView);
+			var homeButton = FindViewById (Resource.Id.homeTextView);
+			var profileButton = FindViewById (Resource.Id.diaryTextView);
+			var diaryButton = FindViewById (Resource.Id.diaryTextView);
+			var wodLibraryButton = FindViewById (Resource.Id.wodLibraryTextView);
+			var movementLibraryButton = FindViewById (Resource.Id.movementLibraryTextView);
+			var logoutButton = FindViewById (Resource.Id.logoutTextView);
+
 		}
 
 		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()

@@ -3,21 +3,36 @@
     android:orientation="vertical"
     android:layout_width="300dp"
     android:layout_height="fill_parent"
-    android:background="#ffa00000"
+    android:background="#707070"
     android:id="@+id/FlyOutContainer"
     android:padding="4dp">
-    <TextView
-        android:text="A Title"
-        android:textAppearance="?android:attr/textAppearanceMedium"
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView1"
-        android:textColor="#ffc1c1c1"
-        android:padding="4dp" />
+        android:id="@+id/titleRow"
+        android:layout_margin="8dp">
+	    <TextView
+	        android:text="WODSTAR"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/titleTextView"
+	        android:textColor="#ffc1c1c1"
+	        android:padding="4dp" />
+	    <ImageView
+	        android:src="@drawable/icon"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	        android:id="@+id/logoImage" />
+	  </LinearLayout>
+	 
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
-        android:id="@+id/view1"
+        android:id="@+id/homeView"
         android:background="#ffc1c1c1"
         android:layout_marginLeft="4dp"
         android:layout_marginRight="16dp"
@@ -28,27 +43,22 @@
         android:minHeight="25px"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1"
+        android:id="@+id/homeRow"
         android:layout_margin="8dp">
-        <ImageView
-            android:src="@drawable/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView1" />
         <TextView
-            android:text="Whatever"
+            android:text="Home"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView2"
+            android:id="@+id/homeTextView"
             android:layout_gravity="center"
             android:layout_marginLeft="8dp"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
-    <View
+	<View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:id="@+id/view2"
+        android:id="@+id/profileView"
         android:background="#abe4e4e4"
         android:layout_gravity="center"
         android:layout_marginLeft="8dp"
@@ -59,19 +69,40 @@
         android:minHeight="25px"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout2"
+        android:id="@+id/wodLibraryRow"
         android:layout_margin="8dp">
-        <ImageView
-            android:src="@drawable/icon"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/imageView2" />
         <TextView
-            android:text="Whichever"
+            android:text="My Profile"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/textView3"
+            android:id="@+id/profileTextView"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:textColor="#fff8f8f8" />
+    </LinearLayout>
+<	View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/diaryView"
+        android:background="#abe4e4e4"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="14dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/diaryRow"
+        android:layout_margin="8dp">
+        <TextView
+            android:text="Workout Diary"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/diaryTextView"
             android:layout_gravity="center"
             android:layout_marginLeft="8dp"
             android:textColor="#fff8f8f8" />
@@ -79,7 +110,85 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:id="@+id/view3"
+        android:id="@+id/wodLibraryView"
+        android:background="#abe4e4e4"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="14dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/wodLibraryRow"
+        android:layout_margin="8dp">
+        <TextView
+            android:text="WOD Library"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/wodLibraryTextView"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:textColor="#fff8f8f8" />
+    </LinearLayout>
+ 	<View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/movementLibraryView"
+        android:background="#abe4e4e4"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="14dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/movementLibraryRow"
+        android:layout_margin="8dp">
+        <TextView
+            android:text="WOD Library"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/movementLibraryTextView"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:textColor="#fff8f8f8" />
+    </LinearLayout>
+	<View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/logoutView"
+        android:background="#abe4e4e4"
+        android:layout_gravity="center"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="14dp" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/logoutRow"
+        android:layout_margin="8dp">
+        <TextView
+            android:text="Logout"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoutTextView"
+            android:layout_gravity="center"
+            android:layout_marginLeft="8dp"
+            android:textColor="#fff8f8f8" />
+    </LinearLayout>
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:id="@+id/bottomView"
         android:background="#abe4e4e4"
         android:layout_gravity="center"
         android:layout_marginLeft="8dp"
