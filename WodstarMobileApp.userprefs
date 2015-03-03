@@ -1,14 +1,12 @@
-﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.DemoAndroid" />
-  <MonoDevelop.Ide.Workbench />
+﻿<Properties GitUserInfo="UsingGIT" StartupItem="Droid/WodstarMobileApp.Droid.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/obj/Debug/__library_projects__/Xamarin.Facebook/library_project_imports/res/layout/com_facebook_picker_activity_circle_row.xml">
+    <Files>
+      <File FileName="Droid/obj/Debug/__library_projects__/Xamarin.Facebook/library_project_imports/res/layout/com_facebook_picker_activity_circle_row.xml" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore>
-      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="28" column="1" />
-      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="30" column="1" />
-      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="32" column="1" />
-      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" line="34" column="1" />
-    </BreakpointStore>
+    <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" />
 </Properties>
