@@ -8214,7 +8214,7 @@ Children = {
         </member>
         <member name="M:Xamarin.Forms.NavigationPage.GetHasNavigationBar(Xamarin.Forms.BindableObject)">
             <param name="page">The <see cref="T:Xamarin.Forms.Page" /> being queried.</param>
-            <summary>Returns a value that indicates hether the <paramref name="page" /> has a navigation bar.</summary>
+            <summary>Returns a value that indicates whether the <paramref name="page" /> has a navigation bar.</summary>
             <returns>
                 <see langword="true" /> if <paramref name="page" /> would display a navigation bar were it the <see cref="P:Xamarin.Forms.NavigationPage.CurrentPage" />.</returns>
             <remarks>To be added.</remarks>
