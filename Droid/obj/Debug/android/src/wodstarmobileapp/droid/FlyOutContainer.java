@@ -41,6 +41,7 @@ public class FlyOutContainer
 	}
 
 
+<<<<<<< HEAD
 	public FlyOutContainer (android.content.Context p0, android.util.AttributeSet p1, int p2, int p3) throws java.lang.Throwable
 	{
 		super (p0, p1, p2, p3);
@@ -49,6 +50,8 @@ public class FlyOutContainer
 	}
 
 
+=======
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
 	public boolean onInterceptTouchEvent (android.view.MotionEvent p0)
 	{
 		return n_onInterceptTouchEvent (p0);

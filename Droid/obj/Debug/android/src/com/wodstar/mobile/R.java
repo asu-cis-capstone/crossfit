@@ -248,6 +248,7 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_profile_picture_width=0x7f040002;
     }
     public static final class drawable {
+<<<<<<< HEAD
         public static final int amanda=0x7f020000;
         public static final int camille=0x7f020001;
         public static final int cindy=0x7f020002;
@@ -313,11 +314,76 @@ containing a value of this type.
         public static final int mary=0x7f02003d;
         public static final int monoandroidsplash=0x7f02003e;
         public static final int splash=0x7f02003f;
+=======
+        public static final int Danim1=0x7f020038;
+        public static final int IMG_6063=0x7f020037;
+        public static final int amanda=0x7f020000;
+        public static final int camillePNG=0x7f02003a;
+        public static final int cindy=0x7f020039;
+        public static final int com_facebook_button_blue=0x7f020001;
+        public static final int com_facebook_button_blue_focused=0x7f020002;
+        public static final int com_facebook_button_blue_normal=0x7f020003;
+        public static final int com_facebook_button_blue_pressed=0x7f020004;
+        public static final int com_facebook_button_check=0x7f020005;
+        public static final int com_facebook_button_check_off=0x7f020006;
+        public static final int com_facebook_button_check_on=0x7f020007;
+        public static final int com_facebook_button_grey_focused=0x7f020008;
+        public static final int com_facebook_button_grey_normal=0x7f020009;
+        public static final int com_facebook_button_grey_pressed=0x7f02000a;
+        public static final int com_facebook_button_like=0x7f02000b;
+        public static final int com_facebook_button_like_background=0x7f02000c;
+        public static final int com_facebook_button_like_background_selected=0x7f02000d;
+        public static final int com_facebook_button_like_icon=0x7f02000e;
+        public static final int com_facebook_button_like_icon_selected=0x7f02000f;
+        public static final int com_facebook_button_like_pressed=0x7f020010;
+        public static final int com_facebook_button_like_selected=0x7f020011;
+        public static final int com_facebook_close=0x7f020012;
+        public static final int com_facebook_inverse_icon=0x7f020013;
+        public static final int com_facebook_list_divider=0x7f020014;
+        public static final int com_facebook_list_section_header_background=0x7f020015;
+        public static final int com_facebook_loginbutton_silver=0x7f020016;
+        public static final int com_facebook_logo=0x7f020017;
+        public static final int com_facebook_picker_default_separator_color=0x7f020036;
+        public static final int com_facebook_picker_item_background=0x7f020018;
+        public static final int com_facebook_picker_list_focused=0x7f020019;
+        public static final int com_facebook_picker_list_longpressed=0x7f02001a;
+        public static final int com_facebook_picker_list_pressed=0x7f02001b;
+        public static final int com_facebook_picker_list_selector=0x7f02001c;
+        public static final int com_facebook_picker_list_selector_background_transition=0x7f02001d;
+        public static final int com_facebook_picker_list_selector_disabled=0x7f02001e;
+        public static final int com_facebook_picker_magnifier=0x7f02001f;
+        public static final int com_facebook_picker_top_button=0x7f020020;
+        public static final int com_facebook_place_default_icon=0x7f020021;
+        public static final int com_facebook_profile_default_icon=0x7f020022;
+        public static final int com_facebook_profile_picture_blank_portrait=0x7f020023;
+        public static final int com_facebook_profile_picture_blank_square=0x7f020024;
+        public static final int com_facebook_tooltip_black_background=0x7f020025;
+        public static final int com_facebook_tooltip_black_bottomnub=0x7f020026;
+        public static final int com_facebook_tooltip_black_topnub=0x7f020027;
+        public static final int com_facebook_tooltip_black_xout=0x7f020028;
+        public static final int com_facebook_tooltip_blue_background=0x7f020029;
+        public static final int com_facebook_tooltip_blue_bottomnub=0x7f02002a;
+        public static final int com_facebook_tooltip_blue_topnub=0x7f02002b;
+        public static final int com_facebook_tooltip_blue_xout=0x7f02002c;
+        public static final int com_facebook_top_background=0x7f02002d;
+        public static final int com_facebook_top_button=0x7f02002e;
+        public static final int com_facebook_usersettingsfragment_background_gradient=0x7f02002f;
+        public static final int forums=0x7f02003c;
+        public static final int graph=0x7f02003b;
+        public static final int hamburger=0x7f020030;
+        public static final int icon=0x7f020031;
+        public static final int jackie=0x7f020032;
+        public static final int kelly=0x7f020033;
+        public static final int mary=0x7f02003d;
+        public static final int monoandroidsplash=0x7f020034;
+        public static final int splash=0x7f020035;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
     }
     public static final class id {
         public static final int FlyOutContainer=0x7f08007a;
         public static final int FlyOutContent=0x7f080083;
         public static final int OneRmLabelText=0x7f080015;
+<<<<<<< HEAD
         public static final int ageSpinner=0x7f080094;
         public static final int amandaButton=0x7f0800a3;
         public static final int angieButton=0x7f0800b2;
@@ -330,15 +396,34 @@ containing a value of this type.
         public static final int box_count=0x7f080003;
         public static final int button=0x7f080004;
         public static final int button1=0x7f08008b;
+=======
+        public static final int ageSpinner=0x7f080093;
+        public static final int amandaButton=0x7f0800a2;
+        public static final int angieButton=0x7f0800b1;
+        public static final int annieButton=0x7f0800ae;
+        public static final int barbaraButton=0x7f0800b0;
+        public static final int bioTextView=0x7f08004b;
+        public static final int blueSquareButton=0x7f0800b6;
+        public static final int bottom=0x7f080006;
+        public static final int box_count=0x7f080003;
+        public static final int button=0x7f080004;
+        public static final int button1=0x7f08008a;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int calcHeaderText=0x7f08000d;
         public static final int calcReturnButton=0x7f08002d;
         public static final int calcTableImageButton=0x7f08002c;
         public static final int calculateButton=0x7f080012;
         public static final int calculatorButton=0x7f08004c;
         public static final int center=0x7f080009;
+<<<<<<< HEAD
         public static final int chelseaButton=0x7f0800ae;
         public static final int christineButton=0x7f0800b0;
         public static final int cindyButton=0x7f0800ad;
+=======
+        public static final int chelseaButton=0x7f0800ad;
+        public static final int christineButton=0x7f0800af;
+        public static final int cindyButton=0x7f0800ac;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int cindyImgButton=0x7f08006b;
         public static final int com_facebook_body_frame=0x7f080040;
         public static final int com_facebook_button_xout=0x7f080042;
@@ -365,23 +450,38 @@ containing a value of this type.
         public static final int com_facebook_usersettingsfragment_login_button=0x7f080047;
         public static final int com_facebook_usersettingsfragment_logo_image=0x7f080045;
         public static final int com_facebook_usersettingsfragment_profile_name=0x7f080046;
+<<<<<<< HEAD
         public static final int confirmPwordEditText=0x7f080096;
         public static final int createAccountTitleText=0x7f08008d;
         public static final int dianeButton=0x7f0800ac;
+=======
+        public static final int confirmPwordEditText=0x7f080095;
+        public static final int createAccountTitleText=0x7f08008c;
+        public static final int dianeButton=0x7f0800ab;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int diaryHeaderButton=0x7f080048;
         public static final int eightyCalc=0x7f080022;
         public static final int eightyFiveCalc=0x7f08001e;
         public static final int eightyFiveLabelText=0x7f08001f;
         public static final int eightyLabelText=0x7f080023;
+<<<<<<< HEAD
         public static final int elizabethButton=0x7f0800ab;
         public static final int emailEditText=0x7f080090;
         public static final int fNameEditText=0x7f08008e;
         public static final int fRadioButton=0x7f080093;
         public static final int fifthPlaceUserText=0x7f0800a1;
+=======
+        public static final int elizabethButton=0x7f0800aa;
+        public static final int emailEditText=0x7f08008f;
+        public static final int fNameEditText=0x7f08008d;
+        public static final int fRadioButton=0x7f080092;
+        public static final int fifthPlaceUserText=0x7f0800a0;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int fiftyCalc=0x7f080028;
         public static final int fiftyFiveCalc=0x7f080024;
         public static final int fiftyFiveLabelText=0x7f080025;
         public static final int fiftyLabelText=0x7f080029;
+<<<<<<< HEAD
         public static final int firstPlaceDetailText=0x7f08009d;
         public static final int firstPlaceUserText=0x7f08009c;
         public static final int formsTextView=0x7f080076;
@@ -407,6 +507,32 @@ containing a value of this type.
         public static final int kellyButton=0x7f0800a5;
         public static final int kellyImgButton=0x7f080069;
         public static final int lNameEditText=0x7f08008f;
+=======
+        public static final int firstPlaceDetailText=0x7f08009c;
+        public static final int firstPlaceUserText=0x7f08009b;
+        public static final int formsTextView=0x7f080076;
+        public static final int forumsMainImgButton=0x7f080078;
+        public static final int fourthPlaceUserText=0x7f08009f;
+        public static final int fragment_container=0x7f080070;
+        public static final int franButton=0x7f0800a9;
+        public static final int graceButton=0x7f0800a8;
+        public static final int graphViewButton=0x7f08004d;
+        public static final int greenCircleButton=0x7f0800b5;
+        public static final int hamburgerButton=0x7f08000c;
+        public static final int helenButton=0x7f0800a5;
+        public static final int imageButton1=0x7f080098;
+        public static final int imageView1=0x7f08007c;
+        public static final int imageView2=0x7f080080;
+        public static final int inline=0x7f080007;
+        public static final int isabelButton=0x7f0800a7;
+        public static final int jackieButton=0x7f0800a3;
+        public static final int jackieimgButton=0x7f080067;
+        public static final int joshuaButton=0x7f0800b3;
+        public static final int karenButton=0x7f0800a6;
+        public static final int kellyButton=0x7f0800a4;
+        public static final int kellyImgButton=0x7f080069;
+        public static final int lNameEditText=0x7f08008e;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int large=0x7f080000;
         public static final int lboardsHeaderText=0x7f080062;
         public static final int leaderColumnText=0x7f080064;
@@ -416,18 +542,30 @@ containing a value of this type.
         public static final int linearLayout1=0x7f080049;
         public static final int linearLayout2=0x7f08007f;
         public static final int login_button=0x7f08006e;
+<<<<<<< HEAD
         public static final int mRadioButton=0x7f080092;
         public static final int main_ui_container=0x7f08006d;
         public static final int maryButton=0x7f0800b3;
         public static final int maryImage=0x7f08009b;
         public static final int maryTitleText=0x7f08009a;
         public static final int movementsHeaderText=0x7f080085;
+=======
+        public static final int mRadioButton=0x7f080091;
+        public static final int main_ui_container=0x7f08006d;
+        public static final int maryButton=0x7f0800b2;
+        public static final int maryEditText=0x7f0800b8;
+        public static final int maryImage=0x7f08009a;
+        public static final int maryTitleText=0x7f080099;
+        public static final int maryWodDescriptionText=0x7f0800b9;
+        public static final int movementsHeaderText=0x7f080084;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int ninetyCalc=0x7f08001a;
         public static final int ninetyFiveCalc=0x7f080016;
         public static final int ninetyFiveLabelText=0x7f080017;
         public static final int ninetyLabelText=0x7f08001b;
         public static final int normal=0x7f080001;
         public static final int oneRmCalc=0x7f080014;
+<<<<<<< HEAD
         public static final int pWordEditText=0x7f080095;
         public static final int picker_subtitle=0x7f08003d;
         public static final int profilePictureImageView=0x7f08004a;
@@ -440,12 +578,31 @@ containing a value of this type.
         public static final int rxButton=0x7f0800b9;
         public static final int sampWod1ImageButton=0x7f080065;
         public static final int secondPlaceUserText=0x7f08009e;
+=======
+        public static final int pWordEditText=0x7f080094;
+        public static final int picker_subtitle=0x7f08003d;
+        public static final int profilePictureImageView=0x7f08004a;
+        public static final int radioGroup1=0x7f080090;
+        public static final int repsDoneLabel=0x7f080011;
+        public static final int repsDoneSpinner=0x7f080010;
+        public static final int resetButton=0x7f080013;
+        public static final int returnButton=0x7f080097;
+        public static final int right=0x7f08000b;
+        public static final int rxButton=0x7f0800b7;
+        public static final int sampWod1ImageButton=0x7f080065;
+        public static final int secondPlaceUserText=0x7f08009d;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int seventyCalc=0x7f080018;
         public static final int seventyFiveCalc=0x7f080026;
         public static final int seventyFiveLabelText=0x7f080027;
         public static final int seventyLabelText=0x7f080019;
+<<<<<<< HEAD
         public static final int signUpButton=0x7f080097;
         public static final int signUpHeaderText=0x7f08008c;
+=======
+        public static final int signUpButton=0x7f080096;
+        public static final int signUpHeaderText=0x7f08008b;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int sixtyCalc=0x7f080020;
         public static final int sixtyFiveCalc=0x7f08001c;
         public static final int sixtyFiveLabelText=0x7f08001d;
@@ -464,7 +621,10 @@ containing a value of this type.
         public static final int tableRow6=0x7f080059;
         public static final int textView1=0x7f08002a;
         public static final int textView10=0x7f080051;
+<<<<<<< HEAD
         public static final int textView11=0x7f0800ba;
+=======
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int textView2=0x7f08007d;
         public static final int textView22=0x7f080052;
         public static final int textView3=0x7f080081;
@@ -478,7 +638,11 @@ containing a value of this type.
         public static final int textView40=0x7f08005b;
         public static final int textView41=0x7f08005e;
         public static final int textView42=0x7f080061;
+<<<<<<< HEAD
         public static final int thirdPlaceUserText=0x7f08009f;
+=======
+        public static final int thirdPlaceUserText=0x7f08009e;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int top=0x7f080008;
         public static final int view1=0x7f08007b;
         public static final int view2=0x7f08007e;
@@ -491,17 +655,30 @@ containing a value of this type.
         public static final int wod4LeaderText=0x7f08006c;
         public static final int wodColumnText=0x7f080063;
         public static final int wodHeader=0x7f08004e;
+<<<<<<< HEAD
         public static final int wodHeaderText=0x7f0800b5;
         public static final int wodsHeaderText=0x7f0800a2;
+=======
+        public static final int wodHeaderText=0x7f0800b4;
+        public static final int wodsHeaderText=0x7f0800a1;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
         public static final int wodsMainImgButton=0x7f080074;
         public static final int wodsTextView=0x7f080072;
         public static final int wodstarImage=0x7f08002b;
         public static final int wodstarTextView=0x7f080071;
+<<<<<<< HEAD
         public static final int youtubePlayer1=0x7f080086;
         public static final int youtubePlayer2=0x7f080087;
         public static final int youtubePlayer3=0x7f080088;
         public static final int youtubePlayer4=0x7f080089;
         public static final int youtubePlayer5=0x7f08008a;
+=======
+        public static final int youtubePlayer1=0x7f080085;
+        public static final int youtubePlayer2=0x7f080086;
+        public static final int youtubePlayer3=0x7f080087;
+        public static final int youtubePlayer4=0x7f080088;
+        public static final int youtubePlayer5=0x7f080089;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
     }
     public static final class layout {
         public static final int calc=0x7f030000;
@@ -527,6 +704,7 @@ containing a value of this type.
         public static final int main=0x7f030014;
         public static final int menulayout=0x7f030015;
         public static final int movementlibrary=0x7f030016;
+<<<<<<< HEAD
         public static final int movementlibrarycontent=0x7f030017;
         public static final int personalrecord=0x7f030018;
         public static final int signup=0x7f030019;
@@ -534,6 +712,14 @@ containing a value of this type.
         public static final int wodboard=0x7f03001b;
         public static final int wodlibrary=0x7f03001c;
         public static final int wodpage=0x7f03001d;
+=======
+        public static final int personalrecord=0x7f030017;
+        public static final int signup=0x7f030018;
+        public static final int userprofile=0x7f030019;
+        public static final int wodboard=0x7f03001a;
+        public static final int wodlibrary=0x7f03001b;
+        public static final int wodpage=0x7f03001c;
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
     }
     public static final class string {
         public static final int app_name=0x7f06001d;

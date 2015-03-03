@@ -68,15 +68,30 @@ public class MonoPackageManager {
 class MonoPackageManager_Resources {
 	public static final String[] Assemblies = new String[]{
 		"WodstarMobileApp.Droid.dll",
+<<<<<<< HEAD
 		"Microsoft.WindowsAzure.Mobile.dll",
 		"Microsoft.WindowsAzure.Mobile.Ext.dll",
 		"Newtonsoft.Json.dll",
 		"Xamarin.Android.Support.v4.dll",
 		"Xamarin.Facebook.dll",
+=======
+		"Xamarin.Android.Support.v4.dll",
+		"FormsViewGroup.dll",
+		"Xamarin.Forms.Core.dll",
+		"Xamarin.Forms.Platform.Android.dll",
+		"Xamarin.Forms.Xaml.dll",
+		"Xamarin.Facebook.dll",
+		"System.Net.Http.Extensions.dll",
+		"Microsoft.WindowsAzure.Mobile.dll",
+		"Microsoft.WindowsAzure.Mobile.Ext.dll",
+		"Newtonsoft.Json.dll",
+		"System.Net.Http.Primitives.dll",
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
 		"YoutubeJavaBindings.dll",
 		"System.Collections.Concurrent.dll",
 		"System.Collections.dll",
 		"System.ComponentModel.Annotations.dll",
+<<<<<<< HEAD
 		"System.ComponentModel.dll",
 		"System.ComponentModel.EventBasedAsync.dll",
 		"System.Diagnostics.Contracts.dll",
@@ -90,10 +105,25 @@ class MonoPackageManager_Resources {
 		"System.Linq.Expressions.dll",
 		"System.Linq.Parallel.dll",
 		"System.Linq.Queryable.dll",
+=======
+		"System.ComponentModel.EventBasedAsync.dll",
+		"System.ComponentModel.dll",
+		"System.Diagnostics.Contracts.dll",
+		"System.Diagnostics.Debug.dll",
+		"System.Diagnostics.Tools.dll",
+		"System.Dynamic.Runtime.dll",
+		"System.Globalization.dll",
+		"System.IO.dll",
+		"System.Linq.Expressions.dll",
+		"System.Linq.Parallel.dll",
+		"System.Linq.Queryable.dll",
+		"System.Linq.dll",
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
 		"System.Net.NetworkInformation.dll",
 		"System.Net.Primitives.dll",
 		"System.Net.Requests.dll",
 		"System.ObjectModel.dll",
+<<<<<<< HEAD
 		"System.Reflection.dll",
 		"System.Reflection.Emit.dll",
 		"System.Reflection.Emit.ILGeneration.dll",
@@ -105,10 +135,23 @@ class MonoPackageManager_Resources {
 		"System.Runtime.Extensions.dll",
 		"System.Runtime.InteropServices.dll",
 		"System.Runtime.InteropServices.WindowsRuntime.dll",
+=======
+		"System.Reflection.Emit.ILGeneration.dll",
+		"System.Reflection.Emit.Lightweight.dll",
+		"System.Reflection.Emit.dll",
+		"System.Reflection.Extensions.dll",
+		"System.Reflection.Primitives.dll",
+		"System.Reflection.dll",
+		"System.Resources.ResourceManager.dll",
+		"System.Runtime.Extensions.dll",
+		"System.Runtime.InteropServices.WindowsRuntime.dll",
+		"System.Runtime.InteropServices.dll",
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
 		"System.Runtime.Numerics.dll",
 		"System.Runtime.Serialization.Json.dll",
 		"System.Runtime.Serialization.Primitives.dll",
 		"System.Runtime.Serialization.Xml.dll",
+<<<<<<< HEAD
 		"System.Security.Principal.dll",
 		"System.ServiceModel.Http.dll",
 		"System.ServiceModel.Primitives.dll",
@@ -128,4 +171,23 @@ class MonoPackageManager_Resources {
 	public static final String[] Dependencies = new String[]{
 	};
 	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_21";
+=======
+		"System.Runtime.dll",
+		"System.Security.Principal.dll",
+		"System.ServiceModel.Http.dll",
+		"System.ServiceModel.Primitives.dll",
+		"System.Text.Encoding.Extensions.dll",
+		"System.Text.Encoding.dll",
+		"System.Text.RegularExpressions.dll",
+		"System.Threading.Tasks.Parallel.dll",
+		"System.Threading.Tasks.dll",
+		"System.Threading.dll",
+		"System.Xml.ReaderWriter.dll",
+		"System.Xml.XDocument.dll",
+		"System.Xml.XmlSerializer.dll",
+	};
+	public static final String[] Dependencies = new String[]{
+	};
+	public static final String ApiPackageName = "Mono.Android.Platform.ApiLevel_19";
+>>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
 }

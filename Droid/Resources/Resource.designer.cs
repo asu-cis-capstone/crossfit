@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Android.Runtime.ResourceDesignerAttribute("WodstarMobileApp.Droid.Resource", IsApplication=true)]
+[assembly: Android.Runtime.ResourceDesignerAttribute("WodstarMobileApp.Droid.Resource", IsApplication=true)]
 
 namespace WodstarMobileApp.Droid
 {
@@ -1278,13 +1278,15 @@ namespace WodstarMobileApp.Droid
 		public partial class Styleable
 		{
 			
-			public static int[] com_facebook_friend_picker_fragment = new int[] {
+			public static int[] com_facebook_friend_picker_fragment = new int[]
+			{
 					2130771975};
 			
 			// aapt resource value: 0
 			public const int com_facebook_friend_picker_fragment_multi_select = 0;
 			
-			public static int[] com_facebook_like_view = new int[] {
+			public static int[] com_facebook_like_view = new int[]
+			{
 					2130771986,
 					2130771987,
 					2130771988,
@@ -1306,7 +1308,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 2
 			public const int com_facebook_like_view_style = 2;
 			
-			public static int[] com_facebook_login_view = new int[] {
+			public static int[] com_facebook_login_view = new int[]
+			{
 					2130771980,
 					2130771981,
 					2130771982,
@@ -1324,7 +1327,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 3
 			public const int com_facebook_login_view_logout_text = 3;
 			
-			public static int[] com_facebook_picker_fragment = new int[] {
+			public static int[] com_facebook_picker_fragment = new int[]
+			{
 					2130771968,
 					2130771969,
 					2130771970,
@@ -1354,7 +1358,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 3
 			public const int com_facebook_picker_fragment_title_text = 3;
 			
-			public static int[] com_facebook_place_picker_fragment = new int[] {
+			public static int[] com_facebook_place_picker_fragment = new int[]
+			{
 					2130771976,
 					2130771977,
 					2130771978,
@@ -1372,7 +1377,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 3
 			public const int com_facebook_place_picker_fragment_show_search_box = 3;
 			
-			public static int[] com_facebook_profile_picture_view = new int[] {
+			public static int[] com_facebook_profile_picture_view = new int[]
+			{
 					2130771984,
 					2130771985};
 			

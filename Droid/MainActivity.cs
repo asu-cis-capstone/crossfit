@@ -45,11 +45,12 @@ namespace WodstarMobileApp.Droid
 			//Get Facebook button object
 			//Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
 
-			//If Facebook session is already open from a previous login, then load the Main layout
+			//If Facebook session is already open from a previous login, request user info
 			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
-				//Start a new Activity for the Main layout
-				StartActivity (typeof(StartScreenActivity));
+				//Get user info from Facebook
+				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
 			} else {
+				//Enable the skip button to go directly into the Main layout
 				var skipButton = FindViewById<Button> (Resource.Id.startScreenButton);
 				skipButton.Click += goToStart;
 			}
