@@ -10,10 +10,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Content.PM;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "WorkoutActivity")]			
+	[Activity (Label = "WorkoutActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class WorkoutActivity : Activity
 	{
 		String [] thisWodInfo;

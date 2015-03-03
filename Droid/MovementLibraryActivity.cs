@@ -7,10 +7,11 @@ using Android.Views;
 using Android.Widget;
 using Android.Runtime;
 using Google.YouTube.Player;
+using Android.Content.PM;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "MovementLibraryActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon")]			
+	[Activity (Label = "MovementLibraryActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class MovementLibraryActivity : YouTubeFailureRecoveryActivity
 	{
 		public int startIndex;

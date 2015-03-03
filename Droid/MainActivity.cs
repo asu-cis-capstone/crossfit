@@ -19,7 +19,7 @@ using Microsoft.WindowsAzure.MobileServices;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Theme = "@android:style/Theme.Black.NoTitleBar", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Theme = "@android:style/Theme.Black.NoTitleBar", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainActivity : Activity, Request.IGraphUserCallback
 	{
 		//Class variables
