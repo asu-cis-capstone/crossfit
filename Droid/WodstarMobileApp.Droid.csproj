@@ -92,6 +92,7 @@
     <Compile Include="WorkoutActivity.cs" />
     <Compile Include="WorkoutLibraryActivity.cs" />
     <Compile Include="FlyOutContainer.cs" />
+    <Compile Include="UserJournal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

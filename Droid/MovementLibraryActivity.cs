@@ -49,10 +49,19 @@ namespace WodstarMobileApp.Droid
 			var titleButton = FindViewById (Resource.Id.titleTextView);
 			var homeButton = FindViewById (Resource.Id.homeTextView);
 			var profileButton = FindViewById (Resource.Id.diaryTextView);
-			var diaryButton = FindViewById (Resource.Id.diaryTextView);
+			var journalButton = FindViewById (Resource.Id.diaryTextView);
 			var wodLibraryButton = FindViewById (Resource.Id.wodLibraryTextView);
 			var movementLibraryButton = FindViewById (Resource.Id.movementLibraryTextView);
 			var logoutButton = FindViewById (Resource.Id.logoutTextView);
+
+			titleButton.Click += goToHomeScreen;
+			homeButton.Click += goToHomeScreen;
+			profileButton.Click += goToUserProfile;
+			journalButton.Click += goToJournal;
+			wodLibraryButton.Click += goToWodLibrary;
+			movementLibraryButton.Click += goToMovementLibrary;
+			logoutButton.Click += goToLogin;
+
 
 		}
 
@@ -87,6 +96,22 @@ namespace WodstarMobileApp.Droid
 		void goToHomeScreen(object sender, EventArgs e) {
 			//Start a new Activity for the Main layout
 			StartActivity (typeof(StartScreenActivity));
+		}
+
+		void goToUserProfile(object sender, EventArgs e) {
+			StartActivity (typeof(UserProfileActivity));
+		}
+
+		void goToJournal(object sender, EventArgs e) {
+			StartActivity (typof (UserJournal));
+		}
+
+		void goToWodLibrary(object sender, EventArgs e) {
+			StartActivity (typeof(WorkoutLibraryActivity));
+		}
+
+		void goToLogin(object sender, EventArgs e) {
+			StartActivity (typeof(MainActivity));
 		}
 
 		void goToMovementLibrary(object sender, EventArgs e) {
