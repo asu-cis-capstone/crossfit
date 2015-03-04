@@ -14,21 +14,20 @@
         android:layout_height="wrap_content"
         android:id="@+id/titleRow"
         android:layout_margin="8dp">
-	    <TextView
-	        android:text="WODSTAR"
-	        android:textAppearance="?android:attr/textAppearanceMedium"
-	        android:layout_width="fill_parent"
-	        android:layout_height="wrap_content"
-	        android:id="@+id/titleTextView"
-	        android:textColor="#ffc1c1c1"
-	        android:padding="4dp" />
-	    <ImageView
-	        android:src="@drawable/icon"
-	        android:layout_width="wrap_content"
-	        android:layout_height="wrap_content"
-	        android:id="@+id/logoImage" />
-	  </LinearLayout>
-	 
+        <TextView
+            android:text="WODSTAR"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/titleTextView"
+            android:textColor="#ffc1c1c1"
+            android:padding="4dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/logoImage" />
+    </LinearLayout>
     <View
         android:layout_width="fill_parent"
         android:layout_height="2dp"
@@ -55,7 +54,7 @@
             android:layout_marginLeft="8dp"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
-	<View
+    <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:id="@+id/profileView"
@@ -81,7 +80,7 @@
             android:layout_marginLeft="8dp"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
-<	View
+    <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:id="@+id/diaryView"
@@ -133,7 +132,7 @@
             android:layout_marginLeft="8dp"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
- 	<View
+    <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:id="@+id/movementLibraryView"
@@ -159,7 +158,7 @@
             android:layout_marginLeft="8dp"
             android:textColor="#fff8f8f8" />
     </LinearLayout>
-	<View
+    <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
         android:id="@+id/logoutView"

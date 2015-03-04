@@ -99,12 +99,8 @@ namespace WodstarMobileApp.Droid
 			StartActivity (typeof(StartScreenActivity));
 		}
 
-		void goToUserProfile(object sender, EventArgs e) {
-			StartActivity (typeof(UserProfileActivity));
-		}
-
 		void goToJournal(object sender, EventArgs e) {
-			StartActivity (typof (UserJournal));
+			StartActivity (typeof (UserJournal));
 		}
 
 		void goToWodLibrary(object sender, EventArgs e) {
