@@ -16,7 +16,7 @@
         android:layout_margin="8dp">
         <TextView
             android:text="WODSTAR"
-            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/titleTextView"
@@ -46,7 +46,7 @@
         android:layout_margin="8dp">
         <TextView
             android:text="Home"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/homeTextView"
@@ -72,7 +72,7 @@
         android:layout_margin="8dp">
         <TextView
             android:text="My Profile"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/profileTextView"
@@ -83,7 +83,7 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:id="@+id/diaryView"
+        android:id="@+id/journalView"
         android:background="#abe4e4e4"
         android:layout_gravity="center"
         android:layout_marginLeft="8dp"
@@ -94,14 +94,14 @@
         android:minHeight="25px"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/diaryRow"
+        android:id="@+id/journalRow"
         android:layout_margin="8dp">
         <TextView
             android:text="Workout Diary"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/diaryTextView"
+            android:id="@+id/journalTextView"
             android:layout_gravity="center"
             android:layout_marginLeft="8dp"
             android:textColor="#fff8f8f8" />
@@ -124,7 +124,7 @@
         android:layout_margin="8dp">
         <TextView
             android:text="WOD Library"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/wodLibraryTextView"
@@ -149,8 +149,8 @@
         android:id="@+id/movementLibraryRow"
         android:layout_margin="8dp">
         <TextView
-            android:text="WOD Library"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="Movement Library"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/movementLibraryTextView"
@@ -176,7 +176,7 @@
         android:layout_margin="8dp">
         <TextView
             android:text="Logout"
-            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:id="@+id/logoutTextView"

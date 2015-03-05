@@ -1,8 +1,14 @@
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Emulator" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
   <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs">
     <Files>
-      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" Line="53" Column="53" />
+      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" Line="4" Column="4" NotebookId="1" />
+      <File FileName="Droid\SplashActivity.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Droid\StartScreenActivity.cs" Line="44" Column="44" NotebookId="1" />
+      <File FileName="Droid\UserProfileActivity.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Droid\WorkoutActivity.cs" Line="159" Column="159" NotebookId="1" />
+      <File FileName="Droid\WorkoutLibraryActivity.cs" Line="166" Column="166" NotebookId="1" />
+      <File FileName="Droid\UserJournal.cs" Line="1" Column="1" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

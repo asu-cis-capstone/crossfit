@@ -126,7 +126,6 @@
       <DependentUpon>WodPage.axml</DependentUpon>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\Main.axml" />
-    <AndroidResource Include="Resources\layout\WODboard.axml" />
     <AndroidResource Include="Resources\layout\UserProfile.axml" />
     <AndroidResource Include="Resources\layout\PersonalRecord.axml" />
     <AndroidResource Include="Resources\layout\Diary.axml" />
@@ -154,6 +153,32 @@
     <AndroidResource Include="Resources\layout\MovementLibraryContent.axml">
       <DependentUpon>MovementLibrary.axml</DependentUpon>
     </AndroidResource>
+    <AndroidResource Include="Resources\layout\CalcTableContent.axml">
+      <DependentUpon>CalcTable.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\JournalContent.axml">
+      <DependentUpon>Diary.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\LeaderboardContent.axml">
+      <DependentUpon>Leaderboard.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\MainContent.axml">
+      <DependentUpon>Main.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\PersonalRecordContent.axml">
+      <DependentUpon>PersonalRecord.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\WodPageContent.axml">
+      <DependentUpon>WodPage.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\WodLibraryContent.axml">
+      <DependentUpon>WodLibrary.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\WodBoardContent.axml">
+      <DependentUpon>WodBoard.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\WodBoard.axml" />
+    <AndroidResource Include="Resources\layout\UserProfileContent.axml" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

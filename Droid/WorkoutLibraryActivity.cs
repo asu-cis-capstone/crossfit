@@ -24,10 +24,26 @@ namespace WodstarMobileApp.Droid
 			// Create your application here
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
-			Button hamburgerButton = FindViewById<Button> (Resource.Id.hamburgerButton);
+			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
 			hamburgerButton.Click += (sender, e) => {
 				menu.AnimatedOpened = !menu.AnimatedOpened;
 			};
+
+			var titleButton = FindViewById (Resource.Id.titleTextView);
+			var homeButton = FindViewById (Resource.Id.homeTextView);
+			var profileButton = FindViewById (Resource.Id.profileTextView);
+			var journalButton = FindViewById (Resource.Id.journalTextView);
+			var wodLibraryButton = FindViewById (Resource.Id.wodLibraryTextView);
+			var movementLibraryButton = FindViewById (Resource.Id.movementLibraryTextView);
+			var logoutButton = FindViewById (Resource.Id.logoutTextView);
+
+			titleButton.Click += goToHomeScreen;
+			homeButton.Click += goToHomeScreen;
+			profileButton.Click += goToUserProfile;
+			journalButton.Click += goToJournal;
+			wodLibraryButton.Click += goToWodLibrary;
+			movementLibraryButton.Click += goToMovementLibrary;
+			logoutButton.Click += goToLogin;
 
 			ImageButton amandaButton = FindViewById<ImageButton> (Resource.Id.amandaButton);
 				amandaButton.Click += goToAmandaWod;
@@ -175,6 +191,46 @@ namespace WodstarMobileApp.Droid
 			intent.PutExtra("workoutName", "joshua");
 			StartActivity(typeof(WorkoutActivity));
 		}
+
+		//NAVIGATION METHODS
+		void goToUserProfile(object sender, EventArgs e) {
+			//Start a new Activity for the UserProfile layout
+			if (this.LocalClassName != "wodstarmobileapp.droid.UserProfileActivity") {
+				StartActivity (typeof(UserProfileActivity));
+			}
+		}
+
+		void goToHomeScreen(object sender, EventArgs e) {
+			if (this.LocalClassName != "wodstarmobileapp.droid.StartScreenActivity") {
+				StartActivity (typeof(StartScreenActivity));
+			}
+		}
+
+		void goToJournal(object sender, EventArgs e) {
+			if (this.LocalClassName != "wodstarmobileapp.droid.UserJournal") {
+				StartActivity (typeof(UserJournal));
+			}
+		}
+
+		void goToWodLibrary(object sender, EventArgs e) {
+			if (this.LocalClassName != "wodstarmobileapp.droid.WorkoutLibraryActivity") {
+				StartActivity (typeof(WorkoutLibraryActivity));
+			}
+		}
+
+		void goToLogin(object sender, EventArgs e) {
+			if (this.LocalClassName != "wodstarmobileapp.droid.MainActivity") {
+				StartActivity (typeof(MainActivity));
+			}
+		}
+
+		void goToMovementLibrary(object sender, EventArgs e) {
+			if (this.LocalClassName != "wodstarmobileapp.droid.MovementLibraryActivity") {
+				Console.WriteLine ("Local class name = " + this.LocalClassName.ToString ());
+				StartActivity (typeof(MovementLibraryActivity));
+			}
+		}
+		//END NAVIGATION METHODS
 
 	} //End class
 } //End namespace

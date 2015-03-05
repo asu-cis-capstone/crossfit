@@ -370,9 +370,6 @@ containing a value of this type.
         public static final int createAccountTitleText=0x7f08009b;
         public static final int dianeButton=0x7f0800ba;
         public static final int diaryHeaderButton=0x7f080048;
-        public static final int diaryRow=0x7f080085;
-        public static final int diaryTextView=0x7f080086;
-        public static final int diaryView=0x7f080084;
         public static final int eightyCalc=0x7f080022;
         public static final int eightyFiveCalc=0x7f08001e;
         public static final int eightyFiveLabelText=0x7f08001f;
@@ -408,6 +405,9 @@ containing a value of this type.
         public static final int jackieButton=0x7f0800b2;
         public static final int jackieimgButton=0x7f080067;
         public static final int joshuaButton=0x7f0800c2;
+        public static final int journalRow=0x7f080085;
+        public static final int journalTextView=0x7f080086;
+        public static final int journalView=0x7f080084;
         public static final int karenButton=0x7f0800b5;
         public static final int kellyButton=0x7f0800b3;
         public static final int kellyImgButton=0x7f080069;

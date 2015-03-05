@@ -11,6 +11,7 @@ namespace WodstarMobileApp.Droid
 	public class Util
 	{
 		//TODO: Add all the navigation methods here between screens
+
 	}
 }
 

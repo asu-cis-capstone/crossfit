@@ -9,9 +9,9 @@
     <activity android:icon="@drawable/icon" android:label="MovementLibraryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="wodstarmobileapp.droid.MovementLibraryActivity" />
     <activity android:icon="@drawable/icon" android:label="UserProfileActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="wodstarmobileapp.droid.UserProfileActivity" />
     <activity android:configChanges="orientation|screenSize" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="wodstarmobileapp.droid.MainActivity" />
-    <activity android:label="WorkoutActivity" android:screenOrientation="portrait" android:name="wodstarmobileapp.droid.WorkoutActivity" />
-    <activity android:label="WorkoutLibraryActivity" android:screenOrientation="portrait" android:name="wodstarmobileapp.droid.WorkoutLibraryActivity" />
-    <activity android:label="UserJournal" android:name="wodstarmobileapp.droid.UserJournal" />
+    <activity android:icon="@drawable/icon" android:label="WorkoutActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="wodstarmobileapp.droid.WorkoutActivity" />
+    <activity android:icon="@drawable/icon" android:label="WorkoutLibraryActivity" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="wodstarmobileapp.droid.WorkoutLibraryActivity" />
+    <activity android:icon="@drawable/icon" android:label="UserJournal" android:screenOrientation="portrait" android:theme="@android:style/Theme.Black.NoTitleBar" android:name="wodstarmobileapp.droid.UserJournal" />
     <activity android:label="Web Authenticator" android:name="xamarin.auth._mobileservices.FormAuthenticatorActivity" />
     <activity android:label="Web Authenticator" android:name="xamarin.auth._mobileservices.WebAuthenticatorActivity" />
     <provider android:name="mono.MonoRuntimeProvider" android:exported="false" android:initOrder="2147483647" android:authorities="com.wodstar.mobile.mono.MonoRuntimeProvider.__mono_init__" />
