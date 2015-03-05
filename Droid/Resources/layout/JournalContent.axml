@@ -1,8 +1,270 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/FlyOutContent"
+    android:background="#000000"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    >
+    android:layout_height="fill_parent">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="7.9dp">
+        <Button
+            android:layout_width="49.1dp"
+            android:layout_height="45.6dp"
+            android:id="@+id/hamburgerButton"
+            android:background="@drawable/hamburger" />
+        <TextView
+            android:text="Diary"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/diaryHeaderButton"
+            android:layout_marginLeft="119.6dp"
+            android:layout_marginRight="110dp" />
+        <ImageView
+            android:src="@drawable/icon"
+            android:layout_width="50.4dp"
+            android:layout_height="match_parent"
+            android:id="@+id/wodstarImage"
+            android:layout_marginRight="0.0dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="65.1dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/linearLayout1">
+        <ImageView
+            android:src="@+drawable/danim1"
+            android:layout_width="140dp"
+            android:layout_height="140dp"
+            android:id="@+id/profilePictureImageView"
+            android:layout_marginLeft="9.6dp" />
+        <TextView
+            android:text="Dan &quot;The Man&quot; Provenzano"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/bioTextView"
+            android:layout_marginLeft="8.8dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="38.3dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px">
+        <Button
+            android:text="Calculator"
+            android:layout_width="118.8dp"
+            android:layout_height="70dp"
+            android:id="@+id/calculatorButton"
+            android:layout_marginTop="25dp"
+            android:layout_marginLeft="150dp"
+            android:textSize="20dp" />
+        <Button
+            android:text="Graph"
+            android:layout_width="110dp"
+            android:layout_height="70dp"
+            android:id="@+id/graphViewButton"
+            android:layout_marginTop="25dp"
+            android:textSize="20dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="374dp"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_marginBottom="0.0dp"
+        android:background="#ff588bee"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+        <TextView
+            android:text="WODs"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/wodHeader"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold" />
+        <TextView
+            android:text="PRs"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="71.9dp"
+            android:layout_height="37.7dp"
+            android:id="@+id/textView1"
+            android:layout_marginRight="72.7dp"
+            android:layout_marginLeft="23.6dp"
+            android:layout_marginTop="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="262.3dp"
+        android:id="@+id/tableLayout1">
+        <TableRow
+            android:id="@+id/tableRow1"
+            android:background="#ffffffff"
+            android:layout_width="109.0dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:text="Mary"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView10"
+                android:layout_marginLeft="20dp"
+                android:textColor="#ff000000" />
+            <TextView
+                android:text="80 reps"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:id="@+id/textView22"
+                android:layout_marginLeft="60dp"
+                android:textColor="#000000" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow2"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:text="Annie"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView33"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="90 reps"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:id="@+id/textView38"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow3"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:text="Filthy Fifty"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView34"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="65 reps"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:id="@+id/textView39"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow6"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:text="War Frank"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView35"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="78 reps"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:id="@+id/textView40"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:text="Barbara"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView36"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="91 reps"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:id="@+id/textView41"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:background="#FFFFFF"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:text="Cindy"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView37"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="88 reps"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:id="@+id/textView42"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+        </TableRow>
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:background="#FFFFFF"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+            <TextView
+                android:text="Erin"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="0"
+                android:id="@+id/textView37"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+            <TextView
+                android:text="93 reps"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_column="1"
+                android:id="@+id/textView42"
+                android:layout_marginLeft="60dp"
+                android:layout_marginTop="15dp"
+                android:textColor="#000000" />
+        </TableRow>
+    </TableLayout>
 </LinearLayout>
-
