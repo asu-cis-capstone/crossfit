@@ -9,7 +9,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: Android.Runtime.ResourceDesignerAttribute("WodstarMobileApp.Droid.Resource", IsApplication=true)]
+[assembly: global::Android.Runtime.ResourceDesignerAttribute("WodstarMobileApp.Droid.Resource", IsApplication=true)]
 
 namespace WodstarMobileApp.Droid
 {
@@ -470,38 +470,41 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08007a
 			public const int FlyOutContainer = 2131230842;
 			
-			// aapt resource value: 0x7f080083
-			public const int FlyOutContent = 2131230851;
+			// aapt resource value: 0x7f080090
+			public const int FlyOutContent = 2131230864;
 			
 			// aapt resource value: 0x7f080015
 			public const int OneRmLabelText = 2131230741;
 			
-			// aapt resource value: 0x7f080094
-			public const int ageSpinner = 2131230868;
-			
-			// aapt resource value: 0x7f0800a3
-			public const int amandaButton = 2131230883;
-			
-			// aapt resource value: 0x7f0800b2
-			public const int angieButton = 2131230898;
-			
-			// aapt resource value: 0x7f0800af
-			public const int annieButton = 2131230895;
+			// aapt resource value: 0x7f0800a2
+			public const int ageSpinner = 2131230882;
 			
 			// aapt resource value: 0x7f0800b1
-			public const int barbaraButton = 2131230897;
+			public const int amandaButton = 2131230897;
+			
+			// aapt resource value: 0x7f0800c0
+			public const int angieButton = 2131230912;
+			
+			// aapt resource value: 0x7f0800bd
+			public const int annieButton = 2131230909;
+			
+			// aapt resource value: 0x7f0800bf
+			public const int barbaraButton = 2131230911;
 			
 			// aapt resource value: 0x7f08004b
 			public const int bioTextView = 2131230795;
 			
-			// aapt resource value: 0x7f0800b8
-			public const int blackDiamondButton = 2131230904;
+			// aapt resource value: 0x7f0800c6
+			public const int blackDiamondButton = 2131230918;
 			
-			// aapt resource value: 0x7f0800b7
-			public const int blueSquareButton = 2131230903;
+			// aapt resource value: 0x7f0800c5
+			public const int blueSquareButton = 2131230917;
 			
 			// aapt resource value: 0x7f080006
 			public const int bottom = 2131230726;
+			
+			// aapt resource value: 0x7f08008f
+			public const int bottomView = 2131230863;
 			
 			// aapt resource value: 0x7f080003
 			public const int box_count = 2131230723;
@@ -509,8 +512,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080004
 			public const int button = 2131230724;
 			
-			// aapt resource value: 0x7f08008b
-			public const int button1 = 2131230859;
+			// aapt resource value: 0x7f080098
+			public const int button1 = 2131230872;
 			
 			// aapt resource value: 0x7f08000d
 			public const int calcHeaderText = 2131230733;
@@ -530,14 +533,14 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080009
 			public const int center = 2131230729;
 			
-			// aapt resource value: 0x7f0800ae
-			public const int chelseaButton = 2131230894;
+			// aapt resource value: 0x7f0800bc
+			public const int chelseaButton = 2131230908;
 			
-			// aapt resource value: 0x7f0800b0
-			public const int christineButton = 2131230896;
+			// aapt resource value: 0x7f0800be
+			public const int christineButton = 2131230910;
 			
-			// aapt resource value: 0x7f0800ad
-			public const int cindyButton = 2131230893;
+			// aapt resource value: 0x7f0800bb
+			public const int cindyButton = 2131230907;
 			
 			// aapt resource value: 0x7f08006b
 			public const int cindyImgButton = 2131230827;
@@ -617,17 +620,26 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080046
 			public const int com_facebook_usersettingsfragment_profile_name = 2131230790;
 			
-			// aapt resource value: 0x7f080096
-			public const int confirmPwordEditText = 2131230870;
+			// aapt resource value: 0x7f0800a4
+			public const int confirmPwordEditText = 2131230884;
 			
-			// aapt resource value: 0x7f08008d
-			public const int createAccountTitleText = 2131230861;
+			// aapt resource value: 0x7f08009b
+			public const int createAccountTitleText = 2131230875;
 			
-			// aapt resource value: 0x7f0800ac
-			public const int dianeButton = 2131230892;
+			// aapt resource value: 0x7f0800ba
+			public const int dianeButton = 2131230906;
 			
 			// aapt resource value: 0x7f080048
 			public const int diaryHeaderButton = 2131230792;
+			
+			// aapt resource value: 0x7f080085
+			public const int diaryRow = 2131230853;
+			
+			// aapt resource value: 0x7f080086
+			public const int diaryTextView = 2131230854;
+			
+			// aapt resource value: 0x7f080084
+			public const int diaryView = 2131230852;
 			
 			// aapt resource value: 0x7f080022
 			public const int eightyCalc = 2131230754;
@@ -641,20 +653,20 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080023
 			public const int eightyLabelText = 2131230755;
 			
-			// aapt resource value: 0x7f0800ab
-			public const int elizabethButton = 2131230891;
+			// aapt resource value: 0x7f0800b9
+			public const int elizabethButton = 2131230905;
 			
-			// aapt resource value: 0x7f080090
-			public const int emailEditText = 2131230864;
+			// aapt resource value: 0x7f08009e
+			public const int emailEditText = 2131230878;
 			
-			// aapt resource value: 0x7f08008e
-			public const int fNameEditText = 2131230862;
-			
-			// aapt resource value: 0x7f080093
-			public const int fRadioButton = 2131230867;
+			// aapt resource value: 0x7f08009c
+			public const int fNameEditText = 2131230876;
 			
 			// aapt resource value: 0x7f0800a1
-			public const int fifthPlaceUserText = 2131230881;
+			public const int fRadioButton = 2131230881;
+			
+			// aapt resource value: 0x7f0800af
+			public const int fifthPlaceUserText = 2131230895;
 			
 			// aapt resource value: 0x7f080028
 			public const int fiftyCalc = 2131230760;
@@ -668,11 +680,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080029
 			public const int fiftyLabelText = 2131230761;
 			
-			// aapt resource value: 0x7f08009d
-			public const int firstPlaceDetailText = 2131230877;
+			// aapt resource value: 0x7f0800ab
+			public const int firstPlaceDetailText = 2131230891;
 			
-			// aapt resource value: 0x7f08009c
-			public const int firstPlaceUserText = 2131230876;
+			// aapt resource value: 0x7f0800aa
+			public const int firstPlaceUserText = 2131230890;
 			
 			// aapt resource value: 0x7f080076
 			public const int formsTextView = 2131230838;
@@ -680,68 +692,71 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080078
 			public const int forumsMainImgButton = 2131230840;
 			
-			// aapt resource value: 0x7f0800a0
-			public const int fourthPlaceUserText = 2131230880;
+			// aapt resource value: 0x7f0800ae
+			public const int fourthPlaceUserText = 2131230894;
 			
 			// aapt resource value: 0x7f080070
 			public const int fragment_container = 2131230832;
 			
-			// aapt resource value: 0x7f080084
-			public const int frameLayout1 = 2131230852;
+			// aapt resource value: 0x7f080091
+			public const int frameLayout1 = 2131230865;
 			
-			// aapt resource value: 0x7f0800aa
-			public const int franButton = 2131230890;
+			// aapt resource value: 0x7f0800b8
+			public const int franButton = 2131230904;
 			
-			// aapt resource value: 0x7f0800a9
-			public const int graceButton = 2131230889;
+			// aapt resource value: 0x7f0800b7
+			public const int graceButton = 2131230903;
 			
 			// aapt resource value: 0x7f08004d
 			public const int graphViewButton = 2131230797;
 			
-			// aapt resource value: 0x7f0800b6
-			public const int greenCircleButton = 2131230902;
+			// aapt resource value: 0x7f0800c4
+			public const int greenCircleButton = 2131230916;
 			
 			// aapt resource value: 0x7f08000c
 			public const int hamburgerButton = 2131230732;
 			
-			// aapt resource value: 0x7f0800a6
-			public const int helenButton = 2131230886;
+			// aapt resource value: 0x7f0800b4
+			public const int helenButton = 2131230900;
 			
-			// aapt resource value: 0x7f080099
-			public const int imageButton1 = 2131230873;
-			
-			// aapt resource value: 0x7f08007c
-			public const int imageView1 = 2131230844;
+			// aapt resource value: 0x7f08007f
+			public const int homeRow = 2131230847;
 			
 			// aapt resource value: 0x7f080080
-			public const int imageView2 = 2131230848;
+			public const int homeTextView = 2131230848;
+			
+			// aapt resource value: 0x7f08007e
+			public const int homeView = 2131230846;
+			
+			// aapt resource value: 0x7f0800a7
+			public const int imageButton1 = 2131230887;
 			
 			// aapt resource value: 0x7f080007
 			public const int inline = 2131230727;
 			
-			// aapt resource value: 0x7f0800a8
-			public const int isabelButton = 2131230888;
+			// aapt resource value: 0x7f0800b6
+			public const int isabelButton = 2131230902;
 			
-			// aapt resource value: 0x7f0800a4
-			public const int jackieButton = 2131230884;
+			// aapt resource value: 0x7f0800b2
+			public const int jackieButton = 2131230898;
 			
 			// aapt resource value: 0x7f080067
 			public const int jackieimgButton = 2131230823;
 			
-			// aapt resource value: 0x7f0800b4
-			public const int joshuaButton = 2131230900;
+			// aapt resource value: 0x7f0800c2
+			public const int joshuaButton = 2131230914;
 			
-			// aapt resource value: 0x7f0800a7
-			public const int karenButton = 2131230887;
+			// aapt resource value: 0x7f0800b5
+			public const int karenButton = 2131230901;
 			
-			// aapt resource value: 0x7f0800a5
-			public const int kellyButton = 2131230885;
+			// aapt resource value: 0x7f0800b3
+			public const int kellyButton = 2131230899;
 			
 			// aapt resource value: 0x7f080069
 			public const int kellyImgButton = 2131230825;
 			
-			// aapt resource value: 0x7f08008f
-			public const int lNameEditText = 2131230863;
+			// aapt resource value: 0x7f08009d
+			public const int lNameEditText = 2131230877;
 			
 			// aapt resource value: 0x7f080000
 			public const int large = 2131230720;
@@ -764,29 +779,47 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080049
 			public const int linearLayout1 = 2131230793;
 			
-			// aapt resource value: 0x7f08007f
-			public const int linearLayout2 = 2131230847;
-			
 			// aapt resource value: 0x7f08006e
 			public const int login_button = 2131230830;
 			
-			// aapt resource value: 0x7f080092
-			public const int mRadioButton = 2131230866;
+			// aapt resource value: 0x7f08007d
+			public const int logoImage = 2131230845;
+			
+			// aapt resource value: 0x7f08008d
+			public const int logoutRow = 2131230861;
+			
+			// aapt resource value: 0x7f08008e
+			public const int logoutTextView = 2131230862;
+			
+			// aapt resource value: 0x7f08008c
+			public const int logoutView = 2131230860;
+			
+			// aapt resource value: 0x7f0800a0
+			public const int mRadioButton = 2131230880;
 			
 			// aapt resource value: 0x7f08006d
 			public const int main_ui_container = 2131230829;
 			
-			// aapt resource value: 0x7f0800b3
-			public const int maryButton = 2131230899;
+			// aapt resource value: 0x7f0800c1
+			public const int maryButton = 2131230913;
 			
-			// aapt resource value: 0x7f08009b
-			public const int maryImage = 2131230875;
+			// aapt resource value: 0x7f0800a9
+			public const int maryImage = 2131230889;
 			
-			// aapt resource value: 0x7f08009a
-			public const int maryTitleText = 2131230874;
+			// aapt resource value: 0x7f0800a8
+			public const int maryTitleText = 2131230888;
 			
-			// aapt resource value: 0x7f080085
-			public const int movementsHeaderText = 2131230853;
+			// aapt resource value: 0x7f08008a
+			public const int movementLibraryRow = 2131230858;
+			
+			// aapt resource value: 0x7f08008b
+			public const int movementLibraryTextView = 2131230859;
+			
+			// aapt resource value: 0x7f080089
+			public const int movementLibraryView = 2131230857;
+			
+			// aapt resource value: 0x7f080092
+			public const int movementsHeaderText = 2131230866;
 			
 			// aapt resource value: 0x7f08001a
 			public const int ninetyCalc = 2131230746;
@@ -806,8 +839,8 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080014
 			public const int oneRmCalc = 2131230740;
 			
-			// aapt resource value: 0x7f080095
-			public const int pWordEditText = 2131230869;
+			// aapt resource value: 0x7f0800a3
+			public const int pWordEditText = 2131230883;
 			
 			// aapt resource value: 0x7f08003d
 			public const int picker_subtitle = 2131230781;
@@ -815,8 +848,14 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08004a
 			public const int profilePictureImageView = 2131230794;
 			
-			// aapt resource value: 0x7f080091
-			public const int radioGroup1 = 2131230865;
+			// aapt resource value: 0x7f080083
+			public const int profileTextView = 2131230851;
+			
+			// aapt resource value: 0x7f080081
+			public const int profileView = 2131230849;
+			
+			// aapt resource value: 0x7f08009f
+			public const int radioGroup1 = 2131230879;
 			
 			// aapt resource value: 0x7f080011
 			public const int repsDoneLabel = 2131230737;
@@ -827,20 +866,20 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080013
 			public const int resetButton = 2131230739;
 			
-			// aapt resource value: 0x7f080098
-			public const int returnButton = 2131230872;
+			// aapt resource value: 0x7f0800a6
+			public const int returnButton = 2131230886;
 			
 			// aapt resource value: 0x7f08000b
 			public const int right = 2131230731;
 			
-			// aapt resource value: 0x7f0800b9
-			public const int rxButton = 2131230905;
+			// aapt resource value: 0x7f0800c7
+			public const int rxButton = 2131230919;
 			
 			// aapt resource value: 0x7f080065
 			public const int sampWod1ImageButton = 2131230821;
 			
-			// aapt resource value: 0x7f08009e
-			public const int secondPlaceUserText = 2131230878;
+			// aapt resource value: 0x7f0800ac
+			public const int secondPlaceUserText = 2131230892;
 			
 			// aapt resource value: 0x7f080018
 			public const int seventyCalc = 2131230744;
@@ -854,11 +893,11 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080019
 			public const int seventyLabelText = 2131230745;
 			
-			// aapt resource value: 0x7f080097
-			public const int signUpButton = 2131230871;
+			// aapt resource value: 0x7f0800a5
+			public const int signUpButton = 2131230885;
 			
-			// aapt resource value: 0x7f08008c
-			public const int signUpHeaderText = 2131230860;
+			// aapt resource value: 0x7f08009a
+			public const int signUpHeaderText = 2131230874;
 			
 			// aapt resource value: 0x7f080020
 			public const int sixtyCalc = 2131230752;
@@ -914,17 +953,14 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080051
 			public const int textView10 = 2131230801;
 			
-			// aapt resource value: 0x7f0800ba
-			public const int textView11 = 2131230906;
+			// aapt resource value: 0x7f0800c8
+			public const int textView11 = 2131230920;
 			
-			// aapt resource value: 0x7f08007d
-			public const int textView2 = 2131230845;
+			// aapt resource value: 0x7f080099
+			public const int textView2 = 2131230873;
 			
 			// aapt resource value: 0x7f080052
 			public const int textView22 = 2131230802;
-			
-			// aapt resource value: 0x7f080081
-			public const int textView3 = 2131230849;
 			
 			// aapt resource value: 0x7f080054
 			public const int textView33 = 2131230804;
@@ -956,20 +992,17 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080061
 			public const int textView42 = 2131230817;
 			
-			// aapt resource value: 0x7f08009f
-			public const int thirdPlaceUserText = 2131230879;
+			// aapt resource value: 0x7f0800ad
+			public const int thirdPlaceUserText = 2131230893;
+			
+			// aapt resource value: 0x7f08007b
+			public const int titleRow = 2131230843;
+			
+			// aapt resource value: 0x7f08007c
+			public const int titleTextView = 2131230844;
 			
 			// aapt resource value: 0x7f080008
 			public const int top = 2131230728;
-			
-			// aapt resource value: 0x7f08007b
-			public const int view1 = 2131230843;
-			
-			// aapt resource value: 0x7f08007e
-			public const int view2 = 2131230846;
-			
-			// aapt resource value: 0x7f080082
-			public const int view3 = 2131230850;
 			
 			// aapt resource value: 0x7f08000f
 			public const int weightLiftedLabel = 2131230735;
@@ -995,11 +1028,20 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f08004e
 			public const int wodHeader = 2131230798;
 			
-			// aapt resource value: 0x7f0800b5
-			public const int wodHeaderText = 2131230901;
+			// aapt resource value: 0x7f0800c3
+			public const int wodHeaderText = 2131230915;
 			
-			// aapt resource value: 0x7f0800a2
-			public const int wodsHeaderText = 2131230882;
+			// aapt resource value: 0x7f080082
+			public const int wodLibraryRow = 2131230850;
+			
+			// aapt resource value: 0x7f080088
+			public const int wodLibraryTextView = 2131230856;
+			
+			// aapt resource value: 0x7f080087
+			public const int wodLibraryView = 2131230855;
+			
+			// aapt resource value: 0x7f0800b0
+			public const int wodsHeaderText = 2131230896;
 			
 			// aapt resource value: 0x7f080074
 			public const int wodsMainImgButton = 2131230836;
@@ -1013,20 +1055,20 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 0x7f080071
 			public const int wodstarTextView = 2131230833;
 			
-			// aapt resource value: 0x7f080086
-			public const int youtubePlayer1 = 2131230854;
+			// aapt resource value: 0x7f080093
+			public const int youtubePlayer1 = 2131230867;
 			
-			// aapt resource value: 0x7f080087
-			public const int youtubePlayer2 = 2131230855;
+			// aapt resource value: 0x7f080094
+			public const int youtubePlayer2 = 2131230868;
 			
-			// aapt resource value: 0x7f080088
-			public const int youtubePlayer3 = 2131230856;
+			// aapt resource value: 0x7f080095
+			public const int youtubePlayer3 = 2131230869;
 			
-			// aapt resource value: 0x7f080089
-			public const int youtubePlayer4 = 2131230857;
+			// aapt resource value: 0x7f080096
+			public const int youtubePlayer4 = 2131230870;
 			
-			// aapt resource value: 0x7f08008a
-			public const int youtubePlayer5 = 2131230858;
+			// aapt resource value: 0x7f080097
+			public const int youtubePlayer5 = 2131230871;
 			
 			static Id()
 			{
@@ -1278,15 +1320,13 @@ namespace WodstarMobileApp.Droid
 		public partial class Styleable
 		{
 			
-			public static int[] com_facebook_friend_picker_fragment = new int[]
-			{
+			public static int[] com_facebook_friend_picker_fragment = new int[] {
 					2130771975};
 			
 			// aapt resource value: 0
 			public const int com_facebook_friend_picker_fragment_multi_select = 0;
 			
-			public static int[] com_facebook_like_view = new int[]
-			{
+			public static int[] com_facebook_like_view = new int[] {
 					2130771986,
 					2130771987,
 					2130771988,
@@ -1308,8 +1348,7 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 2
 			public const int com_facebook_like_view_style = 2;
 			
-			public static int[] com_facebook_login_view = new int[]
-			{
+			public static int[] com_facebook_login_view = new int[] {
 					2130771980,
 					2130771981,
 					2130771982,
@@ -1327,8 +1366,7 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 3
 			public const int com_facebook_login_view_logout_text = 3;
 			
-			public static int[] com_facebook_picker_fragment = new int[]
-			{
+			public static int[] com_facebook_picker_fragment = new int[] {
 					2130771968,
 					2130771969,
 					2130771970,
@@ -1358,8 +1396,7 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 3
 			public const int com_facebook_picker_fragment_title_text = 3;
 			
-			public static int[] com_facebook_place_picker_fragment = new int[]
-			{
+			public static int[] com_facebook_place_picker_fragment = new int[] {
 					2130771976,
 					2130771977,
 					2130771978,
@@ -1377,8 +1414,7 @@ namespace WodstarMobileApp.Droid
 			// aapt resource value: 3
 			public const int com_facebook_place_picker_fragment_show_search_box = 3;
 			
-			public static int[] com_facebook_profile_picture_view = new int[]
-			{
+			public static int[] com_facebook_profile_picture_view = new int[] {
 					2130771984,
 					2130771985};
 			

@@ -1,17 +1,8 @@
-<<<<<<< HEAD
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Emulator" />
   <MonoDevelop.Ide.Workbench ActiveDocument="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs">
     <Files>
-      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" Line="73" Column="73" />
-      <File FileName="Droid\FlyOutContainer.cs" Line="1" Column="1" />
-=======
-﻿<Properties GitUserInfo="UsingGIT" StartupItem="Droid/WodstarMobileApp.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Droid/obj/Debug/__library_projects__/Xamarin.Facebook/library_project_imports/res/layout/com_facebook_picker_activity_circle_row.xml">
-    <Files>
-      <File FileName="Droid/obj/Debug/__library_projects__/Xamarin.Facebook/library_project_imports/res/layout/com_facebook_picker_activity_circle_row.xml" Line="1" Column="1" />
->>>>>>> 598d5979104c637b6af2673497e6a99054b2bc53
+      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\MovementLibraryActivity.cs" Line="53" Column="53" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
