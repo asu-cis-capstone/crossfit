@@ -13,7 +13,7 @@ using Android.Widget;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "UserJournal")]			
+	[Activity (Label = "UserJournal" Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class UserJournal : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

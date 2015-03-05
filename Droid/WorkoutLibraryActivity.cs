@@ -14,7 +14,7 @@ using Android.Content.PM;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "WorkoutLibraryActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "WorkoutLibraryActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class WorkoutLibraryActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

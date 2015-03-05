@@ -14,7 +14,7 @@ using Android.Content.PM;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "WorkoutActivity", ScreenOrientation = ScreenOrientation.Portrait)]			
+	[Activity (Label = "WorkoutActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class WorkoutActivity : Activity
 	{
 		String [] thisWodInfo;
