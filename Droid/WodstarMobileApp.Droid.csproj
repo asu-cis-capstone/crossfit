@@ -128,8 +128,8 @@
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\layout\UserProfile.axml" />
     <AndroidResource Include="Resources\layout\PersonalRecord.axml" />
-    <AndroidResource Include="Resources\layout\Diary.axml" />
     <AndroidResource Include="Resources\layout\CalcTable.axml" />
+    <AndroidResource Include="Resources\layout\Journal.axml" />
     <AndroidResource Include="Resources\layout\Leaderboard.axml" />
     <AndroidResource Include="Resources\layout\SignUp.axml" />
     <AndroidResource Include="Resources\layout\MovementLibrary.axml" />
@@ -157,7 +157,7 @@
       <DependentUpon>CalcTable.axml</DependentUpon>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\JournalContent.axml">
-      <DependentUpon>Diary.axml</DependentUpon>
+      <DependentUpon>Journal.axml</DependentUpon>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\LeaderboardContent.axml">
       <DependentUpon>Leaderboard.axml</DependentUpon>

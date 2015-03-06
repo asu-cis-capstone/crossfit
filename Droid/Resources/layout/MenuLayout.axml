@@ -97,7 +97,7 @@
         android:id="@+id/journalRow"
         android:layout_margin="8dp">
         <TextView
-            android:text="Workout Diary"
+            android:text="Workout Journal"
             android:textAppearance="?android:attr/textAppearanceMedium"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -17,7 +17,7 @@
             android:id="@+id/hamburgerButton"
             android:background="@drawable/hamburger" />
         <TextView
-            android:text="Diary"
+            android:text="Journal"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"

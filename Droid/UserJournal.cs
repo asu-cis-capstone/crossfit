@@ -22,7 +22,7 @@ namespace WodstarMobileApp.Droid
 			base.OnCreate (bundle);
 
 			// Create your application here
-			SetContentView (Resource.Layout.Diary);
+			SetContentView (Resource.Layout.Journal);
 
 			//NAVIGATION INITIALIZATION
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);

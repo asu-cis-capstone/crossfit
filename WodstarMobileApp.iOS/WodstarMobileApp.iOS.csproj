@@ -122,7 +122,6 @@
     <InterfaceDefinition Include="MovLibrary.xib" />
     <InterfaceDefinition Include="MovLibrarySearch.xib" />
     <InterfaceDefinition Include="UserProfile.xib" />
-    <InterfaceDefinition Include="Diary.xib" />
     <InterfaceDefinition Include="Login.xib" />
     <InterfaceDefinition Include="WODpage.xib" />
     <InterfaceDefinition Include="PersonalRecord.xib" />
@@ -133,11 +132,9 @@
     <InterfaceDefinition Include="Resources\StartScreen.xib" />
     <InterfaceDefinition Include="Resources\StartUp.storyboard" />
     <InterfaceDefinition Include="Resources\WODboard.xib" />
+    <InterfaceDefinition Include="Journal.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
