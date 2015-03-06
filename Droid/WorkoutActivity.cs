@@ -18,7 +18,7 @@ namespace WodstarMobileApp.Droid
 	public class WorkoutActivity : Activity
 	{
 		String [] thisWodInfo;
-		private WorkoutDOM thisWorkout;
+		private Workout thisWorkout;
 
 		protected override void OnCreate (Bundle bundle)
 		{
