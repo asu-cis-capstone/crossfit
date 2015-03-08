@@ -1138,7 +1138,7 @@ namespace WodstarMobileApp.Droid
 			public const int com_facebook_usersettingsfragment = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int Diary = 2130903058;
+			public const int Journal = 2130903058;
 			
 			// aapt resource value: 0x7f030013
 			public const int JournalContent = 2130903059;

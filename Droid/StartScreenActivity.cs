@@ -11,6 +11,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using Android.Graphics;
 
 namespace WodstarMobileApp.Droid
 {
@@ -41,13 +42,13 @@ namespace WodstarMobileApp.Droid
 				menu.AnimatedOpened = !menu.AnimatedOpened;
 			};
 
-			var titleButton = FindViewById (Resource.Id.titleTextView);
-			var homeButton = FindViewById (Resource.Id.homeTextView);
-			var profileButton = FindViewById (Resource.Id.profileTextView);
-			var journalButton = FindViewById (Resource.Id.journalTextView);
-			var wodLibraryButton = FindViewById (Resource.Id.wodLibraryTextView);
-			var movementLibraryButton = FindViewById (Resource.Id.movementLibraryTextView);
-			var logoutButton = FindViewById (Resource.Id.logoutTextView);
+			TextView titleButton = FindViewById<TextView> (Resource.Id.titleTextView);
+			TextView homeButton = FindViewById <TextView> (Resource.Id.homeTextView);
+			TextView profileButton = FindViewById <TextView> (Resource.Id.profileTextView);
+			TextView journalButton = FindViewById <TextView> (Resource.Id.journalTextView);
+			TextView wodLibraryButton = FindViewById <TextView> (Resource.Id.wodLibraryTextView);
+			TextView movementLibraryButton = FindViewById <TextView> (Resource.Id.movementLibraryTextView);
+			TextView logoutButton = FindViewById <TextView> (Resource.Id.logoutTextView);
 
 			titleButton.Click += goToHomeScreen;
 			homeButton.Click += goToHomeScreen;
@@ -56,6 +57,15 @@ namespace WodstarMobileApp.Droid
 			wodLibraryButton.Click += goToWodLibrary;
 			movementLibraryButton.Click += goToMovementLibrary;
 			logoutButton.Click += goToLogin;
+
+			Typeface font = Typeface.CreateFromAsset (Assets, "Font/montserrat.ttf");
+			titleButton.Typeface = font;
+			homeButton.Typeface = font;
+			profileButton.Typeface = font;
+			journalButton.Typeface = font;
+			wodLibraryButton.Typeface = font;
+			movementLibraryButton.Typeface = font;
+			logoutButton.Typeface = font;
 		}
 
 
