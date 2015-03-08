@@ -138,20 +138,13 @@
     <AndroidResource Include="Resources\layout\WodLibrary.axml" />
     <AndroidResource Include="Resources\layout\WodPage.axml" />
     <AndroidResource Include="Resources\drawable\hamburger.png" />
-    <AndroidResource Include="Resources\drawable\amanda.png" />
-    <AndroidResource Include="Resources\drawable\jackie.png" />
-    <AndroidResource Include="Resources\drawable\kelly.png" />
     <AndroidResource Include="Resources\layout\MenuLayout.axml" />
     <AndroidResource Include="Resources\drawable\camille.png" />
-    <AndroidResource Include="Resources\drawable\cindy.png" />
     <AndroidResource Include="Resources\drawable\danim1.png" />
     <AndroidResource Include="Resources\drawable\forums.png" />
-    <AndroidResource Include="Resources\drawable\fran.png" />
     <AndroidResource Include="Resources\drawable\graph.png" />
     <AndroidResource Include="Resources\drawable\leaders.png" />
-    <AndroidResource Include="Resources\drawable\grace.png" />
     <AndroidResource Include="Resources\drawable\img_6063.png" />
-    <AndroidResource Include="Resources\drawable\mary.png" />
     <AndroidResource Include="Resources\layout\MovementLibraryContent.axml">
       <DependentUpon>MovementLibrary.axml</DependentUpon>
     </AndroidResource>
@@ -181,6 +174,28 @@
     </AndroidResource>
     <AndroidResource Include="Resources\layout\WodBoard.axml" />
     <AndroidResource Include="Resources\layout\UserProfileContent.axml" />
+    <AndroidResource Include="Resources\drawable\amanda.png" />
+    <AndroidResource Include="Resources\drawable\angie.png" />
+    <AndroidResource Include="Resources\drawable\annie.png" />
+    <AndroidResource Include="Resources\drawable\chelsea.png" />
+    <AndroidResource Include="Resources\drawable\christine.png" />
+    <AndroidResource Include="Resources\drawable\cindy.png" />
+    <AndroidResource Include="Resources\drawable\diane.png" />
+    <AndroidResource Include="Resources\drawable\elizabeth.png" />
+    <AndroidResource Include="Resources\drawable\eva.png" />
+    <AndroidResource Include="Resources\drawable\fran.png" />
+    <AndroidResource Include="Resources\drawable\grace.png" />
+    <AndroidResource Include="Resources\drawable\helen.png" />
+    <AndroidResource Include="Resources\drawable\isabel.png" />
+    <AndroidResource Include="Resources\drawable\jackie.png" />
+    <AndroidResource Include="Resources\drawable\karen.png" />
+    <AndroidResource Include="Resources\drawable\kelly.png" />
+    <AndroidResource Include="Resources\drawable\linda.png" />
+    <AndroidResource Include="Resources\drawable\lynne.png" />
+    <AndroidResource Include="Resources\drawable\mary.png" />
+    <AndroidResource Include="Resources\drawable\nancy.png" />
+    <AndroidResource Include="Resources\drawable\nicole.png" />
+    <AndroidResource Include="Resources\drawable\rosa.png" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
