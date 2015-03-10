@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="88.3dp"
         android:layout_weight="1"
-        android:id="wodLibraryLayout">
+        android:id="@+id/FlyOutContent">
         <Button
             android:layout_width="49.1dp"
             android:layout_height="45.6dp"
