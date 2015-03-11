@@ -185,8 +185,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\MovementController.cs" />
     <Compile Include="Controllers\UserAccountController.cs" />
+    <Compile Include="Controllers\WorkoutController.cs" />
+    <Compile Include="DataObjects\Movement.cs" />
     <Compile Include="DataObjects\UserAccount.cs" />
+    <Compile Include="DataObjects\Workout.cs" />
     <Compile Include="Models\wodstarContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">
