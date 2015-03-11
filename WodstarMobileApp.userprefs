@@ -1,19 +1,9 @@
-﻿<Properties GitUserInfo="UsingGIT" StartupItem="Droid/WodstarMobileApp.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="WodstarMobileApp.iOS/AppDelegate.cs">
-    <Files>
-      <File FileName="WodstarMobileApp.iOS/Main.cs" Line="1" Column="1" />
-      <File FileName="WodstarMobileApp.iOS/AppDelegate.cs" Line="1" Column="1" />
-      <File FileName="WodstarMobileApp.iOS/DetailViewController.cs" Line="1" Column="1" />
-      <File FileName="WodstarMobileApp.iOS/DetailViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="WodstarMobileApp.iOS/RootViewController.designer.cs" Line="1" Column="1" />
-      <File FileName="WodstarMobileApp.iOS/Info.plist" />
-      <File FileName="WodstarMobileApp.iOS/MasterViewController.cs" Line="1" Column="1" />
-      <File FileName="WodstarMobileApp.iOS/ModelController.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4-v4" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>
