@@ -112,7 +112,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <InterfaceDefinition Include="MainStoryboard.storyboard" />
+    <InterfaceDefinition Include="MainStoryboard.storyboard">
+      <DependentUpon>AppDelegate.cs</DependentUpon>
+    </InterfaceDefinition>
     <InterfaceDefinition Include="SignUp.xib" />
     <InterfaceDefinition Include="Calc.xib" />
     <InterfaceDefinition Include="Leaderboard.xib" />

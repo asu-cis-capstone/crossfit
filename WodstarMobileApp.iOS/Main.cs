@@ -18,6 +18,8 @@ namespace WodstarMobileApp.iOS
 			UIApplication.Main (args, null, "AppDelegate");
 
 
+
+
 		
 		}
 	}
