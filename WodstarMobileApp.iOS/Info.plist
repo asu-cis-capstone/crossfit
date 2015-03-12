@@ -22,10 +22,6 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
-	<key>UILaunchStoryboardName</key>
-	<string>LaunchScreen</string>
-	<key>UIMainStoryboardFile</key>
-	<string>Main</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
 	<key>UIRequiredDeviceCapabilities</key>
@@ -44,5 +40,7 @@
 	<string>Wodstar</string>
 	<key>MinimumOSVersion</key>
 	<string>7.0</string>
+	<key>UILaunchStoryboardName</key>
+	<string>SignUp</string>
 </dict>
 </plist>

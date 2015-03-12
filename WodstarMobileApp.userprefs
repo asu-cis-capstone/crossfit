@@ -1,16 +1,9 @@
 ﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
-  <MonoDevelop.Ide.Workbench>
-    <Files>
-      <File FileName="Droid\StartScreenActivity.cs" Line="51" Column="51" />
-      <File FileName="Droid\Util.cs" Line="1" Column="1" />
-      <File FileName="WodstarMobileApp\Azure.cs" Line="56" Column="56" />
-      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\WorkoutLibraryActivity.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.Nexus4-v4" />
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar.Fullscreen" />
+  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar.Fullscreen" AndroidDesignerPreferredDevice="Nexus 4" />
 </Properties>

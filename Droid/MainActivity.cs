@@ -67,7 +67,7 @@ namespace WodstarMobileApp.Droid
 		{
 			base.OnActivityResult (requestCode, resultCode, data);
 
-			//Relay the result to our FB Session
+			//Relay the result to the Facebook Session
 			Session.ActiveSession.OnActivityResult (this, requestCode, (int)resultCode, data);
 
 			//If a Facebook session is open, request the user's information an		
@@ -100,7 +100,11 @@ namespace WodstarMobileApp.Droid
 				//alert.Show ();
 
 				//Get or create user account in Azure
-				Azure.GetUserAccount (ThisUser);
+				try {
+					Azure.GetUserAccount (ThisUser);
+				} catch( Exception e) {
+					Console.WriteLine(e);
+				}
 
 				//Start a new Activity for the Main layout
 				StartActivity (typeof(StartScreenActivity));
