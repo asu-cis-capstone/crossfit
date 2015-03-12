@@ -27,12 +27,21 @@ namespace WodstarMobileApp.Droid
 
 			//Captures data from starting activity, loads the proper data to the page.
 			String id = Intent.GetStringExtra ("workoutId");
-			//TODO: Constructor corresponds to name, type, need to change somewhere.
-			//thisWorkout = new WorkoutDOM (thisWodInfo [1], thisWodInfo [1]);		
+			//Based off ID, fetch workout and assign it to this workout.
 
-			//parse thisWod for Id of workout
-			//Call Azure to retrieve workout object based on Id
-			//Map to the instance of a workout above - thisWorkout;
+			//Assign thisWorkout value.
+			switch (Int64.Parse(id)) {
+			case 1: //Amanda
+
+				thisWorkout=new Workout("amanda", WorkoutUtil.forTime, new Movement[])
+				break;
+			case 2: //Jackie
+				break;
+			default: 
+				//TODO: Add error handling
+				break;
+			}
+				
 			//Load data from workout for header image, text, steps, and movement videos.
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
@@ -56,6 +65,10 @@ namespace WodstarMobileApp.Droid
 			wodLibraryButton.Click += goToWodLibrary;
 			movementLibraryButton.Click += goToMovementLibrary;
 			logoutButton.Click += goToLogin;
+		}
+
+		void createMovementVideo(String url) {
+			//Take in movement video url and create Youtube fragment for it.
 		}
 
 		//NAVIGATION METHODS

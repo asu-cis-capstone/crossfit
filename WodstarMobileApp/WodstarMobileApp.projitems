@@ -16,7 +16,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Azure.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MovementDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutDOM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)WorkoutLinks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UserAccountDOM.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WorkoutUtil.cs" />
   </ItemGroup>
 </Project>
