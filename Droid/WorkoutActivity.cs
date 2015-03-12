@@ -33,7 +33,7 @@ namespace WodstarMobileApp.Droid
 			switch (Int64.Parse(id)) {
 			case 1: //Amanda
 
-				thisWorkout=new Workout("amanda", WorkoutUtil.forTime, new Movement[])
+				//thisWorkout=new Workout("amanda", WorkoutUtil.forTime, new Movement[])
 				break;
 			case 2: //Jackie
 				break;

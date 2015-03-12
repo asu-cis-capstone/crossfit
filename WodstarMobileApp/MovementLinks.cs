@@ -45,6 +45,7 @@ namespace WodstarMobileApp
 		public const String rowing = "Rowing";
 		public const String pullUp = "Pull Up";
 		public const String run = "Run";
+		public const String squatSnatch = "Squat Snatch";
 
 		//Types of equipment
 		public const String box = "Box";
@@ -96,11 +97,11 @@ namespace WodstarMobileApp
 		public static Movement hangPowerCleanMovement = new Movement(hangPowerClean, hangPowerCleanLink, strength, barbell);
 		public static Movement ringMuscleUpMovement = new Movement(ringMuscleUp, ringMuscleUpLink, bodyweight, rings, 
 			ringKippingMuscleUp, "addLinkToRingKipping", "Chest to Bar Pull-Up and Dip (2:1)", "addLink", "Pull-Up and Dip (2:1)", "addLink");
-		public static Movement squatSnatch = new Movement(squatSnatch, powerSnatchLink, strength);
-		public static Movement rowing = new Movement(rowing, rowingLink, strength, rower);
-		public static Movement thruster = new Movement(thruster, thrusterLink, strength, barbell);
-		public static Movement pullUp = new Movement(pullUp, "getPullUpLink", strength, pullUpBar);
-		public static Movement run = new Movement(run, null, cardio, null);
+		public static Movement squatSnatchMovement = new Movement(squatSnatch, powerSnatchLink, strength, barbell);
+		public static Movement rowingMovement = new Movement(rowing, rowingLink, strength, rower);
+		public static Movement thrusterMovement = new Movement(thruster, thrusterLink, strength, barbell);
+		public static Movement pullUpMovement = new Movement(pullUp, "getPullUpLink", strength, pullUpBar);
+		public static Movement runMovement = new Movement(run, null, cardio, null);
 	}
 }
 

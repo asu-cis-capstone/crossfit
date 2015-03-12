@@ -28,6 +28,7 @@ namespace WodstarMobileApp
 
 		public Movement[] parseMovements(String movementsFromAzure) {
 			//Parse string for 
+			return new Movement[1];
 		}
 	}
 }

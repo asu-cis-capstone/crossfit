@@ -21,25 +21,25 @@ namespace WodstarMobileApp
 		public String rxName { get; set;}
 
 		[JsonProperty(PropertyName = "rxLink")]
-		public Uri rxLink { get; set;}
+		public String rxLink { get; set;}
 
 		[JsonProperty(PropertyName = "blackDiamondName")]
 		public String blackDiamondName { get; set;}
 
 		[JsonProperty(PropertyName = "blackDiamondLink")]
-		public Uri blackDiamondLink { get; set;}
+		public String blackDiamondLink { get; set;}
 
 		[JsonProperty(PropertyName = "blueSquareName")]
 		public String blueSquareName{ get; set;}
 
 		[JsonProperty(PropertyName = "blueSquareLink")]
-		public Uri blueSquareLink{ get; set;}
+		public String blueSquareLink{ get; set;}
 
 		[JsonProperty(PropertyName = "greenCircleName")]
 		public String greenCircleName{ get; set;}
 
 		[JsonProperty(PropertyName = "greenCircleLink")]
-		public Uri greenCircleLink { get; set;}
+		public String greenCircleLink { get; set;}
 
 		public Movement(String rxName, String rxLink, String type, String equipment) {
 			this.rxName = rxName;
