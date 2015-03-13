@@ -52,3 +52,11 @@ Tyler Daulton | tdaulton@asu.edu
 * Youtube Player Added
 * Android Slide-In Menu Added
 * Azure Integration Begins
+
+###v0.4
+* Workout timer
+* Workout library
+* Movement library
+* Bug fixes
+* Layout tweaks
+* Youtube video: https://www.youtube.com/watch?v=2owdoczOKUk
