@@ -54,4 +54,9 @@ Tyler Daulton | tdaulton@asu.edu
 * Azure Integration Begins
 
 ###v0.4
-* Please use the following link to access a video we have made about the application we are developing: https://www.youtube.com/watch?v=2owdoczOKUk&feature=youtu.be
+* Workout timer
+* Workout library
+* Movement library
+* Bug fixes
+* Layout tweaks
+* Youtube video: https://www.youtube.com/watch?v=2owdoczOKUk
