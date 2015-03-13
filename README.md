@@ -52,3 +52,6 @@ Tyler Daulton | tdaulton@asu.edu
 * Youtube Player Added
 * Android Slide-In Menu Added
 * Azure Integration Begins
+
+###v0.4
+* Please use the following link to access a video we have made about the application we are developing: https://www.youtube.com/watch?v=2owdoczOKUk&feature=youtu.be
