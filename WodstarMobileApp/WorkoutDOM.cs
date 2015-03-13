@@ -12,9 +12,9 @@ namespace WodstarMobileApp
 		public String workoutName { get; set;}
 
 		[JsonProperty(PropertyName = "workoutType")]
-		publicString workoutType { get; set;}
+		public String workoutType { get; set;}
 
-		public WorkoutSegment[] segments { get; set;}
+		public WorkoutSegment[] segments;
 
 		//Add the cool down/end workout one time sessions
 		//Need to have a type for each movement in the array - maybe make jagged array of types?

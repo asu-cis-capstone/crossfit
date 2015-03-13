@@ -169,7 +169,9 @@
       <DependentUpon>WodBoard.axml</DependentUpon>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\WodBoard.axml" />
-    <AndroidResource Include="Resources\layout\UserProfileContent.axml" />
+    <AndroidResource Include="Resources\layout\UserProfileContent.axml">
+      <DependentUpon>UserProfile.axml</DependentUpon>
+    </AndroidResource>
     <AndroidResource Include="Resources\drawable\amanda.png" />
     <AndroidResource Include="Resources\drawable\angie.png" />
     <AndroidResource Include="Resources\drawable\annie.png" />

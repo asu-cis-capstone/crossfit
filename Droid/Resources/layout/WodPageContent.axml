@@ -52,7 +52,8 @@
         android:layout_height="30.1dp"
         android:layout_weight="1"
         android:layout_marginBottom="0dp"
-        android:layout_marginTop="5.3dp">
+        android:layout_marginTop="5.3dp"
+        android:id="@+id/buttonLayout">
         <Button
             android:text="(Rx)"
             android:layout_width="90dp"
@@ -84,40 +85,29 @@
         android:layout_weight="1"
         android:minWidth="25px"
         android:minHeight="25px"
-        android:id="@+id/linearLayout1"
+        android:id="@+id/wodDataLayout"
         android:layout_marginTop="5.3dp">
         <TableLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/workoutDetailsLayout">
-            <TableRow
-                android:id="@+id/tableRow1">
-                <TextView
-                    android:text=" Mary"
-                    android:textAppearance="?android:attr/textAppearanceLarge"
-                    android:layout_column="0"
-                    android:id="@+id/textView10"
-                    android:layout_width="370dp"
-                    android:layout_marginLeft="7dp"
-                    android:layout_marginRight="7dp"
-                    android:layout_height="35.8dp"
-                    android:background="#ff75bbce"
-                    android:layout_marginBottom="2dp" />
-            </TableRow>
-            <TableRow
-                android:id="@+id/tableRow2">
-                <TextView
-                    android:text="DESCRIPTION: AMRAP in 20:00 of: 5 Handstand Push-ups, 10 Alternating Pistols, 15 Pull-ups GOAL: WodStar Rx Goal Rounds Elite: 14+ Rounds, Level 3: 12-15 Rounds, Level 2: 9-12 Rounds, Level 1: 5-9 Rounds"
-                    android:textAppearance="?android:attr/textAppearanceMedium"
-                    android:layout_column="0"
-                    android:id="@+id/textView11"
-                    android:layout_width="370dp"
-                    android:layout_marginRight="7dp"
-                    android:layout_marginLeft="7dp"
-                    android:layout_height="301.0dp"
-                    android:background="#ffffffff"
-                    android:textColor="#ff000000" />
-            </TableRow>
-        </TableLayout>
+            android:id="@+id/workoutDetailsLayout" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="300.5dp"
+        android:layout_weight="1"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:id="@+id/wodDataLayout"
+        android:layout_marginTop="5.3dp">
+        <fragment
+            android:name="com.google.android.youtube.player.YouTubePlayerFragment"
+            android:layout_width="fill_parent"
+            android:layout_height="169.1dp"
+            android:id="@+id/movementVideos"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="30dp" />
     </LinearLayout>
 </LinearLayout>

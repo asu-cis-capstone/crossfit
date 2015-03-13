@@ -11,6 +11,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using WodstarMobileApp;
+using Google.YouTube.Player;
 
 namespace WodstarMobileApp.Droid
 {
@@ -18,6 +20,7 @@ namespace WodstarMobileApp.Droid
 	public class WorkoutActivity : Activity
 	{
 		public Workout thisWorkout= new Workout();
+		private List<String> movementUrls = new List<String> ();
 
 		//Sample workout
 		private WorkoutSegment amanda1 = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
@@ -42,6 +45,7 @@ namespace WodstarMobileApp.Droid
 			TextView wodHeaderText = FindViewById<TextView> (Resource.Id.wodHeaderText);
 			ImageView wodImage = FindViewById<ImageView> (Resource.Id.wodstarImage);
 			TableLayout workoutDetailsLayout = FindViewById<TableLayout> (Resource.Id.workoutDetailsLayout);
+			YouTubePlayerFragment movementVideos = (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
 
 			//Assign thisWorkout value.
 			switch (Int64.Parse(id)) {
@@ -58,17 +62,30 @@ namespace WodstarMobileApp.Droid
 				break;
 			}
 
-			wodHeaderText = thisWorkout.workoutName;
+			wodHeaderText.SetText(thisWorkout.workoutName);
+
 			for(int i=0;i <thisWorkout.segments.Count; i++) {
-				TableRow segmentHeader = new TableRow (thisWorkout.segments[i].segmentHeader);
+				TableRow segmentHeader = new TableRow ();
+				TextView headerText = new TextView ();
+				headerText.SetText (thisWorkout.segments [i].segmentHeader);
+				segmentHeader.AddView (headerText);
+
 				TableRow segmentDescription = new TableRow (thisWorkout.segments[i].segmentDescription);
+				TextView descriptionText = new TextView ();
+				descriptionText.SetText (thisWorkout.segments [i].segmentDescription);
+				segmentDescription.AddView (descriptionText);
+
+				//Initial call to load RX Video Links
+				loadRxVideos ();
+
 				workoutDetailsLayout.AddView (segmentHeader);
 				workoutDetailsLayout.AddView (segmentDescription);
 			}
 
-				
-			//Load data from workout for header image, text, steps, and movement videos.
+			//Has to be at the end to add to video cue.
+			movementVideos.Initialize (DeveloperKey.key, this);
 
+			//MENU METHODS
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
 			hamburgerButton.Click += (sender, e) => {
@@ -90,10 +107,25 @@ namespace WodstarMobileApp.Droid
 			wodLibraryButton.Click += goToWodLibrary;
 			movementLibraryButton.Click += goToMovementLibrary;
 			logoutButton.Click += goToLogin;
+			//END MENU METHODS
+
+		} //End onCreate
+
+		void loadRxVideos() {
+			foreach(Movement m in thisWorkout.segments[i].segmentMovements) {
+				if (m.rxLink != null) {
+					movementUrls.Add (m.rxLink);
+				}
+			}
 		}
 
-		void createMovementVideo(String url) {
-			//Take in movement video url and create Youtube fragment for it.
+		//YOUTUBE METHODS
+		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
+		{
+			return (YouTubePlayerFragment) FragmentManager.FindFragmentById(Resource.Id.movementVideos)
+		}
+		private void loadVideos(IYouTubePlayer player) {
+			player.CueVideos (movementUrls);
 		}
 
 		//NAVIGATION METHODS
