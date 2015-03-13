@@ -18,5 +18,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UserAccountDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)WorkoutSegment.cs" />
   </ItemGroup>
 </Project>

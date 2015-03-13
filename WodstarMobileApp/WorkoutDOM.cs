@@ -9,26 +9,24 @@ namespace WodstarMobileApp
 		public string id { get; set;}
 
 		[JsonProperty(PropertyName = "workoutName")]
-		private String workoutName { get; set;}
+		public String workoutName { get; set;}
 
 		[JsonProperty(PropertyName = "workoutType")]
-		private String workoutType { get; set;}
+		publicString workoutType { get; set;}
 
-		private Movement[] movements { get; set;}
+		public WorkoutSegment[] segments { get; set;}
 
 		//Add the cool down/end workout one time sessions
 		//Need to have a type for each movement in the array - maybe make jagged array of types?
 
-		public Workout (String name, String type, Movement[] movements)
-		{
+		public Workout (String name, params WorkoutSegment[] segments)
 			this.workoutName = name;
-			this.workoutType = type;
-			this.movements = movements;
+			this.segments = segments;
 		}
 
 		public Movement[] parseMovements(String movementsFromAzure) {
-			//Parse string for 
-			return new Movement[1];
+			//Parse string for commas
+			return new Movement[0];
 		}
 	}
 }
