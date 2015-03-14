@@ -1,9 +1,7 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -21,7 +19,7 @@ namespace WodstarMobileApp.Droid
 	{
 		public Workout thisWorkout;
 		private List<String> movementUrls = new List<String> ();
-		private String workoutId=null;
+		private String workoutId="1";
 		private ImageView wodImage;
 		String segmentMovementDescriptions = null;
 
@@ -46,7 +44,7 @@ namespace WodstarMobileApp.Droid
 			YouTubePlayerFragment movementVideos = (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
 
 			//Captures data from starting activity, loads the proper data to the page.
-			workoutId = Intent.GetStringExtra ("workoutId");
+			//workoutId = Intent.GetStringExtra (workoutId);
 			setThisWorkout ();
 			wodHeaderText.Text = thisWorkout.workoutName;
 
