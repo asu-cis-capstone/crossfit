@@ -13,7 +13,7 @@ namespace WodstarMobileApp
 
 		public static void InitializeAzure() {
 			//connect to Azure
-			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "kQKEljOALXgvBQWocFdYxXYaHlfAYB80");
+			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
 			CurrentPlatform.Init();
 		}//end initializeAzure method
 
