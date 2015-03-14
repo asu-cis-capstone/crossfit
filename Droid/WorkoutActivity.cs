@@ -99,15 +99,15 @@ namespace WodstarMobileApp.Droid
 		private String getRxSegmentDescription(WorkoutSegment segment) {
 			String s = null;
 			for(int j = 0; j< segment.segmentMovements.Length; j++) {
-				s = s + "\n" + segment.segmentDescription [j] + " " + segment.segmentMovements [j].rxName;
+				s = s + "\n" + segment.segmentDescription [j] + " " + segment.segmentMovements [j].rxDescription;
 			}
 			return s;
 		}
 
 		void loadRxVideos(WorkoutSegment segment) {
 			foreach(Movement m in segment.segmentMovements) {
-				if (m.rxLink != null) {
-					movementUrls.Add (m.rxLink);
+				if (m.url != null) {
+					movementUrls.Add (m.url);
 				}
 			}
 		}

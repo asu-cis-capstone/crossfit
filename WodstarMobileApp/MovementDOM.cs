@@ -6,80 +6,70 @@ namespace WodstarMobileApp
 	public class Movement
 	{
 		[JsonProperty(PropertyName = "id")]
-		public string id { get; set;}
+		public string id { get; set; }
 
 		[JsonProperty(PropertyName = "classification")]
-		public String classification { get; set;}
+		public String classification { get; set; }
 
 		[JsonProperty(PropertyName = "equipment")]
-		public String equipment { get; set;}
+		public String equipment { get; set; }
 
 		[JsonProperty(PropertyName = "type")]
-		public String type { get; set;}
+		public String type { get; set; }
 
-		[JsonProperty(PropertyName = "rxName")]
-		public String rxName { get; set;}
+		[JsonProperty(PropertyName = "name")]
+		public String name { get; set; }
 
-		[JsonProperty(PropertyName = "rxLink")]
-		public String rxLink { get; set;}
+		[JsonProperty(PropertyName = "rxDescription")]
+		public String rxDescription { get; set; }
 
-		[JsonProperty(PropertyName = "blackDiamondName")]
-		public String blackDiamondName { get; set;}
+		[JsonProperty(PropertyName = "blackDiamondDescription")]
+		public String blackDiamondDescription { get; set; }
 
-		[JsonProperty(PropertyName = "blackDiamondLink")]
-		public String blackDiamondLink { get; set;}
+		[JsonProperty(PropertyName = "blueSquareDescription")]
+		public String blueSquareDescription { get; set; }
 
-		[JsonProperty(PropertyName = "blueSquareName")]
-		public String blueSquareName{ get; set;}
+		[JsonProperty(PropertyName = "greenCircleDescription")]
+		public String greenCircleDescription { get; set; }
 
-		[JsonProperty(PropertyName = "blueSquareLink")]
-		public String blueSquareLink{ get; set;}
+		[JsonProperty(PropertyName = "url")]
+		public String url { get; set; }
 
-		[JsonProperty(PropertyName = "greenCircleName")]
-		public String greenCircleName{ get; set;}
-
-		[JsonProperty(PropertyName = "greenCircleLink")]
-		public String greenCircleLink { get; set;}
-
-		public Movement(String rxName, String rxLink, String type, String equipment) {
-			this.rxName = rxName;
-			this.rxLink = rxLink;
+		public Movement(String name, String url, String type, String equipment) {
+			this.rxDescription = rxDescription;
+			this.url = url;
 			this.type = type;
 			this.equipment = equipment;
 		}
 
-		public Movement (String rxName, String rxLink, String type, String equipment, String blackDiamondName, String blackDiamondLink)
+		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription)
 		{
-			this.rxName = rxName;
-			this.rxLink = rxLink;
+			this.name = name;
+			this.url = url;
 			this.type = type;
 			this.equipment = equipment;
-			this.blackDiamondName = blackDiamondName;
-			this.blackDiamondLink = blackDiamondLink;
+			this.blackDiamondDescription = blackDiamondDescription;
 		}
 
-		public Movement (String rxName, String rxLink, String type, String equipment, String blackDiamondName, String blackDiamondLink, String blueSquareName, String blueSquareLink)
+		public Movement (String rxDescription, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription)
 		{
-			this.rxName = rxName;
-			this.rxLink = rxLink;
+			this.rxDescription = rxDescription;
+			this.url = url;
 			this.type = type;
 			this.equipment = equipment;
-			this.blackDiamondName = blackDiamondName;
-			this.blackDiamondLink = blackDiamondLink;
-			this.blueSquareLink = blueSquareLink;
-			this.blueSquareName = blueSquareName;
+			this.blackDiamondDescription = blackDiamondDescription;
+			this.blueSquareDescription = blueSquareDescription;
 		}
 
-		public Movement (String rxName, String rxLink, String type, String equipment, String blackDiamondName, String blackDiamondLink, String blueSquareName, String blueSquareLink, String greenCircleName, String greenCircleLink)
+		public Movement (String rxDescription, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription, String greenCircleDescription)
 		{
-			this.rxName = rxName;
-			this.rxLink = rxLink;
+			this.rxDescription = rxDescription;
+			this.url = url;
 			this.type = type;
 			this.equipment = equipment;
-			this.blueSquareLink = blueSquareLink;
-			this.blueSquareName = blueSquareName;
-			this.greenCircleLink = greenCircleLink;
-			this.greenCircleName = greenCircleName;
+			this.blackDiamondDescription = blackDiamondDescription;
+			this.blueSquareDescription = blueSquareDescription;
+			this.greenCircleDescription = greenCircleDescription;
 		}
 	}
 }
