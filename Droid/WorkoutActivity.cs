@@ -17,18 +17,20 @@ using Google.YouTube.Player;
 namespace WodstarMobileApp.Droid
 {
 	[Activity (Label = "WorkoutActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
-	public class WorkoutActivity : Activity
+	public class WorkoutActivity : YouTubeFailureRecoveryActivity
 	{
-		public Workout thisWorkout= new Workout();
+		public Workout thisWorkout;
 		private List<String> movementUrls = new List<String> ();
+		private String workoutId=null;
+		private ImageView wodImage;
+		String segmentMovementDescriptions = null;
 
-		//Sample workout
-		private WorkoutSegment amanda1 = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
-			1, MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement);
+		//Sample workouts hardcoded for demo purposes
+		private static WorkoutSegment amanda1 = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
+			1, new String[]{null}, MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement);
 		private Workout amandaWorkout = new Workout ("Amanda", amanda1);
-
-		private WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", 
-           "Complete the following for time:\n\n1,000 meter Row\n50 Thrusters (45/35)\n30 Pull-ups", 1, MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
+		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", 
+			"Complete the following for time:", 1, new String[]{"1,000 meter Row", "50 (45/35)", "30"}, MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
            MovementLinks.pullUpMovement);
 		private Workout jackieWorkout = new Workout ("Jackie", jackieSegment);
 
@@ -37,46 +39,31 @@ namespace WodstarMobileApp.Droid
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.WodPage);
 
-			//Captures data from starting activity, loads the proper data to the page.
-			String id = Intent.GetStringExtra ("workoutId");
-			//Based off ID, fetch workout and assign it to this workout.
-
 			//Get all the changeable sections of the layout.
 			TextView wodHeaderText = FindViewById<TextView> (Resource.Id.wodHeaderText);
-			ImageView wodImage = FindViewById<ImageView> (Resource.Id.wodstarImage);
+			wodImage = FindViewById<ImageView> (Resource.Id.wodstarImage);
 			TableLayout workoutDetailsLayout = FindViewById<TableLayout> (Resource.Id.workoutDetailsLayout);
 			YouTubePlayerFragment movementVideos = (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
 
-			//Assign thisWorkout value.
-			switch (Int64.Parse(id)) {
-			case 1: //Amanda
-				thisWorkout = amandaWorkout;
-				wodImage.SetImageResource (Resource.Drawable.amanda);
-				break;
-			case 2: //Jackie
-				thisWorkout = jackieWorkout;
-				wodImage.SetImageResource (Resource.Drawable.jackie);
-				break;
-			default: 
-				//TODO: Add error handling
-				break;
-			}
+			//Captures data from starting activity, loads the proper data to the page.
+			workoutId = Intent.GetStringExtra ("workoutId");
+			setThisWorkout ();
+			wodHeaderText.Text = thisWorkout.workoutName;
 
-			wodHeaderText.SetText(thisWorkout.workoutName);
-
-			for(int i=0;i <thisWorkout.segments.Count; i++) {
-				TableRow segmentHeader = new TableRow ();
-				TextView headerText = new TextView ();
-				headerText.SetText (thisWorkout.segments [i].segmentHeader);
+			//Dynamically load workout content
+			for(int i=0;i <thisWorkout.segments.Length; i++) {
+				TableRow segmentHeader = new TableRow (this);
+				TextView headerText = new TextView (this);
+				headerText.Text =thisWorkout.segments [i].segmentHeader;
 				segmentHeader.AddView (headerText);
 
-				TableRow segmentDescription = new TableRow (thisWorkout.segments[i].segmentDescription);
-				TextView descriptionText = new TextView ();
-				descriptionText.SetText (thisWorkout.segments [i].segmentDescription);
+				TableRow segmentDescription = new TableRow (this);
+				TextView descriptionText = new TextView (this);
+				descriptionText.Text = getRxSegmentDescription (thisWorkout.segments [i]);
 				segmentDescription.AddView (descriptionText);
 
 				//Initial call to load RX Video Links
-				loadRxVideos ();
+				loadRxVideos (thisWorkout.segments[i]);
 
 				workoutDetailsLayout.AddView (segmentHeader);
 				workoutDetailsLayout.AddView (segmentDescription);
@@ -111,18 +98,42 @@ namespace WodstarMobileApp.Droid
 
 		} //End onCreate
 
-		void loadRxVideos() {
-			foreach(Movement m in thisWorkout.segments[i].segmentMovements) {
+		private String getRxSegmentDescription(WorkoutSegment segment) {
+			String s = null;
+			for(int j = 0; j< segment.segmentMovements.Length; j++) {
+				s = s + "\n" + segment.segmentDescription [j] + " " + segment.segmentMovements [j].rxName;
+			}
+			return s;
+		}
+
+		void loadRxVideos(WorkoutSegment segment) {
+			foreach(Movement m in segment.segmentMovements) {
 				if (m.rxLink != null) {
 					movementUrls.Add (m.rxLink);
 				}
 			}
 		}
 
+		void setThisWorkout() {
+			switch (Int64.Parse(workoutId)) {
+			case 1: //Amanda
+				thisWorkout = amandaWorkout;
+				wodImage.SetImageResource (Resource.Drawable.amanda);
+				break;
+			case 2: //Jackie
+				thisWorkout = jackieWorkout;
+				wodImage.SetImageResource (Resource.Drawable.jackie);
+				break;
+			default: 
+				//TODO: Add error handling
+				break;
+			}
+		}
+
 		//YOUTUBE METHODS
 		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
 		{
-			return (YouTubePlayerFragment) FragmentManager.FindFragmentById(Resource.Id.movementVideos)
+			return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
 		}
 		private void loadVideos(IYouTubePlayer player) {
 			player.CueVideos (movementUrls);
