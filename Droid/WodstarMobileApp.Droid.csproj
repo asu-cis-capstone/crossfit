@@ -124,9 +124,7 @@
     <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\layout\Login.axml" />
-    <AndroidResource Include="Resources\layout\Calc.axml">
-      <DependentUpon>WodPage.axml</DependentUpon>
-    </AndroidResource>
+    <AndroidResource Include="Resources\layout\Calc.axml" />
     <AndroidResource Include="Resources\layout\Main.axml" />
     <AndroidResource Include="Resources\layout\UserProfile.axml" />
     <AndroidResource Include="Resources\layout\CalcTable.axml" />
