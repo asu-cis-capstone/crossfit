@@ -1,0 +1,2 @@
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\WodstarMobileApp.iOS\obj\iPhoneSimulator\Debug\
+C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\WodstarMobileApp.iOS\obj\iPhoneSimulator\Debug\WodstarMobileApp.iOS.csprojResolveAssemblyReference.cache

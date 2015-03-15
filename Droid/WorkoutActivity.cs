@@ -13,6 +13,7 @@ using Android.Widget;
 using Android.Content.PM;
 using WodstarMobileApp;
 using Google.YouTube.Player;
+using com.refractored.monodroidtoolkit;
 
 namespace WodstarMobileApp.Droid
 {
@@ -44,6 +45,8 @@ namespace WodstarMobileApp.Droid
 			wodImage = FindViewById<ImageView> (Resource.Id.wodstarImage);
 			TableLayout workoutDetailsLayout = FindViewById<TableLayout> (Resource.Id.workoutDetailsLayout);
 			YouTubePlayerFragment movementVideos = (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
+			var circularProgressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
+			circularProgressBar.Indeterminate = true;
 
 			//Captures data from starting activity, loads the proper data to the page.
 			workoutId = Intent.GetStringExtra ("workoutId");
