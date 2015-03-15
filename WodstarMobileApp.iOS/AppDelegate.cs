@@ -30,7 +30,7 @@ namespace WodstarMobileApp.iOS
 
 			// If you have defined a root view controller, set it here:
 			
-//				window.RootViewController = RootViewController;
+		    // window.RootViewController = RootViewController;
 			
 			// make the window visible
 			window.MakeKeyAndVisible ();

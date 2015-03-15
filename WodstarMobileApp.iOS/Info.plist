@@ -36,11 +36,19 @@
 	<array>
 		<string>Icon-60@2x</string>
 	</array>
+	<key>UIMainNibFile</key>
+	<string>Login</string>
 	<key>CFBundleDisplayName</key>
 	<string>Wodstar</string>
 	<key>MinimumOSVersion</key>
 	<string>7.0</string>
 	<key>UILaunchStoryboardName</key>
 	<string>SignUp</string>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
+	<key>UIApplicationExitsOnSuspend</key>
+	<true/>
+	<key>UILaunchImageFile</key>
+	<string>New Entry</string>
 </dict>
 </plist>
