@@ -136,5 +136,37 @@
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\unnamed.jpg" />
+    <BundleResource Include="Resources\amanda.png" />
+    <BundleResource Include="Resources\angie.png" />
+    <BundleResource Include="Resources\annie.png" />
+    <BundleResource Include="Resources\camille.png" />
+    <BundleResource Include="Resources\chelsea.png" />
+    <BundleResource Include="Resources\christine.png" />
+    <BundleResource Include="Resources\cindy.png" />
+    <BundleResource Include="Resources\danim1.png" />
+    <BundleResource Include="Resources\diane.png" />
+    <BundleResource Include="Resources\elizabeth.png" />
+    <BundleResource Include="Resources\eva.png" />
+    <BundleResource Include="Resources\forums.png" />
+    <BundleResource Include="Resources\fran.png" />
+    <BundleResource Include="Resources\grace.png" />
+    <BundleResource Include="Resources\graph.png" />
+    <BundleResource Include="Resources\hamburger.png" />
+    <BundleResource Include="Resources\helen.png" />
+    <BundleResource Include="Resources\icon.png" />
+    <BundleResource Include="Resources\img_6063.png" />
+    <BundleResource Include="Resources\isabel.png" />
+    <BundleResource Include="Resources\jackie.png" />
+    <BundleResource Include="Resources\karen.png" />
+    <BundleResource Include="Resources\kelly.png" />
+    <BundleResource Include="Resources\leaders.png" />
+    <BundleResource Include="Resources\linda.png" />
+    <BundleResource Include="Resources\lynne.png" />
+    <BundleResource Include="Resources\mary.png" />
+    <BundleResource Include="Resources\nancy.png" />
+    <BundleResource Include="Resources\nicole.png" />
+    <BundleResource Include="Resources\rosa.png" />
+    <BundleResource Include="Resources\splash.png" />
   </ItemGroup>
 </Project>
