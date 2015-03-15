@@ -96,7 +96,7 @@ namespace WodstarMobileApp
 		//*******************************************************************************
 		public static Movement hangPowerCleanMovement = new Movement(hangPowerClean, hangPowerCleanLink, strength, barbell);
 		public static Movement ringMuscleUpMovement = new Movement(ringMuscleUp, ringMuscleUpLink, bodyweight, rings, 
-			ringKippingMuscleUp, null, "Chest to Bar Pull-Up and Dip (2:1)", null, "Pull-Up and Dip (2:1)", null);
+			ringKippingMuscleUp, "Chest to Bar Pull-Up and Dip (2:1)", "Pull-Up and Dip (2:1)");
 		public static Movement squatSnatchMovement = new Movement(squatSnatch, powerSnatchLink, strength, barbell);
 		public static Movement rowingMovement = new Movement(rowing, rowingLink, strength, rower);
 		public static Movement thrusterMovement = new Movement(thruster, thrusterLink, strength, barbell);

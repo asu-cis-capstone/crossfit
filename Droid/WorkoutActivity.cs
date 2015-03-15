@@ -1,9 +1,7 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-
 using Android.App;
 using Android.Content;
 using Android.OS;
@@ -22,7 +20,7 @@ namespace WodstarMobileApp.Droid
 	{
 		public Workout thisWorkout;
 		private List<String> movementUrls = new List<String> ();
-		private String workoutId=null;
+		private String workoutId="1";
 		private ImageView wodImage;
 		String segmentMovementDescriptions = null;
 
@@ -49,7 +47,7 @@ namespace WodstarMobileApp.Droid
 			circularProgressBar.Indeterminate = true;
 
 			//Captures data from starting activity, loads the proper data to the page.
-			workoutId = Intent.GetStringExtra ("workoutId");
+			//workoutId = Intent.GetStringExtra (workoutId);
 			setThisWorkout ();
 			wodHeaderText.Text = thisWorkout.workoutName;
 
@@ -104,15 +102,15 @@ namespace WodstarMobileApp.Droid
 		private String getRxSegmentDescription(WorkoutSegment segment) {
 			String s = null;
 			for(int j = 0; j< segment.segmentMovements.Length; j++) {
-				s = s + "\n" + segment.segmentDescription [j] + " " + segment.segmentMovements [j].rxName;
+				s = s + "\n" + segment.segmentDescription [j] + " " + segment.segmentMovements [j].rxDescription;
 			}
 			return s;
 		}
 
 		void loadRxVideos(WorkoutSegment segment) {
 			foreach(Movement m in segment.segmentMovements) {
-				if (m.rxLink != null) {
-					movementUrls.Add (m.rxLink);
+				if (m.url != null) {
+					movementUrls.Add (m.url);
 				}
 			}
 		}
