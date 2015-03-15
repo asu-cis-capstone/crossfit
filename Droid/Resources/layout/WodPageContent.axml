@@ -5,83 +5,84 @@
     android:background="#000000"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="horizontal"
+    <FrameLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="0.0dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginBottom="7.9dp">
-        <Button
-            android:layout_width="49.1dp"
-            android:layout_height="45.6dp"
-            android:id="@+id/hamburgerButton"
-            android:background="@drawable/hamburger" />
-        <TextView
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/wodHeaderText"
-            android:layout_marginLeft="124.0dp"
-            android:layout_marginRight="100dp" />
-        <ImageView
-            android:src="@drawable/icon"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:id="@+id/wodstarImage"
-            android:layout_marginRight="43.1dp"
-            android:layout_marginLeft="0.0dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="92.9dp"
-        android:layout_weight="1"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/linearLayout1">
-        <ImageView
-            android:src="@+drawable/mary"
-            android:layout_width="382.8dp"
-            android:layout_height="match_parent"
-            android:id="@+id/wodImage" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="30.1dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="0dp"
-        android:layout_marginTop="5.3dp"
-        android:id="@+id/buttonLayout">
-        <Button
-            android:text="(Rx)"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:id="@+id/rxButton"
-            android:layout_marginTop="8dp" />
-        <Button
-            android:text="(Black Diamond)"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:id="@+id/blackDiamondButton" />
-        <Button
-            android:text="(Blue Square)"
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:id="@+id/blueSquareButton"
-            android:layout_marginRight="0.0dp" />
-        <Button
-            android:text="(Green Circle) "
-            android:layout_width="90dp"
-            android:layout_height="60dp"
-            android:id="@+id/greenCircleButton"
-            android:layout_marginLeft="12dp" />
-    </LinearLayout>
+        android:layout_marginBottom="7.9dp"
+        android:id="@+id/headerLayout">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuLayout"
+            android:layout_gravity="top">
+            <Button
+                android:layout_width="49.1dp"
+                android:layout_height="45.6dp"
+                android:id="@+id/hamburgerButton"
+                android:background="@drawable/hamburger" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconLayout"
+            android:layout_gravity="top">
+            <ImageView
+                android:src="@drawable/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/wodstarImage"
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="0.0dp"
+                android:layout_marginBottom="0.0dp"
+                android:layout_marginTop="0.0dp"
+                android:layout_gravity="right" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/wodButtonLayout"
+            android:background="#4DFFFFFF"
+            android:layout_gravity="bottom">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="45.6dp"
+                android:background="#73FFFFFF"
+                android:id="@+id/rxButton"
+                android:text="Rx" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="45.6dp"
+                android:background="#73FFFFFF"
+                android:id="@+id/blackDiamondButton"
+                android:text="Black Diamond" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="45.6dp"
+                android:background="#73FFFFFF"
+                android:id="@+id/blueSquareButton"
+                android:text="Blue Square" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="45.6dp"
+                android:background="#73FFFFFF"
+                android:id="@+id/greenCircleButton"
+                android:text="Green Circle" />
+        </LinearLayout>
+    </FrameLayout>
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
@@ -93,7 +94,7 @@
                 android:id="@+id/workoutDetailsLayout" />
             <fragment
                 android:name="com.google.android.youtube.player.YouTubePlayerFragment"
-                android:layout_width="fill_parent"
+                android:layout_width="match_parent"
                 android:layout_height="169.1dp"
                 android:id="@+id/movementVideos"
                 android:layout_marginRight="30dp"
@@ -101,7 +102,7 @@
                 android:layout_marginLeft="30dp" />
             <com.refractored.monodroidtoolkit.HoloCircularProgressBar
                 android:id="@+id/circularProgressBar"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
         </LinearLayout>
     </ScrollView>
