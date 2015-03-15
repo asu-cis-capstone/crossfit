@@ -23,14 +23,15 @@ namespace WodstarMobileApp.Droid
 		private String workoutId="1";
 		private ImageView wodImage;
 		String segmentMovementDescriptions = null;
+		private YouTubePlayerFragment movementVideos;
 
 		//Sample workouts hardcoded for demo purposes
 		private static WorkoutSegment amanda1 = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
-			1, new String[]{null}, MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement);
+			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
 		private Workout amandaWorkout = new Workout ("Amanda", amanda1);
 		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", 
-			"Complete the following for time:", 1, new String[]{"1,000 meter Row", "50 (45/35)", "30"}, MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
-           MovementLinks.pullUpMovement);
+			"Complete the following for time:", 1, new String[]{"1,000 meter Row", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
+				MovementLinks.pullUpMovement});
 		private Workout jackieWorkout = new Workout ("Jackie", jackieSegment);
 
 		protected override void OnCreate (Bundle bundle)
@@ -40,14 +41,15 @@ namespace WodstarMobileApp.Droid
 
 			//Get all the changeable sections of the layout.
 			TextView wodHeaderText = FindViewById<TextView> (Resource.Id.wodHeaderText);
-			wodImage = FindViewById<ImageView> (Resource.Id.wodstarImage);
+			wodImage = FindViewById<ImageView> (Resource.Id.wodImage);
 			TableLayout workoutDetailsLayout = FindViewById<TableLayout> (Resource.Id.workoutDetailsLayout);
-			YouTubePlayerFragment movementVideos = (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
+			movementVideos = (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
 			var circularProgressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
 			circularProgressBar.Indeterminate = true;
 
 			//Captures data from starting activity, loads the proper data to the page.
-			//workoutId = Intent.GetStringExtra (workoutId);
+			workoutId = Intent.GetStringExtra ("workoutId");
+			Console.WriteLine ("WorkoutId: " + workoutId);
 			setThisWorkout ();
 			wodHeaderText.Text = thisWorkout.workoutName;
 
@@ -56,11 +58,14 @@ namespace WodstarMobileApp.Droid
 				TableRow segmentHeader = new TableRow (this);
 				TextView headerText = new TextView (this);
 				headerText.Text =thisWorkout.segments [i].segmentHeader;
+				headerText.SetTextAppearance (this, global::Android.Resource.Style.TextAppearanceLarge);
 				segmentHeader.AddView (headerText);
 
 				TableRow segmentDescription = new TableRow (this);
 				TextView descriptionText = new TextView (this);
+				descriptionText.SetTextAppearance(this, global::Android.Resource.Style.TextAppearanceMedium);
 				descriptionText.Text = getRxSegmentDescription (thisWorkout.segments [i]);
+				Console.WriteLine("Description text: " + descriptionText.Text);
 				segmentDescription.AddView (descriptionText);
 
 				//Initial call to load RX Video Links
@@ -100,9 +105,21 @@ namespace WodstarMobileApp.Droid
 		} //End onCreate
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {
-			String s = null;
+			String s = segment.segmentDescription;
 			for(int j = 0; j< segment.segmentMovements.Length; j++) {
-				s = s + "\n" + segment.segmentDescription [j] + " " + segment.segmentMovements [j].rxDescription;
+				s = s + "\n \t\u2022 " + segment.movementDescriptions[j]+ " " + segment.segmentMovements [j].name;
+				Console.WriteLine ("Movement name: " + segment.segmentMovements [j].name);
+				Console.WriteLine ("j = " + j.ToString ());
+				Console.WriteLine ("Segment Description: " + s);
+			}
+			return s;
+		}
+
+		private String getBlackDiamondSegmentDescription(WorkoutSegment segment) {
+			String s = segment.segmentDescription;
+			for(int j = 0; j< segment.segmentMovements.Length; j++) {
+				s = s + "\n \t\u2022 " + segment.movementDescriptions[j]+ " " + segment.segmentMovements [j].blackDiamondDescription;
+				Console.WriteLine ("Segment Description: " + s);
 			}
 			return s;
 		}
@@ -111,6 +128,7 @@ namespace WodstarMobileApp.Droid
 			foreach(Movement m in segment.segmentMovements) {
 				if (m.url != null) {
 					movementUrls.Add (m.url);
+					Console.WriteLine ("Movement Url: " + m.url);
 				}
 			}
 		}
@@ -129,12 +147,19 @@ namespace WodstarMobileApp.Droid
 				//TODO: Add error handling
 				break;
 			}
+			Console.WriteLine ("This workout: " + thisWorkout.workoutName);
 		}
 
 		//YOUTUBE METHODS
 		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
 		{
-			return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
+			return movementVideos;
+		}
+		public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
+		{
+			if (!wasRestored) {
+				loadVideos(player);
+			} 
 		}
 		private void loadVideos(IYouTubePlayer player) {
 			player.CueVideos (movementUrls);

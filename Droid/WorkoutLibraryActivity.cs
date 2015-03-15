@@ -85,111 +85,111 @@ namespace WodstarMobileApp.Droid
 
 		void goToAmandaWod(object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.amandaId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.amandaId.ToString());
 			intent.PutExtra("workoutName", "amanda");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToJackieWod(object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.jackieId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.jackieId.ToString());
 			intent.PutExtra("workoutName", "jackie");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToKellyWod(object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.kellyId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.kellyId.ToString());
 			intent.PutExtra("workoutName", "kelly");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToHelenWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.helenId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.helenId.ToString());
 			intent.PutExtra("workoutName", "helen");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToKarenWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.karenId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.karenId.ToString());
 			intent.PutExtra("workoutName", "karen" );
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToIsabelWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.isabelId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.isabelId.ToString());
 			intent.PutExtra("workoutName", "isabel");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToGraceWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.graceId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.graceId.ToString());
 			intent.PutExtra("workoutName", "grace");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToFranWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.franId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.franId.ToString());
 			intent.PutExtra("workoutName", "fran");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToElizabethWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.elizabethId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.elizabethId.ToString());
 			intent.PutExtra("workoutName", "elizabeth");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToDianeWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.dianeId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.dianeId.ToString());
 			intent.PutExtra("workoutName", "diane");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToCindyWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.cindyId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.cindyId.ToString());
 			intent.PutExtra("workoutName", "cindy");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToChelseaWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.chelseaId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.chelseaId.ToString());
 			intent.PutExtra("workoutName","chelsea" );
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToAnnieWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.annieId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.annieId.ToString());
 			intent.PutExtra("workoutName", "annie" );
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToChristineWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.christineId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.christineId.ToString());
 			intent.PutExtra("workoutName", "christine" );
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToBarbaraWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.barbaraId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.barbaraId.ToString());
 			intent.PutExtra("workoutName", "barbara");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToAngieWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.angieId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.angieId.ToString());
 			intent.PutExtra("workoutName", "angie");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToMaryWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.maryId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.maryId.ToString());
 			intent.PutExtra("workoutName", "mary");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 		void goToJoshuaWod (object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.joshuaId);
+			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.joshuaId.ToString());
 			intent.PutExtra("workoutName", "joshua");
-			StartActivity(typeof(WorkoutActivity));
+			StartActivity(intent);
 		}
 
 		//NAVIGATION METHODS

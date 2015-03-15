@@ -36,7 +36,7 @@ namespace WodstarMobileApp
 		public String url { get; set; }
 
 		public Movement(String name, String url, String type, String equipment) {
-			this.rxDescription = rxDescription;
+			this.name = name;
 			this.url = url;
 			this.type = type;
 			this.equipment = equipment;
@@ -51,9 +51,9 @@ namespace WodstarMobileApp
 			this.blackDiamondDescription = blackDiamondDescription;
 		}
 
-		public Movement (String rxDescription, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription)
+		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription)
 		{
-			this.rxDescription = rxDescription;
+			this.name = name;
 			this.url = url;
 			this.type = type;
 			this.equipment = equipment;
@@ -61,9 +61,9 @@ namespace WodstarMobileApp
 			this.blueSquareDescription = blueSquareDescription;
 		}
 
-		public Movement (String rxDescription, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription, String greenCircleDescription)
+		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription, String greenCircleDescription)
 		{
-			this.rxDescription = rxDescription;
+			this.name = name;
 			this.url = url;
 			this.type = type;
 			this.equipment = equipment;
