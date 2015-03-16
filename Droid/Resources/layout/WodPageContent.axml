@@ -12,20 +12,6 @@
         android:layout_weight="1"
         android:layout_marginBottom="7.9dp"
         android:id="@+id/headerLayout">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/menuLayout"
-            android:layout_gravity="top">
-            <TextView
-                android:text="WOD Info"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/wodPageHeaderText"
-                android:layout_marginLeft="135dp"
-                android:layout_marginTop="10dp" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"

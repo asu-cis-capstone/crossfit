@@ -26,6 +26,7 @@ namespace WodstarMobileApp.Droid
 		private FrameLayout headerLayout;
 		private Android.Widget.Button timerButton;
 		private HoloCircularProgressBar progressBar;
+		private bool timerStarted;
 
 		//Sample workouts hardcoded for demo purposes
 		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
@@ -109,25 +110,31 @@ namespace WodstarMobileApp.Droid
 		} //End onCreate
 
 		void timerButtonClick(object sender, EventArgs e) {
-			startTimer ();
+			if (!timerStarted) {
+				startTimer ();
+			} else {
+				stopTimer ();
+			}
 		}
 
 		private void startTimer() {
+			timerStarted = true;
 			bool timerInitialized = true;
 			int timerIncremator = 1;
 			int timerDelineators = thisWorkout.segments.Count ();
 
 			int minutes = 0;
-			double seconds = 00.00; 
-
-			DateTime lastSecond = DateTime.Now;
-			DateTime thisSecond = DateTime.Now;
+			int seconds;
+			int milliseconds;
+			System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch ();
 
 			while(timerInitialized) {
-				if (lastSecond != thisSecond) {
-					seconds += 0.01;
-				}
+
 			}
+		}
+
+		private void stopTimer() {
+			timerStarted = false;
 		}
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {
