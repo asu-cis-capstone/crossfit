@@ -1,27 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
+    android:id="@+id/FlyOutContent"
+    android:background="#000000"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <LinearLayout
-        android:orientation="horizontal"
+    <FrameLayout
+        android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="3.9dp"
-        android:layout_weight="1">
-        <Button
-            android:layout_width="49.1dp"
-            android:layout_height="45.6dp"
-            android:id="@+id/hamburgerButton"
-            android:background="@drawable/hamburger" />
-        <TextView
-            android:text="Calculator"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/calcHeaderText"
-            android:layout_marginLeft="90dp"
-            android:layout_marginRight="85dp" />
-    </LinearLayout>
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="7.9dp"
+        android:id="@+id/headerLayout">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuLayout"
+            android:layout_gravity="top">
+            <TextView
+                android:text="Calculator"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/calcHeaderText"
+                android:layout_marginLeft="135dp"
+                android:layout_marginTop="10dp" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/menuLayout"
+            android:layout_gravity="top">
+            <Button
+                android:layout_width="49.1dp"
+                android:layout_height="45.6dp"
+                android:id="@+id/hamburgerButton"
+                android:background="@drawable/hamburger" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/iconLayout"
+            android:layout_gravity="top">
+            <ImageView
+                android:src="@drawable/icon"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:id="@+id/wodstarImage"
+                android:layout_marginRight="0dp"
+                android:layout_marginLeft="0.0dp"
+                android:layout_marginBottom="0.0dp"
+                android:layout_marginTop="0.0dp"
+                android:layout_gravity="right" />
+        </LinearLayout>
+    </FrameLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -50,7 +85,8 @@
             android:layout_width="155dp"
             android:layout_height="45dp"
             android:id="@+id/repsDoneSpinner"
-            android:layout_marginLeft="20dp" />
+            android:layout_marginLeft="20dp"
+            android:entries="Item 1" />
         <TextView
             android:text="Reps Done"
             android:textAppearance="?android:attr/textAppearanceLarge"
