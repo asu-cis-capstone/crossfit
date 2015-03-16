@@ -11,6 +11,7 @@ using Android.Widget;
 using Android.Content.PM;
 using WodstarMobileApp;
 using Google.YouTube.Player;
+using Xamarin.Forms;
 using com.refractored.monodroidtoolkit;
 
 namespace WodstarMobileApp.Droid
@@ -23,16 +24,18 @@ namespace WodstarMobileApp.Droid
 		private String workoutId="1";
 		private YouTubePlayerFragment movementVideos;
 		private FrameLayout headerLayout;
+		private Android.Widget.Button timerButton;
+		private HoloCircularProgressBar progressBar;
 
 		//Sample workouts hardcoded for demo purposes
-		private static WorkoutSegment amanda1 = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
+		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
 			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
 		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", 
 			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
 				MovementLinks.pullUpMovement});
 
 		private Workout jackieWorkout = new Workout ("Jackie", jackieSegment);
-		private Workout amandaWorkout = new Workout ("Amanda", amanda1);
+		private Workout amandaWorkout = new Workout ("Amanda", amandaSegment);
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -45,10 +48,11 @@ namespace WodstarMobileApp.Droid
 			var circularProgressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
 			circularProgressBar.Indeterminate = true;
 			headerLayout = FindViewById<FrameLayout> (Resource.Id.headerLayout);
+			timerButton = FindViewById<Android.Widget.Button> (Resource.Id.timerButton);
+			progressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
 
 			//Captures data from starting activity, loads the proper data to the page.
 			workoutId = Intent.GetStringExtra ("workoutId");
-			Console.WriteLine ("WorkoutId: " + workoutId);
 			setThisWorkout ();
 
 			//Dynamically load workout content
@@ -76,6 +80,8 @@ namespace WodstarMobileApp.Droid
 			//Has to be at the end to add to video cue.
 			movementVideos.Initialize (DeveloperKey.key, this);
 
+			timerButton.Click += (sender, e) => startTimer ();
+
 			//MENU METHODS
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
@@ -101,6 +107,14 @@ namespace WodstarMobileApp.Droid
 			//END MENU METHODS
 
 		} //End onCreate
+
+		void timerButtonClick(object sender, EventArgs e) {
+
+		}
+
+		private void startTimer() {
+
+		}
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {
 			String s = segment.segmentDescription;
@@ -133,14 +147,12 @@ namespace WodstarMobileApp.Droid
 
 		void setThisWorkout() {
 			switch (Int64.Parse(workoutId)) {
-			case 1: //Amanda
+			case WorkoutUtil.amandaId: //Amanda
 				thisWorkout = amandaWorkout;
-				//wodImage.SetImageResource (Resource.Drawable.amanda);
 				headerLayout.SetBackgroundResource (Resource.Drawable.amanda);
 				break;
-			case 2: //Jackie
+			case WorkoutUtil.jackieId: //Jackie
 				thisWorkout = jackieWorkout;
-				//wodImage.SetImageResource (Resource.Drawable.jackie);
 				headerLayout.SetBackgroundResource (Resource.Drawable.jackie);
 				break;
 			default: 

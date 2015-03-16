@@ -11,7 +11,7 @@ namespace WodstarMobileApp.Droid
 {
 	public class Util
 	{
-		//TODO: Add all the navigation methods here between screens
+		public const String wodstarRed = "#B5191D";
 	}
 }
 
