@@ -80,7 +80,7 @@ namespace WodstarMobileApp.Droid
 			//Has to be at the end to add to video cue.
 			movementVideos.Initialize (DeveloperKey.key, this);
 
-			timerButton.Click += (sender, e) => startTimer ();
+			timerButton.Click += (sender, e) => timerButtonClick();
 
 			//MENU METHODS
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
@@ -109,11 +109,25 @@ namespace WodstarMobileApp.Droid
 		} //End onCreate
 
 		void timerButtonClick(object sender, EventArgs e) {
-
+			startTimer ();
 		}
 
 		private void startTimer() {
+			bool timerInitialized = true;
+			int timerIncremator = 1;
+			int timerDelineators = thisWorkout.segments.Count ();
 
+			int minutes = 0;
+			double seconds = 00.00; 
+
+			DateTime lastSecond = DateTime.Now;
+			DateTime thisSecond = DateTime.Now;
+
+			while(timerInitialized) {
+				if (lastSecond != thisSecond) {
+					seconds += 0.01;
+				}
+			}
 		}
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {
