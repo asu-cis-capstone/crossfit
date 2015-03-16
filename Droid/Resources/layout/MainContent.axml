@@ -41,7 +41,7 @@
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="fill_parent"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/iconLayout"
             android:layout_gravity="top">
@@ -59,99 +59,126 @@
     </FrameLayout>
     <LinearLayout
         android:orientation="horizontal"
-        android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:layout_marginBottom="0.0dp"
+        android:layout_width="fill_parent"
         android:layout_height="0dp"
-        android:paddingBottom="-20dp">
+        android:layout_weight="1"
+        android:layout_marginBottom="0.0dp">
         <TextView
             android:text="WODs"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="wrap_content"
-            android:layout_height="39.1dp"
-            android:id="@+id/wodsTextView"
+            android:layout_height="match_parent"
+            android:id="@+id/wodColumnText"
             android:textStyle="bold"
-            android:layout_marginLeft="55dp"
-            android:layout_marginRight="40dp"
-            android:layout_marginBottom="0.0dp"
-            android:textSize="27dp"
-            android:isScrollContainer="false" />
-        <TextView
-            android:text="My Stats"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="38.4dp"
-            android:id="@+id/statsTextView"
-            android:layout_marginLeft="40dp"
-            android:layout_marginRight="55dp"
-            android:textStyle="bold"
-            android:textSize="27dp"
-            android:layout_marginTop="0.0dp" />
+            android:layout_marginLeft="160dp"
+            android:layout_marginRight="30dp"
+            android:layout_gravity="center_vertical" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="46.9dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="0.0dp">
+        android:layout_height="73dp"
+        android:layout_weight="1">
         <ImageButton
-            android:src="@+drawable/camille"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/wodsMainImgButton"
-            android:layout_marginLeft="35dp"
-            android:background="@android:color/black" />
-        <ImageButton
-            android:src="@+drawable/graph"
-            android:layout_width="150dp"
-            android:layout_height="150dp"
-            android:id="@+id/statsMainImgButton"
-            android:layout_marginLeft="0dp"
-            android:background="@android:color/black"
-            android:layout_marginRight="40dp" />
+            android:src="@drawable/camille"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/sampWod1ImageButton"
+            android:layout_marginLeft="30dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="6.1dp"
+            android:layout_marginRight="30dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="0.0dp"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:layout_marginBottom="0.0dp">
         <TextView
-            android:text="Forums"
+            android:text="Leaderboards"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="94.6dp"
-            android:layout_height="47.6dp"
-            android:id="@+id/formsTextView"
-            android:layout_marginLeft="40dp"
-            android:layout_marginTop="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/wodColumnText"
             android:textStyle="bold"
-            android:textSize="27dp" />
-        <TextView
-            android:text="Leaders"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="108.9dp"
-            android:layout_height="47.6dp"
-            android:id="@+id/leadersTextView"
-            android:layout_marginTop="30dp"
-            android:textStyle="bold"
-            android:textSize="27dp"
-            android:layout_marginLeft="70dp" />
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5.3dp" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="88.3dp"
+        android:layout_height="73dp"
         android:layout_weight="1">
         <ImageButton
-            android:src="@+drawable/forums"
-            android:layout_width="145.5dp"
-            android:layout_height="145.5dp"
-            android:id="@+id/forumsMainImgButton"
-            android:layout_marginLeft="20dp" />
+            android:src="@android:drawable/ic_menu_mapmode"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/jackieimgButton"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="0.0dp">
+        <TextView
+            android:text="Forums"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/wodColumnText"
+            android:textStyle="bold"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="73dp"
+        android:layout_weight="1"
+        android:id="@+id/linearLayout1">
         <ImageButton
-            android:src="@android:drawable/ic_menu_gallery"
-            android:layout_width="145.5dp"
-            android:layout_height="145.5dp"
-            android:id="@+id/leadersMainImgButton"
-            android:layout_marginLeft="20dp" />
+            android:src="@drawable/forums"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/kellyImgButton"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="0.0dp"
+        android:layout_weight="1"
+        android:layout_marginBottom="0.0dp"
+        android:layout_marginTop="0dp">
+        <TextView
+            android:text="My Stats"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/wodColumnText"
+            android:textStyle="bold"
+            android:layout_marginLeft="145dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="73dp"
+        android:layout_weight="1">
+        <ImageButton
+            android:src="@drawable/graph"
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:id="@+id/cindyImgButton"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp" />
     </LinearLayout>
 </LinearLayout>
