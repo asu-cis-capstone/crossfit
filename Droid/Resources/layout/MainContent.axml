@@ -17,16 +17,12 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/menuLayout"
-            android:layout_gravity="top">
-            <TextView
-                android:text="WODSTAR"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/mainHeaderText"
-                android:layout_marginLeft="135dp"
-                android:layout_marginTop="10dp" />
-        </LinearLayout>
+            android:layout_gravity="top" />
+        <ImageView
+            android:src="@drawable/wodstar_logo_white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/imageView1" />
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
