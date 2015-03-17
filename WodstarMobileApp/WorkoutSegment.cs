@@ -12,7 +12,9 @@ namespace WodstarMobileApp
 		public String segmentDescription;
 		public int repetitions = 1;
 
-		public WorkoutSegment (String type, String workoutId, String header, String description, int repetitions, String[] movementDescriptions, params Movement[] movements)
+		public WorkoutSegment (String type, String workoutId, 
+			String header, String description, int repetitions, 
+			String[] movementDescriptions, params Movement[] movements)
 		{
 			this.segmentType = type;
 			this.workoutId = workoutId;

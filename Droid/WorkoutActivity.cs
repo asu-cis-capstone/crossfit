@@ -31,9 +31,9 @@ namespace WodstarMobileApp.Droid
 		private HoloCircularProgressBar circularProgressBar;
 
 		//Sample workouts hardcoded for demo purposes
-		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
+		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.amandaId.ToString(), "Description", "3 Rounds for time of 9-7-5 reps of:", 
 			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
-		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", 
+		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.jackieId.ToString(), "Description", 
 			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
 				MovementLinks.pullUpMovement});
 
@@ -121,6 +121,8 @@ namespace WodstarMobileApp.Droid
 		private async void startTimer() {
 			timerStarted = true;
 			circularProgressBar.Indeterminate = true;
+			circularProgressBar.CircleStrokeWidth = 20;
+			circularProgressBar.Progress = 0;
 			int timerIncremator = 1;
 			int timerDelineators = thisWorkout.segments.Count ();
 

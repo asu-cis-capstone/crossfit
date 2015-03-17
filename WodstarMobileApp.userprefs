@@ -1,19 +1,18 @@
-<<<<<<< HEAD
-﻿<Properties GitUserInfo="UsingGIT" StartupItem="Droid\WodstarMobileApp.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.DemoAndroid" />
-  <MonoDevelop.Ide.Workbench />
-=======
-﻿<Properties GitUserInfo="UsingGIT" StartupItem="Droid/WodstarMobileApp.Droid.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.SelectDevice" />
+﻿<Properties StartupItem="Droid\WodstarMobileApp.Droid.csproj" GitUserInfo="UsingGIT">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Android.8f8696e7" />
   <MonoDevelop.Ide.Workbench>
     <Files>
-      <File FileName="Droid/UserJournal.cs" Line="1" Column="1" />
+      <File FileName="Droid\MovementLibraryActivity.cs" Line="78" Column="78" NotebookId="1" />
+      <File FileName="Droid\WorkoutActivity.cs" Line="18" Column="18" NotebookId="1" />
+      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\WorkoutLibraryActivity.cs" Line="1" Column="1" NotebookId="1" />
+      <File FileName="c:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\StartScreenActivity.cs" Line="4" Column="4" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
->>>>>>> Stash
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="C:\Users\Laura\Documents\ASU\Spring 2015\CIS 440\crossfit\Droid\obj\Debug\android\src\mono\android\support\v4\view\MenuItemCompat_OnActionExpandListenerImplementor.java" line="50" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar" MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" />
+  <MonoDevelop.Ide.ItemProperties.WodstarMobileApp.Droid MonoForAntroid.PreferredDevice="Nexus 4" MonoForAntroid.PreferredTheme="Theme.Black.NoTitleBar" AndroidDesignerPreferredDevice="Nexus 4" AndroidDesignerPreferredTheme="Theme.Black.NoTitleBar" />
 </Properties>
