@@ -13,6 +13,7 @@ using WodstarMobileApp;
 using Google.YouTube.Player;
 using Xamarin.Forms;
 using com.refractored.monodroidtoolkit;
+using System.Threading.Tasks;
 
 namespace WodstarMobileApp.Droid
 {
@@ -81,7 +82,7 @@ namespace WodstarMobileApp.Droid
 			//Has to be at the end to add to video cue.
 			movementVideos.Initialize (DeveloperKey.key, this);
 
-			timerButton.Click += (sender, e) => timerButtonClick();
+			timerButton.Click += timerButtonClick;
 
 			//MENU METHODS
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
@@ -117,24 +118,36 @@ namespace WodstarMobileApp.Droid
 			}
 		}
 
-		private void startTimer() {
+		private async void startTimer() {
 			timerStarted = true;
-			bool timerInitialized = true;
 			int timerIncremator = 1;
 			int timerDelineators = thisWorkout.segments.Count ();
 
+			TimeSpan lastSecond = DateTime.Now.TimeOfDay;
+			TimeSpan thisSecond = DateTime.Now.TimeOfDay;
+
 			int minutes = 0;
-			int seconds;
-			int milliseconds;
-			System.Diagnostics.Stopwatch stopwatch = new System.Diagnostics.Stopwatch ();
+			int seconds = 0;
+			int milliseconds = 0;
 
-			while(timerInitialized) {
-
+			while(timerStarted) {
+				await Task.Delay(100);
+					milliseconds+=100;
+					if(milliseconds>=1000) {
+						seconds+=timerIncremator;
+						milliseconds = 0;
+					}
+					if(seconds>=60) {
+						minutes+=timerIncremator;
+						seconds = 0;
+					}
+				timerButton.Text = minutes + ":" + seconds + "." + milliseconds;
 			}
-		}
+		}//End startTimer()
 
 		private void stopTimer() {
 			timerStarted = false;
+
 		}
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {

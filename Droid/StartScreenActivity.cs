@@ -26,15 +26,8 @@ namespace WodstarMobileApp.Droid
 			//Show the Main layout
 			SetContentView (Resource.Layout.Main);
 
-			var wodsTextView = FindViewById<TextView> (Resource.Id.wodsTextView);
-			wodsTextView.Click += goToMovementLibrary;
-			var wodsMainImgButton = FindViewById<ImageButton> (Resource.Id.wodsMainImgButton);
+			var wodsMainImgButton = FindViewById<ImageButton> (Resource.Id.wodsImageButton);
 			wodsMainImgButton.Click += goToMovementLibrary;
-
-			var statsTextView = FindViewById<TextView> (Resource.Id.statsTextView);
-			statsTextView.Click += goToUserProfile;
-			var statsMainImgButton = FindViewById<ImageButton> (Resource.Id.statsMainImgButton);
-			statsMainImgButton.Click += goToUserProfile;
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);

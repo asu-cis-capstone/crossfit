@@ -11,7 +11,7 @@
         android:layout_height="fill_parent"
         android:layout_gravity="center_horizontal"
         android:gravity="center_horizontal"
-        android:background="@drawable/femaleWorkoutSplash"
+        android:background="@drawable/login"
         android:id="@+id/main_ui_container">
         <com.facebook.widget.LoginButton
             android:id="@+id/login_button"

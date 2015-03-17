@@ -8,11 +8,10 @@
     <FrameLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="35.9dp"
+        android:layout_height="wrap_content"
         android:layout_weight="1"
         android:layout_marginBottom="7.9dp"
         android:id="@+id/headerLayout">
-        </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"

@@ -57,128 +57,50 @@
                 android:layout_gravity="right" />
         </LinearLayout>
     </FrameLayout>
-    <LinearLayout
-        android:orientation="horizontal"
+    <ScrollView
+        android:id="@+id/scroll"
         android:layout_width="fill_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="0.0dp">
-        <TextView
-            android:text="WODs"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/wodColumnText"
-            android:textStyle="bold"
-            android:layout_marginLeft="160dp"
-            android:layout_marginRight="30dp"
-            android:layout_gravity="center_vertical" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="73dp"
+        android:layout_height="530dp"
         android:layout_weight="1">
-        <ImageButton
-            android:src="@drawable/camille"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/sampWod1ImageButton"
-            android:layout_marginLeft="30dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="6.1dp"
-            android:layout_marginRight="30dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="0.0dp">
-        <TextView
-            android:text="Leaderboards"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/wodColumnText"
-            android:textStyle="bold"
-            android:layout_marginLeft="120dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5.3dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="73dp"
-        android:layout_weight="1">
-        <ImageButton
-            android:src="@android:drawable/ic_menu_mapmode"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/jackieimgButton"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="0.0dp">
-        <TextView
-            android:text="Forums"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/wodColumnText"
-            android:textStyle="bold"
-            android:layout_marginLeft="150dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="73dp"
-        android:layout_weight="1"
-        android:id="@+id/linearLayout1">
-        <ImageButton
-            android:src="@drawable/forums"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/kellyImgButton"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="0.0dp"
-        android:layout_weight="1"
-        android:layout_marginBottom="0.0dp"
-        android:layout_marginTop="0dp">
-        <TextView
-            android:text="My Stats"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:id="@+id/wodColumnText"
-            android:textStyle="bold"
-            android:layout_marginLeft="145dp"
-            android:layout_marginRight="30dp"
-            android:layout_marginTop="5dp" />
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="fill_parent"
-        android:layout_height="73dp"
-        android:layout_weight="1">
-        <ImageButton
-            android:src="@drawable/graph"
-            android:layout_width="match_parent"
-            android:layout_height="110dp"
-            android:id="@+id/cindyImgButton"
-            android:layout_marginLeft="30dp"
-            android:layout_marginRight="30dp" />
-    </LinearLayout>
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="fill_parent"
+            android:layout_height="73dp"
+            android:layout_weight="1"
+            android:id="@+id/mainLayout">
+            <ImageButton
+                android:src="@drawable/camille"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:id="@+id/wodsImageButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="25dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="30dp" />
+            <ImageButton
+                android:src="@android:drawable/ic_menu_mapmode"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:id="@+id/jackieimgButton"
+                android:layout_marginTop="25dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+            <ImageButton
+                android:src="@drawable/forums"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/kellyImgButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+            <ImageButton
+                android:src="@drawable/graph"
+                android:layout_width="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_height="110dp"
+                android:id="@+id/cindyImgButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+        </LinearLayout>
+    </ScrollView>
 </LinearLayout>
