@@ -28,6 +28,7 @@ namespace WodstarMobileApp.Droid
 		private Android.Widget.Button timerButton;
 		private HoloCircularProgressBar progressBar;
 		private bool timerStarted;
+		private HoloCircularProgressBar circularProgressBar;
 
 		//Sample workouts hardcoded for demo purposes
 		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, "Description", "3 Rounds for time of 9-7-5 reps of:", 
@@ -47,8 +48,7 @@ namespace WodstarMobileApp.Droid
 			//Get all the changeable sections of the layout.
 			TableLayout workoutDetailsLayout = FindViewById<TableLayout> (Resource.Id.workoutDetailsLayout);
 			movementVideos = (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.movementVideos);
-			var circularProgressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
-			circularProgressBar.Indeterminate = true;
+			circularProgressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
 			headerLayout = FindViewById<FrameLayout> (Resource.Id.headerLayout);
 			timerButton = FindViewById<Android.Widget.Button> (Resource.Id.timerButton);
 			progressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
@@ -120,6 +120,7 @@ namespace WodstarMobileApp.Droid
 
 		private async void startTimer() {
 			timerStarted = true;
+			circularProgressBar.Indeterminate = true;
 			int timerIncremator = 1;
 			int timerDelineators = thisWorkout.segments.Count ();
 
@@ -131,9 +132,9 @@ namespace WodstarMobileApp.Droid
 			int milliseconds = 0;
 
 			while(timerStarted) {
-				await Task.Delay(100);
-					milliseconds+=100;
-					if(milliseconds>=1000) {
+				await Task.Delay(10);
+					milliseconds+=1;
+					if(milliseconds>=100) {
 						seconds+=timerIncremator;
 						milliseconds = 0;
 					}
@@ -141,12 +142,13 @@ namespace WodstarMobileApp.Droid
 						minutes+=timerIncremator;
 						seconds = 0;
 					}
-				timerButton.Text = minutes + ":" + seconds + "." + milliseconds;
+				timerButton.Text = minutes + ":" + seconds.ToString("D2") + "." + milliseconds.ToString("D2");
 			}
 		}//End startTimer()
 
 		private void stopTimer() {
 			timerStarted = false;
+			circularProgressBar.Indeterminate = false;
 
 		}
 
