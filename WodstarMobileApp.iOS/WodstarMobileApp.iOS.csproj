@@ -168,5 +168,6 @@
     <BundleResource Include="Resources\nicole.png" />
     <BundleResource Include="Resources\rosa.png" />
     <BundleResource Include="Resources\splash.png" />
+    <BundleResource Include="Resources\wodstar_logo_white_on_transparent.png" />
   </ItemGroup>
 </Project>
