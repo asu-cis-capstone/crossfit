@@ -91,7 +91,6 @@
     <Compile Include="UserProfileActivity.cs" />
     <Compile Include="MenuUtil.cs" />
     <Compile Include="Util.cs" />
-    <Compile Include="TimerUtil.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="WorkoutActivity.cs" />
     <Compile Include="WorkoutLibraryActivity.cs" />
@@ -196,9 +195,10 @@
     <AndroidResource Include="Resources\drawable\rosa.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\login.png" />
-    <AndroidResource Include="Resources\drawable\movementsImage.png" />
     <AndroidResource Include="Resources\drawable\wodstar_logo_white.png" />
     <AndroidResource Include="Resources\drawable\wodsImage.png" />
+    <AndroidResource Include="Resources\drawable\movementsImage.png" />
+    <AndroidResource Include="Resources\drawable\articles.png" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

@@ -69,7 +69,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_marginTop="25dp"
-                android:id="@+id/articlesImageButton"
+                android:id="@+id/wodsImageButton"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp" />
             <ImageButton
@@ -77,11 +77,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_marginTop="25dp"
-                android:id="@+id/articlesImageButton"
+                android:id="@+id/movementsImageButton"
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp" />
             <ImageButton
-                android:src="@drawable/forums"
+                android:src="@drawable/articles"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
                 android:layout_marginTop="25dp"
