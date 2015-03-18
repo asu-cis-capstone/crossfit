@@ -197,8 +197,8 @@
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\login.png" />
     <AndroidResource Include="Resources\drawable\movementsImage.png" />
-    <AndroidResource Include="Resources\drawable\wodsImage.png" />
     <AndroidResource Include="Resources\drawable\wodstar_logo_white.png" />
+    <AndroidResource Include="Resources\drawable\wodsImage.png" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

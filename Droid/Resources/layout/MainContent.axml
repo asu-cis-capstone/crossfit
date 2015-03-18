@@ -65,6 +65,22 @@
             android:layout_weight="1"
             android:id="@+id/mainLayout">
             <ImageButton
+                android:src="@drawable/wodsImage"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/articlesImageButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+            <ImageButton
+                android:src="@drawable/movementsImage"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/articlesImageButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+            <ImageButton
                 android:src="@drawable/forums"
                 android:layout_width="match_parent"
                 android:layout_height="110dp"
