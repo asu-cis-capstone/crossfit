@@ -173,6 +173,8 @@
     <BundleResource Include="Resources\Montserrat-Bold.otf" />
     <BundleResource Include="Resources\Montserrat-Hairline.otf" />
     <BundleResource Include="Resources\Montserrat-Light.otf" />
-    <BundleResource Include="Resources\Montserrat-Regular.otf" />
+    <BundleResource Include="Resources\Montserrat-Regular.otf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
   </ItemGroup>
 </Project>

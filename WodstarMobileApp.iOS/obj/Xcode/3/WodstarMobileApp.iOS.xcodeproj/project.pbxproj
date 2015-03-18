@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		268311EA0000000000000000 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14ADD2D40000000000000000 /* UIKit.framework */; };
+		22F2054C0000000000000000 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 183EDF720000000000000000 /* MapKit.framework */; };
+		1F60F8AE0000000000000000 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1BCFEC100000000000000000 /* Foundation.framework */; };
+		3384800B0000000000000000 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 37158CA90000000000000000 /* CoreGraphics.framework */; };
+		669A05C00000000000000000 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1DFCC2EA0000000000000000 /* Info.plist */; };
+		2D893BE00000000000000000 /* Entitlements.plist in Resources */ = {isa = PBXBuildFile; fileRef = 218DCF880000000000000000 /* Entitlements.plist */; };
+		3F4787200000000000000000 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 251EDC260000000000000000 /* MainStoryboard.storyboard */; };
+		3BB67A820000000000000000 /* SignUp.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AFE8C40000000000000000 /* SignUp.xib */; };
+		38256DE40000000000000000 /* Calc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C40F5620000000000000000 /* Calc.xib */; };
+		349461460000000000000000 /* Leaderboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2FD202000000000000000000 /* Leaderboard.xib */; };
+		310354A80000000000000000 /* UserProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33630E9E0000000000000000 /* UserProfile.xib */; };
+		2D72480A0000000000000000 /* Login.xib in Resources */ = {isa = PBXBuildFile; fileRef = 36F41B3C0000000000000000 /* Login.xib */; };
+		29E13B6C0000000000000000 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3A8527DA0000000000000000 /* Main.xib */; };
+		26502ECE0000000000000000 /* MovLibrary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E1634780000000000000000 /* MovLibrary.xib */; };
+		22BF22300000000000000000 /* MovLibrarySearch.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7411600000000000000000 /* MovLibrarySearch.xib */; };
+		1F2E15920000000000000000 /* StartScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5384DB400000000000000000 /* StartScreen.xib */; };
+		1B9D08F40000000000000000 /* StartUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8C95A5200000000000000000 /* StartUp.storyboard */; };
+		180BFC560000000000000000 /* WODboard.xib in Resources */ = {isa = PBXBuildFile; fileRef = C5A66F000000000000000000 /* WODboard.xib */; };
+		147AEFB80000000000000000 /* Journal.xib in Resources */ = {isa = PBXBuildFile; fileRef = FEB738E00000000000000000 /* Journal.xib */; };
+		10E9E31A0000000000000000 /* CalcTable.xib in Resources */ = {isa = PBXBuildFile; fileRef = 137C802C0000000000000000 /* CalcTable.xib */; };
+		D58D67C00000000000000000 /* Main.xib in Resources */ = {isa = PBXBuildFile; fileRef = 170D8CCA0000000000000000 /* Main.xib */; };
+		9C7C9DE00000000000000000 /* MovementLibrary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A9E99680000000000000000 /* MovementLibrary.xib */; };
+		636BD4000000000000000000 /* WODPage.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1E2FA6060000000000000000 /* WODPage.xib */; };
+		2A5B0A200000000000000000 /* WODLibrary.xib in Resources */ = {isa = PBXBuildFile; fileRef = 21C0B2A40000000000000000 /* WODLibrary.xib */; };
+		3F14A4040000000000000000 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2551BF420000000000000000 /* Default-568h@2x.png */; };
+		3B8397660000000000000000 /* Icon-60@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 28E2CBE00000000000000000 /* Icon-60@2x.png */; };
+		37F28AC80000000000000000 /* unnamed.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 2C73D87E0000000000000000 /* unnamed.jpg */; };
+		34617E2A0000000000000000 /* amanda.png in Resources */ = {isa = PBXBuildFile; fileRef = 3004E51C0000000000000000 /* amanda.png */; };
+		30D0718C0000000000000000 /* angie.png in Resources */ = {isa = PBXBuildFile; fileRef = 3395F1BA0000000000000000 /* angie.png */; };
+		2D3F64EE0000000000000000 /* annie.png in Resources */ = {isa = PBXBuildFile; fileRef = 3726FE580000000000000000 /* annie.png */; };
+		29AE58500000000000000000 /* camille.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AB80AF60000000000000000 /* camille.png */; };
+		261D4BB20000000000000000 /* chelsea.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E4917940000000000000000 /* chelsea.png */; };
+		228C3F140000000000000000 /* christine.png in Resources */ = {isa = PBXBuildFile; fileRef = 1DA243200000000000000000 /* christine.png */; };
+		1EFB32760000000000000000 /* cindy.png in Resources */ = {isa = PBXBuildFile; fileRef = 56B30D000000000000000000 /* cindy.png */; };
+		1B6A25D80000000000000000 /* danim1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8FC3D6E00000000000000000 /* danim1.png */; };
+		17D9193A0000000000000000 /* diane.png in Resources */ = {isa = PBXBuildFile; fileRef = C8D4A0C00000000000000000 /* diane.png */; };
+		14480C9C0000000000000000 /* elizabeth.png in Resources */ = {isa = PBXBuildFile; fileRef = 101E56AA0000000000000000 /* elizabeth.png */; };
+		10B6FFFE0000000000000000 /* eva.png in Resources */ = {isa = PBXBuildFile; fileRef = 13AF63480000000000000000 /* eva.png */; };
+		D25F36000000000000000000 /* forums.png in Resources */ = {isa = PBXBuildFile; fileRef = 17406FE60000000000000000 /* forums.png */; };
+		994E6C200000000000000000 /* fran.png in Resources */ = {isa = PBXBuildFile; fileRef = 1AD17C840000000000000000 /* fran.png */; };
+		603DA2400000000000000000 /* grace.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E6289220000000000000000 /* grace.png */; };
+		272CD8600000000000000000 /* graph.png in Resources */ = {isa = PBXBuildFile; fileRef = 21F395C00000000000000000 /* graph.png */; };
+		3EE1C0E80000000000000000 /* hamburger.png in Resources */ = {isa = PBXBuildFile; fileRef = 2584A25E0000000000000000 /* hamburger.png */; };
+		3B50B44A0000000000000000 /* helen.png in Resources */ = {isa = PBXBuildFile; fileRef = 2915AEFC0000000000000000 /* helen.png */; };
+		37BFA7AC0000000000000000 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6BB9A0000000000000000 /* icon.png */; };
+		342E9B0E0000000000000000 /* img_6063.png in Resources */ = {isa = PBXBuildFile; fileRef = 3037C8380000000000000000 /* img_6063.png */; };
+		309D8E700000000000000000 /* isabel.png in Resources */ = {isa = PBXBuildFile; fileRef = 33C8D4D60000000000000000 /* isabel.png */; };
+		2D0C81D20000000000000000 /* jackie.png in Resources */ = {isa = PBXBuildFile; fileRef = 3759E1740000000000000000 /* jackie.png */; };
+		297B75340000000000000000 /* karen.png in Resources */ = {isa = PBXBuildFile; fileRef = 3AEAEE120000000000000000 /* karen.png */; };
+		25EA68960000000000000000 /* kelly.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E7BFAB00000000000000000 /* kelly.png */; };
+		22595BF80000000000000000 /* leaders.png in Resources */ = {isa = PBXBuildFile; fileRef = 20D074E00000000000000000 /* leaders.png */; };
+		1EC84F5A0000000000000000 /* linda.png in Resources */ = {isa = PBXBuildFile; fileRef = 59E13EC00000000000000000 /* linda.png */; };
+		1B3742BC0000000000000000 /* lynne.png in Resources */ = {isa = PBXBuildFile; fileRef = 92F208A00000000000000000 /* lynne.png */; };
+		17A6361E0000000000000000 /* mary.png in Resources */ = {isa = PBXBuildFile; fileRef = CC02D2800000000000000000 /* mary.png */; };
+		141529800000000000000000 /* nancy.png in Resources */ = {isa = PBXBuildFile; fileRef = 105139C60000000000000000 /* nancy.png */; };
+		10841CE20000000000000000 /* nicole.png in Resources */ = {isa = PBXBuildFile; fileRef = 13E246640000000000000000 /* nicole.png */; };
+		CF3104400000000000000000 /* rosa.png in Resources */ = {isa = PBXBuildFile; fileRef = 177353020000000000000000 /* rosa.png */; };
+		96203A600000000000000000 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1B045FA00000000000000000 /* splash.png */; };
+		5D0F70800000000000000000 /* wodstar_logo_white_on_transparent.png in Resources */ = {isa = PBXBuildFile; fileRef = 1E956C3E0000000000000000 /* wodstar_logo_white_on_transparent.png */; };
+		23FEA6A00000000000000000 /* Montserrat-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = 222678DC0000000000000000 /* Montserrat-Black.otf */; };
+		3EAEDDCC0000000000000000 /* Montserrat-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 25B7857A0000000000000000 /* Montserrat-Bold.otf */; };
+		3B1DD12E0000000000000000 /* Montserrat-Hairline.otf in Resources */ = {isa = PBXBuildFile; fileRef = 294892180000000000000000 /* Montserrat-Hairline.otf */; };
+		378CC4900000000000000000 /* Montserrat-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2CD99EB60000000000000000 /* Montserrat-Light.otf */; };
+		33FBB7F20000000000000000 /* Montserrat-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 306AAB540000000000000000 /* Montserrat-Regular.otf */; };
+		1A6BB64C0000000000000000 /* AppDelegate.h in Sources */ = {isa = PBXBuildFile; fileRef = 16A7C6920000000000000000 /* AppDelegate.h */; };
+		16DAA9AE0000000000000000 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A38D3300000000000000000 /* AppDelegate.m */; };
+		13499D100000000000000000 /* DataViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 1DC9DFCE0000000000000000 /* DataViewController.h */; };
+		FB8907200000000000000000 /* DataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 215AEC6C0000000000000000 /* DataViewController.m */; };
+		C2783D400000000000000000 /* DetailViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 24EBF90A0000000000000000 /* DetailViewController.h */; };
+		896773600000000000000000 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 287D05A80000000000000000 /* DetailViewController.m */; };
+		5056A9800000000000000000 /* MasterViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 2C0E12460000000000000000 /* MasterViewController.h */; };
+		1745DFA00000000000000000 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F9F1EE40000000000000000 /* MasterViewController.m */; };
+		3DE3515C0000000000000000 /* RootViewController.h in Sources */ = {isa = PBXBuildFile; fileRef = 33302B820000000000000000 /* RootViewController.h */; };
+		3A5244BE0000000000000000 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 36C138200000000000000000 /* RootViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		111CC6360000000000000000 /* WodstarMobileApp.iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = "WodstarMobileApp.iOS.app"; path = "WodstarMobileApp.iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		14ADD2D40000000000000000 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "UIKit.framework"; path = "System/Library/Frameworks/UIKit.framework"; sourceTree = SDKROOT; };
+		183EDF720000000000000000 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "MapKit.framework"; path = "System/Library/Frameworks/MapKit.framework"; sourceTree = SDKROOT; };
+		1BCFEC100000000000000000 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "Foundation.framework"; path = "System/Library/Frameworks/Foundation.framework"; sourceTree = SDKROOT; };
+		37158CA90000000000000000 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = "CoreGraphics.framework"; path = "System/Library/Frameworks/CoreGraphics.framework"; sourceTree = SDKROOT; };
+		1DFCC2EA0000000000000000 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Info.plist"; path = "Info.plist"; sourceTree = "<group>"; };
+		218DCF880000000000000000 /* Entitlements.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "Entitlements.plist"; path = "Entitlements.plist"; sourceTree = "<group>"; };
+		251EDC260000000000000000 /* MainStoryboard.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "MainStoryboard.storyboard"; path = "MainStoryboard.storyboard"; sourceTree = "<group>"; };
+		28AFE8C40000000000000000 /* SignUp.xib */ = {isa = PBXFileReference; name = "SignUp.xib"; path = "SignUp.xib"; sourceTree = "<group>"; };
+		2C40F5620000000000000000 /* Calc.xib */ = {isa = PBXFileReference; name = "Calc.xib"; path = "Calc.xib"; sourceTree = "<group>"; };
+		2FD202000000000000000000 /* Leaderboard.xib */ = {isa = PBXFileReference; name = "Leaderboard.xib"; path = "Leaderboard.xib"; sourceTree = "<group>"; };
+		33630E9E0000000000000000 /* UserProfile.xib */ = {isa = PBXFileReference; name = "UserProfile.xib"; path = "UserProfile.xib"; sourceTree = "<group>"; };
+		36F41B3C0000000000000000 /* Login.xib */ = {isa = PBXFileReference; name = "Login.xib"; path = "Login.xib"; sourceTree = "<group>"; };
+		3A8527DA0000000000000000 /* Main.xib */ = {isa = PBXFileReference; name = "Main.xib"; path = "Main.xib"; sourceTree = "<group>"; };
+		3E1634780000000000000000 /* MovLibrary.xib */ = {isa = PBXFileReference; name = "MovLibrary.xib"; path = "MovLibrary.xib"; sourceTree = "<group>"; };
+		1A7411600000000000000000 /* MovLibrarySearch.xib */ = {isa = PBXFileReference; name = "MovLibrarySearch.xib"; path = "MovLibrarySearch.xib"; sourceTree = "<group>"; };
+		5384DB400000000000000000 /* StartScreen.xib */ = {isa = PBXFileReference; name = "StartScreen.xib"; path = "StartScreen.xib"; sourceTree = "<group>"; };
+		8C95A5200000000000000000 /* StartUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "StartUp.storyboard"; path = "StartUp.storyboard"; sourceTree = "<group>"; };
+		C5A66F000000000000000000 /* WODboard.xib */ = {isa = PBXFileReference; name = "WODboard.xib"; path = "WODboard.xib"; sourceTree = "<group>"; };
+		FEB738E00000000000000000 /* Journal.xib */ = {isa = PBXFileReference; name = "Journal.xib"; path = "Journal.xib"; sourceTree = "<group>"; };
+		137C802C0000000000000000 /* CalcTable.xib */ = {isa = PBXFileReference; name = "CalcTable.xib"; path = "CalcTable.xib"; sourceTree = "<group>"; };
+		170D8CCA0000000000000000 /* Main.xib */ = {isa = PBXFileReference; name = "Main.xib"; path = "Main.xib"; sourceTree = "<group>"; };
+		1A9E99680000000000000000 /* MovementLibrary.xib */ = {isa = PBXFileReference; name = "MovementLibrary.xib"; path = "MovementLibrary.xib"; sourceTree = "<group>"; };
+		1E2FA6060000000000000000 /* WODPage.xib */ = {isa = PBXFileReference; name = "WODPage.xib"; path = "WODPage.xib"; sourceTree = "<group>"; };
+		21C0B2A40000000000000000 /* WODLibrary.xib */ = {isa = PBXFileReference; name = "WODLibrary.xib"; path = "WODLibrary.xib"; sourceTree = "<group>"; };
+		2551BF420000000000000000 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Default-568h@2x.png"; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		28E2CBE00000000000000000 /* Icon-60@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-60@2x.png"; path = "Icon-60@2x.png"; sourceTree = "<group>"; };
+		2C73D87E0000000000000000 /* unnamed.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "unnamed.jpg"; path = "unnamed.jpg"; sourceTree = "<group>"; };
+		3004E51C0000000000000000 /* amanda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "amanda.png"; path = "amanda.png"; sourceTree = "<group>"; };
+		3395F1BA0000000000000000 /* angie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "angie.png"; path = "angie.png"; sourceTree = "<group>"; };
+		3726FE580000000000000000 /* annie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "annie.png"; path = "annie.png"; sourceTree = "<group>"; };
+		3AB80AF60000000000000000 /* camille.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "camille.png"; path = "camille.png"; sourceTree = "<group>"; };
+		3E4917940000000000000000 /* chelsea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "chelsea.png"; path = "chelsea.png"; sourceTree = "<group>"; };
+		1DA243200000000000000000 /* christine.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "christine.png"; path = "christine.png"; sourceTree = "<group>"; };
+		56B30D000000000000000000 /* cindy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "cindy.png"; path = "cindy.png"; sourceTree = "<group>"; };
+		8FC3D6E00000000000000000 /* danim1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "danim1.png"; path = "danim1.png"; sourceTree = "<group>"; };
+		C8D4A0C00000000000000000 /* diane.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "diane.png"; path = "diane.png"; sourceTree = "<group>"; };
+		101E56AA0000000000000000 /* elizabeth.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "elizabeth.png"; path = "elizabeth.png"; sourceTree = "<group>"; };
+		13AF63480000000000000000 /* eva.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "eva.png"; path = "eva.png"; sourceTree = "<group>"; };
+		17406FE60000000000000000 /* forums.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "forums.png"; path = "forums.png"; sourceTree = "<group>"; };
+		1AD17C840000000000000000 /* fran.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "fran.png"; path = "fran.png"; sourceTree = "<group>"; };
+		1E6289220000000000000000 /* grace.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "grace.png"; path = "grace.png"; sourceTree = "<group>"; };
+		21F395C00000000000000000 /* graph.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "graph.png"; path = "graph.png"; sourceTree = "<group>"; };
+		2584A25E0000000000000000 /* hamburger.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "hamburger.png"; path = "hamburger.png"; sourceTree = "<group>"; };
+		2915AEFC0000000000000000 /* helen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "helen.png"; path = "helen.png"; sourceTree = "<group>"; };
+		2CA6BB9A0000000000000000 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "icon.png"; path = "icon.png"; sourceTree = "<group>"; };
+		3037C8380000000000000000 /* img_6063.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "img_6063.png"; path = "img_6063.png"; sourceTree = "<group>"; };
+		33C8D4D60000000000000000 /* isabel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "isabel.png"; path = "isabel.png"; sourceTree = "<group>"; };
+		3759E1740000000000000000 /* jackie.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "jackie.png"; path = "jackie.png"; sourceTree = "<group>"; };
+		3AEAEE120000000000000000 /* karen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "karen.png"; path = "karen.png"; sourceTree = "<group>"; };
+		3E7BFAB00000000000000000 /* kelly.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "kelly.png"; path = "kelly.png"; sourceTree = "<group>"; };
+		20D074E00000000000000000 /* leaders.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "leaders.png"; path = "leaders.png"; sourceTree = "<group>"; };
+		59E13EC00000000000000000 /* linda.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "linda.png"; path = "linda.png"; sourceTree = "<group>"; };
+		92F208A00000000000000000 /* lynne.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "lynne.png"; path = "lynne.png"; sourceTree = "<group>"; };
+		CC02D2800000000000000000 /* mary.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "mary.png"; path = "mary.png"; sourceTree = "<group>"; };
+		105139C60000000000000000 /* nancy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nancy.png"; path = "nancy.png"; sourceTree = "<group>"; };
+		13E246640000000000000000 /* nicole.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "nicole.png"; path = "nicole.png"; sourceTree = "<group>"; };
+		177353020000000000000000 /* rosa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "rosa.png"; path = "rosa.png"; sourceTree = "<group>"; };
+		1B045FA00000000000000000 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "splash.png"; path = "splash.png"; sourceTree = "<group>"; };
+		1E956C3E0000000000000000 /* wodstar_logo_white_on_transparent.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "wodstar_logo_white_on_transparent.png"; path = "wodstar_logo_white_on_transparent.png"; sourceTree = "<group>"; };
+		222678DC0000000000000000 /* Montserrat-Black.otf */ = {isa = PBXFileReference; name = "Montserrat-Black.otf"; path = "Montserrat-Black.otf"; sourceTree = "<group>"; };
+		25B7857A0000000000000000 /* Montserrat-Bold.otf */ = {isa = PBXFileReference; name = "Montserrat-Bold.otf"; path = "Montserrat-Bold.otf"; sourceTree = "<group>"; };
+		294892180000000000000000 /* Montserrat-Hairline.otf */ = {isa = PBXFileReference; name = "Montserrat-Hairline.otf"; path = "Montserrat-Hairline.otf"; sourceTree = "<group>"; };
+		2CD99EB60000000000000000 /* Montserrat-Light.otf */ = {isa = PBXFileReference; name = "Montserrat-Light.otf"; path = "Montserrat-Light.otf"; sourceTree = "<group>"; };
+		306AAB540000000000000000 /* Montserrat-Regular.otf */ = {isa = PBXFileReference; name = "Montserrat-Regular.otf"; path = "Montserrat-Regular.otf"; sourceTree = "<group>"; };
+		16A7C6920000000000000000 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "AppDelegate.h"; path = "AppDelegate.h"; sourceTree = "<group>"; };
+		1A38D3300000000000000000 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "AppDelegate.m"; path = "AppDelegate.m"; sourceTree = "<group>"; };
+		1DC9DFCE0000000000000000 /* DataViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DataViewController.h"; path = "DataViewController.h"; sourceTree = "<group>"; };
+		215AEC6C0000000000000000 /* DataViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DataViewController.m"; path = "DataViewController.m"; sourceTree = "<group>"; };
+		24EBF90A0000000000000000 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "DetailViewController.h"; path = "DetailViewController.h"; sourceTree = "<group>"; };
+		287D05A80000000000000000 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "DetailViewController.m"; path = "DetailViewController.m"; sourceTree = "<group>"; };
+		2C0E12460000000000000000 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "MasterViewController.h"; path = "MasterViewController.h"; sourceTree = "<group>"; };
+		2F9F1EE40000000000000000 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "MasterViewController.m"; path = "MasterViewController.m"; sourceTree = "<group>"; };
+		33302B820000000000000000 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "RootViewController.h"; path = "RootViewController.h"; sourceTree = "<group>"; };
+		36C138200000000000000000 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "RootViewController.m"; path = "RootViewController.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		14ED16D60000000000000000 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				268311EA0000000000000000 /* UIKit.framework in Frameworks */,
+				22F2054C0000000000000000 /* MapKit.framework in Frameworks */,
+				1F60F8AE0000000000000000 /* Foundation.framework in Frameworks */,
+				3384800B0000000000000000 /* CoreGraphics.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		56BD1E100000000000000000 = {
+			isa = PBXGroup;
+			children = (
+				2AC564CE0000000000000000 /* WodstarMobileApp.iOS */,
+				3FB9AE3E0000000000000000 /* Frameworks */,
+				101EF7BB0000000000000000 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		101EF7BB0000000000000000 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				111CC6360000000000000000 /* WodstarMobileApp.iOS.app */,
+			);
+			name = "Products";
+			sourceTree = "<group>";
+		};
+		3FB9AE3E0000000000000000 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				14ADD2D40000000000000000 /* UIKit.framework */,
+				183EDF720000000000000000 /* MapKit.framework */,
+				1BCFEC100000000000000000 /* Foundation.framework */,
+				37158CA90000000000000000 /* CoreGraphics.framework */,
+			);
+			name = "Frameworks";
+			sourceTree = "<group>";
+		};
+		2AC564CE0000000000000000 /* WodstarMobileApp.iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3004E51C0000000000000000 /* amanda.png */,
+				3395F1BA0000000000000000 /* angie.png */,
+				3726FE580000000000000000 /* annie.png */,
+				16A7C6920000000000000000 /* AppDelegate.h */,
+				2C40F5620000000000000000 /* Calc.xib */,
+				137C802C0000000000000000 /* CalcTable.xib */,
+				3AB80AF60000000000000000 /* camille.png */,
+				3E4917940000000000000000 /* chelsea.png */,
+				1DA243200000000000000000 /* christine.png */,
+				56B30D000000000000000000 /* cindy.png */,
+				8FC3D6E00000000000000000 /* danim1.png */,
+				1DC9DFCE0000000000000000 /* DataViewController.h */,
+				2551BF420000000000000000 /* Default-568h@2x.png */,
+				24EBF90A0000000000000000 /* DetailViewController.h */,
+				C8D4A0C00000000000000000 /* diane.png */,
+				101E56AA0000000000000000 /* elizabeth.png */,
+				218DCF880000000000000000 /* Entitlements.plist */,
+				13AF63480000000000000000 /* eva.png */,
+				17406FE60000000000000000 /* forums.png */,
+				1AD17C840000000000000000 /* fran.png */,
+				1E6289220000000000000000 /* grace.png */,
+				21F395C00000000000000000 /* graph.png */,
+				2584A25E0000000000000000 /* hamburger.png */,
+				2915AEFC0000000000000000 /* helen.png */,
+				2CA6BB9A0000000000000000 /* icon.png */,
+				28E2CBE00000000000000000 /* Icon-60@2x.png */,
+				3037C8380000000000000000 /* img_6063.png */,
+				1DFCC2EA0000000000000000 /* Info.plist */,
+				33C8D4D60000000000000000 /* isabel.png */,
+				3759E1740000000000000000 /* jackie.png */,
+				FEB738E00000000000000000 /* Journal.xib */,
+				3AEAEE120000000000000000 /* karen.png */,
+				3E7BFAB00000000000000000 /* kelly.png */,
+				2FD202000000000000000000 /* Leaderboard.xib */,
+				20D074E00000000000000000 /* leaders.png */,
+				59E13EC00000000000000000 /* linda.png */,
+				36F41B3C0000000000000000 /* Login.xib */,
+				92F208A00000000000000000 /* lynne.png */,
+				170D8CCA0000000000000000 /* Main.xib */,
+				3A8527DA0000000000000000 /* Main.xib */,
+				251EDC260000000000000000 /* MainStoryboard.storyboard */,
+				CC02D2800000000000000000 /* mary.png */,
+				2C0E12460000000000000000 /* MasterViewController.h */,
+				222678DC0000000000000000 /* Montserrat-Black.otf */,
+				25B7857A0000000000000000 /* Montserrat-Bold.otf */,
+				294892180000000000000000 /* Montserrat-Hairline.otf */,
+				2CD99EB60000000000000000 /* Montserrat-Light.otf */,
+				306AAB540000000000000000 /* Montserrat-Regular.otf */,
+				1A9E99680000000000000000 /* MovementLibrary.xib */,
+				3E1634780000000000000000 /* MovLibrary.xib */,
+				1A7411600000000000000000 /* MovLibrarySearch.xib */,
+				105139C60000000000000000 /* nancy.png */,
+				13E246640000000000000000 /* nicole.png */,
+				33302B820000000000000000 /* RootViewController.h */,
+				177353020000000000000000 /* rosa.png */,
+				28AFE8C40000000000000000 /* SignUp.xib */,
+				1B045FA00000000000000000 /* splash.png */,
+				5384DB400000000000000000 /* StartScreen.xib */,
+				8C95A5200000000000000000 /* StartUp.storyboard */,
+				2C73D87E0000000000000000 /* unnamed.jpg */,
+				33630E9E0000000000000000 /* UserProfile.xib */,
+				C5A66F000000000000000000 /* WODboard.xib */,
+				21C0B2A40000000000000000 /* WODLibrary.xib */,
+				1E2FA6060000000000000000 /* WODPage.xib */,
+				1E956C3E0000000000000000 /* wodstar_logo_white_on_transparent.png */,
+				155F191A0000000000000000 /* Supporting Files */,
+			);
+			name = "WodstarMobileApp.iOS";
+			sourceTree = "<group>";
+		};
+		155F191A0000000000000000 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				1A38D3300000000000000000 /* AppDelegate.m */,
+				215AEC6C0000000000000000 /* DataViewController.m */,
+				287D05A80000000000000000 /* DetailViewController.m */,
+				2F9F1EE40000000000000000 /* MasterViewController.m */,
+				36C138200000000000000000 /* RootViewController.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		59EB4FD00000000000000000 /* WodstarMobileApp.iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 204522100000000000000000 /* Build configuration list for PBXNativeTarget "WodstarMobileApp.iOS" */;
+			buildPhases = (
+				D8BB99800000000000000000 /* Sources */,
+				14ED16D60000000000000000 /* Frameworks */,
+				9FAACFA00000000000000000 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "WodstarMobileApp.iOS";
+			productName = "WodstarMobileApp.iOS";
+			productReference = 111CC6360000000000000000 /* WodstarMobileApp.iOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E1C14F00000000000000000 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 2BB082000000000000000000 /* Build configuration list for PBXProject "WodstarMobileApp.iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 56BD1E100000000000000000;
+			productRefGroup = 101EF7BB0000000000000000 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				59EB4FD00000000000000000 /* WodstarMobileApp.iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		9FAACFA00000000000000000 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				669A05C00000000000000000 /* Info.plist in Resources */,
+				2D893BE00000000000000000 /* Entitlements.plist in Resources */,
+				3F4787200000000000000000 /* MainStoryboard.storyboard in Resources */,
+				3BB67A820000000000000000 /* SignUp.xib in Resources */,
+				38256DE40000000000000000 /* Calc.xib in Resources */,
+				349461460000000000000000 /* Leaderboard.xib in Resources */,
+				310354A80000000000000000 /* UserProfile.xib in Resources */,
+				2D72480A0000000000000000 /* Login.xib in Resources */,
+				29E13B6C0000000000000000 /* Main.xib in Resources */,
+				26502ECE0000000000000000 /* MovLibrary.xib in Resources */,
+				22BF22300000000000000000 /* MovLibrarySearch.xib in Resources */,
+				1F2E15920000000000000000 /* StartScreen.xib in Resources */,
+				1B9D08F40000000000000000 /* StartUp.storyboard in Resources */,
+				180BFC560000000000000000 /* WODboard.xib in Resources */,
+				147AEFB80000000000000000 /* Journal.xib in Resources */,
+				10E9E31A0000000000000000 /* CalcTable.xib in Resources */,
+				D58D67C00000000000000000 /* Main.xib in Resources */,
+				9C7C9DE00000000000000000 /* MovementLibrary.xib in Resources */,
+				636BD4000000000000000000 /* WODPage.xib in Resources */,
+				2A5B0A200000000000000000 /* WODLibrary.xib in Resources */,
+				3F14A4040000000000000000 /* Default-568h@2x.png in Resources */,
+				3B8397660000000000000000 /* Icon-60@2x.png in Resources */,
+				37F28AC80000000000000000 /* unnamed.jpg in Resources */,
+				34617E2A0000000000000000 /* amanda.png in Resources */,
+				30D0718C0000000000000000 /* angie.png in Resources */,
+				2D3F64EE0000000000000000 /* annie.png in Resources */,
+				29AE58500000000000000000 /* camille.png in Resources */,
+				261D4BB20000000000000000 /* chelsea.png in Resources */,
+				228C3F140000000000000000 /* christine.png in Resources */,
+				1EFB32760000000000000000 /* cindy.png in Resources */,
+				1B6A25D80000000000000000 /* danim1.png in Resources */,
+				17D9193A0000000000000000 /* diane.png in Resources */,
+				14480C9C0000000000000000 /* elizabeth.png in Resources */,
+				10B6FFFE0000000000000000 /* eva.png in Resources */,
+				D25F36000000000000000000 /* forums.png in Resources */,
+				994E6C200000000000000000 /* fran.png in Resources */,
+				603DA2400000000000000000 /* grace.png in Resources */,
+				272CD8600000000000000000 /* graph.png in Resources */,
+				3EE1C0E80000000000000000 /* hamburger.png in Resources */,
+				3B50B44A0000000000000000 /* helen.png in Resources */,
+				37BFA7AC0000000000000000 /* icon.png in Resources */,
+				342E9B0E0000000000000000 /* img_6063.png in Resources */,
+				309D8E700000000000000000 /* isabel.png in Resources */,
+				2D0C81D20000000000000000 /* jackie.png in Resources */,
+				297B75340000000000000000 /* karen.png in Resources */,
+				25EA68960000000000000000 /* kelly.png in Resources */,
+				22595BF80000000000000000 /* leaders.png in Resources */,
+				1EC84F5A0000000000000000 /* linda.png in Resources */,
+				1B3742BC0000000000000000 /* lynne.png in Resources */,
+				17A6361E0000000000000000 /* mary.png in Resources */,
+				141529800000000000000000 /* nancy.png in Resources */,
+				10841CE20000000000000000 /* nicole.png in Resources */,
+				CF3104400000000000000000 /* rosa.png in Resources */,
+				96203A600000000000000000 /* splash.png in Resources */,
+				5D0F70800000000000000000 /* wodstar_logo_white_on_transparent.png in Resources */,
+				23FEA6A00000000000000000 /* Montserrat-Black.otf in Resources */,
+				3EAEDDCC0000000000000000 /* Montserrat-Bold.otf in Resources */,
+				3B1DD12E0000000000000000 /* Montserrat-Hairline.otf in Resources */,
+				378CC4900000000000000000 /* Montserrat-Light.otf in Resources */,
+				33FBB7F20000000000000000 /* Montserrat-Regular.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D8BB99800000000000000000 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A6BB64C0000000000000000 /* AppDelegate.h in Sources */,
+				16DAA9AE0000000000000000 /* AppDelegate.m in Sources */,
+				13499D100000000000000000 /* DataViewController.h in Sources */,
+				FB8907200000000000000000 /* DataViewController.m in Sources */,
+				C2783D400000000000000000 /* DetailViewController.h in Sources */,
+				896773600000000000000000 /* DetailViewController.m in Sources */,
+				5056A9800000000000000000 /* MasterViewController.h in Sources */,
+				1745DFA00000000000000000 /* MasterViewController.m in Sources */,
+				3DE3515C0000000000000000 /* RootViewController.h in Sources */,
+				3A5244BE0000000000000000 /* RootViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1316B9F40000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				SDKROOT = iphoneos;
+			};
+			name = MonoTouch;
+		};
+		102FCC700000000000000000 /* MonoTouch */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				PRODUCT_NAME = "WodstarMobileApp.iOS";
+				WRAPPER_EXTENSION = app;
+			};
+			name = MonoTouch;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2BB082000000000000000000 /* Build configuration list for PBXProject "WodstarMobileApp.iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1316B9F40000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+		204522100000000000000000 /* Build configuration list for PBXNativeTarget "WodstarMobileApp.iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				102FCC700000000000000000 /* MonoTouch */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = MonoTouch;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E1C14F00000000000000000 /* Project object */;
+}
