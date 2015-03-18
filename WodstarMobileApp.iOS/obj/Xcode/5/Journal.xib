@@ -40,7 +40,7 @@
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C7S-ny-ucQ">
                     <rect key="frame" x="197" y="189" width="52" height="38"/>
-                    <state key="normal" backgroundImage="Default.png">
+                    <state key="normal" backgroundImage="graph.png">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
@@ -82,8 +82,9 @@
         </view>
     </objects>
     <resources>
-        <image name="Default.png" width="16" height="16"/>
+        <image name="Default.png" width="480" height="800"/>
         <image name="danim1.png" width="192" height="192"/>
+        <image name="graph.png" width="250" height="163"/>
         <image name="hamburger.png" width="600" height="400"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

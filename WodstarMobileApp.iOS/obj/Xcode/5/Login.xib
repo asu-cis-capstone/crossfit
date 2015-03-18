@@ -17,7 +17,7 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="splash.png" translatesAutoresizingMaskIntoConstraints="NO" id="dtk-Vg-f9U">
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="login.png" translatesAutoresizingMaskIntoConstraints="NO" id="dtk-Vg-f9U">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                 </imageView>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qYH-Ph-hap">
@@ -47,7 +47,7 @@
                     </state>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wodstar_logo_white_on_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="YAq-pY-dwq">
-                    <rect key="frame" x="4" y="20" width="313" height="81"/>
+                    <rect key="frame" x="13" y="29" width="294" height="63"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -55,7 +55,7 @@
         </view>
     </objects>
     <resources>
-        <image name="splash.png" width="480" height="800"/>
+        <image name="login.png" width="996" height="729"/>
         <image name="wodstar_logo_white_on_transparent.png" width="2540" height="490"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

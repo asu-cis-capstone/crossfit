@@ -10,24 +10,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="USER NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SoC-zV-oBi">
-                    <rect key="frame" x="83" y="64" width="155" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ta2-AH-6X8">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                     <color key="backgroundColor" red="0.66666666669999997" green="0.0" blue="0.0067010132709999998" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <color key="barTintColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     <textAttributes key="titleTextAttributes">
-                        <fontDescription key="fontDescription" name="ArialMT" family="Arial" pointSize="22"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="22"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <color key="textShadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </textAttributes>
                     <items>
-                        <navigationItem title="Your Profile" id="qHU-mY-ZNs">
+                        <navigationItem title="My Profile" id="qHU-mY-ZNs">
                             <barButtonItem key="leftBarButtonItem" style="plain" id="LZV-6K-LZH">
                                 <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zdj-It-746">
                                     <rect key="frame" x="-23" y="-15" width="71" height="30"/>
@@ -40,11 +34,15 @@
                         </navigationItem>
                     </items>
                 </navigationBar>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="danim1.png" translatesAutoresizingMaskIntoConstraints="NO" id="96u-gL-lWR">
+                    <rect key="frame" x="17" y="71" width="151" height="134"/>
+                </imageView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
         </view>
     </objects>
     <resources>
+        <image name="danim1.png" width="192" height="192"/>
         <image name="hamburger.png" width="600" height="400"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
