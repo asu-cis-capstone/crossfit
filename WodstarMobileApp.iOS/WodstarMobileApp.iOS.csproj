@@ -169,5 +169,10 @@
     <BundleResource Include="Resources\rosa.png" />
     <BundleResource Include="Resources\splash.png" />
     <BundleResource Include="Resources\wodstar_logo_white_on_transparent.png" />
+    <BundleResource Include="Resources\Montserrat-Black.otf" />
+    <BundleResource Include="Resources\Montserrat-Bold.otf" />
+    <BundleResource Include="Resources\Montserrat-Hairline.otf" />
+    <BundleResource Include="Resources\Montserrat-Light.otf" />
+    <BundleResource Include="Resources\Montserrat-Regular.otf" />
   </ItemGroup>
 </Project>
