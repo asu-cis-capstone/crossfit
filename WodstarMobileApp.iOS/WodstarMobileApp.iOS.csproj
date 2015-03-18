@@ -117,13 +117,8 @@
     <InterfaceDefinition Include="SignUp.xib" />
     <InterfaceDefinition Include="Calc.xib" />
     <InterfaceDefinition Include="Leaderboard.xib" />
-    <InterfaceDefinition Include="MovLibrary.xib" />
-    <InterfaceDefinition Include="MovLibrarySearch.xib" />
     <InterfaceDefinition Include="UserProfile.xib" />
     <InterfaceDefinition Include="Login.xib" />
-    <InterfaceDefinition Include="WODpage.xib" />
-    <InterfaceDefinition Include="PersonalRecord.xib" />
-    <InterfaceDefinition Include="WODlibrary.xib" />
     <InterfaceDefinition Include="Resources\Main.xib" />
     <InterfaceDefinition Include="Resources\MovLibrary.xib" />
     <InterfaceDefinition Include="Resources\MovLibrarySearch.xib" />
@@ -131,6 +126,11 @@
     <InterfaceDefinition Include="Resources\StartUp.storyboard" />
     <InterfaceDefinition Include="Resources\WODboard.xib" />
     <InterfaceDefinition Include="Journal.xib" />
+    <InterfaceDefinition Include="CalcTable.xib" />
+    <InterfaceDefinition Include="Main.xib" />
+    <InterfaceDefinition Include="MovementLibrary.xib" />
+    <InterfaceDefinition Include="WODPage.xib" />
+    <InterfaceDefinition Include="WODLibrary.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
