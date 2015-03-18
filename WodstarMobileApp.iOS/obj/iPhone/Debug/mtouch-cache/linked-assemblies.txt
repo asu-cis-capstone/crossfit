@@ -1,4 +1,0 @@
-/Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/obj/iPhone/Debug/mtouch-cache/Link/monotouch.dll
-/Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/obj/iPhone/Debug/mtouch-cache/Link/System.dll
-/Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/obj/iPhone/Debug/mtouch-cache/Link/WodstarMobileApp.iOS.exe
-/Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/obj/iPhone/Debug/mtouch-cache/Link/mscorlib.dll
