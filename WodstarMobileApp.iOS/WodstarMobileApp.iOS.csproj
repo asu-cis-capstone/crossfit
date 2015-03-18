@@ -131,6 +131,7 @@
     <InterfaceDefinition Include="MovementLibrary.xib" />
     <InterfaceDefinition Include="WODPage.xib" />
     <InterfaceDefinition Include="WODLibrary.xib" />
+    <InterfaceDefinition Include="Launch.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -176,5 +177,8 @@
     <BundleResource Include="Resources\Montserrat-Regular.otf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </BundleResource>
+    <BundleResource Include="Resources\login.png" />
+    <BundleResource Include="Resources\movementsImage.png" />
+    <BundleResource Include="Resources\wodsImage.png" />
   </ItemGroup>
 </Project>

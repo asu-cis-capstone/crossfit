@@ -9,22 +9,9 @@
         <view contentMode="scaleToFill" id="1">
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Gf-8r-DKf">
-                    <rect key="frame" x="32" y="211" width="147" height="129"/>
-                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                    <state key="normal" title="FACEBOOK LOGIN" backgroundImage="Icon-60.png">
-                        <color key="titleColor" red="1" green="0.98119832770000004" blue="0.97935015859999996" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
-            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
         </view>
     </objects>
-    <resources>
-        <image name="Icon-60.png" width="60" height="60"/>
-    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
