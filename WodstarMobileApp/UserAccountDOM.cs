@@ -29,8 +29,21 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "userImage")] 
 		public Android.Media.Image userImage { get; set; }
 
+		[JsonProperty(PropertyName = "userJournal")]
+		public UserJournal journal { get; set; }
+
 		//Default constructor
-		public UserAccount () {
+		public UserAccount (string id, string username, string type, string fName, string lName, string gender, int age) {
+			this.Id = id;
+			this.Username = username;
+			this.AccountType = type;
+			this.FirstName = fName;
+			this.LastName = lName;
+			this.Gender = gender;
+			this.Age = age;
+		}
+
+		public UserAccount() {
 
 		}
 	}

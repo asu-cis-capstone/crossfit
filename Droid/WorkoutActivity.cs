@@ -29,6 +29,8 @@ namespace WodstarMobileApp.Droid
 		private HoloCircularProgressBar progressBar;
 		private bool timerStarted;
 		private HoloCircularProgressBar circularProgressBar;
+		private Android.Widget.Button logButton;
+		private Android.Widget.Button restartButton;
 
 		//Sample workouts hardcoded for demo purposes
 		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.amandaId.ToString(), "Description", "3 Rounds for time of 9-7-5 reps of:", 
@@ -52,10 +54,23 @@ namespace WodstarMobileApp.Droid
 			headerLayout = FindViewById<FrameLayout> (Resource.Id.headerLayout);
 			timerButton = FindViewById<Android.Widget.Button> (Resource.Id.timerButton);
 			progressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
+			logButton = FindViewById<Android.Widget.Button> (Resource.Id.logButton);
+			restartButton = FindViewById<Android.Widget.Button> (Resource.Id.restartButton);
+
+			restartButton.Click += (sender, e) => {
+				resetTimer();
+			}; 
+			logButton.Click += (sender, e) => {
+				//logData();
+			};
+
 
 			//Captures data from starting activity, loads the proper data to the page.
 			workoutId = Intent.GetStringExtra ("workoutId");
 			setThisWorkout ();
+
+			logButton.Visibility = ViewStates.Invisible;
+			restartButton.Visibility = ViewStates.Invisible;
 
 			//Dynamically load workout content
 			for(int i=0;i <thisWorkout.segments.Length; i++) {
@@ -119,15 +134,15 @@ namespace WodstarMobileApp.Droid
 		}
 
 		private async void startTimer() {
+			resetTimer ();
 			timerStarted = true;
+
 			circularProgressBar.Indeterminate = true;
 			circularProgressBar.CircleStrokeWidth = 20;
 			circularProgressBar.Progress = 0;
+
 			int timerIncremator = 1;
 			int timerDelineators = thisWorkout.segments.Count ();
-
-			TimeSpan lastSecond = DateTime.Now.TimeOfDay;
-			TimeSpan thisSecond = DateTime.Now.TimeOfDay;
 
 			int minutes = 0;
 			int seconds = 0;
@@ -151,9 +166,21 @@ namespace WodstarMobileApp.Droid
 		private void stopTimer() {
 			timerStarted = false;
 			circularProgressBar.Indeterminate = false;
+			logButton.Visibility = ViewStates.Visible;
+			restartButton.Visibility = ViewStates.Visible;
 
 		}
 
+		private void resetTimer() {
+			logButton.Visibility = ViewStates.Invisible;
+			restartButton.Visibility = ViewStates.Invisible;
+			timerButton.Text = "0:00.00";
+		}
+
+		private void logData(int workoutId, int finalScore) {
+			//If for time, final score should be passed in seconds with 2 decimal places
+			//If AMRAP, should be passed as total number of reps.
+		}
 		private String getRxSegmentDescription(WorkoutSegment segment) {
 			String s = segment.segmentDescription;
 			for(int j = 0; j< segment.segmentMovements.Length; j++) {

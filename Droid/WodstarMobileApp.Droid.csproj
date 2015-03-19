@@ -91,7 +91,6 @@
     <Compile Include="UserProfileActivity.cs" />
     <Compile Include="MenuUtil.cs" />
     <Compile Include="Util.cs" />
-    <Compile Include="TimerUtil.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="WorkoutActivity.cs" />
     <Compile Include="WorkoutLibraryActivity.cs" />
@@ -119,11 +118,6 @@
     <AndroidResource Include="Resources\drawable-mdpi\icon.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\icon.png" />
     <AndroidResource Include="Resources\values\Styles.xml" />
-    <AndroidResource Include="Resources\drawable-hdpi\splash.png" />
-    <AndroidResource Include="Resources\drawable-mdpi\splash.png" />
-    <AndroidResource Include="Resources\drawable-xhdpi\splash.png" />
-    <AndroidResource Include="Resources\drawable-xxhdpi\splash.png" />
-    <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
     <AndroidResource Include="Resources\values\Strings.xml" />
     <AndroidResource Include="Resources\layout\Login.axml" />
     <AndroidResource Include="Resources\layout\Calc.axml" />
@@ -196,9 +190,21 @@
     <AndroidResource Include="Resources\drawable\rosa.png" />
     <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\login.png" />
-    <AndroidResource Include="Resources\drawable\movementsImage.png" />
-    <AndroidResource Include="Resources\drawable\wodsImage.png" />
     <AndroidResource Include="Resources\drawable\wodstar_logo_white.png" />
+    <AndroidResource Include="Resources\drawable\wodsImage.png" />
+    <AndroidResource Include="Resources\drawable\movementsImage.png" />
+    <AndroidResource Include="Resources\drawable\articles.png" />
+    <AndroidResource Include="Resources\drawable\profileImage.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\wodstar_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-mdpi\wodstar_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\wodstar_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xxhdpi\wodstar_logo_white.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
+    <AndroidResource Include="Resources\drawable-xxxhdpi\wodstar_logo_white.png" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
