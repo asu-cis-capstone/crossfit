@@ -45,6 +45,8 @@ Droid/bin/
 Droid/obj/
 YoutubeJavaBindings/bin/
 YoutubeJavaBindings/obj/
+WodstarMobileApp.iOS/bin
+WodstarMobileApp.iOS/obj
 
 # Xamarin preferences
 WodstarMobileApp.userprefs
