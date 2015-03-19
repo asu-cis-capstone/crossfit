@@ -1,0 +1,29 @@
+# Version: 8.6.1.26 (98ee412)
+# [first argument, ignore] # /Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/bin/iPhone/Debug/mtouch.exe
+/Library/Frameworks/Xamarin.iOS.framework/Versions/8.6.1.26/bin/mtouch-64 \
+	-sdkroot \
+	/Applications/Xcode.app/Contents/Developer \
+	--cache \
+	/Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/obj/iPhone/Debug/mtouch-cache \
+	--executable \
+	WodstarMobileApp.iOS \
+	--nomanifest \
+	--nosign \
+	-dev \
+	/Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/bin/iPhone/Debug/WodstarMobileApp.iOS.app \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Xml.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/System.Core.dll \
+	-r \
+	/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/lib/mono/2.1/monotouch.dll \
+	-debug \
+	-linksdkonly \
+	-sdk \
+	8.1 \
+	-targetver \
+	7.0 \
+	--abi=armv7 \
+	/Users/krisser/asu-cis-capstone/crossfit/WodstarMobileApp.iOS/bin/iPhone/Debug/WodstarMobileApp.iOS.exe \

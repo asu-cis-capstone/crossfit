@@ -89,7 +89,23 @@
                 android:layout_marginLeft="30dp"
                 android:layout_marginRight="30dp" />
             <ImageButton
-                android:src="@drawable/graph"
+                android:src="@drawable/profileImage"
+                android:layout_width="match_parent"
+                android:layout_marginTop="25dp"
+                android:layout_height="110dp"
+                android:id="@+id/myProfileImageButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+            <ImageButton
+                android:src="@drawable/articles"
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                android:layout_marginTop="25dp"
+                android:id="@+id/articlesImageButton"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp" />
+            <ImageButton
+                android:src="@drawable/profileImage"
                 android:layout_width="match_parent"
                 android:layout_marginTop="25dp"
                 android:layout_height="110dp"
