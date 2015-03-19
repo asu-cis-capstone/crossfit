@@ -61,7 +61,7 @@
         </searchDisplayController>
     </objects>
     <resources>
-        <image name="Default.png" width="16" height="16"/>
+        <image name="Default.png" width="400" height="300"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

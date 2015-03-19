@@ -81,7 +81,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wodstar_logo_white_on_transparent.png" translatesAutoresizingMaskIntoConstraints="NO" id="YAq-pY-dwq">
-                    <rect key="frame" x="4" y="14" width="313" height="81"/>
+                    <rect key="frame" x="0.0" y="14" width="317" height="81"/>
                 </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
