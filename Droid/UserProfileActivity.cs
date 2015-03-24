@@ -40,15 +40,15 @@ namespace WodstarMobileApp.Droid
 			wodDataButton = FindViewById<Button> (Resource.Id.wodButton);
 			prDataButton = FindViewById<Button> (Resource.Id.prButton);
 
-			wodDataButton.Click += createWodTable ();
-			prDataButton.Click += createPrTable ();
+			wodDataButton.Click += createWodTable;
+			prDataButton.Click += createPrTable;
 
-			userNameTextView.Text = Util.thisUser.FirstName + " " + Util.thisUser.LastName;
-			userInfoTextView .Text= "Age: " + Util.thisUser.Age + "\nGender: " + Util.thisUser.Gender;
+			userNameTextView.Text = Util.thisUser.firstName + " " + Util.thisUser.lastName;
+			userInfoTextView .Text= "Age: " + Util.thisUser.age + "\nGender: " + Util.thisUser.gender;
 			//TODO: Dynamically retrieve user picture and set.
 
 			//Initialize views to Wods
-			createWodTable ();
+			//createWodTable();
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
@@ -73,32 +73,34 @@ namespace WodstarMobileApp.Droid
 			logoutButton.Click += goToLogin;
 		}
 
-		void createWodTable() {
+		void createWodTable(object sender, EventArgs e) {
 			if (!wodVisible) {
 				wodVisible = true;
 				clearTable ();
-				List<List<int>> wodData = Util.thisUser.journal.workoutStats;
+				List<UserJournal> wodData = new List<UserJournal>();
 				//TODO: Sort data into new array by the number of entries then by alphabet if necessary
 				//TODO: for each entry, sort for the best value - how? depends on id of workout amrap/time going to be different sorts.
 				//TODO: create string[] of workouts name and the value - create maps of id to name in workout util?
-				String[][] workoutResultInfo = new String[wodData.Count ()] [1];
+				String[][] workoutResultInfo = new String[wodData.Count()][];
 				addDataToTable (workoutResultInfo);
 			}
 		}
 
-		void createPrTable() {
+		void createPrTable(object sender, EventArgs e) {
 			if (wodVisible) {
 				wodVisible = false;
 				clearTable ();
-				List<List<int>> prData = Util.thisUser.journal.prStats;
+				//List<List<int>> prData = Util.thisUser.journal.prStats;
 			}
 		}
 
 		void addDataToTable(String[][] resultInfo) {
 			for(int i = 0; i < resultInfo.Count(); i++) {
-				TableRow dataRow = new TableRow ();
-				TextView workoutName = new TextView (resultInfo [i] [0]);
-				TextView workoutPr = new TextView (resultInfo [i] [1]);
+				TableRow dataRow = new TableRow (this);
+				TextView workoutName = new TextView (this);
+				TextView workoutPr = new TextView (this);
+				workoutName.Text =resultInfo [i] [0];
+				workoutPr.Text = resultInfo [i] [1];
 				workoutPr.Gravity = GravityFlags.Right;
 				workoutName.Gravity = GravityFlags.Left;
 				dataRow.AddView (workoutName);

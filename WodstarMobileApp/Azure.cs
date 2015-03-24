@@ -24,8 +24,8 @@ namespace WodstarMobileApp
 
 			//Query the UserAccount table for the logged in user
 			List<UserAccount> users = await userAccountTable
-				.Where(u => u.Username == thisUser.Username)
-				.Where(u => u.AccountType == thisUser.AccountType)
+				.Where(u => u.username == thisUser.username)
+				.Where(u => u.accountType == thisUser.accountType)
 				.ToListAsync();
 
 			//Create the record in UserAccount table if no records are found
@@ -33,9 +33,9 @@ namespace WodstarMobileApp
 				CreateUserAccount (thisUser);
 			//Otherwise populate thisUser object with the fetched details
 			} else {
-				thisUser.Id = users [0].Id;
-				thisUser.Gender = users [0].Gender;
-				thisUser.Age = users [0].Age;
+				thisUser.id = users [0].id;
+				thisUser.gender = users [0].gender;
+				thisUser.age = users [0].age;
 			}
 		}//end UserAccount method
 

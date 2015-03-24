@@ -35,13 +35,13 @@ namespace WodstarMobileApp
 
 		//Default constructor
 		public UserAccount (string id, string username, string type, string fName, string lName, string gender, int age) {
-			this.Id = id;
-			this.Username = username;
-			this.AccountType = type;
-			this.FirstName = fName;
-			this.LastName = lName;
-			this.Gender = gender;
-			this.Age = age;
+			this.id = id;
+			this.username = username;
+			this.accountType = type;
+			this.firstName = fName;
+			this.lastName = lName;
+			this.gender = gender;
+			this.age = age;
 		}
 
 		public UserAccount() {

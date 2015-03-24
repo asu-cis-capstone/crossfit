@@ -12,7 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
 using Android.Graphics;
-using Xamarin.Facebook
+using Xamarin.Facebook;
 
 namespace WodstarMobileApp.Droid
 {

@@ -27,9 +27,6 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "statResult")]
 		public string statResult { get; set; }
 
-		public List<int> workoutIdsInJournal;
-
-
 		public UserJournal (string userId, string entryType, int statId, string type, string name, string result)
 		{
 			this.entryType = entryType;
@@ -38,13 +35,6 @@ namespace WodstarMobileApp
 			this.statType = type;
 			this.statName = name;
 			this.statResult = result;
-		}
-
-		public void addWorkoutData(int workoutId) {
-			if (!workoutIdsInJournal.Contains (workoutId)) {
-				//Create new entrance for workout Id
-			}
-			//Add data information to set
 		}
 	}
 }
