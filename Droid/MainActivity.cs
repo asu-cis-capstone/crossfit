@@ -97,7 +97,7 @@ namespace WodstarMobileApp.Droid
 
 				//Get or create user account in Azure
 				try {
-					Azure.GetUserAccount (ThisUser);
+					Azure.GetUserAccount (Util.thisUser);
 				} catch( Exception e) {
 					Console.WriteLine(e);
 				}

@@ -39,7 +39,6 @@ namespace WodstarMobileApp.Droid
 			TextView titleButton = FindViewById<TextView> (Resource.Id.titleTextView);
 			TextView homeButton = FindViewById <TextView> (Resource.Id.homeTextView);
 			TextView profileButton = FindViewById <TextView> (Resource.Id.profileTextView);
-			TextView journalButton = FindViewById <TextView> (Resource.Id.journalTextView);
 			TextView wodLibraryButton = FindViewById <TextView> (Resource.Id.wodLibraryTextView);
 			TextView movementLibraryButton = FindViewById <TextView> (Resource.Id.movementLibraryTextView);
 			TextView logoutButton = FindViewById <TextView> (Resource.Id.logoutTextView);
@@ -47,7 +46,6 @@ namespace WodstarMobileApp.Droid
 			titleButton.Click += goToHomeScreen;
 			homeButton.Click += goToHomeScreen;
 			profileButton.Click += goToUserProfile;
-			journalButton.Click += goToJournal;
 			wodLibraryButton.Click += goToWodLibrary;
 			movementLibraryButton.Click += goToMovementLibrary;
 			logoutButton.Click += goToLogin;
@@ -56,7 +54,6 @@ namespace WodstarMobileApp.Droid
 			titleButton.Typeface = font;
 			homeButton.Typeface = font;
 			profileButton.Typeface = font;
-			journalButton.Typeface = font;
 			wodLibraryButton.Typeface = font;
 			movementLibraryButton.Typeface = font;
 			logoutButton.Typeface = font;
@@ -74,12 +71,6 @@ namespace WodstarMobileApp.Droid
 		void goToHomeScreen(object sender, EventArgs e) {
 			if (this.LocalClassName != "wodstarmobileapp.droid.StartScreenActivity") {
 				StartActivity (typeof(StartScreenActivity));
-			}
-		}
-
-		void goToJournal(object sender, EventArgs e) {
-			if (this.LocalClassName != "wodstarmobileapp.droid.UserJournal") {
-				StartActivity (typeof(UserJournal));
 			}
 		}
 

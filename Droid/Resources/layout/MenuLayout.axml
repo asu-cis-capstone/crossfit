@@ -83,32 +83,6 @@
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dp"
-        android:id="@+id/journalView"
-        android:background="#abe4e4e4"
-        android:layout_gravity="center"
-        android:layout_marginLeft="8dp"
-        android:layout_marginRight="14dp" />
-    <LinearLayout
-        android:orientation="horizontal"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/journalRow"
-        android:layout_margin="8dp">
-        <TextView
-            android:text="Workout Journal"
-            android:textAppearance="?android:attr/textAppearanceMedium"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/journalTextView"
-            android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
-            android:textColor="#fff8f8f8" />
-    </LinearLayout>
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dp"
         android:id="@+id/wodLibraryView"
         android:background="#abe4e4e4"
         android:layout_gravity="center"
