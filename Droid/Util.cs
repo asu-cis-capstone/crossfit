@@ -28,7 +28,7 @@ namespace WodstarMobileApp.Droid
 		private UserJournal demoentry9 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTime, "War Frank", "8:21:43");
 		private UserJournal demoentry10 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTime, "War Frank", "8:21:43");
 
-		private UserJournal demoentry11 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.movementId, WorkoutUtil.strengthType, "Back Squat", "8:21:43");
+		private UserJournal demoentry11 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks., WorkoutUtil.strengthType, "Back Squat", "8:21:43");
 		private UserJournal demoentry12 = new UserJournal (thisUser.id, WorkoutUtil.prType, WorkoutUtil.warFrankId, WorkoutUtil.strengthType, "Back Squat", "8:21:43");
 
 		private UserJournal demoentry13 = new UserJournal (thisUser.id, WorkoutUtil.prType, WorkoutUtil.warFrankId, WorkoutUtil.strengthType, "Squat Jerk", "8:21:43");

@@ -47,6 +47,37 @@ namespace WodstarMobileApp
 		public const String run = "Run";
 		public const String squatSnatch = "Squat Snatch";
 
+		//Movement Ids
+		public const int hangPowerClean =1;
+		public const int burpee = 2;
+		public const int backSquat = 3;
+		public const int hangSnatch = 4;
+		public const int squatClean = 5;
+		public const int powerClean = 6;
+		public const int hangSquatClean = 7;
+		public const int boxJump = 8;
+		public const int airSquat = 9;
+		public const int deadlift = 10;
+		public const int doubleUnders = 11;
+		public const int frontSquat = 12;
+		public const int splitJerk = 13;
+		public const int ringMuscleUp = 14;
+		public const int ringKippingMuscleUp = 15;
+		public const int kippingBarMuscleUp = 16
+		public const int pistolSquat = 17;
+		public const int powerSnatch = 18;
+		public const int sumoDeadliftHighPull = 19;
+		public const int thruster = 20;
+		public const int americanKettlebellSwing = 21;
+		public const int strictPress = 22;
+		public const int pushPress = 23;
+		public const int strictRingMuscleUp = 24;
+		public const int russianKettlebellSwing = 25;
+		public const int rowing = 26;
+		public const int pullUp = 27;
+		public const int run = 28;
+		public const int squatSnatch = 29;
+
 		//Types of equipment
 		public const String box = "Box";
 		public const String barbell = "Barbell";
