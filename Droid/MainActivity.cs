@@ -82,10 +82,10 @@ namespace WodstarMobileApp.Droid
 			// If Facebook session is open, then load the Main layout
 			if (user != null) {
 				//Get user information from the Facebook session
-				ThisUser.accountType = "Facebook";
-				ThisUser.username = user.Id;
-				ThisUser.firstName = user.FirstName;
-				ThisUser.lastName = user.LastName;
+				Util.thisUser.accountType = "Facebook";
+				Util.thisUser.username = user.Id;
+				Util.thisUser.firstName = user.FirstName;
+				Util.thisUser.lastName = user.LastName;
 
 				//Show popup containing Facebook user info
 				//AlertDialog.Builder alert = new AlertDialog.Builder (this);
