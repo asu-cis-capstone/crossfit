@@ -37,9 +37,9 @@ namespace wodstarService.Controllers
         }
 
         // POST tables/Workout
-        public async Task<IHttpActionResult> PostWorkout(Workout user)
+        public async Task<IHttpActionResult> PostWorkout(Workout workout)
         {
-            Workout current = await InsertAsync(user);
+            Workout current = await InsertAsync(workout);
             return CreatedAtRoute("Tables", new { id = current.Id }, current);
         }
 
