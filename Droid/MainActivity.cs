@@ -22,10 +22,6 @@ namespace WodstarMobileApp.Droid
 	[Activity (Theme = "@android:style/Theme.Black.NoTitleBar", ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation, ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainActivity : Activity, Request.IGraphUserCallback
 	{
-		//Class variables
-		public static UserAccount ThisUser = new UserAccount();
-
-
 		//First method that is executed on app start
 		protected override void OnCreate (Bundle bundle)
 		{

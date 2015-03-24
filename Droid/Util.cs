@@ -14,6 +14,9 @@ namespace WodstarMobileApp.Droid
 	{
 		public const String wodstarRed = "#B5191D";
 		public static  WodstarMobileApp.UserAccount thisUser = new UserAccount("14", "dprovenzano", "user", "Dan", "Provenzano", "Male", 29);
+
+		public static List<UserJournal> wodJournal;
+		public static List<UserJournal> prJournal;
 	/*
 		public static UserJournal demoentry1 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTime, "Fran", "3:42.13");
 		public static UserJournal demoentry2 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTime, "Fran", "4:12.08");
