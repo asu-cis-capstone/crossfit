@@ -1,11 +1,9 @@
-﻿using System;
-using Microsoft.WindowsAzure.Mobile.Service;
+﻿using Microsoft.WindowsAzure.Mobile.Service;
 
 namespace wodstarService.DataObjects
 {
     public class UserAccount : EntityData
     {
-        public string Id { get; set; }
         public string Username { get; set; }
 
         public string AccountType { get; set; }

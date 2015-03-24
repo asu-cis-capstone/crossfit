@@ -5,10 +5,8 @@ namespace wodstarService.DataObjects
 {
     public class Workout : EntityData
     {
-        public string id { get; set; }
+        public string WorkoutName { get; set; }
 
-        public string workoutName { get; set; }
-
-        public string workoutType { get; set; }
+        public string WorkoutType { get; set; }
     }
 }

@@ -22,27 +22,29 @@ namespace wodstarService
             // line. Comment it out again when you deploy your service for production use.
             // config.IncludeErrorDetailPolicy = IncludeErrorDetailPolicy.Always;
             
-            //Database.SetInitializer(new wodstarInitializer());
+            Database.SetInitializer(new wodstarInitializer());
+            //Database.SetInitializer<wodstarContext>(null);
         }
     }
 
-    //Disabled by sbeverly to avoid destroying the existing tables during Publishing to Azure Mobile Service
-    //public class wodstarInitializer : ClearDatabaseSchemaIfModelChanges<wodstarContext>
-    //{
-        //protected override void Seed(wodstarContext context)
-        //{
-            //List<UserAccount> userAccounts = new List<UserAccount>
+    public class wodstarInitializer : ClearDatabaseSchemaIfModelChanges<wodstarContext>
+    //public class wodstarInitializer : CreateDatabaseIfNotExists<wodstarContext>
+    {
+        protected override void Seed(wodstarContext context)
+        {
+            //List<TodoItem> todoItems = new List<TodoItem>
             //{
-                //new UserAccount { Id = Guid.NewGuid().ToString(), Username = "wodstar_admin", AccountType = "wodstar", FirstName = "Wodstar", LastName = "Admin" }
+                //new TodoItem { Id = Guid.NewGuid().ToString(), Text = "First item", Complete = false },
+                //new TodoItem { Id = Guid.NewGuid().ToString(), Text = "Second item", Complete = false },
             //};
 
-            //foreach (UserAccount userAccount in userAccounts)
+            //foreach (TodoItem todoItem in todoItems)
             //{
-                //context.Set<UserAccount>().Add(userAccount);
+                //context.Set<TodoItem>().Add(todoItem);
             //}
 
-            //base.Seed(context);
-        //}
-    //}
+            base.Seed(context);
+        }
+    }
 }
 

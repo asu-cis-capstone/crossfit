@@ -46,9 +46,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>59984</DevelopmentServerPort>
+          <DevelopmentServerPort>50003</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59984/</IISUrl>
+          <IISUrl>http://localhost:50003/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>
@@ -185,12 +185,17 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\MovementSegmentController.cs" />
     <Compile Include="Controllers\MovementController.cs" />
     <Compile Include="Controllers\UserAccountController.cs" />
+    <Compile Include="Controllers\UserJournalsController.cs" />
     <Compile Include="Controllers\WorkoutController.cs" />
     <Compile Include="DataObjects\Movement.cs" />
+    <Compile Include="DataObjects\MovementSegment.cs" />
     <Compile Include="DataObjects\UserAccount.cs" />
+    <Compile Include="DataObjects\UserJournal.cs" />
     <Compile Include="DataObjects\Workout.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\wodstarContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">
@@ -212,7 +217,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Properties\PublishProfiles\mobile-wodstar %282%29.pubxml" />
     <None Include="Properties\PublishProfiles\mobile-wodstar.pubxml" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
