@@ -12,6 +12,7 @@ using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
 using Android.Graphics;
+using Xamarin.Facebook
 
 namespace WodstarMobileApp.Droid
 {
@@ -26,8 +27,8 @@ namespace WodstarMobileApp.Droid
 			//Show the Main layout
 			SetContentView (Resource.Layout.Main);
 
-			//var wodsMainImgButton = FindViewById<ImageButton> (Resource.Id.wodsImageButton);
-			//wodsMainImgButton.Click += goToMovementLibrary;
+			//Initialize FB profile picture data
+
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);

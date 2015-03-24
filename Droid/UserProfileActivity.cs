@@ -99,8 +99,11 @@ namespace WodstarMobileApp.Droid
 				TableRow dataRow = new TableRow ();
 				TextView workoutName = new TextView (resultInfo [i] [0]);
 				TextView workoutPr = new TextView (resultInfo [i] [1]);
+				workoutPr.Gravity = GravityFlags.Right;
+				workoutName.Gravity = GravityFlags.Left;
 				dataRow.AddView (workoutName);
 				dataRow.AddView (workoutPr);
+
 				userDataTable.AddView (dataRow);
 			}
 		}

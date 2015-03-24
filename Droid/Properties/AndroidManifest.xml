@@ -1,10 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.wodstar.mobile" android:versionName="Initial Release">
-	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="Wodstar">
-		<activity android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" />
-	</application>
-	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+<uses-sdk android:minSdkVersion="15" />
+
+<<!--NOTE: Facebook rqeuires that the value point to a string resource in values folder
+	It will not allow you to use the app_id value directly here -->
+<application android:label="Wodstar">
+	<activity android:name="com.facebook.LoginActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar" android:label="@string/app_name" />
+</application>
+	[assembly:MetaData ("com.facebook.sdk.ApplicationId", Value="@string/app_id")]
+<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
 <uses-permission android:name="android.permission.INTERNET" />
 <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />

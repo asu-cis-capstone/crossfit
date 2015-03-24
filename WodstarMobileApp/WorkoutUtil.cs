@@ -6,6 +6,9 @@ namespace WodstarMobileApp
 	{
 		public const String amrap = "amrap";
 		public const String forTime = "time";
+		public const String wodType = "wod";
+		public const String prType = "pr";
+		public const String strengthType = "strength";
 
 		public const  int amandaId=1;
 		public const  int jackieId=2;

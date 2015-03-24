@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace WodstarMobileApp
 {
@@ -30,7 +31,7 @@ namespace WodstarMobileApp
 		public Android.Media.Image userImage { get; set; }
 
 		[JsonProperty(PropertyName = "userJournal")]
-		public UserJournal journal { get; set; }
+		public List<UserJournal> journal { get; set; }
 
 		//Default constructor
 		public UserAccount (string id, string username, string type, string fName, string lName, string gender, int age) {
