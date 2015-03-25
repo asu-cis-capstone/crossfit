@@ -8,8 +8,9 @@ namespace WodstarMobileApp
 	public static class Azure
 	{
 		private static MobileServiceClient azureClient;
-		//public static UserAccount thisUser;
 		private static IMobileServiceTable<UserAccount> userAccountTable;
+		private static IMobileServiceTable<Workout> workoutTable;
+		public static List<Workout> workouts;
 
 		public static void InitializeAzure() {
 			//connect to Azure
@@ -50,6 +51,19 @@ namespace WodstarMobileApp
 			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 			GetUserAccount (thisUser);
 		}//end CreateUserAccount method
+
+		public async static void GetWorkouts() {
+			//Set UserAccount table object
+			workoutTable = azureClient.GetTable<Workout>();
+
+			//Query the Workout table for all workouts
+			workouts = await workoutTable
+				.ToListAsync();
+
+			foreach (var workout in workouts) {
+				Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
+			}
+		}//end GetWorkouts method
 
 /*		public static WorkoutDOM getWorkout(string id) {
 			return new WorkoutDOM ();

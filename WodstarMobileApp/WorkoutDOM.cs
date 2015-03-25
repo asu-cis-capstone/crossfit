@@ -24,6 +24,10 @@ namespace WodstarMobileApp
 			this.segments = segments;
 		}
 
+		//Default constructor
+		public Workout () {
+
+		}
 	}
 }
 

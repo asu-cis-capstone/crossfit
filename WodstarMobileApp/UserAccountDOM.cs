@@ -33,7 +33,7 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "userJournal")]
 		public List<UserJournal> journal { get; set; }
 
-		//Default constructor
+
 		public UserAccount (string id, string username, string type, string fName, string lName, string gender, int age) {
 			this.id = id;
 			this.username = username;
@@ -44,6 +44,7 @@ namespace WodstarMobileApp
 			this.age = age;
 		}
 
+		//Default constructor
 		public UserAccount() {
 
 		}

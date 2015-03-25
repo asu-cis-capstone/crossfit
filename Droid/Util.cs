@@ -10,10 +10,11 @@ using System.Collections.Generic;
 
 namespace WodstarMobileApp.Droid
 {
-	public class Util
+	public static class Util
 	{
 		public const String wodstarRed = "#B5191D";
-		public static  WodstarMobileApp.UserAccount thisUser = new UserAccount("14", "dprovenzano", "user", "Dan", "Provenzano", "Male", 29);
+		//public static WodstarMobileApp.UserAccount thisUser = new UserAccount("14", "dprovenzano", "user", "Dan", "Provenzano", "Male", 29);
+		public static WodstarMobileApp.UserAccount thisUser = new UserAccount();
 	
 		public static WodstarMobileApp.UserJournal demoentry1 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTime, "Fran", "3:42.13");
 		public static WodstarMobileApp.UserJournal demoentry2 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTime, "Fran", "4:12.08");
