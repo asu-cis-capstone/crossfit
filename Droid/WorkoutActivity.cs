@@ -11,7 +11,6 @@ using Android.Widget;
 using Android.Content.PM;
 using WodstarMobileApp;
 using Google.YouTube.Player;
-using Xamarin.Forms;
 using com.refractored.monodroidtoolkit;
 using System.Threading.Tasks;
 
