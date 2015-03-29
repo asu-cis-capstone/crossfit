@@ -24,22 +24,23 @@ namespace WodstarMobileApp.Droid
 		private String workoutId="1";
 		private YouTubePlayerFragment movementVideos;
 		private FrameLayout headerLayout;
-		private Android.Widget.Button timerButton;
+		private Button timerButton;
 		private HoloCircularProgressBar progressBar;
 		private bool timerStarted;
 		private HoloCircularProgressBar circularProgressBar;
-		private Android.Widget.Button logButton;
-		private Android.Widget.Button restartButton;
+		private Button logButton;
+		private Button restartButton;
 
 		//Sample workouts hardcoded for demo purposes
 		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.amandaId.ToString(), "Description", "3 Rounds for time of 9-7-5 reps of:", 
 			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
+
 		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.jackieId.ToString(), "Description", 
 			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
 				MovementLinks.pullUpMovement});
 
-		private Workout jackieWorkout = new Workout ("Jackie", jackieSegment);
-		private Workout amandaWorkout = new Workout ("Amanda", amandaSegment);
+		private Workout jackieWorkout = new Workout ("Jackie", "Time", jackieSegment);
+		private Workout amandaWorkout = new Workout ("Amanda", "Time", amandaSegment);
 
 		protected override void OnCreate (Bundle bundle)
 		{
