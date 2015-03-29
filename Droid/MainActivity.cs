@@ -106,7 +106,6 @@ namespace WodstarMobileApp.Droid
 				try {
 					Console.WriteLine("Fetching workouts");
 					Azure.GetWorkouts();
-					Console.WriteLine(Azure.workouts.Count);
 				} catch (Exception e) {
 					Console.WriteLine (e);
 				}

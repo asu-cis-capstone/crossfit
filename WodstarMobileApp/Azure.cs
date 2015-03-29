@@ -60,18 +60,14 @@ namespace WodstarMobileApp
 			workouts = await workoutTable
 				.ToListAsync();
 
+			//Debug output to the console
+			Console.WriteLine("DEBUG - GetWorkouts");
 			foreach (var workout in workouts) {
 				Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
 			}
 		}//end GetWorkouts method
 
-/*		public static WorkoutDOM getWorkout(string id) {
-			return new WorkoutDOM ();
-		}
 
-		public static MovementDOM getMovement(string id) {
-			return new MovementDOM ();
-		} */
 	}
 }
 

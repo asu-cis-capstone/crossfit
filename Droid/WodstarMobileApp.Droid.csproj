@@ -89,7 +89,6 @@
     <Compile Include="StartScreenActivity.cs" />
     <Compile Include="MovementLibraryActivity.cs" />
     <Compile Include="UserProfileActivity.cs" />
-    <Compile Include="MenuUtil.cs" />
     <Compile Include="Util.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="WorkoutActivity.cs" />
