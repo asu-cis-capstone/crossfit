@@ -60,3 +60,11 @@ Tyler Daulton | tdaulton@asu.edu
 * Bug fixes
 * Layout tweaks
 * Youtube video: https://www.youtube.com/watch?v=2owdoczOKUk
+
+###v0.5
+* Youtube play list and rotation
+* Updated timer
+* Redesign AzureDB schema
+* Harmonize Android layout formatting
+* IOS splash and start page updated
+
