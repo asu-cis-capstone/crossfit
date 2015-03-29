@@ -5,42 +5,53 @@ namespace WodstarMobileApp
 {
 	public class WorkoutSegment
 	{
-		[JsonProperty(PropertyName = "id")]
+		[JsonProperty (PropertyName = "id")]
 		public string id { get; set; }
 
-		[JsonProperty(PropertyName = "segmentType")]
+		[JsonProperty (PropertyName = "segmentType")]
 		public String segmentType;
 
-		[JsonProperty(PropertyName = "workoutId")]
+		[JsonProperty (PropertyName = "workoutId")]
 		public String workoutId;
 
-		[JsonProperty(PropertyName = "segmentMovements")]
-		public Movement[] segmentMovements;
+		[JsonProperty (PropertyName = "segmentMovements")]
+		public String segmentMovements;
+		public Movement[] segmentMovementsArray;
 
-		[JsonProperty(PropertyName = "movementDescriptions")]
-		public String[] movementDescriptions;
+		[JsonProperty (PropertyName = "movementDescriptions")]
+		public String movementDescriptions;
+		public String[] movementDescriptionsArray;
 
-		[JsonProperty(PropertyName = "segmentHeader")]
+		[JsonProperty (PropertyName = "segmentHeader")]
 		public String segmentHeader;
 
-		[JsonProperty(PropertyName = "segmentDescription")]
+		[JsonProperty (PropertyName = "segmentDescription")]
 		public String segmentDescription;
 
-		[JsonProperty(PropertyName = "repetitions")]
+		[JsonProperty (PropertyName = "repetitions")]
 		public int repetitions;
 
+		//Default constructor
+		public WorkoutSegment ()
+		{
+
+		}
+
 		public WorkoutSegment (String type, String workoutId, 
-			String header, String description, int repetitions, 
-			String[] movementDescriptions, params Movement[] movements)
+		                       String header, String description, int repetitions, 
+		                       String[] movementDescriptions, params Movement[] movements)
 		{
 			this.segmentType = type;
 			this.workoutId = workoutId;
 			this.segmentHeader = header;
-			this.segmentMovements = movements;
+			this.segmentMovementsArray = movements;
 			this.repetitions = repetitions;
-			this.movementDescriptions = movementDescriptions;
+			this.movementDescriptionsArray = movementDescriptions;
 			this.segmentDescription = description;
 		}
+
+
+
 	}
 }
 

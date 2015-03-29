@@ -5,37 +5,45 @@ namespace WodstarMobileApp
 {
 	public class Movement
 	{
-		[JsonProperty(PropertyName = "id")]
+		[JsonProperty (PropertyName = "id")]
 		public string id { get; set; }
 
-		[JsonProperty(PropertyName = "classification")]
+		[JsonProperty (PropertyName = "classification")]
 		public String classification { get; set; }
 
-		[JsonProperty(PropertyName = "equipment")]
+		[JsonProperty (PropertyName = "equipment")]
 		public String equipment { get; set; }
 
-		[JsonProperty(PropertyName = "type")]
+		[JsonProperty (PropertyName = "type")]
 		public String type { get; set; }
 
-		[JsonProperty(PropertyName = "name")]
+		[JsonProperty (PropertyName = "name")]
 		public String name { get; set; }
 
-		[JsonProperty(PropertyName = "rxDescription")]
+		[JsonProperty (PropertyName = "rxDescription")]
 		public String rxDescription { get; set; }
 
-		[JsonProperty(PropertyName = "blackDiamondDescription")]
+		[JsonProperty (PropertyName = "blackDiamondDescription")]
 		public String blackDiamondDescription { get; set; }
 
-		[JsonProperty(PropertyName = "blueSquareDescription")]
+		[JsonProperty (PropertyName = "blueSquareDescription")]
 		public String blueSquareDescription { get; set; }
 
-		[JsonProperty(PropertyName = "greenCircleDescription")]
+		[JsonProperty (PropertyName = "greenCircleDescription")]
 		public String greenCircleDescription { get; set; }
 
-		[JsonProperty(PropertyName = "url")]
+		[JsonProperty (PropertyName = "url")]
 		public String url { get; set; }
 
-		public Movement(String name, String url, String type, String equipment) {
+		//Default constructor
+		public Movement ()
+		{
+			
+		}
+
+
+		public Movement (String name, String url, String type, String equipment)
+		{
 			this.name = name;
 			this.url = url;
 			this.type = type;

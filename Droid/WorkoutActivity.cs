@@ -179,11 +179,12 @@ namespace WodstarMobileApp.Droid
 			//If for time, final score should be passed in seconds with 2 decimal places
 			//If AMRAP, should be passed as total number of reps.
 		}
+
 		private String getRxSegmentDescription(WorkoutSegment segment) {
 			String s = segment.segmentDescription;
-			for(int j = 0; j< segment.segmentMovements.Length; j++) {
-				s = s + "\n \t\u2022 " + segment.movementDescriptions[j]+ " " + segment.segmentMovements [j].name;
-				Console.WriteLine ("Movement name: " + segment.segmentMovements [j].name);
+			for(int j = 0; j< segment.segmentMovementsArray.Length; j++) {
+				s = s + "\n \t\u2022 " + segment.movementDescriptionsArray[j]+ " " + segment.segmentMovementsArray [j].name;
+				Console.WriteLine ("Movement name: " + segment.segmentMovementsArray [j].name);
 				Console.WriteLine ("j = " + j.ToString ());
 				Console.WriteLine ("Segment Description: " + s);
 			}
@@ -192,22 +193,22 @@ namespace WodstarMobileApp.Droid
 
 		private String getBlackDiamondSegmentDescription(WorkoutSegment segment) {
 			String s = segment.segmentDescription;
-			for(int j = 0; j< segment.segmentMovements.Length; j++) {
-				s = s + "\n \t\u2022 " + segment.movementDescriptions[j]+ " " + segment.segmentMovements [j].blackDiamondDescription;
+			for(int j = 0; j< segment.segmentMovementsArray.Length; j++) {
+				s = s + "\n \t\u2022 " + segment.movementDescriptionsArray[j]+ " " + segment.segmentMovementsArray [j].blackDiamondDescription;
 				Console.WriteLine ("Segment Description: " + s);
 			}
 			return s;
 		}
 
 		void loadRxVideos(WorkoutSegment segment) {
-			foreach(Movement m in segment.segmentMovements) {
+			foreach(Movement m in segment.segmentMovementsArray) {
 				if (m.url != null) {
 					movementUrls.Add (m.url);
 					Console.WriteLine ("Movement Url: " + m.url);
 				}
 			}
 		}
-
+			
 		void setThisWorkout() {
 			switch (Int64.Parse(workoutId)) {
 			case WorkoutUtil.amandaId: //Amanda
