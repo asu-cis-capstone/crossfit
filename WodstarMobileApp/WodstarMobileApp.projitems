@@ -9,16 +9,15 @@
     <Import_RootNamespace>WodstarMobileApp</Import_RootNamespace>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="$(MSBuildThisFileDirectory)WodstarMobileApp.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)DeveloperKey.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)YouTubeFailureRecoveryActivity.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)MovementLinks.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Azure.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)MovementDOM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)WorkoutDOM.cs" />
-    <Compile Include="$(MSBuildThisFileDirectory)UserAccountDOM.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutUtil.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)WorkoutSegment.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)UserJournal.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Workout.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)UserAccount.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Movement.cs" />
   </ItemGroup>
 </Project>
