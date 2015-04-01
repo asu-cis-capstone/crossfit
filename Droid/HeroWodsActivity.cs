@@ -10,24 +10,16 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
-using Android.Content.PM;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "WorkoutLibraryActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
-	public class WorkoutLibraryActivity : Activity
+	[Activity (Label = "HeroWodsActivity")]			
+	public class HeroWodsActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-			SetContentView (Resource.Layout.WodLibrary);
-
-			ImageButton benchmarkWodsButton = FindViewById<ImageButton> (Resource.Id.benchmarkWodsButton);
-			ImageButton heroWodsButton = FindViewById<ImageButton> (Resource.Id.heroWodsButton);
-			ImageButton camilleWodsButton = FindViewById<ImageButton> (Resource.Id.camilleWodsButton);
-			ImageButton wodstarWodsButton = FindViewById<ImageButton> (Resource.Id.wodstarWodsButton);
-
-			benchmarkWodsButton.Click += goToBenchmarkWods;
+			SetContentView (Resource.Layout.HeroWods);
 
 			//NAVIGATION
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
@@ -50,11 +42,6 @@ namespace WodstarMobileApp.Droid
 			movementLibraryButton.Click += goToMovementLibrary;
 			logoutButton.Click += goToLogin;
 			//END NAVIGATION
-
-		} // End on create
-			
-		void goToBenchmarkWods(object sender, EventArgs e) {
-			StartActivity (typeof(BenchmarkWodsActivity));
 		}
 
 		//NAVIGATION METHODS
@@ -90,6 +77,6 @@ namespace WodstarMobileApp.Droid
 			}
 		}
 		//END NAVIGATION METHODS
+	}
+}
 
-	} //End class
-} //End namespace

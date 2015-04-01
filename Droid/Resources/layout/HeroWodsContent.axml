@@ -67,38 +67,32 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/wodLibraryLayout">
-            <ImageButton
-                android:src="@+drawable/amanda"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/benchmarkWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
-            <ImageButton
-                android:src="@+drawable/jackie"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/heroWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
-            <ImageButton
-                android:src="@+drawable/kelly"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/camilleWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
-            <ImageButton
-                android:src="@+drawable/helen"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/wodstarWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/firstHeroWodRelativeLayout">
+                <ImageButton
+                    android:src="@+drawable/americanFlag"
+                    android:layout_width="match_parent"
+                    android:layout_height="169.1dp"
+                    android:id="@+id/hero1Button"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center_horizontal" />
+                <TextView
+                    android:layout_width="200dp"
+                    android:layout_height="80dp"
+                    android:id="@+id/firstHeroText"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="44sp"
+                    android:background="#00FFFFFF"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerInParent="true"
+                    android:text="Hero Wod 1" />
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>

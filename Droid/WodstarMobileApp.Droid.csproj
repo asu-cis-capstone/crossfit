@@ -94,6 +94,9 @@
     <Compile Include="WorkoutActivity.cs" />
     <Compile Include="WorkoutLibraryActivity.cs" />
     <Compile Include="FlyOutContainer.cs" />
+    <Compile Include="BenchmarkWodsActivity.cs" />
+    <Compile Include="HeroWodsActivity.cs" />
+    <Compile Include="CamilleWodsActivity.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -186,7 +189,6 @@
     <AndroidResource Include="Resources\drawable\nancy.png" />
     <AndroidResource Include="Resources\drawable\nicole.png" />
     <AndroidResource Include="Resources\drawable\rosa.png" />
-    <AndroidResource Include="Resources\drawable\splash.png" />
     <AndroidResource Include="Resources\drawable\login.png" />
     <AndroidResource Include="Resources\drawable\wodstar_logo_white.png" />
     <AndroidResource Include="Resources\drawable\wodsImage.png" />
@@ -203,6 +205,18 @@
     <AndroidResource Include="Resources\drawable-xxhdpi\wodstar_logo_white.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\splash.png" />
     <AndroidResource Include="Resources\drawable-xxxhdpi\wodstar_logo_white.png" />
+    <AndroidResource Include="Resources\layout\BenchmarkWods.axml" />
+    <AndroidResource Include="Resources\layout\BenchmarkWodsContent.axml">
+      <DependentUpon>BenchmarkWods.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\HeroWods.axml" />
+    <AndroidResource Include="Resources\layout\HeroWodsContent.axml">
+      <DependentUpon>HeroWods.axml</DependentUpon>
+    </AndroidResource>
+    <AndroidResource Include="Resources\drawable\splash.jpg" />
+    <AndroidResource Include="Resources\drawable\americanFlag.jpg" />
+    <AndroidResource Include="Resources\drawable\australianFlag.jpg" />
+    <AndroidResource Include="Resources\drawable\canadianFlag.jpg" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
