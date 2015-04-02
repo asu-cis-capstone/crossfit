@@ -8,9 +8,11 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "id")]
 		public string id { get; set;}
 
+		//The workout name
 		[JsonProperty(PropertyName = "workoutName")]
 		public String workoutName { get; set;}
 
+		//The type; benchmark, hero, camille, wodstar
 		[JsonProperty(PropertyName = "workoutType")]
 		public String workoutType { get; set;}
 
