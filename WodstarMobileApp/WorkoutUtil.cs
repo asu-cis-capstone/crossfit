@@ -10,6 +10,18 @@ namespace WodstarMobileApp
 		public const String prType = "pr";
 		public const String strengthType = "strength";
 
+		public static String[] heroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
+			"The Seven", "McCluskey", "Weaver", "Ledesma", "Wittman", "Rankel", "Holbrook", "Whitten",
+			"Bull", "Collin", "Thompson", "Santora", "Bradshaw", "Santiago", "Carse", "Bradley", "Meadows",
+			"Gator", "Small", "Moon", "Wilmot", "Lumberjack 20", "Strange", "Nick", "Brian", "Jag 28", "Pheezy",
+			"Rahoj", "Desforges", "Paul", "McGhee", "Tyler", "Hansen", "Danny", "DT", "Ryan", "Tommy V", "Garrett",
+			"Mr. Joshua", "JT", "Blake", "Moore", "Brenton", "Murph", "Michael", "Daniel", "Josh", "Jason", "Badger",
+			"Joshie", "Randy", "Griff", "War Frank", "Jerry", "Nate", "Joshua"
+		};
+		
+		public static String[] canadaHeroWods = new String[] { "Stephen", "Nutts", "Erin" };
+		public static String[] australiaHeroWods = new String[] { "Wood" };
+
 		public const  int amandaId=1;
 		public const  int jackieId=2;
 		public const  int kellyId=3;

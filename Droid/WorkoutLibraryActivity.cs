@@ -28,6 +28,7 @@ namespace WodstarMobileApp.Droid
 			ImageButton wodstarWodsButton = FindViewById<ImageButton> (Resource.Id.wodstarWodsButton);
 
 			benchmarkWodsButton.Click += goToBenchmarkWods;
+			heroWodsButton.Click += goToHeroWods;
 
 			//NAVIGATION
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
@@ -55,6 +56,10 @@ namespace WodstarMobileApp.Droid
 			
 		void goToBenchmarkWods(object sender, EventArgs e) {
 			StartActivity (typeof(BenchmarkWodsActivity));
+		}
+
+		void goToHeroWods(object sender, EventArgs e) {
+			StartActivity (typeof(HeroWodsActivity));
 		}
 
 		//NAVIGATION METHODS

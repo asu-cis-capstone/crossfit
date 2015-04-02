@@ -16,10 +16,14 @@ namespace WodstarMobileApp.Droid
 	[Activity (Label = "HeroWodsActivity")]			
 	public class HeroWodsActivity : Activity
 	{
+		private LinearLayout workoutLayout;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.HeroWods);
+
+			workoutLayout = FindViewById<LinearLayout>(Resource.Id.wodLibraryLayout);
 
 			//NAVIGATION
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
@@ -42,6 +46,18 @@ namespace WodstarMobileApp.Droid
 			movementLibraryButton.Click += goToMovementLibrary;
 			logoutButton.Click += goToLogin;
 			//END NAVIGATION
+		}
+
+		private void initializeHeroPage() {
+			for(int i = 0; i <WorkoutUtil.heroWods.Length; i++) {
+				TextView wodTextView = new TextView (this);
+				wodTextView.Text = WorkoutUtil.heroWods [i];
+				RelativeLayout wodLayout = new RelativeLayout (this);
+				ImageView wodImage = new ImageView (this);
+			//	wodImage.Drawable = Resource.Drawable.americanFlag;
+				wodLayout.AddView (wodTextView);
+				wodLayout.AddView (wodImage);
+			}
 		}
 
 		//NAVIGATION METHODS
