@@ -4,11 +4,18 @@ namespace WodstarMobileApp
 {
 	public static class WorkoutUtil
 	{
+		//Segment types
 		public const String amrap = "amrap";
 		public const String forTime = "time";
 		public const String wodType = "wod";
 		public const String prType = "pr";
 		public const String strengthType = "strength";
+
+		//Workout types
+		public const String camilleType = "camile";
+		public const String heroType = "hero";
+		public const String benchmarkType = "benchmark";
+		public const String wodstarType = "wodstar";
 
 		public static String[] heroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
 			"The Seven", "McCluskey", "Weaver", "Ledesma", "Wittman", "Rankel", "Holbrook", "Whitten",
@@ -18,6 +25,8 @@ namespace WodstarMobileApp
 			"Mr. Joshua", "JT", "Blake", "Moore", "Brenton", "Murph", "Michael", "Daniel", "Josh", "Jason", "Badger",
 			"Joshie", "Randy", "Griff", "War Frank", "Jerry", "Nate", "Joshua"
 		};
+
+		public static Workout johnsonWorkout; 
 		
 		public static String[] canadaHeroWods = new String[] { "Stephen", "Nutts", "Erin" };
 		public static String[] australiaHeroWods = new String[] { "Wood" };
