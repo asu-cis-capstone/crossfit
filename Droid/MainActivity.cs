@@ -103,14 +103,14 @@ namespace WodstarMobileApp.Droid
 				}
 
 				//Get data from Azure
-				try {
+/*				try {
 					Azure.GetWorkouts();
 					Azure.GetWorkoutSegments();
 					Azure.GetMovements();
 				} catch (Exception e) {
 					Console.WriteLine (e);
 				}
-
+*/
 				//Start a new Activity for the Main layout
 				StartActivity (typeof(StartScreenActivity));
 			}

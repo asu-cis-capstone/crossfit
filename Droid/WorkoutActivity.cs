@@ -39,8 +39,8 @@ namespace WodstarMobileApp.Droid
 			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
 				MovementLinks.pullUpMovement});
 
-		private Workout jackieWorkout = new Workout ("Jackie", "Time", jackieSegment);
-		private Workout amandaWorkout = new Workout ("Amanda", "Time", amandaSegment);
+		private Workout jackieWorkout = new Workout ("Jackie", WorkoutUtil.benchmarkType, jackieSegment);
+		private Workout amandaWorkout = new Workout ("Amanda", WorkoutUtil.benchmarkType, amandaSegment);
 
 		protected override void OnCreate (Bundle bundle)
 		{

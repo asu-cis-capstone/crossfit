@@ -10,10 +10,11 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Android.Content.PM;
 
 namespace WodstarMobileApp.Droid
 {
-	[Activity (Label = "BenchmarkWodsActivity")]			
+	[Activity (Label = "BenchmarkWodsActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class BenchmarkWodsActivity : Activity
 	{
 		protected override void OnCreate (Bundle bundle)

@@ -65,40 +65,100 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/wodLibraryLayout">
-            <ImageButton
-                android:src="@+drawable/amanda"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/benchmarkWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
-            <ImageButton
-                android:src="@+drawable/jackie"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/heroWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
-            <ImageButton
-                android:src="@+drawable/kelly"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/camilleWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
-            <ImageButton
-                android:src="@+drawable/helen"
-                android:layout_width="match_parent"
-                android:layout_height="169.1dp"
-                android:id="@+id/wodstarWodsButton"
-                android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp" />
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/progressBarLayout">
+                <ImageButton
+                    android:src="@+drawable/amanda"
+                    android:layout_width="match_parent"
+                    android:layout_height="169.1dp"
+                    android:id="@+id/benchmarkWodsButton"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="44sp"
+                    android:background="#00FFFFFF"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerInParent="true"
+                    android:text="BENCHMARK" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:src="@+drawable/jackie"
+                    android:layout_width="match_parent"
+                    android:layout_height="169.1dp"
+                    android:id="@+id/heroWodsButton"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="44sp"
+                    android:background="#00FFFFFF"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerInParent="true"
+                    android:text="HERO" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:src="@+drawable/kelly"
+                    android:layout_width="match_parent"
+                    android:layout_height="169.1dp"
+                    android:id="@+id/camilleWodsButton"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="44sp"
+                    android:background="#00FFFFFF"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerInParent="true"
+                    android:text="CAMILLE" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:src="@+drawable/helen"
+                    android:layout_width="match_parent"
+                    android:layout_height="169.1dp"
+                    android:id="@+id/wodstarWodsButton"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp" />
+                <TextView
+                    android:layout_width="300dp"
+                    android:layout_height="80dp"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textSize="44sp"
+                    android:background="#00FFFFFF"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="#FFFFFF"
+                    android:layout_centerInParent="true"
+                    android:text="WODSTAR" />
+            </RelativeLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
