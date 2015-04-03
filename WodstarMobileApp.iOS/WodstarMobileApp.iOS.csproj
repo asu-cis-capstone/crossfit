@@ -22,6 +22,8 @@
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
     <ErrorReport>prompt</ErrorReport>
+    <CodesignProvision>badefd46-bb7b-4f83-aaa0-c694d1c9830e</CodesignProvision>
+    <CodesignKey>iPhone Developer: Jeff Adkins (XWS587U4TL)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -89,11 +91,15 @@
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
     <Reference Include="monotouch" />
+    <Reference Include="MonoTouch.FacebookConnect">
+      <HintPath>..\packages\Xamarin.Facebook.3.22.0.0\lib\MonoTouch10\MonoTouch.FacebookConnect.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <None Include="Info.plist" />
     <None Include="Entitlements.plist" />
     <None Include="WodstarMobileApp.iOS.csproj" />
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AppDelegate.cs" />
