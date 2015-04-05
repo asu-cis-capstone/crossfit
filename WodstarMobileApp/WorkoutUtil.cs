@@ -17,6 +17,12 @@ namespace WodstarMobileApp
 		public const String benchmarkType = "benchmark";
 		public const String wodstarType = "wodstar";
 
+		public static String[] benchmarkWods = new String[] {
+			"Amanda", "Jackie", "Kelly", "Helen", "Karen", "Isabel", "Grace", "Fran", "Elizabeth",
+			"Diane", "Cindy", "Chelsea", "Annie", "Christine", "Barbara", "Angie", "Mary", "Annie", "Nancy",
+			"Nicole", "Linda", "Rosa", "Eva"
+		};
+
 		public static String[] heroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
 			"The Seven", "McCluskey", "Weaver", "Ledesma", "Wittman", "Rankel", "Holbrook", "Whitten",
 			"Bull", "Collin", "Thompson", "Santora", "Bradshaw", "Santiago", "Carse", "Bradley", "Meadows",

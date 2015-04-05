@@ -57,6 +57,17 @@
                 android:layout_gravity="right" />
         </LinearLayout>
     </FrameLayout>
+    <LinearLayout
+        android:id="@+id/autocompleteLayout"
+        android:layout_width="fill_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+        <AutoCompleteTextView
+            android:id="@+id/autocompleteBenchmark"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
     <ScrollView
         android:id="@+id/scroll"
         android:layout_width="fill_parent"

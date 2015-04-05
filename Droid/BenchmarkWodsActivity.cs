@@ -21,7 +21,10 @@ namespace WodstarMobileApp.Droid
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.BenchmarkWods);
-			// Create your application here
+
+			AutoCompleteTextView autocompleteBenchmark = FindViewById<AutoCompleteTextView> (Resource.Id.autocompleteBenchmark);
+			var adapter = new ArrayAdapter<String> (this, Resource.Layout.WodTextViewTemplate, WorkoutUtil.benchmarkWods);
+			autocompleteBenchmark.Adapter = adapter;
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
