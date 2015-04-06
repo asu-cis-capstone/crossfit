@@ -25,6 +25,7 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.HeroWods);
 
 			workoutLayout = FindViewById<LinearLayout> (Resource.Id.wodLibraryLayout);
+			initializeHeroWods ();
 
 			//Get all the image buttons, add click events
 			ImageButton johnsonButton = FindViewById<ImageButton> (Resource.Id.johnsonButton);
@@ -116,34 +117,80 @@ namespace WodstarMobileApp.Droid
 			//END NAVIGATION
 		}
 
-		/* DO NOT DELTE
-
 		private void initializeHeroWods() {
 			Console.WriteLine ("InitializeHeroWods");
 			for(int i=0; i < WorkoutUtil.heroWods.Length; i++) {
 				//Create relative layout, image button, and text
 				RelativeLayout rLayout = new RelativeLayout(this);
+
 				ImageButton heroButton = (ImageButton)LayoutInflater.Inflate (Resource.Layout.WodImageButtonTemplate, null);
 				TextView heroText = (TextView)LayoutInflater.Inflate(Resource.Layout.WodTextViewTemplate, null);
 
 				heroText.Text = WorkoutUtil.heroWods [i];
 				heroText.Gravity = GravityFlags.Center;
 				heroText.SetTextSize(Android.Util.ComplexUnitType.Sp, 44);
+				rLayout.SetPadding (75, 100, 75, 0);
+				RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.WrapContent,
+					                                 RelativeLayout.LayoutParams.WrapContent);
+				lp.AddRule (LayoutRules.CenterInParent);
+				heroText.LayoutParameters = lp;
 
 				heroButton.SetImageDrawable(GetDrawable(Resource.Drawable.american));
-				rLayout.SetHorizontalGravity(Android.Views.GravityFlags.CenterHorizontal);
+				heroButton.SetMinimumHeight (162);
+				rLayout.SetGravity (Android.Views.GravityFlags.Center);
+				rLayout.SetBackgroundColor (new Android.Graphics.Color (255, 255, 255, 0));
 
 				rLayout.AddView(heroButton);
 				rLayout.AddView(heroText);
 				workoutLayout.AddView(rLayout);
 			}
 			for (int i = 0; i <WorkoutUtil.canadaHeroWods.Length; i++) {
-				
+				//Create relative layout, image button, and text
+				RelativeLayout rLayout = new RelativeLayout(this);
+				ImageButton heroButton = (ImageButton)LayoutInflater.Inflate (Resource.Layout.WodImageButtonTemplate, null);
+				TextView heroText = (TextView)LayoutInflater.Inflate(Resource.Layout.WodTextViewTemplate, null);
+
+				heroText.Text = WorkoutUtil.canadaHeroWods [i];
+				heroText.Gravity = GravityFlags.Center;
+				heroText.SetTextSize(Android.Util.ComplexUnitType.Sp, 44);
+				rLayout.SetPadding (75, 100, 75, 0);
+				RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.WrapContent,
+					RelativeLayout.LayoutParams.WrapContent);
+				lp.AddRule (LayoutRules.CenterInParent);
+				heroText.LayoutParameters = lp;
+				heroButton.SetAdjustViewBounds (false);
+				heroButton.SetImageDrawable(GetDrawable(Resource.Drawable.canadian));
+				rLayout.SetGravity (Android.Views.GravityFlags.Center);
+				rLayout.SetBackgroundColor (new Android.Graphics.Color (255, 255, 255, 0));
+
+				rLayout.AddView(heroButton);
+				rLayout.AddView(heroText);
+				workoutLayout.AddView(rLayout);
 			}
 			for (int i = 0; i <WorkoutUtil.australiaHeroWods.Length; i++) {
-				
+				//Create relative layout, image button, and text
+				RelativeLayout rLayout = new RelativeLayout(this);
+				ImageButton heroButton = (ImageButton)LayoutInflater.Inflate (Resource.Layout.WodImageButtonTemplate, null);
+				TextView heroText = (TextView)LayoutInflater.Inflate(Resource.Layout.WodTextViewTemplate, null);
+
+				heroText.Text = WorkoutUtil.australiaHeroWods [i];
+				heroText.Gravity = GravityFlags.Center;
+				heroText.SetTextSize(Android.Util.ComplexUnitType.Sp, 44);
+				rLayout.SetPadding (75, 100, 75, 0);
+				RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.WrapContent,
+					RelativeLayout.LayoutParams.WrapContent);
+				lp.AddRule (LayoutRules.CenterInParent);
+				heroText.LayoutParameters = lp;
+				heroButton.SetImageDrawable(GetDrawable(Resource.Drawable.australian));
+				heroButton.SetMinimumHeight (162);
+				rLayout.SetGravity (Android.Views.GravityFlags.Center);
+				rLayout.SetBackgroundColor (new Android.Graphics.Color (255, 255, 255, 0));
+
+				rLayout.AddView(heroButton);
+				rLayout.AddView(heroText);
+				workoutLayout.AddView(rLayout);
 			}
-		} */
+		} 
 
 		//NAVIGATION METHODS
 		void goToUserProfile(object sender, EventArgs e) {

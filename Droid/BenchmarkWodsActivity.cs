@@ -17,14 +17,20 @@ namespace WodstarMobileApp.Droid
 	[Activity (Label = "BenchmarkWodsActivity", Theme="@android:style/Theme.Black.NoTitleBar", Icon = "@drawable/icon", ScreenOrientation = ScreenOrientation.Portrait)]			
 	public class BenchmarkWodsActivity : Activity
 	{
+		AutoCompleteTextView autocompleteBenchmark;
+
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.BenchmarkWods);
 
-			AutoCompleteTextView autocompleteBenchmark = FindViewById<AutoCompleteTextView> (Resource.Id.autocompleteBenchmark);
-			var adapter = new ArrayAdapter<String> (this, Resource.Layout.WodTextViewTemplate, WorkoutUtil.benchmarkWods);
+			autocompleteBenchmark = FindViewById<AutoCompleteTextView> (Resource.Id.autocompleteBenchmark);
+			var adapter = new ArrayAdapter<String> (this, Resource.Layout.AutcompleteTextViewTemplate, WorkoutUtil.benchmarkWods);
 			autocompleteBenchmark.Adapter = adapter;
+			autocompleteBenchmark.SetSelectAllOnFocus (true);
+			autocompleteBenchmark.Threshold = 1;
+			autocompleteBenchmark.SetText ("Search", false);
+			autocompleteBenchmark.ItemSelected += searchItemSelected;
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
@@ -81,6 +87,12 @@ namespace WodstarMobileApp.Droid
 			ImageButton maryButton = FindViewById<ImageButton> (Resource.Id.maryButton);
 			maryButton.Click += goToMaryWod;
 		} // End on create
+
+		void searchItemSelected(object sender, EventArgs e) {
+			//Get search item from autoCompleteTextView, match to workoutId
+			//Delete all the other items on screen or hide/cover with other layout
+			//Put search item up.
+		}
 
 		void goToAmandaWod(object sender, EventArgs e) {
 			var intent = new Intent (this, typeof(WorkoutActivity));

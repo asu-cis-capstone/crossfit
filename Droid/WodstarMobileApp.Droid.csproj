@@ -219,6 +219,7 @@
     <AndroidResource Include="Resources\layout\WodImageButtonTemplate.axml" />
     <AndroidResource Include="Resources\drawable\australian.jpg" />
     <AndroidResource Include="Resources\drawable\canadian.jpg" />
+    <AndroidResource Include="Resources\layout\AutcompleteTextViewTemplate.axml" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
