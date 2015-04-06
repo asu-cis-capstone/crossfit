@@ -16,6 +16,9 @@ namespace WodstarMobileApp
 		public static List<WorkoutSegment> workoutSegments;
 		private static IMobileServiceTable<Movement> movementTable;
 		public static List<Movement> movements;
+		private static IMobileServiceTable<UserJournal> userJournalTable;
+		public static List<UserJournal> userJournals;
+
 
 		//Initialize connection to Azure Mobile Service
 		public static void InitializeAzure ()
@@ -111,6 +114,37 @@ namespace WodstarMobileApp
 				Console.WriteLine (string.Format ("ID: {0}\nName: {1}", movement.id, movement.name));
 			}
 		}//end GetMovements method
+
+		//Query UserJournal table for this user's journal entries
+		public async static void GetUserJournals (UserAccount thisUser)
+		{
+			//Set UserJournal table object
+			userJournalTable = azureClient.GetTable<UserJournal> ();
+
+			//Fetch all of this user's journals into a List
+			userJournals = await userJournalTable
+				.Where (uj => uj.userAccountId == thisUser.id)
+				.ToListAsync ();
+
+			//Debug output to the console
+			Console.WriteLine ("DEBUG - UserJournals");
+			foreach (var journal in userJournals) {
+				Console.WriteLine (string.Format ("ID: {0}\nName: {1}", journal.id, journal.statName));
+			}
+		}//end GetUserJournals method
+
+		//Create UserJoural record
+		public async static void CreateUserJournal (UserAccount thisUser, UserJournal journal)
+		{
+			//Set UserJournal table object
+			userJournalTable = azureClient.GetTable<UserJournal> ();
+
+			//Insert new record
+			await userJournalTable.InsertAsync (journal);
+
+			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
+			GetUserJournals (thisUser);
+		}//end CreateUserJournal method
 	}
 }
 
