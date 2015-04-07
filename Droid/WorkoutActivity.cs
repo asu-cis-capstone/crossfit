@@ -202,9 +202,9 @@ namespace WodstarMobileApp.Droid
 
 		void loadRxVideos(WorkoutSegment segment) {
 			foreach(Movement m in segment.segmentMovementsArray) {
-				if (m.url != null) {
-					movementUrls.Add (m.url);
-					Console.WriteLine ("Movement Url: " + m.url);
+				if (m.rxVideoUrl != null) {
+					movementUrls.Add (m.rxVideoUrl);
+					Console.WriteLine ("Movement Url: " + m.rxVideoUrl);
 				}
 			}
 		}

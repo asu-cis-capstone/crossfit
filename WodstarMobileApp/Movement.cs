@@ -11,17 +11,14 @@ namespace WodstarMobileApp
 		[JsonProperty (PropertyName = "classification")]
 		public String classification { get; set; }
 
+		[JsonProperty (PropertyName = "name")]
+		public String name { get; set; }
+
 		[JsonProperty (PropertyName = "equipment")]
 		public String equipment { get; set; }
 
 		[JsonProperty (PropertyName = "type")]
 		public String type { get; set; }
-
-		[JsonProperty (PropertyName = "name")]
-		public String name { get; set; }
-
-		[JsonProperty (PropertyName = "rxDescription")]
-		public String rxDescription { get; set; }
 
 		[JsonProperty (PropertyName = "blackDiamondDescription")]
 		public String blackDiamondDescription { get; set; }
@@ -32,8 +29,30 @@ namespace WodstarMobileApp
 		[JsonProperty (PropertyName = "greenCircleDescription")]
 		public String greenCircleDescription { get; set; }
 
-		[JsonProperty (PropertyName = "url")]
-		public String url { get; set; }
+		[JsonProperty (PropertyName = "rxVideoUrl")]
+		public String rxVideoUrl { get; set; }
+
+		[JsonProperty (PropertyName = "rxImageUrl")]
+		public String rxImageUrl { get; set; }
+
+		[JsonProperty (PropertyName = "blackDiamondVideoUrl")]
+		public String blackDiamondVideoUrl { get; set; }
+
+		[JsonProperty (PropertyName = "blackDiamondImageUrl")]
+		public String blackDiamondImageUrl { get; set; }
+
+		[JsonProperty (PropertyName = "blueSquareVideoUrl")]
+		public String blueSquareVideoUrl { get; set; }
+
+		[JsonProperty (PropertyName = "blueSquareImageUrl")]
+		public String blueSquareImageUrl { get; set; }
+
+		[JsonProperty (PropertyName = "greenCircleVideoUrl")]
+		public String greenCircleVideoUrl { get; set; }
+
+		[JsonProperty (PropertyName = "greenCircleImageUrl")]
+		public String greenCircleImageUrl { get; set; }
+
 
 		//Default constructor
 		public Movement ()
@@ -45,7 +64,7 @@ namespace WodstarMobileApp
 		public Movement (String name, String url, String type, String equipment)
 		{
 			this.name = name;
-			this.url = url;
+			this.rxVideoUrl = url;
 			this.type = type;
 			this.equipment = equipment;
 		}
@@ -53,7 +72,7 @@ namespace WodstarMobileApp
 		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription)
 		{
 			this.name = name;
-			this.url = url;
+			this.rxVideoUrl = url;
 			this.type = type;
 			this.equipment = equipment;
 			this.blackDiamondDescription = blackDiamondDescription;
@@ -62,7 +81,7 @@ namespace WodstarMobileApp
 		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription)
 		{
 			this.name = name;
-			this.url = url;
+			this.rxVideoUrl = url;
 			this.type = type;
 			this.equipment = equipment;
 			this.blackDiamondDescription = blackDiamondDescription;
@@ -72,7 +91,7 @@ namespace WodstarMobileApp
 		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription, String greenCircleDescription)
 		{
 			this.name = name;
-			this.url = url;
+			this.rxVideoUrl = url;
 			this.type = type;
 			this.equipment = equipment;
 			this.blackDiamondDescription = blackDiamondDescription;

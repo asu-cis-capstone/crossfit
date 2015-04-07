@@ -2,7 +2,7 @@
 
 namespace WodstarMobileApp
 {
-	public class MovementLinks
+	public static class MovementLinks
 	{
 		public static String[] MovementUrls = new String[] {hangPowerCleanLink, burpeeLink, backSquatLink, hangSnatchLink, squatCleanLink, powerCleanLink, hangSquatCleanLink,
 			boxJumpLink, airSquatLink, deadliftLink, doubleUndersLink, frontSquatLink, splitJerkLink, ringMuscleUpLink, pistolSquatLink, powerSnatchLink, sumoDeadliftHighPullLink, thrusterLink, 
