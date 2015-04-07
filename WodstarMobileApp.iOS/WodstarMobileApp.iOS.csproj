@@ -119,6 +119,10 @@
     <Compile Include="Login.designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
+    <Compile Include="Main.cs" />
+    <Compile Include="Main.designer.cs">
+      <DependentUpon>Main.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard">
@@ -137,11 +141,11 @@
     <InterfaceDefinition Include="Resources\WODboard.xib" />
     <InterfaceDefinition Include="Journal.xib" />
     <InterfaceDefinition Include="CalcTable.xib" />
-    <InterfaceDefinition Include="Main.xib" />
     <InterfaceDefinition Include="MovementLibrary.xib" />
     <InterfaceDefinition Include="WODPage.xib" />
     <InterfaceDefinition Include="WODLibrary.xib" />
     <InterfaceDefinition Include="Launch.xib" />
+    <InterfaceDefinition Include="Main.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
