@@ -83,7 +83,6 @@ namespace WodstarMobileApp
 					Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
 					//Create new Workout object off of data
 					Workout workoutDom = new Workout (workout.workoutName, workout.workoutType, workout.segments);
-
 					//Add to correct data lists in workoutUtil
 					if (workout.workoutType == WorkoutUtil.benchmarkType) {
 						WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);

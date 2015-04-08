@@ -18,8 +18,21 @@ namespace WodstarMobileApp
 		public const String benchmarkType = "benchmark";
 		public const String wodstarType = "wodstar";
 
+		//Sample workouts hardcoded for demo purposes
+		//TODO: Remove before launch
+		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.amandaId.ToString(), "Description", "3 Rounds for time of 9-7-5 reps of:", 
+			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
+		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.jackieId.ToString(), "Description", 
+			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
+				MovementLinks.pullUpMovement});
+		private static Workout jackieWorkout = new Workout ("Jackie", WorkoutUtil.benchmarkType, jackieSegment);
+		private static Workout amandaWorkout = new Workout ("Amanda", WorkoutUtil.benchmarkType, amandaSegment);
+
 		//Id and full workout
-		public static Dictionary<string, Workout> benchmarkWods = new Dictionary<string, Workout>();
+		public static Dictionary<string, Workout> benchmarkWods = new Dictionary<string, Workout>() {
+			{amandaId, amandaWorkout},
+			{jackieId, jackieWorkout}
+		};
 		public static Dictionary<string, Workout> heroWods = new Dictionary<string, Workout>();
 		public static Dictionary<string, Workout> camilleWods = new Dictionary<string, Workout>();
 		public static Dictionary<string, Workout> wodstarWods = new Dictionary<string, Workout>();
@@ -32,7 +45,7 @@ namespace WodstarMobileApp
 			{helenName, helenId},
 			{karenName, karenId}
 		};
-
+    
 		//Name, Id
 		public static Dictionary<string, string> heroIds = new Dictionary<string, string>() {
 			{jerryName, jerryId},

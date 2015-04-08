@@ -79,9 +79,13 @@ namespace WodstarMobileApp.Droid
 
 				//Get or create user account in Azure, get data
 				try {
+					Console.WriteLine("About to try to getUserAccount(Util.thisUser");
+					Console.WriteLine("Util.thisUser = " + Util.thisUser.firstName + " " + Util.thisUser.lastName);
 					Azure.GetUserAccount (Util.thisUser);
+					Console.WriteLine("Trying to get workouts");
 					Azure.GetWorkouts();
-					Azure.GetWorkoutSegments();
+					//Azure.GetWorkoutSegments();
+					Console.WriteLine("Trying to get movements");
 					Azure.GetMovements();
 					//Azure.GetUserJournals(Util.thisUser);
 				} catch (Exception e) {

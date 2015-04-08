@@ -210,6 +210,7 @@ namespace WodstarMobileApp.Droid
 		}
 			
 		void setThisWorkout() {
+			Console.WriteLine ("setThisWorkout() called");
 			if (WorkoutUtil.benchmarkWods.ContainsKey (workoutId)) {
 				Console.WriteLine ("Benchmark Wods contains key for workoutID");
 				thisWorkout = WorkoutUtil.benchmarkWods [workoutId];
@@ -220,6 +221,8 @@ namespace WodstarMobileApp.Droid
 				thisWorkout = WorkoutUtil.camilleWods [workoutId];
 			} else if (WorkoutUtil.wodstarWods.ContainsKey(workoutId)) {
 				thisWorkout = WorkoutUtil.wodstarWods [workoutId];
+			} else {
+				Console.WriteLine ("No ID dictionary found that contains this workoutkey");
 			}
 			if (thisWorkout.workoutType == WorkoutUtil.heroType) {
 				if (WorkoutUtil.stringHeroWods.Contains (thisWorkout.workoutName)) {
