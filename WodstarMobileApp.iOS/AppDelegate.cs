@@ -25,7 +25,7 @@ namespace WodstarMobileApp.iOS
 		{
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-			RootViewController = new MainController ();
+			RootViewController = MainController ();
 			window.MakeKeyAndVisible ();
 		
 			FBSettings.DefaultAppID = FacebookAppId;

@@ -112,8 +112,6 @@
     <Compile Include="ModelController.cs" />
     <Compile Include="DetailViewController.cs" />
     <Compile Include="DetailViewController.designer.cs" />
-    <Compile Include="MasterViewController.cs" />
-    <Compile Include="MasterViewController.designer.cs" />
     <Compile Include="AppDelegate.designer.cs">
       <DependentUpon>AppDelegate.cs</DependentUpon>
     </Compile>
