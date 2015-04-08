@@ -31,6 +31,9 @@ namespace WodstarMobileApp
 		[JsonProperty (PropertyName = "repetitions")]
 		public int repetitions;
 
+		[JsonProperty (PropertyName = "time")]
+		public int time;
+
 		//Default constructor
 		public WorkoutSegment ()
 		{

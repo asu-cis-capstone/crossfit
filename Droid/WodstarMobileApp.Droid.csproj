@@ -126,7 +126,6 @@
     <AndroidResource Include="Resources\drawable\forums.png" />
     <AndroidResource Include="Resources\drawable\graph.png" />
     <AndroidResource Include="Resources\drawable\leaders.png" />
-    <AndroidResource Include="Resources\drawable\img_6063.png" />
     <AndroidResource Include="Resources\layout\MovementLibraryContent.axml">
       <DependentUpon>MovementLibrary.axml</DependentUpon>
     </AndroidResource>

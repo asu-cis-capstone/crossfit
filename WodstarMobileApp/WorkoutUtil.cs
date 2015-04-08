@@ -6,8 +6,10 @@ namespace WodstarMobileApp
 	public static class WorkoutUtil
 	{
 		//Segment types
-		public const String amrap = "amrap";
-		public const String forTime = "time";
+		public const String amrapType = "amrap";
+		public const String forTimeType = "forTme";
+		public const String notForTimeType = "notForTime";
+		public const String emomType = "emom";
 		public const String wodType = "wod";
 		public const String prType = "pr";
 		public const String strengthType = "strength";
@@ -20,9 +22,9 @@ namespace WodstarMobileApp
 
 		//Sample workouts hardcoded for demo purposes
 		//TODO: Remove before launch
-		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.amandaId.ToString(), "Description", "3 Rounds for time of 9-7-5 reps of:", 
+		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTimeType, WorkoutUtil.amandaId.ToString(), "Description", "3 Rounds for time of 9-7-5 reps of:", 
 			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
-		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.jackieId.ToString(), "Description", 
+		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTimeType, WorkoutUtil.jackieId.ToString(), "Description", 
 			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
 				MovementLinks.pullUpMovement});
 		private static Workout jackieWorkout = new Workout ("Jackie", WorkoutUtil.benchmarkType, jackieSegment);

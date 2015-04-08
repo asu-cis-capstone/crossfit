@@ -30,17 +30,9 @@ namespace WodstarMobileApp.Droid
 		private HoloCircularProgressBar circularProgressBar;
 		private Button logButton;
 		private Button restartButton;
-
-		//Sample workouts hardcoded for demo purposes
-		private static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.amandaId.ToString(), "Description", "3 Rounds for time of 9-7-5 reps of:", 
-			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
-
-		private static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTime, WorkoutUtil.jackieId.ToString(), "Description", 
-			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
-				MovementLinks.pullUpMovement});
-
-		private Workout jackieWorkout = new Workout ("Jackie", WorkoutUtil.benchmarkType, jackieSegment);
-		private Workout amandaWorkout = new Workout ("Amanda", WorkoutUtil.benchmarkType, amandaSegment);
+		int blueWodstarColor = Android.Graphics.Color.Argb (1, 46, 67, 89);
+		int redWodstarColor = Android.Graphics.Color.Argb (1, 181, 25, 29);
+		int thisSegment =0;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -57,13 +49,9 @@ namespace WodstarMobileApp.Droid
 			logButton = FindViewById<Android.Widget.Button> (Resource.Id.logButton);
 			restartButton = FindViewById<Android.Widget.Button> (Resource.Id.restartButton);
 
-			restartButton.Click += (sender, e) => {
-				resetTimer();
-			}; 
-			logButton.Click += (sender, e) => {
-				//logData();
+			restartButton.Click += (sender, e) => {resetTimer();}; 
+			logButton.Click += (sender, e) => {	//logData();
 			};
-
 
 			//Captures data from starting activity, loads the proper data to the page.
 			workoutId = Intent.GetStringExtra ("workoutId");
@@ -89,7 +77,6 @@ namespace WodstarMobileApp.Droid
 
 				//Initial call to load RX Video Links
 				loadRxVideos (thisWorkout.segments[i]);
-
 				workoutDetailsLayout.AddView (segmentHeader);
 				workoutDetailsLayout.AddView (segmentDescription);
 			}
@@ -131,35 +118,102 @@ namespace WodstarMobileApp.Droid
 			}
 		}
 
-		private async void startTimer() {
+		private async void startAmrapTimer(int minutes) {
 			resetTimer ();
 			timerStarted = true;
 
-			circularProgressBar.Indeterminate = true;
+			circularProgressBar.IndeterminateInterval = 320;
+			circularProgressBar.Indeterminate=true;
+
+			int minutesPassed = 0;
+			int secondsPassed = 0;
+			int millisecondsPassed = 0;
+			int secondsText = 0;
+			int millisecondsText = 0;
+			int minutesText =0;
+			TimeSpan delayTimeSpan = new TimeSpan (0, 0, 0, 0, 100);
+
+			while(timerStarted) {
+				await Task.Delay(delayTimeSpan);
+				millisecondsPassed+=1;
+				if(millisecondsPassed>=10) {
+					secondsPassed+=1;
+					millisecondsPassed = 0;
+				}
+				if(secondsPassed>=60) {
+					minutesPassed+=1;
+					secondsPassed = 0;
+				}
+				if(millisecondsPassed==0) {
+					millisecondsText = 0;
+				} else {
+					millisecondsText = 10 - millisecondsPassed;
+				}
+				if(secondsPassed==0) {
+					secondsText = 0;
+				} else {
+					secondsText = 60 - secondsPassed;
+				}
+				if (minutes - minutesPassed <0) {
+					minutesText = 0;
+				}else if(minutes==1) {
+					if (secondsPassed==0) {
+						minutesText = 1;
+					} else {
+						minutesText = 0;
+					}
+				} else {
+					minutesText = minutes - minutesPassed;
+				}
+				timerButton.Text = minutesText.ToString("D2") + ":" + secondsText.ToString("D2") + "." + millisecondsText.ToString("D2");
+				if(minutesPassed==minutes-1) {
+					circularProgressBar.ProgressColor = redWodstarColor;
+				}else if(minutesPassed == minutes) {
+					stopTimer ();
+				}
+			}
+		} //end startCountdownTimer()
+
+		private void startTimer() {
+			resetTimer ();
+			timerStarted = true;
+			circularProgressBar.ProgressColor = Android.Graphics.Color.DarkBlue.ToArgb();
 			circularProgressBar.CircleStrokeWidth = 20;
 			circularProgressBar.Progress = 0;
 
-			int timerIncremator = 1;
-			int timerDelineators = thisWorkout.segments.Count ();
+	/*		if(thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
+				startStopwatchTimer ();
+			} else if (thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
+				startAmrapTimer (thisWorkout.segments [thisSegment].time); 
+			} else if (thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.emomType) {
+				startEmomTimer(thisWorkout.segments [thisSegment].time, thisWorkout.segments[thisSegment].repetitions);
+			}
+	*/
+			startAmrapTimer (2);
+			
+		}//End startTimer()
 
+		private async void startStopwatchTimer() {
+			circularProgressBar.Indeterminate = true;
 			int minutes = 0;
 			int seconds = 0;
 			int milliseconds = 0;
+			TimeSpan delayTimeSpan = new TimeSpan (0, 0, 0, 0, 100);
 
 			while(timerStarted) {
-				await Task.Delay(10);
-					milliseconds+=1;
-					if(milliseconds>=100) {
-						seconds+=timerIncremator;
-						milliseconds = 0;
-					}
-					if(seconds>=60) {
-						minutes+=timerIncremator;
-						seconds = 0;
-					}
-				timerButton.Text = minutes + ":" + seconds.ToString("D2") + "." + milliseconds.ToString("D2");
+				await Task.Delay(delayTimeSpan);
+				milliseconds+=1;
+				if(milliseconds>=10) {
+					seconds+=1;
+					milliseconds = 0;
+				}
+				if(seconds>=60) {
+					minutes+=1;
+					seconds = 0;
+				}
+				timerButton.Text = minutes.ToString("D2") + ":" + seconds.ToString("D2") + "." + milliseconds.ToString("D2");
 			}
-		}//End startTimer()
+		}
 
 		private void stopTimer() {
 			timerStarted = false;
