@@ -128,14 +128,14 @@ namespace WodstarMobileApp.Droid
 
 		private void initializeHeroWods() {
 			Console.WriteLine ("InitializeHeroWods");
-			for(int i=0; i < WorkoutUtil.stringheroWods.Length; i++) {
+			for(int i=0; i < WorkoutUtil.stringHeroWods.Length; i++) {
 				//Create relative layout, image button, and text
 				RelativeLayout rLayout = new RelativeLayout(this);
 
 				ImageButton heroButton = (ImageButton)LayoutInflater.Inflate (Resource.Layout.WodImageButtonTemplate, null);
 				TextView heroText = (TextView)LayoutInflater.Inflate(Resource.Layout.WodTextViewTemplate, null);
 
-				heroText.Text = WorkoutUtil.stringheroWods [i];
+				heroText.Text = WorkoutUtil.stringHeroWods [i];
 				heroText.Gravity = GravityFlags.Center;
 				heroText.SetTextSize(Android.Util.ComplexUnitType.Sp, 44);
 				rLayout.SetPadding (75, 100, 75, 0);

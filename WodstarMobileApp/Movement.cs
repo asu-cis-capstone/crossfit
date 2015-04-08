@@ -60,43 +60,27 @@ namespace WodstarMobileApp
 			
 		}
 
-
-		public Movement (String name, String url, String type, String equipment)
+		public Movement (String classification, String name, String equipment, String type, String blackDiamondDescription, 
+			String blueSquareDescription, String greenCircleDescription, String rxVideoUrl, String rxImageUrl, String blackDiamondVideoUrl,
+			String blackDiamondImageUrl, String blueSquareVideoUrl, String blueSquareImageUrl, String greenCircleVideoUrl, String greenCircleImageUrl)
 		{
 			this.name = name;
-			this.rxVideoUrl = url;
-			this.type = type;
-			this.equipment = equipment;
-		}
-
-		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription)
-		{
-			this.name = name;
-			this.rxVideoUrl = url;
-			this.type = type;
-			this.equipment = equipment;
-			this.blackDiamondDescription = blackDiamondDescription;
-		}
-
-		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription)
-		{
-			this.name = name;
-			this.rxVideoUrl = url;
-			this.type = type;
-			this.equipment = equipment;
-			this.blackDiamondDescription = blackDiamondDescription;
-			this.blueSquareDescription = blueSquareDescription;
-		}
-
-		public Movement (String name, String url, String type, String equipment, String blackDiamondDescription, String blueSquareDescription, String greenCircleDescription)
-		{
-			this.name = name;
-			this.rxVideoUrl = url;
+			this.classification = classification;
+			this.rxVideoUrl = rxVideoUrl;
 			this.type = type;
 			this.equipment = equipment;
 			this.blackDiamondDescription = blackDiamondDescription;
 			this.blueSquareDescription = blueSquareDescription;
 			this.greenCircleDescription = greenCircleDescription;
+			this.rxImageUrl = rxImageUrl;
+			this.blackDiamondVideoUrl = blackDiamondVideoUrl;
+			this.blackDiamondImageUrl = blackDiamondImageUrl;
+			this.blueSquareImageUrl = blueSquareImageUrl;
+			this.blueSquareVideoUrl = blueSquareVideoUrl;
+			this.blueSquareImageUrl = blueSquareImageUrl;
+			this.blueSquareVideoUrl = blueSquareVideoUrl;
+			this.greenCircleImageUrl = greenCircleImageUrl;
+			this.greenCircleVideoUrl = greenCircleVideoUrl;
 		}
 	}
 }

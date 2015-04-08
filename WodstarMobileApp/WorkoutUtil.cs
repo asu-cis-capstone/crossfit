@@ -32,16 +32,16 @@ namespace WodstarMobileApp
 			{karenName, karenId}
 		};
 		public static Dictionary<string, string> heroIds = new Dictionary<string, string>();
-		public static Dictionary<string, string>> camilleIds = new Dictionary<string, string>();
+		public static Dictionary<string, string> camilleIds = new Dictionary<string, string>();
 		public static Dictionary<string, string> wodstarIds = new Dictionary<string, string>();
 
 		public static String[] stringBenchmarkWods = new String[] {
-			"Amanda", "Jackie", "Kelly", "Helen", "Karen", "Isabel", "Grace", "Fran", "Elizabeth",
-			"Diane", "Cindy", "Chelsea", "Annie", "Christine", "Barbara", "Angie", "Mary", "Annie", "Nancy",
-			"Nicole", "Linda", "Rosa", "Eva"
+			amandaName, jackieName, kellyName, helenName, karenName, isabelName, graceName, franName, elizabethName,
+			dianeName, cindyName, chelseaName, annieName, christineName, barbaraName, angieName, maryName, annieName, nancyName,
+			nicoleName, lindaName, rosaName, evaName
 		};
 
-		public static String[] stringheroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
+		public static String[] stringHeroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
 			"The Seven", "McCluskey", "Weaver", "Ledesma", "Wittman", "Rankel", "Holbrook", "Whitten",
 			"Bull", "Collin", "Thompson", "Santora", "Bradshaw", "Santiago", "Carse", "Bradley", "Meadows",
 			"Gator", "Small", "Moon", "Wilmot", "Lumberjack 20", "Strange", "Nick", "Brian", "Jag 28", "Pheezy",
@@ -80,15 +80,33 @@ namespace WodstarMobileApp
 		public const string nicoleName = "Nicole";
 		public const string nicoleId = "13";
 		public const string graceId = "14";
+		public const string graceName = "Grace";
 		public const string elizabethId = "15";
+		public const string elizabethName = "Elizabeth";
 		public const string dianeId = "16";
+		public const string dianeName = "Diane";
 		public const string cindyId = "17";
+		public const string cindyName = "Cindy";
 		public const string chelseaId = "18";
+		public const string chelseaName = "Chelsea";
 		public const string annieId = "19";
+		public const string annieName = "Annie";
 		public const string christineId = "20";
+		public const string christineName = "Christine";
 		public const string barbaraId = "21";
+		public const string barbaraName = "Barbara";
 		public const string angieId = "22";
+		public const string angieName = "Angie";
 		public const string maryId = "23";
+		public const string maryName = "Mary";
+		public const string nancyName = "Nancy";
+		public const string nancyId = "24";
+		public const string evaName = "Eva";
+		public const string evaId = "25";
+		public const string lindaName = "Linda";
+		public const string lindaId = "26";
+		public const string rosaId = "27";
+		public const string rosaName = "Rosa";
 	}
 }
 

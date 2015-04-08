@@ -25,9 +25,6 @@ namespace WodstarMobileApp.Droid
 			//Show the Main layout
 			SetContentView (Resource.Layout.Main);
 
-			//Initialize FB profile picture data
-
-
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
 			hamburgerButton.Click += (sender, e) => {
@@ -47,14 +44,6 @@ namespace WodstarMobileApp.Droid
 			wodLibraryButton.Click += goToWodLibrary;
 			movementLibraryButton.Click += goToMovementLibrary;
 			logoutButton.Click += goToLogin;
-
-			Typeface font = Typeface.CreateFromAsset (Assets, "Font/montserrat.ttf");
-			titleButton.Typeface = font;
-			homeButton.Typeface = font;
-			profileButton.Typeface = font;
-			wodLibraryButton.Typeface = font;
-			movementLibraryButton.Typeface = font;
-			logoutButton.Typeface = font;
 		}
 
 

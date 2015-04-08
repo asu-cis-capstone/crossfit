@@ -23,9 +23,12 @@ namespace WodstarMobileApp
 		//Initialize connection to Azure Mobile Service
 		public static void InitializeAzure ()
 		{
+			Console.WriteLine ("InitializeAzure method called");
 			//connect to Azure
 			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
+			Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);
 			CurrentPlatform.Init ();
+			Console.WriteLine ("Azure initialization successful");
 		}//end initializeAzure method
 
 		//Query UserAccount table for the authenticated user
@@ -71,17 +74,31 @@ namespace WodstarMobileApp
 			workoutTable = azureClient.GetTable<Workout> ();
 
 			//Fetch all workouts into a List
-			workouts = await workoutTable
-				.ToListAsync ();
+			workouts = await workoutTable.ToListAsync ();
 
 			//Debug output to the console
 			Console.WriteLine ("DEBUG - GetWorkouts");
-			foreach (var workout in workouts) {
-				Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
-				//If workout.workoutType = benchmark
-					//add to WorkoutUtil.benchmarkIds key value pair as name, id.
-					//Add whole workout to WorkoutUtil.benchmarkWods;
-				//So on and so forth for other types of WODS.
+			foreach (var workout in workouts) {				
+				if (workouts != null) {
+					Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
+					//Create new Workout object off of data
+					Workout workoutDom = new Workout (workout.workoutName, workout.workoutType, workout.segments);
+
+					//Add to correct data lists in workoutUtil
+					if (workout.workoutType == WorkoutUtil.benchmarkType) {
+						WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.benchmarkWods.Add (workoutDom);					
+					} else if (workout.workoutType == WorkoutUtil.heroType) {
+						WorkoutUtil.heroIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.heroWods.Add (workoutDom);	
+					} else if (workout.workoutType == WorkoutUtil.camilleType) {
+						WorkoutUtil.camilleIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.camilleWods.Add (workoutDom);	
+					} else if (workout.workoutType == WorkoutUtil.wodstarType) {
+						WorkoutUtil.wodstarIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.wodstarWods.Add (workoutDom);	
+					}
+				}
 			}
 		}//end GetWorkouts method
 
@@ -97,8 +114,10 @@ namespace WodstarMobileApp
 
 			//Debug output to the console
 			Console.WriteLine ("DEBUG - GetWorkoutSegments");
-			foreach (var segment in workoutSegments) {
-				Console.WriteLine (string.Format ("ID: {0}\nWorkout: {1}\nType: {2}", segment.id, segment.workoutId, segment.segmentType));
+			if (workoutSegments != null) {
+				foreach (var segment in workoutSegments) {
+					Console.WriteLine (string.Format ("ID: {0}\nWorkout: {1}\nType: {2}", segment.id, segment.workoutId, segment.segmentType));
+				}
 			}
 		}//end GetWorkoutSegments method
 
@@ -109,13 +128,18 @@ namespace WodstarMobileApp
 			movementTable = azureClient.GetTable<Movement> ();
 
 			//Fetch all movements into a List
-			movements = await movementTable
-				.ToListAsync ();
+			movements = await movementTable.ToListAsync ();
 
 			//Debug output to the console
 			Console.WriteLine ("DEBUG - Movements");
 			foreach (var movement in movements) {
 				Console.WriteLine (string.Format ("ID: {0}\nName: {1}", movement.id, movement.name));
+				MovementLinks.allMovements = new List<Movement> ();
+				Movement thisMovement = new Movement (movement.classification, movement.name, movement.equipment, movement.type,
+					                        movement.blackDiamondDescription, movement.blueSquareDescription, movement.greenCircleDescription, movement.rxVideoUrl,
+					                        movement.rxImageUrl, movement.blackDiamondVideoUrl, movement.blackDiamondImageUrl, movement.blueSquareVideoUrl, movement.blueSquareImageUrl,
+					                        movement.greenCircleVideoUrl, movement.greenCircleImageUrl);
+				MovementLinks.allMovements.Add(new Movement);
 			}
 		}//end GetMovements method
 
@@ -126,9 +150,7 @@ namespace WodstarMobileApp
 			userJournalTable = azureClient.GetTable<UserJournal> ();
 
 			//Fetch all of this user's journals into a List
-			userJournals = await userJournalTable
-				.Where (uj => uj.userAccountId == thisUser.id)
-				.ToListAsync ();
+			userJournals = await userJournalTable.Where (uj => uj.userAccountId == thisUser.id).ToListAsync ();
 
 			//Debug output to the console
 			Console.WriteLine ("DEBUG - UserJournals");

@@ -26,11 +26,7 @@ namespace WodstarMobileApp.Droid
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
-
-			//Set our view from the "Login" layout resource
-			//Need to load this first in order to get Facebook session status from the button
 			SetContentView (Resource.Layout.Login);
-			initializeWodLists ();
 
 			//Connect to Azure
 			try {
@@ -38,9 +34,6 @@ namespace WodstarMobileApp.Droid
 			} catch( Exception e) {
 				Console.WriteLine(e);
 			}
-
-			//Get Facebook button object
-			//Button fbLoginButton = FindViewById<Button> (Resource.Id.login_button);
 
 			//If Facebook session is already open from a previous login, request user info
 			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
@@ -84,27 +77,9 @@ namespace WodstarMobileApp.Droid
 				Util.thisUser.firstName = user.FirstName;
 				Util.thisUser.lastName = user.LastName;
 
-				//Show popup containing Facebook user info
-				//AlertDialog.Builder alert = new AlertDialog.Builder (this);
-				//alert.SetTitle ("Facebook session");
-				//alert.SetMessage (string.Format ("User ID: {0}\nFirst name: {1}\nLast name: {2}", ThisUser.Username, ThisUser.FirstName, ThisUser.LastName));
-				//alert.SetPositiveButton ("OK", (senderAlert, args) => {
-					//change value write your own set of instructions
-					//you can also create an event for the same in xamarin
-					//instead of writing things here
-				//});
-				//run the alert in UI thread to display in the screen
-				//alert.Show ();
-
-				//Get or create user account in Azure
+				//Get or create user account in Azure, get data
 				try {
 					Azure.GetUserAccount (Util.thisUser);
-				} catch( Exception e) {
-					Console.WriteLine(e);
-				}
-
-				//Get data from Azure
-				try {
 					Azure.GetWorkouts();
 					Azure.GetWorkoutSegments();
 					Azure.GetMovements();
@@ -117,15 +92,5 @@ namespace WodstarMobileApp.Droid
 				StartActivity (typeof(StartScreenActivity));
 			}
 		}//end OnCompleted method
-
-		//TODO: Adding dummy data for purposes of demo/testing - REMOVE BEFORE LAUNCH
-		private void initializeWodLists() {
-			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Joshua", "18"));
-			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Jerry", "20"));
-			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("War Frank", "21"));
-			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Garrett", "22"));
-			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Griff", "23"));
-		}
-
 	}	//end class
 } //end namespace

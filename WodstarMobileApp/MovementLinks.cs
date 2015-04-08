@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WodstarMobileApp
 {
@@ -9,7 +10,8 @@ namespace WodstarMobileApp
 			americanKettlebellSwingLink, strictPressLink, pushPressLink, strictRingMuscleUpLink, russianKettlebellSwingLink, rowingLink
 		};
 
-		public static Movement[] allMovements;
+		public static List<Movement> allMovements;
+		public static Dictionary<string, Movement>();
 
 		//Types of movements
 		public const String strength = "strength";
@@ -125,6 +127,7 @@ namespace WodstarMobileApp
 		public const String rowingLink = "7VmDpg6-QhA";
 
 		//*******************************************************************************
+		public static Movement hangPowerCleanMovement = new Movement(null, hangPowerClean,)
 		public static Movement hangPowerCleanMovement = new Movement(hangPowerClean, hangPowerCleanLink, strength, barbell);
 		public static Movement ringMuscleUpMovement = new Movement(ringMuscleUp, ringMuscleUpLink, bodyweight, rings, 
 			ringKippingMuscleUp, "Chest to Bar Pull-Up and Dip (2:1)", "Pull-Up and Dip (2:1)");
@@ -133,6 +136,7 @@ namespace WodstarMobileApp
 		public static Movement thrusterMovement = new Movement(thruster, thrusterLink, strength, barbell);
 		public static Movement pullUpMovement = new Movement(pullUp, null, strength, pullUpBar);
 		public static Movement runMovement = new Movement(run, null, cardio, null);
+
 	}
 }
 

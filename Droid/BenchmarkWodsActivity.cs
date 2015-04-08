@@ -18,6 +18,8 @@ namespace WodstarMobileApp.Droid
 	public class BenchmarkWodsActivity : Activity
 	{
 		AutoCompleteTextView autocompleteBenchmark;
+		string intentWorkoutName;
+		string intentWorkoutId;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -91,114 +93,103 @@ namespace WodstarMobileApp.Droid
 		void searchItemSelected(object sender, AdapterView.ItemClickEventArgs e) {
 			String workoutSelected = autocompleteBenchmark.Text;
 			if(WorkoutUtil.benchmarkIds.ContainsKey(workoutSelected)) {
-				var intent = new Intent(this, typeof(WorkoutActivity));
-				intent.PutExtra("workoutName", workoutSelected);
-				intent.PutExtra("workoutId", WorkoutUtil.benchmarkIds[workoutSelected]);
-				StartActivity(intent);
+				intentWorkoutId = WorkoutUtil.benchmarkIds [workoutSelected];
+				intentWorkoutName = workoutSelected;
+				goToWorkout ();
 			}
 		}
 
-		void goToAmandaWod(object sender, EventArgs e) {
+		void goToWorkout() {
 			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.amandaId.ToString());
-			intent.PutExtra("workoutName", "amanda");
-			StartActivity(intent);
+			intent.PutExtra ("workoutName", intentWorkoutName);
+			intent.PutExtra ("workoutId", intentWorkoutId);
+			StartActivity (intent);
+		}
+
+		void goToAmandaWod(object sender, EventArgs e) {
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.amandaName];
+			intentWorkoutName = WorkoutUtil.amandaName;
+			goToWorkout ();
 		}
 		void goToJackieWod(object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.jackieId.ToString());
-			intent.PutExtra("workoutName", "jackie");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.jackieName];
+			intentWorkoutName = WorkoutUtil.jackieName;
+			goToWorkout ();
 		}
 		void goToKellyWod(object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.kellyId.ToString());
-			intent.PutExtra("workoutName", "kelly");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.kellyName];
+			intentWorkoutName = WorkoutUtil.kellyName;
+			goToWorkout ();
 		}
 		void goToHelenWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.helenId.ToString());
-			intent.PutExtra("workoutName", "helen");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.helenName];
+			intentWorkoutName = WorkoutUtil.helenName;
+			goToWorkout ();
 		}
 		void goToKarenWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.karenId.ToString());
-			intent.PutExtra("workoutName", "karen" );
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.karenName];
+			intentWorkoutName = WorkoutUtil.karenName;
+			goToWorkout ();
 		}
 		void goToIsabelWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.isabelId.ToString());
-			intent.PutExtra("workoutName", "isabel");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.isabelName];
+			intentWorkoutName = WorkoutUtil.isabelName;
+			goToWorkout ();
 		}
 		void goToGraceWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.graceId.ToString());
-			intent.PutExtra("workoutName", "grace");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.graceName];
+			intentWorkoutName = WorkoutUtil.graceName;
+			goToWorkout ();
 		}
 		void goToFranWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.franId.ToString());
-			intent.PutExtra("workoutName", "fran");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.franName];
+			intentWorkoutName = WorkoutUtil.franName;
+			goToWorkout ();
 		}
 		void goToElizabethWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.elizabethId.ToString());
-			intent.PutExtra("workoutName", "elizabeth");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.elizabethName];
+			intentWorkoutName = WorkoutUtil.elizabethName;
+			goToWorkout ();
 		}
 		void goToDianeWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.dianeId.ToString());
-			intent.PutExtra("workoutName", "diane");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.dianeName];
+			intentWorkoutName = WorkoutUtil.dianeName;
+			goToWorkout ();
 		}
 		void goToCindyWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.cindyId.ToString());
-			intent.PutExtra("workoutName", "cindy");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.cindyName];
+			intentWorkoutName = WorkoutUtil.cindyName;
+			goToWorkout ();
 		}
 		void goToChelseaWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.chelseaId.ToString());
-			intent.PutExtra("workoutName","chelsea" );
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.chelseaName];
+			intentWorkoutName = WorkoutUtil.chelseaName;
+			goToWorkout ();
 		}
 		void goToAnnieWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.annieId.ToString());
-			intent.PutExtra("workoutName", "annie" );
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.annieName];
+			intentWorkoutName = WorkoutUtil.annieName;
+			goToWorkout ();
 		}
 		void goToChristineWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.christineId.ToString());
-			intent.PutExtra("workoutName", "christine" );
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.christineName];
+			intentWorkoutName = WorkoutUtil.christineName;
+			goToWorkout ();
 		}
 		void goToBarbaraWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.barbaraId.ToString());
-			intent.PutExtra("workoutName", "barbara");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.barbaraName];
+			intentWorkoutName = WorkoutUtil.barbaraName;
+			goToWorkout ();
 		}
 		void goToAngieWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.angieId.ToString());
-			intent.PutExtra("workoutName", "angie");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.angieName];
+			intentWorkoutName = WorkoutUtil.angieName;
+			goToWorkout ();
 		}
 		void goToMaryWod (object sender, EventArgs e) {
-			var intent = new Intent (this, typeof(WorkoutActivity));
-			intent.PutExtra("workoutId", WodstarMobileApp.WorkoutUtil.maryId.ToString());
-			intent.PutExtra("workoutName", "mary");
-			StartActivity(intent);
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.maryName];
+			intentWorkoutName = WorkoutUtil.maryName;
+			goToWorkout ();
 		}
 
 		//NAVIGATION METHODS
