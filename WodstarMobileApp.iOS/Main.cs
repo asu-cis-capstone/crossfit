@@ -7,11 +7,13 @@ using MonoTouch.UIKit;
 
 namespace WodstarMobileApp.iOS
 {
-	public partial class Main : UIViewController
+	public partial class MainClass : UIViewController
 	{
-		public Main () : base ("Main", null)
+		static void Main (string[] args)
 		{
+			UIApplication.Main (args, null, "AppDelegate");
 		}
+
 
 		public override void DidReceiveMemoryWarning ()
 		{

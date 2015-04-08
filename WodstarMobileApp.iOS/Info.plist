@@ -49,7 +49,7 @@
 	<key>UIApplicationExitsOnSuspend</key>
 	<true/>
 	<key>UILaunchImageFile</key>
-	<string>New Entry</string>
+	<string>wodstar-app-start-screen.jpg</string>
 	<key>UIAppFonts</key>
 	<string>Montserrat-Regular.otf</string>
 </dict>

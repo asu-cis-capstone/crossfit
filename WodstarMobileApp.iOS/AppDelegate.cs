@@ -19,25 +19,18 @@ namespace WodstarMobileApp.iOS
 	{
 		const string FacebookAppId = "446144862198047";
 		const string DisplayName = "Wodstar Mobile App";
-	
-
-		// class-level declarations
 		UIWindow window;
 
 		public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 		{
 			// create a new window instance based on the screen size
 			window = new UIWindow (UIScreen.MainScreen.Bounds);
-
+			RootViewController = new MainController ();
+			window.MakeKeyAndVisible ();
+		
 			FBSettings.DefaultAppID = FacebookAppId;
 			FBSettings.DefaultDisplayName = DisplayName;
 
-			// If you have defined a root view controller, set it here:
-			
-		    window.RootViewController = Login;
-			
-			// make the window visible
-			window.MakeKeyAndVisible ();
 			
 			return true;
 		}

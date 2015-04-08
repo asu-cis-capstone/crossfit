@@ -24,6 +24,8 @@
     <ErrorReport>prompt</ErrorReport>
     <CodesignProvision>badefd46-bb7b-4f83-aaa0-c694d1c9830e</CodesignProvision>
     <CodesignKey>iPhone Developer: Jeff Adkins (XWS587U4TL)</CodesignKey>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -123,6 +125,10 @@
     <Compile Include="Main.designer.cs">
       <DependentUpon>Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="MainController.cs" />
+    <Compile Include="MainController.designer.cs">
+      <DependentUpon>MainController.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard">
@@ -145,7 +151,6 @@
     <InterfaceDefinition Include="WODPage.xib" />
     <InterfaceDefinition Include="WODLibrary.xib" />
     <InterfaceDefinition Include="Launch.xib" />
-    <InterfaceDefinition Include="Main.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
   <ItemGroup>
@@ -194,5 +199,6 @@
     <BundleResource Include="Resources\login.png" />
     <BundleResource Include="Resources\movementsImage.png" />
     <BundleResource Include="Resources\wodsImage.png" />
+    <BundleResource Include="Resources\wodstar-app-start-screen.jpg" />
   </ItemGroup>
 </Project>
