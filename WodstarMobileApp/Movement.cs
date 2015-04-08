@@ -60,6 +60,23 @@ namespace WodstarMobileApp
 			
 		}
 
+		public Movement(String name, String rxLink, String type, String equipment) {
+			this.name = name;
+			this.rxVideoUrl = rxLink;
+			this.type = type;
+			this.equipment = equipment;
+		}
+
+		public Movement(String name, String rxLink, String type, String equipment, String blackDiamondName, String blueSquareName, String greenCircleName) {
+			this.name = name;
+			this.rxVideoUrl = rxLink;
+			this.type = type;
+			this.equipment = equipment;
+			this.blackDiamondDescription = blackDiamondName;
+			this.blueSquareDescription = blueSquareName;
+			this.greenCircleDescription = greenCircleName;
+		}
+
 		public Movement (String classification, String name, String equipment, String type, String blackDiamondDescription, 
 			String blueSquareDescription, String greenCircleDescription, String rxVideoUrl, String rxImageUrl, String blackDiamondVideoUrl,
 			String blackDiamondImageUrl, String blueSquareVideoUrl, String blueSquareImageUrl, String greenCircleVideoUrl, String greenCircleImageUrl)

@@ -11,7 +11,7 @@ namespace WodstarMobileApp
 		};
 
 		public static List<Movement> allMovements;
-		public static Dictionary<string, Movement>();
+		public static Dictionary<string, Movement> movementDictionary;
 
 		//Types of movements
 		public const String strength = "strength";
@@ -48,37 +48,6 @@ namespace WodstarMobileApp
 		public const String pullUp = "Pull Up";
 		public const String run = "Run";
 		public const String squatSnatch = "Squat Snatch";
-
-		//Movement Ids
-		public const int hangPowerCleanId =1;
-		public const int burpeeId = 2;
-		public const int backSquatId = 3;
-		public const int hangSnatchId = 4;
-		public const int squatCleanId = 5;
-		public const int powerCleanId = 6;
-		public const int hangSquatCleanId = 7;
-		public const int boxJumpId = 8;
-		public const int airSquatId = 9;
-		public const int deadliftId = 10;
-		public const int doubleUndersId = 11;
-		public const int frontSquatId = 12;
-		public const int splitJerkId = 13;
-		public const int ringMuscleUpId = 14;
-		public const int ringKippingMuscleUpId = 15;
-		public const int kippingBarMuscleUpId = 16;
-		public const int pistolSquatId = 17;
-		public const int powerSnatchId = 18;
-		public const int sumoDeadliftHighPullId = 19;
-		public const int thrusterId = 20;
-		public const int americanKettlebellSwingId = 21;
-		public const int strictPressId = 22;
-		public const int pushPressId = 23;
-		public const int strictRingMuscleUpId = 24;
-		public const int russianKettlebellSwingId = 25;
-		public const int rowingId = 26;
-		public const int pullUpId = 27;
-		public const int runId = 28;
-		public const int squatSnatchId = 29;
 
 		//Types of equipment
 		public const String box = "Box";
@@ -127,7 +96,6 @@ namespace WodstarMobileApp
 		public const String rowingLink = "7VmDpg6-QhA";
 
 		//*******************************************************************************
-		public static Movement hangPowerCleanMovement = new Movement(null, hangPowerClean,)
 		public static Movement hangPowerCleanMovement = new Movement(hangPowerClean, hangPowerCleanLink, strength, barbell);
 		public static Movement ringMuscleUpMovement = new Movement(ringMuscleUp, ringMuscleUpLink, bodyweight, rings, 
 			ringKippingMuscleUp, "Chest to Bar Pull-Up and Dip (2:1)", "Pull-Up and Dip (2:1)");

@@ -18,10 +18,11 @@ namespace WodstarMobileApp
 		public const String benchmarkType = "benchmark";
 		public const String wodstarType = "wodstar";
 
-		public static List<Workout> benchmarkWods = new List<Workout>();
-		public static List<Workout> heroWods = new List<Workout>();
-		public static List<Workout> camilleWods = new List<Workout>();
-		public static List<Workout> wodstarWods = new List<Workout>();
+		//Id and full workout
+		public static Dictionary<string, Workout> benchmarkWods = new Dictionary<string, Workout>();
+		public static Dictionary<string, Workout> heroWods = new Dictionary<string, Workout>();
+		public static Dictionary<string, Workout> camilleWods = new Dictionary<string, Workout>();
+		public static Dictionary<string, Workout> wodstarWods = new Dictionary<string, Workout>();
 
 		//Initialized by Azure. Name, Id.
 		public static Dictionary<string, string> benchmarkIds = new Dictionary<string, string>() {
@@ -31,7 +32,15 @@ namespace WodstarMobileApp
 			{helenName, helenId},
 			{karenName, karenId}
 		};
-		public static Dictionary<string, string> heroIds = new Dictionary<string, string>();
+
+		//Name, Id
+		public static Dictionary<string, string> heroIds = new Dictionary<string, string>() {
+			{jerryName, jerryId},
+			{joshuaName, joshuaId},
+			{warFrankName, warFrankId},
+			{garrettName, garrettId},
+			{griffName, griffId}
+		};
 		public static Dictionary<string, string> camilleIds = new Dictionary<string, string>();
 		public static Dictionary<string, string> wodstarIds = new Dictionary<string, string>();
 

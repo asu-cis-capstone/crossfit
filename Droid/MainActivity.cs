@@ -83,7 +83,7 @@ namespace WodstarMobileApp.Droid
 					Azure.GetWorkouts();
 					Azure.GetWorkoutSegments();
 					Azure.GetMovements();
-					Azure.GetUserJournals(Util.thisUser);
+					//Azure.GetUserJournals(Util.thisUser);
 				} catch (Exception e) {
 					Console.WriteLine (e);
 				}

@@ -87,16 +87,16 @@ namespace WodstarMobileApp
 					//Add to correct data lists in workoutUtil
 					if (workout.workoutType == WorkoutUtil.benchmarkType) {
 						WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.benchmarkWods.Add (workoutDom);					
+						WorkoutUtil.benchmarkWods.Add (workout.id, workoutDom);					
 					} else if (workout.workoutType == WorkoutUtil.heroType) {
 						WorkoutUtil.heroIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.heroWods.Add (workoutDom);	
+						WorkoutUtil.heroWods.Add (workout.id, workoutDom);	
 					} else if (workout.workoutType == WorkoutUtil.camilleType) {
 						WorkoutUtil.camilleIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.camilleWods.Add (workoutDom);	
+						WorkoutUtil.camilleWods.Add (workout.id, workoutDom);	
 					} else if (workout.workoutType == WorkoutUtil.wodstarType) {
 						WorkoutUtil.wodstarIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.wodstarWods.Add (workoutDom);	
+						WorkoutUtil.wodstarWods.Add (workout.id, workoutDom);	
 					}
 				}
 			}
@@ -139,7 +139,7 @@ namespace WodstarMobileApp
 					                        movement.blackDiamondDescription, movement.blueSquareDescription, movement.greenCircleDescription, movement.rxVideoUrl,
 					                        movement.rxImageUrl, movement.blackDiamondVideoUrl, movement.blackDiamondImageUrl, movement.blueSquareVideoUrl, movement.blueSquareImageUrl,
 					                        movement.greenCircleVideoUrl, movement.greenCircleImageUrl);
-				MovementLinks.allMovements.Add(new Movement);
+				MovementLinks.allMovements.Add(thisMovement);
 			}
 		}//end GetMovements method
 

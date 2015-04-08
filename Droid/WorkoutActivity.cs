@@ -166,7 +166,6 @@ namespace WodstarMobileApp.Droid
 			circularProgressBar.Indeterminate = false;
 			logButton.Visibility = ViewStates.Visible;
 			restartButton.Visibility = ViewStates.Visible;
-
 		}
 
 		private void resetTimer() {
@@ -178,6 +177,7 @@ namespace WodstarMobileApp.Droid
 		private void logData(int workoutId, int finalScore) {
 			//If for time, final score should be passed in seconds with 2 decimal places
 			//If AMRAP, should be passed as total number of reps.
+			//If EMOM, should be total number of completed minutes
 		}
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {
@@ -210,18 +210,38 @@ namespace WodstarMobileApp.Droid
 		}
 			
 		void setThisWorkout() {
-			switch (workoutId) {
-			case WorkoutUtil.amandaId: //Amanda
-				thisWorkout = amandaWorkout;
-				headerLayout.SetBackgroundResource (Resource.Drawable.amanda);
-				break;
-			case WorkoutUtil.jackieId: //Jackie
-				thisWorkout = jackieWorkout;
-				headerLayout.SetBackgroundResource (Resource.Drawable.jackie);
-				break;
-			default: 
-				//TODO: Add error handling
-				break;
+			if (WorkoutUtil.benchmarkWods.ContainsKey (workoutId)) {
+				Console.WriteLine ("Benchmark Wods contains key for workoutID");
+				thisWorkout = WorkoutUtil.benchmarkWods [workoutId];
+			} else if (WorkoutUtil.heroWods.ContainsKey (workoutId)) {
+				Console.WriteLine ("HeroWods contains key for workoutID");
+				thisWorkout = WorkoutUtil.heroWods [workoutId];
+			} else if (WorkoutUtil.camilleWods.ContainsKey(workoutId)) {
+				thisWorkout = WorkoutUtil.camilleWods [workoutId];
+			} else if (WorkoutUtil.wodstarWods.ContainsKey(workoutId)) {
+				thisWorkout = WorkoutUtil.wodstarWods [workoutId];
+			}
+			if (thisWorkout.workoutType == WorkoutUtil.heroType) {
+				if (WorkoutUtil.stringHeroWods.Contains (thisWorkout.workoutName)) {
+					headerLayout.SetBackgroundResource (Resource.Drawable.american);
+				} else if (WorkoutUtil.canadaHeroWods.Contains (thisWorkout.workoutName)) {
+					headerLayout.SetBackgroundResource (Resource.Drawable.canadian);
+				} else {
+					headerLayout.SetBackgroundResource (Resource.Drawable.australian);
+				}
+			} else if (thisWorkout.workoutType == WorkoutUtil.benchmarkType) {
+				Console.WriteLine ("thisWorkout.workoutType = WorkoutUtil.benchmarkType");
+				switch (workoutId) {
+				case WorkoutUtil.amandaId: //Amanda
+					headerLayout.SetBackgroundResource (Resource.Drawable.amanda);
+					break;
+				case WorkoutUtil.jackieId: //Jackie
+					headerLayout.SetBackgroundResource (Resource.Drawable.jackie);
+					break;
+				default: 
+			//TODO: Add error handling
+					break;
+				}
 			}
 			Console.WriteLine ("This workout: " + thisWorkout.workoutName);
 		}
