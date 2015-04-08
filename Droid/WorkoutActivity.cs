@@ -210,7 +210,7 @@ namespace WodstarMobileApp.Droid
 		}
 			
 		void setThisWorkout() {
-			switch (Int64.Parse(workoutId)) {
+			switch (workoutId) {
 			case WorkoutUtil.amandaId: //Amanda
 				thisWorkout = amandaWorkout;
 				headerLayout.SetBackgroundResource (Resource.Drawable.amanda);

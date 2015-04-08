@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace WodstarMobileApp
 {
@@ -17,13 +18,30 @@ namespace WodstarMobileApp
 		public const String benchmarkType = "benchmark";
 		public const String wodstarType = "wodstar";
 
-		public static String[] benchmarkWods = new String[] {
+		public static List<Workout> benchmarkWods = new List<Workout>();
+		public static List<Workout> heroWods = new List<Workout>();
+		public static List<Workout> camilleWods = new List<Workout>();
+		public static List<Workout> wodstarWods = new List<Workout>();
+
+		//Initialized by Azure. Name, Id.
+		public static Dictionary<string, string> benchmarkIds = new Dictionary<string, string>() {
+			{amandaName, amandaId},
+			{jackieName, jackieId},
+			{kellyName, kellyId},
+			{helenName, helenId},
+			{karenName, karenId}
+		};
+		public static Dictionary<string, string> heroIds = new Dictionary<string, string>();
+		public static Dictionary<string, string>> camilleIds = new Dictionary<string, string>();
+		public static Dictionary<string, string> wodstarIds = new Dictionary<string, string>();
+
+		public static String[] stringBenchmarkWods = new String[] {
 			"Amanda", "Jackie", "Kelly", "Helen", "Karen", "Isabel", "Grace", "Fran", "Elizabeth",
 			"Diane", "Cindy", "Chelsea", "Annie", "Christine", "Barbara", "Angie", "Mary", "Annie", "Nancy",
 			"Nicole", "Linda", "Rosa", "Eva"
 		};
 
-		public static String[] heroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
+		public static String[] stringheroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
 			"The Seven", "McCluskey", "Weaver", "Ledesma", "Wittman", "Rankel", "Holbrook", "Whitten",
 			"Bull", "Collin", "Thompson", "Santora", "Bradshaw", "Santiago", "Carse", "Bradley", "Meadows",
 			"Gator", "Small", "Moon", "Wilmot", "Lumberjack 20", "Strange", "Nick", "Brian", "Jag 28", "Pheezy",
@@ -31,57 +49,46 @@ namespace WodstarMobileApp
 			"Mr. Joshua", "JT", "Blake", "Moore", "Brenton", "Murph", "Michael", "Daniel", "Josh", "Jason", "Badger",
 			"Joshie", "Randy", "Griff", "War Frank", "Jerry", "Nate", "Joshua"
 		};
-
-		public static Workout johnsonWorkout; 
 		
 		public static String[] canadaHeroWods = new String[] { "Stephen", "Nutts", "Erin" };
 		public static String[] australiaHeroWods = new String[] { "Wood" };
 
-		public const int amandaId=1;
-		public const int jackieId=2;
-		public const int kellyId=3;
-		public const int helenId=4;
-		public const int karenId=5;
-		public const int isabelId=6;
-		public const int graceId=7;
-		public const int franId=8;
-		public const int elizabethId=9;
-		public const int dianeId=10;
-		public const int cindyId=11;
-		public const int chelseaId=12;
-		public const int annieId=13;
-		public const int christineId=14;
-		public const int barbaraId=15;
-		public const int angieId=16;
-		public const int maryId=17;
-		public const int joshuaId=18;
-		public const int erinId=19;
-		public const int jerryId=20;
-		public const int warFrankId=21;
-		public const int garrettId=22;
-		public const int griffId=23;
-		public const int randyId=24;
-		public const int joshieId=25;
-		public const int badgerId=26;
-		public const int jasonId=27;
-		public const int joshId=28; 
-		public const int danielId=29;
-		public const int michaelId=30;
-		public const int murphId=31;
-		public const int brentonId=32;
-		public const int woodId=33;
-		public const int mooreId=34;
-		public const int blakeId=35;
-		public const int nuttsId=36;
-		public const int jtId=37;
-		public const int desforgesId=38;
-		public const int nateId=39;
-		public const int rosaId=40;
-		public const int nicoleId=41;
-		public const int nancyId=42;
-		public const int lynneId=43;
-		public const int lindaId=44;
-		public const int evaId=45;
+		public const string amandaId="1";
+		public const string amandaName = "Amanda";
+		public const string jackieId="2";
+		public const string jackieName = "Jackie";
+		public const string kellyId="3";
+		public const string kellyName = "Kelly";
+		public const string helenId="4";
+		public const string helenName = "Helen";
+		public const string karenId="5";
+		public const string karenName = "Karen";
+		public const string isabelId = "6";
+		public const string isabelName = "Isabel";
+		public const string joshuaId="7";
+		public const string joshuaName = "Joshua";
+		public const string jerryId="8";
+		public const string jerryName = "Jerry";
+		public const string warFrankId="9";
+		public const string warFrankName = "War Frank";
+		public const string garrettId="10";
+		public const string garrettName = "Garrett";
+		public const string griffId="11";
+		public const string griffName = "Griff";
+		public const string franName = "Fran";
+		public const string franId = "12";
+		public const string nicoleName = "Nicole";
+		public const string nicoleId = "13";
+		public const string graceId = "14";
+		public const string elizabethId = "15";
+		public const string dianeId = "16";
+		public const string cindyId = "17";
+		public const string chelseaId = "18";
+		public const string annieId = "19";
+		public const string christineId = "20";
+		public const string barbaraId = "21";
+		public const string angieId = "22";
+		public const string maryId = "23";
 	}
 }
 

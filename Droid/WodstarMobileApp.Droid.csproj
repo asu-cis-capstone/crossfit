@@ -201,13 +201,13 @@
     <AndroidResource Include="Resources\layout\HeroWodsContent.axml">
       <DependentUpon>HeroWods.axml</DependentUpon>
     </AndroidResource>
-    <AndroidResource Include="Resources\drawable\splash.jpg" />
     <AndroidResource Include="Resources\drawable\american.jpg" />
     <AndroidResource Include="Resources\layout\WodTextViewTemplate.axml" />
     <AndroidResource Include="Resources\layout\WodImageButtonTemplate.axml" />
     <AndroidResource Include="Resources\drawable\australian.jpg" />
     <AndroidResource Include="Resources\drawable\canadian.jpg" />
     <AndroidResource Include="Resources\layout\AutcompleteTextViewTemplate.axml" />
+    <AndroidResource Include="Resources\drawable\splash.jpg" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

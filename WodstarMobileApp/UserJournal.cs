@@ -16,7 +16,7 @@ namespace WodstarMobileApp
 		public string entryType { get; set; }
 
 		[JsonProperty(PropertyName = "statId")]
-		public int statId { get; set; }
+		public string statId { get; set; }
 
 		[JsonProperty(PropertyName = "statType")]
 		public string statType { get; set; }
@@ -27,7 +27,7 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "statResult")]
 		public string statResult { get; set; }
 
-		public UserJournal (string userId, string entryType, int statId, string type, string name, string result)
+		public UserJournal (string userId, string entryType, string statId, string type, string name, string result)
 		{
 			this.entryType = entryType;
 			this.statId = statId;

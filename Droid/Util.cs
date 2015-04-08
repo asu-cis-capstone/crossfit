@@ -22,15 +22,15 @@ namespace WodstarMobileApp.Droid
 		public static WodstarMobileApp.UserJournal demoentry9 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrap, "Nicole", "91");
 		public static WodstarMobileApp.UserJournal demoentry10 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrap, "Nicole", "87");
 
-		public static WodstarMobileApp.UserJournal demoentry11 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "345");
+	/*	public static WodstarMobileApp.UserJournal demoentry11 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "345");
 		public static WodstarMobileApp.UserJournal demoentry12 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "312");
 
 		public static WodstarMobileApp.UserJournal demoentry13 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.squatCleanId, WorkoutUtil.strengthType, "Squat Clean", "217");
 		public static WodstarMobileApp.UserJournal demoentry14 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.squatCleanId, WorkoutUtil.strengthType, "Squat Clean", "243");
-
+	*/
 		public static List<UserJournal> wodJournal = new List<UserJournal>() {demoentry1, demoentry2, demoentry3, demoentry4, demoentry5,
 			demoentry6, demoentry7, demoentry8, demoentry9, demoentry10};
-		public static List<UserJournal> prJournal = new List<UserJournal>() {demoentry11, demoentry12, demoentry13, demoentry14};
+	//	public static List<UserJournal> prJournal = new List<UserJournal>() {demoentry11, demoentry12, demoentry13, demoentry14};
 
 		public static String fbUserId = null;
 	}

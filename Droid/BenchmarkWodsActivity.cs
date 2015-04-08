@@ -25,12 +25,12 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.BenchmarkWods);
 
 			autocompleteBenchmark = FindViewById<AutoCompleteTextView> (Resource.Id.autocompleteBenchmark);
-			var adapter = new ArrayAdapter<String> (this, Resource.Layout.AutcompleteTextViewTemplate, WorkoutUtil.benchmarkWods);
+			var adapter = new ArrayAdapter<String> (this, Resource.Layout.AutcompleteTextViewTemplate, WorkoutUtil.stringBenchmarkWods);
 			autocompleteBenchmark.Adapter = adapter;
 			autocompleteBenchmark.SetSelectAllOnFocus (true);
 			autocompleteBenchmark.Threshold = 1;
 			autocompleteBenchmark.SetText ("Search", false);
-			autocompleteBenchmark.ItemSelected += searchItemSelected;
+			autocompleteBenchmark.ItemClick += searchItemSelected;
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
@@ -88,10 +88,14 @@ namespace WodstarMobileApp.Droid
 			maryButton.Click += goToMaryWod;
 		} // End on create
 
-		void searchItemSelected(object sender, EventArgs e) {
-			//Get search item from autoCompleteTextView, match to workoutId
-			//Delete all the other items on screen or hide/cover with other layout
-			//Put search item up.
+		void searchItemSelected(object sender, AdapterView.ItemClickEventArgs e) {
+			String workoutSelected = autocompleteBenchmark.Text;
+			if(WorkoutUtil.benchmarkIds.ContainsKey(workoutSelected)) {
+				var intent = new Intent(this, typeof(WorkoutActivity));
+				intent.PutExtra("workoutName", workoutSelected);
+				intent.PutExtra("workoutId", WorkoutUtil.benchmarkIds[workoutSelected]);
+				StartActivity(intent);
+			}
 		}
 
 		void goToAmandaWod(object sender, EventArgs e) {

@@ -18,11 +18,20 @@ namespace WodstarMobileApp.Droid
 	public class HeroWodsActivity : Activity
 	{
 		private LinearLayout workoutLayout;
+		AutoCompleteTextView autocompleteHero;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.HeroWods);
+
+			autocompleteHero = FindViewById<AutoCompleteTextView> (Resource.Id.autocompleteHero);
+			var adapter = new ArrayAdapter<String> (this, Resource.Layout.AutcompleteTextViewTemplate, WorkoutUtil.stringHeroWods);
+			autocompleteHero.Adapter = adapter;
+			autocompleteHero.SetSelectAllOnFocus (true);
+			autocompleteHero.Threshold = 1;
+			autocompleteHero.SetText ("Search", false);
+			autocompleteHero.ItemClick += searchItemSelected;
 
 			workoutLayout = FindViewById<LinearLayout> (Resource.Id.wodLibraryLayout);
 			initializeHeroWods ();
@@ -119,14 +128,14 @@ namespace WodstarMobileApp.Droid
 
 		private void initializeHeroWods() {
 			Console.WriteLine ("InitializeHeroWods");
-			for(int i=0; i < WorkoutUtil.heroWods.Length; i++) {
+			for(int i=0; i < WorkoutUtil.stringheroWods.Length; i++) {
 				//Create relative layout, image button, and text
 				RelativeLayout rLayout = new RelativeLayout(this);
 
 				ImageButton heroButton = (ImageButton)LayoutInflater.Inflate (Resource.Layout.WodImageButtonTemplate, null);
 				TextView heroText = (TextView)LayoutInflater.Inflate(Resource.Layout.WodTextViewTemplate, null);
 
-				heroText.Text = WorkoutUtil.heroWods [i];
+				heroText.Text = WorkoutUtil.stringheroWods [i];
 				heroText.Gravity = GravityFlags.Center;
 				heroText.SetTextSize(Android.Util.ComplexUnitType.Sp, 44);
 				rLayout.SetPadding (75, 100, 75, 0);
@@ -157,8 +166,10 @@ namespace WodstarMobileApp.Droid
 				RelativeLayout.LayoutParams lp = new RelativeLayout.LayoutParams (RelativeLayout.LayoutParams.WrapContent,
 					RelativeLayout.LayoutParams.WrapContent);
 				lp.AddRule (LayoutRules.CenterInParent);
+				//WorkoutUtil.canadaHeroWods [i].ToLower ();
 				heroText.LayoutParameters = lp;
 				heroButton.SetAdjustViewBounds (false);
+
 				heroButton.SetImageDrawable(GetDrawable(Resource.Drawable.canadian));
 				rLayout.SetGravity (Android.Views.GravityFlags.Center);
 				rLayout.SetBackgroundColor (new Android.Graphics.Color (255, 255, 255, 0));
@@ -191,6 +202,16 @@ namespace WodstarMobileApp.Droid
 				workoutLayout.AddView(rLayout);
 			}
 		} 
+
+		void searchItemSelected(object sender, AdapterView.ItemClickEventArgs e) {
+			String workoutSelected = autocompleteHero.Text;
+			if(WorkoutUtil.benchmarkIds.ContainsKey(workoutSelected)) {
+				var intent = new Intent(this, typeof(WorkoutActivity));
+				intent.PutExtra("workoutName", workoutSelected);
+				intent.PutExtra("workoutId", WorkoutUtil.benchmarkIds[workoutSelected]);
+				StartActivity(intent);
+			}
+		}
 
 		//NAVIGATION METHODS
 		void goToUserProfile(object sender, EventArgs e) {

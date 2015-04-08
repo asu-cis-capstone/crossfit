@@ -30,6 +30,7 @@ namespace WodstarMobileApp.Droid
 			//Set our view from the "Login" layout resource
 			//Need to load this first in order to get Facebook session status from the button
 			SetContentView (Resource.Layout.Login);
+			initializeWodLists ();
 
 			//Connect to Azure
 			try {
@@ -116,6 +117,15 @@ namespace WodstarMobileApp.Droid
 				StartActivity (typeof(StartScreenActivity));
 			}
 		}//end OnCompleted method
+
+		//TODO: Adding dummy data for purposes of demo/testing - REMOVE BEFORE LAUNCH
+		private void initializeWodLists() {
+			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Joshua", "18"));
+			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Jerry", "20"));
+			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("War Frank", "21"));
+			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Garrett", "22"));
+			WorkoutUtil.heroIds.Add (new System.Collections.Generic.KeyValuePair<string, string> ("Griff", "23"));
+		}
 
 	}	//end class
 } //end namespace

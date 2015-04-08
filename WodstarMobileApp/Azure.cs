@@ -78,6 +78,10 @@ namespace WodstarMobileApp
 			Console.WriteLine ("DEBUG - GetWorkouts");
 			foreach (var workout in workouts) {
 				Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
+				//If workout.workoutType = benchmark
+					//add to WorkoutUtil.benchmarkIds key value pair as name, id.
+					//Add whole workout to WorkoutUtil.benchmarkWods;
+				//So on and so forth for other types of WODS.
 			}
 		}//end GetWorkouts method
 
