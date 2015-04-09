@@ -160,7 +160,21 @@ Scope: <br/>
 ###User WOD Data Log
 Class: WodstarMobileApp.Azure.cs (<br/>
 Scope: <br/>
-*Not yet implemented*
+
+	void createWodTable(object sender, EventArgs e) {
+				if (!wodVisible) {
+					wodVisible = true;
+					clearTable ();
+					List<UserJournal> wodData = new List<UserJournal>();
+					//TODO: Sort data into new array by the number of entries then by alphabet if necessary
+					//TODO: for each entry, sort for the best value - how? depends on id of workout amrap/time going to be different sorts.
+					//TODO: create string[] of workouts name and the value - create maps of id to name in workout util?
+					String[][] workoutResultInfo = new String[wodData.Count()][];
+					addDataToTable (workoutResultInfo);
+				}
+				Console.WriteLine ("User WOD data entry successful");
+			}
+
 
 
 
