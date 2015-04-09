@@ -1,7 +1,7 @@
 # Testing Documentation
 We are currenlty using Xamarin Studio for the cross platform development of this mobile application. Unfortunately, Xamarin requires that any automated testing be done through its "Test Cloud". The "Test Cloud" cost upwards of $12,000/year and is not a tool within our project budget. In order to overcome this we have implemented basic tests through the the console.
 
-###Database Connect
+###Azure Connect
 Class: *WodstarMobileApp.Azure.cs* (line 32)<br/>
 Purpose: To test that there was a successful connection to Azure<br/>
 Platform: Cross <br/>
@@ -18,9 +18,9 @@ Platform: Cross <br/>
 			}//end initializeAzure method
 
 
-###Database Read
+###Azure Get User
 Class: *WodstarMobileApp.Azure.cs* (line 56) <br/>
-Purpose: To test if the application is properly reading from Azure.
+Purpose: To test if the application is properly reading from Azure. <br/>
 Platform: Cross <br/>
 
 
@@ -45,7 +45,7 @@ Platform: Cross <br/>
 					thisUser.age = users [0].age;
 				}
 				//DB read test
-				Console.WriteLine ("Azure read successful");
+				Console.WriteLine ("Azure get user successful");
 			}//end UserAccount method
 
 
