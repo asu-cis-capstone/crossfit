@@ -5,90 +5,93 @@ Because Xamarin requires that any automated testing be done through its "Test Cl
 Class: WodstarMobileApp.Azure.cs (line 32)<br/>
 Scope: <br/>
 Code: <br/>
-public static void InitializeAzure ()
-		{
-			Console.WriteLine ("InitializeAzure method called"); <br/>
-			//connect to Azure <br/>
-			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66"); <br/>
-			Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);<br/>
-			CurrentPlatform.Init ();<br/>
-			<b>//DB connect test<br/>
-			Console.WriteLine ("Azure initialization successful");</b><br/>
-		}//end initializeAzure method<br/>
+	public static void InitializeAzure ()
+			{
+				Console.WriteLine ("InitializeAzure method called");
+				//connect to Azure
+				azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", 				"aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
+				Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);
+				CurrentPlatform.Init ();
+				//DB connect test
+				Console.WriteLine ("Azure initialization successful");
+			}//end initializeAzure method
+
 
 ###Database Read
 Class: WodstarMobileApp.Azure.cs (line 56) <br/>
 Scope: <br/>
 Code: <br/>
-public async static void GetUserAccount (UserAccount thisUser) <br/>
-		{<br/>
-			//Set UserAccount table object<br/>
-			userAccountTable = azureClient.GetTable<UserAccount> ();<br/>
-<br/>
-			//Query the UserAccount table for the logged in user<br/>
-			List<UserAccount> users = await userAccountTable<br/>
-				.Where (u => u.username == thisUser.username)<br/>
-				.Where (u => u.accountType == thisUser.accountType)<br/>
-				.ToListAsync ();<br/>
 
-			//Create the record in UserAccount table if no records are found<br/>
-			if (users.Count == 0) {<br/>
-				CreateUserAccount (thisUser);<br/>
-			//Otherwise populate thisUser object with the fetched details<br/>
-			} else {<br/>
-				thisUser.id = users [0].id;<br/>
-				thisUser.gender = users [0].gender;<br/>
-				thisUser.age = users [0].age;<br/>
-			}<br/>
-			<b>Console.WriteLine ("Azure read successful");</b><br/>
-		}//end UserAccount method<br/>
+	public async static void GetUserAccount (UserAccount thisUser) 
+			{
+				//Set UserAccount table object
+				userAccountTable = azureClient.GetTable<UserAccount> ();
+
+				//Query the UserAccount table for the logged in user
+				List<UserAccount> users = await userAccountTable
+					.Where (u => u.username == thisUser.username)
+					.Where (u => u.accountType == thisUser.accountType)
+					.ToListAsync ();
+	
+				//Create the record in UserAccount table if no records are found
+				if (users.Count == 0) {
+					CreateUserAccount (thisUser);
+				//Otherwise populate thisUser object with the fetched details
+				} else 
+					thisUser.id = users [0].id;
+					thisUser.gender = users [0].gender;
+					thisUser.age = users [0].age;
+				}
+				//DB read test
+				Console.WriteLine ("Azure read successful");
+			}//end UserAccount method
 
 
 ###User Account Creation 
 Class: WodstarMobileApp.Azure.cs (line 70) <br/>
 Scope: <br/>
 Code: <br/>
-public async static void CreateUserAccount (UserAccount thisUser)<br/>
-		{<br/>
-			//Set UserAccount table object<br/>
-			userAccountTable = azureClient.GetTable<UserAccount> ();<br/>
-<br/>
-			//Insert new record<br/>
-			await userAccountTable.InsertAsync (thisUser);<br/>
-<br/>
-			//Call GetUserAccount to fetch the Id for the newly created UserAccount record<br/>
-			GetUserAccount (thisUser);<br/>
-			<b>Console.WriteLine ("User account creation succesful");</b><br/>
-		}//end CreateUserAccount method<br/>
+	public async static void CreateUserAccount (UserAccount thisUser)
+			{
+				//Set UserAccount table object
+				userAccountTable = azureClient.GetTable<UserAccount> ();
+	
+				//Insert new record
+				await userAccountTable.InsertAsync (thisUser);
+	
+				//Call GetUserAccount to fetch the Id for the newly created UserAccount record
+				GetUserAccount (thisUser);
+				Console.WriteLine ("User account creation succesful");
+			}//end CreateUserAccount method
 
 ###Facebook Login
 Class: WodstarMobileApp.Droid.MainActivity.cs (line 43) <br/>
 Scope: <br/>
 Code: <br/>
-protected override void OnCreate (Bundle bundle) <br/>
-		{<br/>
-			base.OnCreate (bundle);<br/>
-			SetContentView (Resource.Layout.Login);<br/>
-<br/>
-			//Connect to Azure<br/>
-			try {<br/>
-				Azure.InitializeAzure ();<br/>
-			} catch( Exception e) {<br/>
-				Console.WriteLine(e);<br/>
-			}<br/>
-<br/>
-			//If Facebook session is already open from a previous login, request user info<br/>
-			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {<br/>
-				//Get user info from Facebook<br/>
-				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);<br/>
-				//FB login test<br/>
-				<b>Console.WriteLine ("Facebook login successful");</b><br/>
-			} else {<br/>
-				//Enable the skip button to go directly into the Main layout<br/>
-				var skipButton = FindViewById<Button> (Resource.Id.startScreenButton);<br/>
-				skipButton.Click += goToStart;<br/>
-			}<br/>
-		}//end OnCreate method<br/>
+	protected override void OnCreate (Bundle bundle)
+			{
+				base.OnCreate (bundle);
+				SetContentView (Resource.Layout.Login);
+	
+				//Connect to Azure
+				try {
+					Azure.InitializeAzure ();
+				} catch( Exception e) {
+					Console.WriteLine(e);
+				}
+	
+				//If Facebook session is already open from a previous login, request user info
+				if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
+					//Get user info from Facebook
+					Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
+					//FB login test
+					Console.WriteLine ("Facebook login successful");
+				} else {
+					//Enable the skip button to go directly into the Main layout
+					var skipButton = FindViewById<Button> (Resource.Id.startScreenButton);
+					skipButton.Click += goToStart;
+				}
+
 
 
 ###Facebook Logout
