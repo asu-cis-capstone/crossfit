@@ -28,12 +28,14 @@ namespace WodstarMobileApp
 			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
 			Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);
 			CurrentPlatform.Init ();
+			//DB connect test
 			Console.WriteLine ("Azure initialization successful");
 		}//end initializeAzure method
 
 		//Query UserAccount table for the authenticated user
 		public async static void GetUserAccount (UserAccount thisUser)
 		{
+			Console.WriteLine ("Azure GetUserAccount method called");
 			//Set UserAccount table object
 			userAccountTable = azureClient.GetTable<UserAccount> ();
 
@@ -45,35 +47,44 @@ namespace WodstarMobileApp
 
 			//Create the record in UserAccount table if no records are found
 			if (users.Count == 0) {
+				Console.WriteLine ("No user account found, calling CreateUserAccount method");
 				CreateUserAccount (thisUser);
 			//Otherwise populate thisUser object with the fetched details
 			} else {
+				Console.WriteLine ("User account found, populating details");
 				thisUser.id = users [0].id;
 				thisUser.gender = users [0].gender;
 				thisUser.age = users [0].age;
 			}
-		}//end UserAccount method
+			Console.WriteLine ("Azure GetUserAccount method successful");
+		}//end GetUserAccount method
 
 		//Create UserAccount record, called automatically by GetUserAccount when no account exists
 		public async static void CreateUserAccount (UserAccount thisUser)
 		{
+			Console.WriteLine ("CreateUserAccount method called");
 			//Set UserAccount table object
 			userAccountTable = azureClient.GetTable<UserAccount> ();
 
 			//Insert new record
+			Console.WriteLine ("Inserting new user into Azure database");
 			await userAccountTable.InsertAsync (thisUser);
 
 			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 			GetUserAccount (thisUser);
+			Console.WriteLine ("CreateUserAccount method successful");
 		}//end CreateUserAccount method
 
 		//Query Workout table for all workouts
 		public async static void GetWorkouts ()
 		{
+			Console.WriteLine ("GetWorkouts method called");
+
 			//Set Workouts table object
 			workoutTable = azureClient.GetTable<Workout> ();
 
 			//Fetch all workouts into a List
+			Console.WriteLine("Getting workouts from Azure");
 			workouts = await workoutTable.ToListAsync ();
 
 			//Debug output to the console
@@ -99,15 +110,19 @@ namespace WodstarMobileApp
 					}
 				}
 			}
+
+			Console.WriteLine ("GetWorkouts method successful");
 		}//end GetWorkouts method
 
 		//Query WorkoutSegment table for all workout segments
 		public async static void GetWorkoutSegments ()
 		{
+			Console.WriteLine ("GetWorkoutSegments method called");
 			//Set WorkoutSegments table object
 			workoutSegmentTable = azureClient.GetTable<WorkoutSegment> ();
 
 			//Fetch all workout segments into a List
+			Console.WriteLine("Fetching workout segments from Azure");
 			workoutSegments = await workoutSegmentTable.ToListAsync ();
 
 			//Debug output to the console
@@ -117,15 +132,19 @@ namespace WodstarMobileApp
 					Console.WriteLine (string.Format ("ID: {0}\nWorkout: {1}\nType: {2}", segment.id, segment.workoutId, segment.segmentType));
 				}
 			}
+
+			Console.WriteLine ("GetWorkoutSegments method successful");
 		}//end GetWorkoutSegments method
 
 		//Query Movements table for all movements
 		public async static void GetMovements ()
 		{
+			Console.WriteLine ("GetMovements method called");
 			//Set Movements table object
 			movementTable = azureClient.GetTable<Movement> ();
 
 			//Fetch all movements into a List
+			Console.WriteLine("Fetching data from Azure");
 			movements = await movementTable.ToListAsync ();
 
 			//Debug output to the console
@@ -139,15 +158,19 @@ namespace WodstarMobileApp
 					                        movement.greenCircleVideoUrl, movement.greenCircleImageUrl);
 				MovementLinks.allMovements.Add(thisMovement);
 			}
+
+			Console.WriteLine ("GetMovements method successful");
 		}//end GetMovements method
 
 		//Query UserJournal table for this user's journal entries
 		public async static void GetUserJournals (UserAccount thisUser)
 		{
+			Console.WriteLine ("GetUserJournals method called");
 			//Set UserJournal table object
 			userJournalTable = azureClient.GetTable<UserJournal> ();
 
 			//Fetch all of this user's journals into a List
+			Console.WriteLine("Fetching user's journals from Azure");
 			userJournals = await userJournalTable.Where (uj => uj.userAccountId == thisUser.id).ToListAsync ();
 
 			//Debug output to the console
@@ -155,20 +178,25 @@ namespace WodstarMobileApp
 			foreach (var journal in userJournals) {
 				Console.WriteLine (string.Format ("ID: {0}\nName: {1}", journal.id, journal.statName));
 			}
+
+			Console.WriteLine ("GetUserJournal method successful");
 		}//end GetUserJournals method
 
 		//Create UserJoural record
 		public async static void CreateUserJournal (UserAccount thisUser, UserJournal journal)
 		{
+			Console.WriteLine ("CreateUserJournal method called");
 			//Set UserJournal table object
 			userJournalTable = azureClient.GetTable<UserJournal> ();
 
 			//Insert new record
+			Console.WriteLine("Inserting journal record into Azure");
 			await userJournalTable.InsertAsync (journal);
 
 			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 			GetUserJournals (thisUser);
+
+			Console.WriteLine ("CreateUserJournal method successful");
 		}//end CreateUserJournal method
 	}
 }
-

@@ -68,3 +68,9 @@ Tyler Daulton | tdaulton@asu.edu
 * Harmonize Android layout formatting
 * IOS splash and start page updated
 
+###v0.6
+* Searchable workouts
+* Timer updates journal
+* Modify AzureDB schema
+* Organize workout data
+* Implement test cases

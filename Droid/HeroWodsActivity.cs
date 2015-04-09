@@ -169,6 +169,8 @@ namespace WodstarMobileApp.Droid
 				intent.PutExtra("workoutId", WorkoutUtil.benchmarkIds[workoutSelected]);
 				StartActivity(intent);
 			}
+			//WOD page search test
+			Console.WriteLine ("WOD page search successful");
 		}
 
 		//NAVIGATION METHODS

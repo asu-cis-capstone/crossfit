@@ -66,6 +66,7 @@ namespace WodstarMobileApp.Droid
 
 		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
 		{
+
 			if (!firstPlayer) {
 				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
 			} else if (!secondPlayer) {
@@ -77,13 +78,17 @@ namespace WodstarMobileApp.Droid
 			} else if (!fifthPlayer) {
 				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
 			}
+			Console.WriteLine ("YouTube connect successful");
 			return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
 		}
 
 		public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 		{
+	
 			if (!wasRestored) {
 				loadVideos(player);
+				//YouTube load test
+				Console.WriteLine ("YouTube load successful");
 			} 
 		}
 
@@ -135,7 +140,8 @@ namespace WodstarMobileApp.Droid
 			} else {
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+4], 50);
 				fifthPlayer=true;
-			} 
+			}
+			//Console.WriteLine(Yo
 		}
 
 		private void resetBools() {
