@@ -4,12 +4,12 @@ Because Xamarin requires that any automated testing be done through its "Test Cl
 ###Database Connect
 Class: WodstarMobileApp.Azure.cs (line 32)<br/>
 Scope: <br/>
-Code: <br/>
+
 	public static void InitializeAzure ()
 			{
 				Console.WriteLine ("InitializeAzure method called");
 				//connect to Azure
-				azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", 				"aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
+				azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
 				Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);
 				CurrentPlatform.Init ();
 				//DB connect test
@@ -20,7 +20,7 @@ Code: <br/>
 ###Database Read
 Class: WodstarMobileApp.Azure.cs (line 56) <br/>
 Scope: <br/>
-Code: <br/>
+
 
 	public async static void GetUserAccount (UserAccount thisUser) 
 			{
@@ -50,7 +50,8 @@ Code: <br/>
 ###User Account Creation 
 Class: WodstarMobileApp.Azure.cs (line 70) <br/>
 Scope: <br/>
-Code: <br/>
+
+
 	public async static void CreateUserAccount (UserAccount thisUser)
 			{
 				//Set UserAccount table object
@@ -67,7 +68,8 @@ Code: <br/>
 ###Facebook Login
 Class: WodstarMobileApp.Droid.MainActivity.cs (line 43) <br/>
 Scope: <br/>
-Code: <br/>
+
+
 	protected override void OnCreate (Bundle bundle)
 			{
 				base.OnCreate (bundle);
@@ -102,7 +104,8 @@ Code:
 ###YouTube Connect
 Class: WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 81)<br/>
 Scope: <br/>
-Code: <br/>
+
+
 	protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
 			{
 	
@@ -124,7 +127,8 @@ Code: <br/>
 
 ###YouTube Load
 Class: WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 89) <br/>
-Code: <br/>
+Scope: <br/>
+
 	public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 			{
 				if (!wasRestored) {
