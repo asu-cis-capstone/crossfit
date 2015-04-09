@@ -27,6 +27,11 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "statResult")]
 		public string statResult { get; set; }
 
+		//Default constructor
+		public UserJournal () {
+
+		}
+
 		public UserJournal (string userId, string entryType, string statId, string type, string name, string result)
 		{
 			this.entryType = entryType;
