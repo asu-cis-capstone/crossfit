@@ -71,7 +71,8 @@ namespace WodstarMobileApp.Droid
 			logoutButton.Click += goToLogin;
 		}
 
-		void createWodTable(object sender, EventArgs e) {
+		void createWodTable(object sender, EventArgs e) 
+		{
 			if (!wodVisible) {
 				wodVisible = true;
 				clearTable ();
@@ -82,6 +83,8 @@ namespace WodstarMobileApp.Droid
 				String[][] workoutResultInfo = new String[wodData.Count()][];
 				addDataToTable (workoutResultInfo);
 			}
+			//User WOD data entry successful
+			Console.WriteLine ("User WOD data entry successful");
 		}
 
 		void createPrTable(object sender, EventArgs e) {
