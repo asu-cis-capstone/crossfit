@@ -168,15 +168,26 @@ Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs* (line 89) <br/>
 Purpose: To test that the YouTube videos sucessfully loaded in the workout library <br/>
 Platform: Android <br/>
 
-	public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
-			{
-				if (!wasRestored) {
-					loadVideos(player);
-					//YouTube load test
-					Console.WriteLine ("YouTube load successful");
-				} 
+	private void loadVideos(IYouTubePlayer player) 
+		{
+			if (!firstPlayer) {
+				player.CueVideo (MovementLinks.MovementUrls [startIndex], 50);
+				firstPlayer = true;
+			} else if (!secondPlayer) {
+				player.CueVideo (MovementLinks.MovementUrls[startIndex+1], 50);
+				secondPlayer=true;
+			} else if (!thirdPlayer) {
+				player.CueVideo (MovementLinks.MovementUrls[startIndex+2], 50);
+				thirdPlayer=true;
+			} else if (!fourthPlayer) {
+				player.CueVideo (MovementLinks.MovementUrls[startIndex+3], 50);
+				fourthPlayer=true;
+			} else {
+				player.CueVideo (MovementLinks.MovementUrls[startIndex+4], 50);
+				fifthPlayer=true;
 			}
-
+			//Console.WriteLine(Yo
+		}
 
 
 ###WOD Page Search
