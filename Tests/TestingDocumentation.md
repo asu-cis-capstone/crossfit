@@ -57,17 +57,19 @@ Platform: Cross <br/>
 
 
 	public async static void CreateUserAccount (UserAccount thisUser)
-			{
-				//Set UserAccount table object
-				userAccountTable = azureClient.GetTable<UserAccount> ();
-	
-				//Insert new record
-				await userAccountTable.InsertAsync (thisUser);
-	
-				//Call GetUserAccount to fetch the Id for the newly created UserAccount record
-				GetUserAccount (thisUser);
-				Console.WriteLine ("User account creation succesful");
-			}//end CreateUserAccount method
+		{
+			Console.WriteLine ("CreateUserAccount method called");
+			//Set UserAccount table object
+			userAccountTable = azureClient.GetTable<UserAccount> ();
+
+			//Insert new record
+			Console.WriteLine ("Inserting new user into Azure database");
+			await userAccountTable.InsertAsync (thisUser);
+
+			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
+			GetUserAccount (thisUser);
+			Console.WriteLine ("CreateUserAccount method successful");
+		}//end CreateUserAccount method
 			
 			
 ###Azure Get Workouts
@@ -75,23 +77,27 @@ Class: *WodstarMobileApp.Azure.cs* (line 118) <br/>
 Purpose: To test that the workouts were successfully pulled from Azure <br/>
 Platform: Cross <br/>
 
-		public async static void GetWorkoutSegments ()
-			{
-				//Set WorkoutSegments table object
-				workoutSegmentTable = azureClient.GetTable<WorkoutSegment> ();
-	
-				//Fetch all workout segments into a List
-				workoutSegments = await workoutSegmentTable
-					.ToListAsync ();
-	
-				//Debug output to the console
-				Console.WriteLine ("DEBUG - GetWorkoutSegments");
-				if (workoutSegments != null) {
-					foreach (var segment in workoutSegments) {
-						Console.WriteLine (string.Format ("ID: {0}\nWorkout: {1}\nType: {2}", segment.id, segment.workoutId, segment.segmentType));
-					}
+public async static void GetWorkouts ()
+		{
+			Console.WriteLine ("GetWorkouts method called");
+
+			//Set Workouts table object
+			workoutTable = azureClient.GetTable<Workout> ();
+
+			//Fetch all workouts into a List
+			Console.WriteLine("Getting workouts from Azure");
+			workouts = await workoutTable.ToListAsync ();
+
+			//Debug output to the console
+			Console.WriteLine ("DEBUG - GetWorkouts");
+			foreach (var workout in workouts) {				
+				if (workouts != null) {
+					Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
 				}
-			}//end GetWorkoutSegments method
+			}
+
+			Console.WriteLine ("GetWorkouts method successful");
+		}//end GetWorkouts method
 
 ###Azure Get Movements
 Class: *WodstarMobileApp.Azure.cs* (line 136) <br/>
@@ -99,25 +105,23 @@ Purpose: To test that the movements were successfully pulled from Azure <br/>
 Platform: Cross <br/>
 
 	public async static void GetMovements ()
-			{
-				//Set Movements table object
-				movementTable = azureClient.GetTable<Movement> ();
-	
-				//Fetch all movements into a List
-				movements = await movementTable.ToListAsync ();
-	
-				//Debug output to the console
-				Console.WriteLine ("DEBUG - Movements");
-				foreach (var movement in movements) {
-					Console.WriteLine (string.Format ("ID: {0}\nName: {1}", movement.id, movement.name));
-					MovementLinks.allMovements = new List<Movement> ();
-					Movement thisMovement = new Movement (movement.classification, movement.name, movement.equipment, movement.type,
-						                        movement.blackDiamondDescription, movement.blueSquareDescription, movement.greenCircleDescription, movement.rxVideoUrl,
-						                        movement.rxImageUrl, movement.blackDiamondVideoUrl, movement.blackDiamondImageUrl, movement.blueSquareVideoUrl, movement.blueSquareImageUrl,
-						                        movement.greenCircleVideoUrl, movement.greenCircleImageUrl);
-					MovementLinks.allMovements.Add(thisMovement);
-				}
-			}//end GetMovements method
+		{
+			Console.WriteLine ("GetMovements method called");
+			//Set Movements table object
+			movementTable = azureClient.GetTable<Movement> ();
+
+			//Fetch all movements into a List
+			Console.WriteLine("Fetching data from Azure");
+			movements = await movementTable.ToListAsync ();
+
+			//Debug output to the console
+			Console.WriteLine ("DEBUG - Movements");
+			foreach (var movement in movements) {
+				Console.WriteLine (string.Format ("ID: {0}\nName: {1}", movement.id, movement.name));
+			}
+
+			Console.WriteLine ("GetMovements method successful");
+		}//end GetMovements method
 
 ###Facebook Login
 Class: *WodstarMobileApp.Droid.MainActivity.cs* (line 43) <br/>
