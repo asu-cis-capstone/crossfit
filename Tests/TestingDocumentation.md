@@ -2,7 +2,7 @@
 We are currenlty using Xamarin Studio for the cross platform development of this mobile application. Unfortunately, Xamarin requires that any automated testing be done through its "Test Cloud". The "Test Cloud" cost upwards of $12,000/year and is not a tool within our project budget. In order to overcome this we have implemented basic tests through the the console.
 
 ###Database Connect
-Class: WodstarMobileApp.Azure.cs (line 32)<br/>
+Class: *WodstarMobileApp.Azure.cs* (line 32)<br/>
 Scope: <br/>
 
 	public static void InitializeAzure ()
@@ -18,7 +18,7 @@ Scope: <br/>
 
 
 ###Database Read
-Class: WodstarMobileApp.Azure.cs (line 56) <br/>
+Class: *WodstarMobileApp.Azure.cs* (line 56) <br/>
 Scope: <br/>
 
 
@@ -48,7 +48,7 @@ Scope: <br/>
 
 
 ###User Account Creation 
-Class: WodstarMobileApp.Azure.cs (line 70) <br/>
+Class: *WodstarMobileApp.Azure.cs* (line 70) <br/>
 Scope: <br/>
 
 
@@ -66,7 +66,7 @@ Scope: <br/>
 			}//end CreateUserAccount method
 
 ###Facebook Login
-Class: WodstarMobileApp.Droid.MainActivity.cs (line 43) <br/>
+Class: *WodstarMobileApp.Droid.MainActivity.cs* (line 43) <br/>
 Scope: <br/>
 
 
@@ -99,10 +99,10 @@ Scope: <br/>
 ###Facebook Logout
 Class: <br/>
 Scope: <br/>
-Code:
+*Not yet implemented*
 
 ###YouTube Connect
-Class: WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 81)<br/>
+Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 81)*<br/>
 Scope: <br/>
 
 
@@ -126,7 +126,7 @@ Scope: <br/>
 
 
 ###YouTube Load
-Class: WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 89) <br/>
+Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs* (line 89) <br/>
 Scope: <br/>
 
 	public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
