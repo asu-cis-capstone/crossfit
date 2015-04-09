@@ -157,11 +157,12 @@ Scope: <br/>
 				Console.WriteLine ("WOD page search successful");
 			}
 
-###User WOD Data Log
-Class: WodstarMobileApp.Azure.cs (<br/>
+###User WOD Data Entry
+Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 87) (<br/>
 Scope: <br/>
 
-	void createWodTable(object sender, EventArgs e) {
+	void createWodTable(object sender, EventArgs e) 
+			{
 				if (!wodVisible) {
 					wodVisible = true;
 					clearTable ();
@@ -172,9 +173,9 @@ Scope: <br/>
 					String[][] workoutResultInfo = new String[wodData.Count()][];
 					addDataToTable (workoutResultInfo);
 				}
+				//User WOD data entry test
 				Console.WriteLine ("User WOD data entry successful");
 			}
-
 
 
 
