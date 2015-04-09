@@ -120,6 +120,7 @@ Scope: <br/>
 				} else if (!fifthPlayer) {
 					return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
 				}
+				//YouTube connect test
 				Console.WriteLine ("YouTube connect successful");
 				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
 			}
@@ -141,9 +142,20 @@ Scope: <br/>
 
 
 ###WOD Page Search
-Class: <br/>
+Class: *WodstarMobileApp.Droid.HeroWodsActivity.cs* (line 173)
 Scope: <br/>
 
+	void searchItemSelected(object sender, AdapterView.ItemClickEventArgs e) {
+				String workoutSelected = autocompleteHero.Text;
+				if(WorkoutUtil.benchmarkIds.ContainsKey(workoutSelected)) {
+					var intent = new Intent(this, typeof(WorkoutActivity));
+					intent.PutExtra("workoutName", workoutSelected);
+					intent.PutExtra("workoutId", WorkoutUtil.benchmarkIds[workoutSelected]);
+					StartActivity(intent);
+				}
+				//WOD page search test
+				Console.WriteLine ("WOD page search successful");
+			}
 
 ###User WOD Data Log
 Class: WodstarMobileApp.Azure.cs (<br/>
