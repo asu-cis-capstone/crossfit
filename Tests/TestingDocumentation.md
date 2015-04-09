@@ -17,7 +17,6 @@ Platform: Cross <br/>
 				Console.WriteLine ("Azure initialization successful");
 			}//end initializeAzure method
 
-
 ###Azure Get User
 Class: *WodstarMobileApp.Azure.cs* (line 56) <br/>
 Purpose: To test if the application is properly reading from Azure. <br/>
@@ -49,7 +48,7 @@ Platform: Cross <br/>
 			}//end UserAccount method
 
 
-###Azure User Account Creation 
+###Azure Create User Account
 Class: *WodstarMobileApp.Azure.cs* (line 70) <br/>
 Purpose: To test that the user can create a new account independent from social login functionality
 Platform: Cross <br/>
@@ -91,6 +90,32 @@ Platform: Cross <br/>
 					}
 				}
 			}//end GetWorkoutSegments method
+
+###Azure Get Movements
+Class: *WodstarMobileApp.Azure.cs* (line 136) <br/>
+Purpose: To test that the movements were successfully pulled from Azure
+Platform: Cross <br/>
+
+	public async static void GetMovements ()
+			{
+				//Set Movements table object
+				movementTable = azureClient.GetTable<Movement> ();
+	
+				//Fetch all movements into a List
+				movements = await movementTable.ToListAsync ();
+	
+				//Debug output to the console
+				Console.WriteLine ("DEBUG - Movements");
+				foreach (var movement in movements) {
+					Console.WriteLine (string.Format ("ID: {0}\nName: {1}", movement.id, movement.name));
+					MovementLinks.allMovements = new List<Movement> ();
+					Movement thisMovement = new Movement (movement.classification, movement.name, movement.equipment, movement.type,
+						                        movement.blackDiamondDescription, movement.blueSquareDescription, movement.greenCircleDescription, movement.rxVideoUrl,
+						                        movement.rxImageUrl, movement.blackDiamondVideoUrl, movement.blackDiamondImageUrl, movement.blueSquareVideoUrl, movement.blueSquareImageUrl,
+						                        movement.greenCircleVideoUrl, movement.greenCircleImageUrl);
+					MovementLinks.allMovements.Add(thisMovement);
+				}
+			}//end GetMovements method
 
 ###Facebook Login
 Class: *WodstarMobileApp.Droid.MainActivity.cs* (line 43) <br/>
