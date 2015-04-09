@@ -135,7 +135,7 @@ Platform: Android </br>
 ###YouTube Load
 Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs* (line 89) <br/>
 Purpose: To test that the YouTube videos sucessfully loaded in the workout library <br/>
-Platform: <br/>
+Platform: Android <br/>
 
 	public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 			{
@@ -151,7 +151,7 @@ Platform: <br/>
 ###WOD Page Search
 Class: *WodstarMobileApp.Droid.HeroWodsActivity.cs* (line 173)
 Purpose: To test if the search function in the WOD library is properly working<br/>
-Platform: <br/>
+Platform: Android <br/>
 
 	void searchItemSelected(object sender, AdapterView.ItemClickEventArgs e) {
 				String workoutSelected = autocompleteHero.Text;
@@ -168,7 +168,7 @@ Platform: <br/>
 ###User WOD Data Entry
 Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 113) <br/>
 Purpose: To test if the user can sucessfully add WOD data to their journal <br/>
-Platform: <br/>
+Platform: Android <br/>
 
 	void addDataToTable(String[][] resultInfo) 
 			{
