@@ -153,23 +153,13 @@ Purpose: To test that the applicaiton successfully connected to YouTube <br/>
 Platform: Android </br>
 
 
-	protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
+		public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 			{
-	
-				if (!firstPlayer) {
-					return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
-				} else if (!secondPlayer) {
-					return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer2);
-				} else if (!thirdPlayer) {
-					return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer3);
-				} else if (!fourthPlayer) {
-					return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer4);
-				} else if (!fifthPlayer) {
-					return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
-				}
-				//YouTube connect test
-				Console.WriteLine ("YouTube connect successful");
-				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
+				if (!wasRestored) {
+					loadVideos(player);
+					//YouTube load test
+					Console.WriteLine ("YouTube load successful");
+				} 
 			}
 
 
