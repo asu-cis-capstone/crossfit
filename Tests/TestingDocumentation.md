@@ -49,7 +49,7 @@ Platform: Cross <br/>
 			}//end UserAccount method
 
 
-###User Account Creation 
+###Azure User Account Creation 
 Class: *WodstarMobileApp.Azure.cs* (line 70) <br/>
 Purpose: To test that the user can create a new account independent from social login functionality
 Platform: Cross <br/>
@@ -67,6 +67,30 @@ Platform: Cross <br/>
 				GetUserAccount (thisUser);
 				Console.WriteLine ("User account creation succesful");
 			}//end CreateUserAccount method
+			
+			
+###Azure Get Workouts
+Class: *WodstarMobileApp.Azure.cs* (line 118) <br/>
+Purpose: To test that the workouts were successfully pulled from Azure
+Platform: Cross <br/>
+
+		public async static void GetWorkoutSegments ()
+			{
+				//Set WorkoutSegments table object
+				workoutSegmentTable = azureClient.GetTable<WorkoutSegment> ();
+	
+				//Fetch all workout segments into a List
+				workoutSegments = await workoutSegmentTable
+					.ToListAsync ();
+	
+				//Debug output to the console
+				Console.WriteLine ("DEBUG - GetWorkoutSegments");
+				if (workoutSegments != null) {
+					foreach (var segment in workoutSegments) {
+						Console.WriteLine (string.Format ("ID: {0}\nWorkout: {1}\nType: {2}", segment.id, segment.workoutId, segment.segmentType));
+					}
+				}
+			}//end GetWorkoutSegments method
 
 ###Facebook Login
 Class: *WodstarMobileApp.Droid.MainActivity.cs* (line 43) <br/>
