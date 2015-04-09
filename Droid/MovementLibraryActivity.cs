@@ -84,6 +84,7 @@ namespace WodstarMobileApp.Droid
 
 		public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 		{
+	
 			if (!wasRestored) {
 				loadVideos(player);
 				//YouTube load test
