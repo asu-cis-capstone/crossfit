@@ -50,7 +50,7 @@ Platform: Cross <br/>
 
 ###Azure Create User Account
 Class: *WodstarMobileApp.Azure.cs* (line 70) <br/>
-Purpose: To test that the user can create a new account independent from social login functionality
+Purpose: To test that the user can create a new account independent from social login functionality <br/>
 Platform: Cross <br/>
 
 
@@ -70,7 +70,7 @@ Platform: Cross <br/>
 			
 ###Azure Get Workouts
 Class: *WodstarMobileApp.Azure.cs* (line 118) <br/>
-Purpose: To test that the workouts were successfully pulled from Azure
+Purpose: To test that the workouts were successfully pulled from Azure <br/>
 Platform: Cross <br/>
 
 		public async static void GetWorkoutSegments ()
@@ -93,7 +93,7 @@ Platform: Cross <br/>
 
 ###Azure Get Movements
 Class: *WodstarMobileApp.Azure.cs* (line 136) <br/>
-Purpose: To test that the movements were successfully pulled from Azure
+Purpose: To test that the movements were successfully pulled from Azure <br/>
 Platform: Cross <br/>
 
 	public async static void GetMovements ()
