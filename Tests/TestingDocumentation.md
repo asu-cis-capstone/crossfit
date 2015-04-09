@@ -158,20 +158,23 @@ Scope: <br/>
 			}
 
 ###User WOD Data Entry
-Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 87) (<br/>
+Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 113) (<br/>
 Scope: <br/>
 
-	void createWodTable(object sender, EventArgs e) 
+	void addDataToTable(String[][] resultInfo) 
 			{
-				if (!wodVisible) {
-					wodVisible = true;
-					clearTable ();
-					List<UserJournal> wodData = new List<UserJournal>();
-					//TODO: Sort data into new array by the number of entries then by alphabet if necessary
-					//TODO: for each entry, sort for the best value - how? depends on id of workout amrap/time going to be different sorts.
-					//TODO: create string[] of workouts name and the value - create maps of id to name in workout util?
-					String[][] workoutResultInfo = new String[wodData.Count()][];
-					addDataToTable (workoutResultInfo);
+				for(int i = 0; i < resultInfo.Count(); i++) {
+					TableRow dataRow = new TableRow (this);
+					TextView workoutName = new TextView (this);
+					TextView workoutPr = new TextView (this);
+					workoutName.Text =resultInfo [i] [0];
+					workoutPr.Text = resultInfo [i] [1];
+					workoutPr.Gravity = GravityFlags.Right;
+					workoutName.Gravity = GravityFlags.Left;
+					dataRow.AddView (workoutName);
+					dataRow.AddView (workoutPr);
+	
+					userDataTable.AddView (dataRow);
 				}
 				//User WOD data entry test
 				Console.WriteLine ("User WOD data entry successful");
