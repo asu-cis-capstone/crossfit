@@ -158,7 +158,7 @@ Purpose: To test if the search function in the WOD library is properly working<b
 			}
 
 ###User WOD Data Entry
-Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 113) (<br/>
+Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 113) <br/>
 Purpose: To test if the user can sucessfully add WOD data to their journal <br/>
 
 	void addDataToTable(String[][] resultInfo) 
