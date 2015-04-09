@@ -143,12 +143,12 @@ Scope: <br/>
 ###WOD Page Search
 Class: <br/>
 Scope: <br/>
-Code:
 
-###WOD Data Added
+
+###User WOD Data Log
 Class: WodstarMobileApp.Azure.cs (<br/>
 Scope: <br/>
-Code:
+*Not yet implemented*
 
 
 
