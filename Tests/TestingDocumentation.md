@@ -147,14 +147,6 @@ Platform: Android <br/>
 					skipButton.Click += goToStart;
 				}
 
-
-
-###Facebook Logout
-Class: <br/>
-Scope: <br/>
-Platform: <br/>
-*Not yet implemented*
-
 ###YouTube Connect
 Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 81)*<br/>
 Purpose: To test that the applicaiton successfully connected to YouTube <br/>
