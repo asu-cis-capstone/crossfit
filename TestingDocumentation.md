@@ -4,7 +4,17 @@ Because Xamarin requires that any automated testing be done through its "Test Cl
 ###Database Connect
 Class: WodstarMobileApp.Azure.cs (line 32)<br/>
 Scope: <br/>
-Code:
+Code: <br/>
+public static void InitializeAzure ()
+		{
+			Console.WriteLine ("InitializeAzure method called"); <br/>
+			//connect to Azure <br/>
+			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66"); <br/>
+			Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);<br/>
+			CurrentPlatform.Init ();<br/>
+			<b>//DB connect test<br/>
+			Console.WriteLine ("Azure initialization successful");</b><br/>
+		}//end initializeAzure method<br/>
 
 ###Database Read
 Class: WodstarMobileApp.Azure.cs (line 56) <br/>
