@@ -1,5 +1,5 @@
 # Testing Documentation
-Because Xamarin requires that any automated testing be done through its "Test Cloud", we have had to implement testing directly into the code. The "Test Cloud" cost upwards of $12,000/year and is not a tool within our budget. 
+We are currenlty using Xamarin Studio for the cross platform development of this mobile application. Unfortunately, Xamarin requires that any automated testing be done through its "Test Cloud". The "Test Cloud" cost upwards of $12,000/year and is not a tool within our project budget. In order to overcome this we have implemented basic tests through the the console.
 
 ###Database Connect
 Class: WodstarMobileApp.Azure.cs (line 32)<br/>
