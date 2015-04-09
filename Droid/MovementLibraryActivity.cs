@@ -140,7 +140,7 @@ namespace WodstarMobileApp.Droid
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+4], 50);
 				fifthPlayer=true;
 			}
-			Console.WriteLine(Yo
+			//Console.WriteLine(Yo
 		}
 
 		private void resetBools() {
