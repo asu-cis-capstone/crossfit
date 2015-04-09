@@ -86,6 +86,8 @@ namespace WodstarMobileApp.Droid
 		{
 			if (!wasRestored) {
 				loadVideos(player);
+				//YouTube load test
+				Console.WriteLine ("YouTube load successful");
 			} 
 		}
 

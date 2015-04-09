@@ -53,6 +53,7 @@ namespace WodstarMobileApp
 				thisUser.gender = users [0].gender;
 				thisUser.age = users [0].age;
 			}
+			Console.WriteLine ("Azure read successful");
 		}//end UserAccount method
 
 		//Create UserAccount record, called automatically by GetUserAccount when no account exists
@@ -66,6 +67,7 @@ namespace WodstarMobileApp
 
 			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 			GetUserAccount (thisUser);
+			Console.WriteLine ("User account creation succesful");
 		}//end CreateUserAccount method
 
 		//Query Workout table for all workouts
