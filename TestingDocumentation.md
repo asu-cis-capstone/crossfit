@@ -103,35 +103,37 @@ Code:
 Class: WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 81)<br/>
 Scope: <br/>
 Code: <br/>
-protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()<br/>
-		{<br/>
-<br/>
-			if (!firstPlayer) {<br/>
-				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);<br/>
-			} else if (!secondPlayer) {<br/>
-				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer2);<br/>
-			} else if (!thirdPlayer) {<br/>
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer3);<br/>
-			} else if (!fourthPlayer) {<br/>
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer4);<br/>
-			} else if (!fifthPlayer) {<br/>
-				return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);<br/>
-			}<br/>
-			<b>Console.WriteLine ("YouTube connect successful");</b><br/>
-			return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);<br/>
-		}<br/>
+	protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
+			{
+	
+				if (!firstPlayer) {
+					return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
+				} else if (!secondPlayer) {
+					return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer2);
+				} else if (!thirdPlayer) {
+					return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer3);
+				} else if (!fourthPlayer) {
+					return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer4);
+				} else if (!fifthPlayer) {
+					return (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer5);
+				}
+				Console.WriteLine ("YouTube connect successful");
+				return (YouTubePlayerFragment)FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
+			}
 
 
 ###YouTube Load
 Class: WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 89) <br/>
 Code: <br/>
-public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored) <br/>
-		{<br/>
-			if (!wasRestored) {<br/>
-				loadVideos(player);<br/>
-				Console.WriteLine ("YouTube load successful");<br/>
-			} <br/>
-		}<br/>
+	public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
+			{
+				if (!wasRestored) {
+					loadVideos(player);
+					Console.WriteLine ("YouTube load successful");
+				} 
+			}
+
+
 
 ###WOD Page Search
 Class: <br/>
