@@ -4,6 +4,7 @@ We are currenlty using Xamarin Studio for the cross platform development of this
 ###Database Connect
 Class: *WodstarMobileApp.Azure.cs* (line 32)<br/>
 Purpose: To test that there was a successful connection to Azure<br/>
+Platform: Cross <br/>
 
 	public static void InitializeAzure ()
 			{
@@ -20,6 +21,7 @@ Purpose: To test that there was a successful connection to Azure<br/>
 ###Database Read
 Class: *WodstarMobileApp.Azure.cs* (line 56) <br/>
 Purpose: To test if the application is properly reading from Azure.
+Platform: Cross <br/>
 
 
 	public async static void GetUserAccount (UserAccount thisUser) 
@@ -50,6 +52,7 @@ Purpose: To test if the application is properly reading from Azure.
 ###User Account Creation 
 Class: *WodstarMobileApp.Azure.cs* (line 70) <br/>
 Purpose: To test that the user can create a new account independent from social login functionality
+Platform: Cross <br/>
 
 
 	public async static void CreateUserAccount (UserAccount thisUser)
@@ -68,6 +71,7 @@ Purpose: To test that the user can create a new account independent from social 
 ###Facebook Login
 Class: *WodstarMobileApp.Droid.MainActivity.cs* (line 43) <br/>
 Purpose: To test if the Facebook login functionality is properly working <br/>
+Platform: Android <br/>
 
 
 	protected override void OnCreate (Bundle bundle)
@@ -99,11 +103,13 @@ Purpose: To test if the Facebook login functionality is properly working <br/>
 ###Facebook Logout
 Class: <br/>
 Scope: <br/>
+Platform: <br/>
 *Not yet implemented*
 
 ###YouTube Connect
 Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 81)*<br/>
 Purpose: To test that the applicaiton successfully connected to YouTube <br/>
+Platform: Android </br>
 
 
 	protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
@@ -129,6 +135,7 @@ Purpose: To test that the applicaiton successfully connected to YouTube <br/>
 ###YouTube Load
 Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs* (line 89) <br/>
 Purpose: To test that the YouTube videos sucessfully loaded in the workout library <br/>
+Platform: <br/>
 
 	public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 			{
@@ -144,6 +151,7 @@ Purpose: To test that the YouTube videos sucessfully loaded in the workout libra
 ###WOD Page Search
 Class: *WodstarMobileApp.Droid.HeroWodsActivity.cs* (line 173)
 Purpose: To test if the search function in the WOD library is properly working<br/>
+Platform: <br/>
 
 	void searchItemSelected(object sender, AdapterView.ItemClickEventArgs e) {
 				String workoutSelected = autocompleteHero.Text;
@@ -160,6 +168,7 @@ Purpose: To test if the search function in the WOD library is properly working<b
 ###User WOD Data Entry
 Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 113) <br/>
 Purpose: To test if the user can sucessfully add WOD data to their journal <br/>
+Platform: <br/>
 
 	void addDataToTable(String[][] resultInfo) 
 			{
