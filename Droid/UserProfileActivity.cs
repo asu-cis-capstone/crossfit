@@ -84,7 +84,7 @@ namespace WodstarMobileApp.Droid
 				addDataToTable (workoutResultInfo);
 			}
 			//User WOD data entry successful
-			Console.WriteLine ("User WOD data entry successful");
+
 		}
 
 		void createPrTable(object sender, EventArgs e) {
@@ -95,7 +95,8 @@ namespace WodstarMobileApp.Droid
 			}
 		}
 
-		void addDataToTable(String[][] resultInfo) {
+		void addDataToTable(String[][] resultInfo) 
+		{
 			for(int i = 0; i < resultInfo.Count(); i++) {
 				TableRow dataRow = new TableRow (this);
 				TextView workoutName = new TextView (this);
@@ -109,6 +110,7 @@ namespace WodstarMobileApp.Droid
 
 				userDataTable.AddView (dataRow);
 			}
+			Console.WriteLine ("User WOD data entry successful");
 		}
 
 		void clearTable() {
