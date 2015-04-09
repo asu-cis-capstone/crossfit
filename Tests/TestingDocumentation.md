@@ -3,7 +3,7 @@ We are currenlty using Xamarin Studio for the cross platform development of this
 
 ###Database Connect
 Class: *WodstarMobileApp.Azure.cs* (line 32)<br/>
-Scope: <br/>
+Purpose: To test that there was a successful connection to Azure<br/>
 
 	public static void InitializeAzure ()
 			{
@@ -19,7 +19,7 @@ Scope: <br/>
 
 ###Database Read
 Class: *WodstarMobileApp.Azure.cs* (line 56) <br/>
-Scope: <br/>
+Purpose: To test if the application is properly reading from Azure.
 
 
 	public async static void GetUserAccount (UserAccount thisUser) 
@@ -49,7 +49,7 @@ Scope: <br/>
 
 ###User Account Creation 
 Class: *WodstarMobileApp.Azure.cs* (line 70) <br/>
-Scope: <br/>
+Purpose: To test that the user can create a new account independent from social login functionality
 
 
 	public async static void CreateUserAccount (UserAccount thisUser)
@@ -67,7 +67,7 @@ Scope: <br/>
 
 ###Facebook Login
 Class: *WodstarMobileApp.Droid.MainActivity.cs* (line 43) <br/>
-Scope: <br/>
+Purpose: To test if the Facebook login functionality is properly working <br/>
 
 
 	protected override void OnCreate (Bundle bundle)
@@ -103,7 +103,7 @@ Scope: <br/>
 
 ###YouTube Connect
 Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs (line 81)*<br/>
-Scope: <br/>
+Purpose: To test that the applicaiton successfully connected to YouTube <br/>
 
 
 	protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()
@@ -128,7 +128,7 @@ Scope: <br/>
 
 ###YouTube Load
 Class: *WodstarMobileApp.Droid.MovementLibraryActivity.cs* (line 89) <br/>
-Scope: <br/>
+Purpose: To test that the YouTube videos sucessfully loaded in the workout library <br/>
 
 	public override void OnInitializationSuccess (IYouTubePlayerProvider provider, IYouTubePlayer player, bool wasRestored)
 			{
@@ -143,7 +143,7 @@ Scope: <br/>
 
 ###WOD Page Search
 Class: *WodstarMobileApp.Droid.HeroWodsActivity.cs* (line 173)
-Scope: <br/>
+Purpose: To test if the search function in the WOD library is properly working<br/>
 
 	void searchItemSelected(object sender, AdapterView.ItemClickEventArgs e) {
 				String workoutSelected = autocompleteHero.Text;
@@ -159,7 +159,7 @@ Scope: <br/>
 
 ###User WOD Data Entry
 Class: *WodstarMobileApp.Droid.UserProfileActivity* (line 113) (<br/>
-Scope: <br/>
+Purpose: To test if the user can sucessfully add WOD data to their journal <br/>
 
 	void addDataToTable(String[][] resultInfo) 
 			{
