@@ -39,6 +39,8 @@ namespace WodstarMobileApp.Droid
 			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
 				//Get user info from Facebook
 				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
+				//FB login test
+				Console.WriteLine ("Facebook login successful");
 			} else {
 				//Enable the skip button to go directly into the Main layout
 				var skipButton = FindViewById<Button> (Resource.Id.startScreenButton);

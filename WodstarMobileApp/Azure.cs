@@ -28,6 +28,7 @@ namespace WodstarMobileApp
 			azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
 			Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);
 			CurrentPlatform.Init ();
+			//DB connect test
 			Console.WriteLine ("Azure initialization successful");
 		}//end initializeAzure method
 
