@@ -53,7 +53,7 @@ namespace WodstarMobileApp
 				thisUser.gender = users [0].gender;
 				thisUser.age = users [0].age;
 			}
-			Console.WriteLine ("Azure read successful");
+			Console.WriteLine ("Azure GetUserAccount successful");
 		}//end UserAccount method
 
 		//Create UserAccount record, called automatically by GetUserAccount when no account exists
@@ -67,7 +67,7 @@ namespace WodstarMobileApp
 
 			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 			GetUserAccount (thisUser);
-			Console.WriteLine ("User account creation succesful");
+			Console.WriteLine ("Azure user account creation succesful");
 		}//end CreateUserAccount method
 
 		//Query Workout table for all workouts
@@ -102,6 +102,8 @@ namespace WodstarMobileApp
 					}
 				}
 			}
+
+			Console.WriteLine ("Azure GetWorkouts successful");
 		}//end GetWorkouts method
 
 		//Query WorkoutSegment table for all workout segments
@@ -121,6 +123,8 @@ namespace WodstarMobileApp
 					Console.WriteLine (string.Format ("ID: {0}\nWorkout: {1}\nType: {2}", segment.id, segment.workoutId, segment.segmentType));
 				}
 			}
+
+			Console.WriteLine ("Azure GetWorkoutSegments successful");
 		}//end GetWorkoutSegments method
 
 		//Query Movements table for all movements
@@ -143,6 +147,8 @@ namespace WodstarMobileApp
 					                        movement.greenCircleVideoUrl, movement.greenCircleImageUrl);
 				MovementLinks.allMovements.Add(thisMovement);
 			}
+
+			Console.WriteLine ("Azure GetMovements successful");
 		}//end GetMovements method
 
 		//Query UserJournal table for this user's journal entries
@@ -159,6 +165,8 @@ namespace WodstarMobileApp
 			foreach (var journal in userJournals) {
 				Console.WriteLine (string.Format ("ID: {0}\nName: {1}", journal.id, journal.statName));
 			}
+
+			Console.WriteLine ("Azure GetUserJournal successful");
 		}//end GetUserJournals method
 
 		//Create UserJoural record
@@ -172,7 +180,8 @@ namespace WodstarMobileApp
 
 			//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 			GetUserJournals (thisUser);
+
+			Console.WriteLine ("Azure CreateUserJournal successful");
 		}//end CreateUserJournal method
 	}
 }
-

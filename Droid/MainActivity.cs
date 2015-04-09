@@ -45,6 +45,8 @@ namespace WodstarMobileApp.Droid
 				//Enable the skip button to go directly into the Main layout
 				var skipButton = FindViewById<Button> (Resource.Id.startScreenButton);
 				skipButton.Click += goToStart;
+
+				Console.WriteLine ("User not logged in");
 			}
 		}//end OnCreate method
 
@@ -85,10 +87,10 @@ namespace WodstarMobileApp.Droid
 					Console.WriteLine("Util.thisUser = " + Util.thisUser.firstName + " " + Util.thisUser.lastName);
 					Azure.GetUserAccount (Util.thisUser);
 					Console.WriteLine("Trying to get workouts");
-					Azure.GetWorkouts();
+					//Azure.GetWorkouts();
 					//Azure.GetWorkoutSegments();
 					Console.WriteLine("Trying to get movements");
-					Azure.GetMovements();
+					//Azure.GetMovements();
 					//Azure.GetUserJournals(Util.thisUser);
 				} catch (Exception e) {
 					Console.WriteLine (e);
