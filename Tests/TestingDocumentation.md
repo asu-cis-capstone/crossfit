@@ -186,7 +186,7 @@ Platform: Android <br/>
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+4], 50);
 				fifthPlayer=true;
 			}
-			//Console.WriteLine(Yo
+			Console.WriteLine ("YouTube load successful");
 		}
 
 
