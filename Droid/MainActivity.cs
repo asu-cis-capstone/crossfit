@@ -39,18 +39,8 @@ namespace WodstarMobileApp.Droid
 			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
 				//Get user info from Facebook
 				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
-			} else {
-				//Enable the skip button to go directly into the Main layout
-				var skipButton = FindViewById<Button> (Resource.Id.startScreenButton);
-				skipButton.Click += goToStart;
-			}
+			} 
 		}//end OnCreate method
-
-		void goToStart (object sender, EventArgs e)
-		{
-			//Start a new Activity for the Main layout
-			StartActivity (typeof(StartScreenActivity));
-		}
 
 		//This method is required by Facebook SDK Request.IGraphUserCallback, handles callback from the Facebook button
 		protected override void OnActivityResult (int requestCode, Result resultCode, Intent data)
@@ -83,10 +73,10 @@ namespace WodstarMobileApp.Droid
 					Console.WriteLine("Util.thisUser = " + Util.thisUser.firstName + " " + Util.thisUser.lastName);
 					Azure.GetUserAccount (Util.thisUser);
 					Console.WriteLine("Trying to get workouts");
-					Azure.GetWorkouts();
+					//Azure.GetWorkouts();
 					//Azure.GetWorkoutSegments();
 					Console.WriteLine("Trying to get movements");
-					Azure.GetMovements();
+					//Azure.GetMovements();
 					//Azure.GetUserJournals(Util.thisUser);
 				} catch (Exception e) {
 					Console.WriteLine (e);

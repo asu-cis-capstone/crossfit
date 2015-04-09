@@ -21,12 +21,6 @@
             facebook:confirm_logout="false"
             facebook:fetch_user_info="true"
             android:isScrollContainer="false" />
-        <Button
-            android:text="Skip to Start Screen"
-            android:layout_width="280.0dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/startScreenButton"
-            android:layout_marginTop="10.5dp" />
     </LinearLayout>
     <FrameLayout
         android:id="@+id/fragment_container"

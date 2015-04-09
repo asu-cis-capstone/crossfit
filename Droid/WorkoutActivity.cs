@@ -30,8 +30,15 @@ namespace WodstarMobileApp.Droid
 		private HoloCircularProgressBar circularProgressBar;
 		private Button logButton;
 		private Button restartButton;
-		int blueWodstarColor = Android.Graphics.Color.Argb (1, 46, 67, 89);
-		int redWodstarColor = Android.Graphics.Color.Argb (1, 181, 25, 29);
+		public bool colorIsRed=true;
+		static Android.Graphics.Color blue = Android.Graphics.Color.Argb(1, 46, 67, 89);
+		static Android.Graphics.Color red = Android.Graphics.Color.Argb(0, 181, 25, 29);
+		int blueWodstarColor = Android.Graphics.Color.RoyalBlue;
+		int redWodstarColor = Android.Graphics.Color.Red;
+		int whiteColor = Android.Graphics.Color.Snow;
+		LinearLayout buttonLayout;
+		int amrapResult =0;
+
 		int thisSegment =0;
 
 		protected override void OnCreate (Bundle bundle)
@@ -48,7 +55,9 @@ namespace WodstarMobileApp.Droid
 			progressBar = FindViewById<HoloCircularProgressBar> (Resource.Id.circularProgressBar);
 			logButton = FindViewById<Android.Widget.Button> (Resource.Id.logButton);
 			restartButton = FindViewById<Android.Widget.Button> (Resource.Id.restartButton);
-
+			buttonLayout = FindViewById<LinearLayout> (Resource.Id.buttonLayout);
+			logButton.Visibility = ViewStates.Invisible;
+			restartButton.Visibility = ViewStates.Invisible;
 			restartButton.Click += (sender, e) => {resetTimer();}; 
 			logButton.Click += (sender, e) => {	//logData();
 			};
@@ -56,9 +65,6 @@ namespace WodstarMobileApp.Droid
 			//Captures data from starting activity, loads the proper data to the page.
 			workoutId = Intent.GetStringExtra ("workoutId");
 			setThisWorkout ();
-
-			logButton.Visibility = ViewStates.Invisible;
-			restartButton.Visibility = ViewStates.Invisible;
 
 			//Dynamically load workout content
 			for(int i=0;i <thisWorkout.segments.Length; i++) {
@@ -119,78 +125,99 @@ namespace WodstarMobileApp.Droid
 		}
 
 		private async void startAmrapTimer(int minutes) {
-			resetTimer ();
-			timerStarted = true;
+			//TODO: Add some kind of error handling.
+			if (minutes >= 1) {
+				resetTimer ();
+				timerStarted = true;
 
-			circularProgressBar.IndeterminateInterval = 320;
-			circularProgressBar.Indeterminate=true;
+				bool initial = true;
+				int minutesPassed = 0;
+				int secondsPassed = 0;
+				int millisecondsPassed = 0;
+				int secondsText = 0;
+				int millisecondsText = 0;
+				int minutesText = 0;
+				TimeSpan delayTimeSpan = new TimeSpan (0, 0, 0, 0, 100);
 
-			int minutesPassed = 0;
-			int secondsPassed = 0;
-			int millisecondsPassed = 0;
-			int secondsText = 0;
-			int millisecondsText = 0;
-			int minutesText =0;
-			TimeSpan delayTimeSpan = new TimeSpan (0, 0, 0, 0, 100);
-
-			while(timerStarted) {
-				await Task.Delay(delayTimeSpan);
-				millisecondsPassed+=1;
-				if(millisecondsPassed>=10) {
-					secondsPassed+=1;
-					millisecondsPassed = 0;
-				}
-				if(secondsPassed>=60) {
-					minutesPassed+=1;
-					secondsPassed = 0;
-				}
-				if(millisecondsPassed==0) {
-					millisecondsText = 0;
-				} else {
-					millisecondsText = 10 - millisecondsPassed;
-				}
-				if(secondsPassed==0) {
-					secondsText = 0;
-				} else {
-					secondsText = 60 - secondsPassed;
-				}
-				if (minutes - minutesPassed <0) {
-					minutesText = 0;
-				}else if(minutes==1) {
-					if (secondsPassed==0) {
-						minutesText = 1;
-					} else {
-						minutesText = 0;
+				while (timerStarted) {
+					await Task.Delay (delayTimeSpan);
+					millisecondsPassed += 1;
+					if (millisecondsPassed >= 10) {
+						secondsPassed += 1;
+						millisecondsPassed = 0;
 					}
-				} else {
-					minutesText = minutes - minutesPassed;
-				}
-				timerButton.Text = minutesText.ToString("D2") + ":" + secondsText.ToString("D2") + "." + millisecondsText.ToString("D2");
-				if(minutesPassed==minutes-1) {
-					circularProgressBar.ProgressColor = redWodstarColor;
-				}else if(minutesPassed == minutes) {
-					stopTimer ();
+					if (secondsPassed >= 60) {
+						minutesPassed += 1;
+						secondsPassed = 0;
+					}
+
+					if (initial) {
+						minutesText = minutes;
+						if(millisecondsPassed!=0) {
+							secondsPassed+=1;
+						}
+						initial = false;
+					} else if(minutesPassed == 0 && !initial){
+						minutesText = minutes - 1;
+					} else {
+						minutesText = minutes - minutesPassed - 1;
+					}
+
+					if (millisecondsPassed == 0) {
+						millisecondsText = 0;
+					} else {
+						millisecondsText = 10 - millisecondsPassed;
+					}
+					if (secondsPassed == 0) {secondsText = 0;}
+						else {secondsText = 60 - secondsPassed;}
+											
+					timerButton.Text = Math.Abs(minutesText).ToString ("D2") + ":" + secondsText.ToString ("D2") + "." + millisecondsText.ToString ("D2");
+
+					//Change color of bar to red in last minute, stop if out of time.
+					if (minutesPassed == minutes - 1) {
+						circularProgressBar.ProgressColor = redWodstarColor;
+						//Flash on last five seconds.
+						if (secondsPassed >=55) {
+							if (millisecondsPassed % 5 == 0) {
+								circularProgressBar.ProgressColor = flashColor ();
+							} 
+						}
+					} else if (minutesPassed == minutes) {
+						stopTimer ();
+					}
 				}
 			}
 		} //end startCountdownTimer()
 
+		private int flashColor() {
+			if(colorIsRed) {
+				return whiteColor;
+			} else {
+				return redWodstarColor;
+			}
+		}
+
+		private void startCountdown() {
+			//TODO: Implement countdown functionality
+		}
+
 		private void startTimer() {
 			resetTimer ();
 			timerStarted = true;
-			circularProgressBar.ProgressColor = Android.Graphics.Color.DarkBlue.ToArgb();
+			circularProgressBar.ProgressColor = blueWodstarColor;
 			circularProgressBar.CircleStrokeWidth = 20;
 			circularProgressBar.Progress = 0;
 
-	/*		if(thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
+			if(thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
 				startStopwatchTimer ();
 			} else if (thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
 				startAmrapTimer (thisWorkout.segments [thisSegment].time); 
 			} else if (thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.emomType) {
-				startEmomTimer(thisWorkout.segments [thisSegment].time, thisWorkout.segments[thisSegment].repetitions);
+			//	startEmomTimer(thisWorkout.segments [thisSegment].time, thisWorkout.segments[thisSegment].repetitions);
 			}
-	*/
-			startAmrapTimer (2);
-			
+
+			circularProgressBar.IndeterminateInterval = 320;
+			circularProgressBar.Indeterminate=true;	
 		}//End startTimer()
 
 		private async void startStopwatchTimer() {
@@ -223,6 +250,7 @@ namespace WodstarMobileApp.Droid
 		}
 
 		private void resetTimer() {
+			timerStarted = false;
 			logButton.Visibility = ViewStates.Invisible;
 			restartButton.Visibility = ViewStates.Invisible;
 			timerButton.Text = "0:00.00";
@@ -270,6 +298,7 @@ namespace WodstarMobileApp.Droid
 				thisWorkout = WorkoutUtil.benchmarkWods [workoutId];
 			} else if (WorkoutUtil.heroWods.ContainsKey (workoutId)) {
 				Console.WriteLine ("HeroWods contains key for workoutID");
+
 				thisWorkout = WorkoutUtil.heroWods [workoutId];
 			} else if (WorkoutUtil.camilleWods.ContainsKey(workoutId)) {
 				thisWorkout = WorkoutUtil.camilleWods [workoutId];
@@ -294,6 +323,67 @@ namespace WodstarMobileApp.Droid
 					break;
 				case WorkoutUtil.jackieId: //Jackie
 					headerLayout.SetBackgroundResource (Resource.Drawable.jackie);
+					break;
+				case WorkoutUtil.kellyId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.kelly);
+					break;
+				case WorkoutUtil.elizabethId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.elizabeth);
+					break;
+				case WorkoutUtil.helenId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.helen);
+					break;
+				case WorkoutUtil.karenId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.karen);
+					break;
+				case WorkoutUtil.isabelId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.isabel);
+					break;
+				case WorkoutUtil.franId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.fran);
+					break;
+				case WorkoutUtil.nicoleId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.nicole);
+					break;
+				case WorkoutUtil.graceId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.grace);
+					break;
+				case WorkoutUtil.dianeId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.diane);
+					break;
+				case WorkoutUtil.cindyId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.cindy);
+					break;
+				case WorkoutUtil.chelseaId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.chelsea);
+					break;
+				case WorkoutUtil.annieId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.annie);
+					break;
+				case WorkoutUtil.christineId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.christine);
+					break;
+					//TODO: uncomment after adding in barbara photo
+			/*	case WorkoutUtil.barbaraId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.barbara);
+					break;
+			*/	case WorkoutUtil.angieId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.angie);
+					break;
+				case WorkoutUtil.maryId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.mary);
+					break;
+				case WorkoutUtil.nancyId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.nancy);
+					break;
+				case WorkoutUtil.evaId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.eva);
+					break;
+				case WorkoutUtil.lindaId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.linda);
+					break;
+				case WorkoutUtil.rosaId:
+					headerLayout.SetBackgroundResource (Resource.Drawable.rosa);
 					break;
 				default: 
 			//TODO: Add error handling

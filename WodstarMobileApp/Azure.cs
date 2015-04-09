@@ -108,8 +108,7 @@ namespace WodstarMobileApp
 			workoutSegmentTable = azureClient.GetTable<WorkoutSegment> ();
 
 			//Fetch all workout segments into a List
-			workoutSegments = await workoutSegmentTable
-				.ToListAsync ();
+			workoutSegments = await workoutSegmentTable.ToListAsync ();
 
 			//Debug output to the console
 			Console.WriteLine ("DEBUG - GetWorkoutSegments");
