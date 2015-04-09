@@ -23,29 +23,31 @@ Purpose: To test if the application is properly reading from Azure. <br/>
 Platform: Cross <br/>
 
 
-	public async static void GetUserAccount (UserAccount thisUser) 
-			{
-				//Set UserAccount table object
-				userAccountTable = azureClient.GetTable<UserAccount> ();
+	public async static void GetUserAccount (UserAccount thisUser)
+		{
+			Console.WriteLine ("Azure GetUserAccount method called");
+			//Set UserAccount table object
+			userAccountTable = azureClient.GetTable<UserAccount> ();
 
-				//Query the UserAccount table for the logged in user
-				List<UserAccount> users = await userAccountTable
-					.Where (u => u.username == thisUser.username)
-					.Where (u => u.accountType == thisUser.accountType)
-					.ToListAsync ();
-	
-				//Create the record in UserAccount table if no records are found
-				if (users.Count == 0) {
-					CreateUserAccount (thisUser);
-				//Otherwise populate thisUser object with the fetched details
-				} else 
-					thisUser.id = users [0].id;
-					thisUser.gender = users [0].gender;
-					thisUser.age = users [0].age;
-				}
-				//DB read test
-				Console.WriteLine ("Azure get user successful");
-			}//end UserAccount method
+			//Query the UserAccount table for the logged in user
+			List<UserAccount> users = await userAccountTable
+				.Where (u => u.username == thisUser.username)
+				.Where (u => u.accountType == thisUser.accountType)
+				.ToListAsync ();
+
+			//Create the record in UserAccount table if no records are found
+			if (users.Count == 0) {
+				Console.WriteLine ("No user account found, calling CreateUserAccount method");
+				CreateUserAccount (thisUser);
+			//Otherwise populate thisUser object with the fetched details
+			} else {
+				Console.WriteLine ("User account found, populating details");
+				thisUser.id = users [0].id;
+				thisUser.gender = users [0].gender;
+				thisUser.age = users [0].age;
+			}
+			Console.WriteLine ("Azure GetUserAccount method successful");
+		}//end GetUserAccount method
 
 
 ###Azure Create User Account
