@@ -2,7 +2,7 @@
 Because Xamarin requires that any automated testing be done through its "Test Cloud", we have had to implement testing directly into the code. The "Test Cloud" cost upwards of $12,000/year and is not a tool within our budget. 
 
 ###Database Connect
-Class: Azure.cs (line 32)<br/>
+Class: WodstarMobileApp.Azure.cs (line 32)<br/>
 Scope: <br/>
 Code:
 
