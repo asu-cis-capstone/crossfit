@@ -31,6 +31,7 @@ namespace WodstarMobileApp.Droid
 			//Connect to Azure
 			try {
 				Azure.InitializeAzure ();
+				//System.Threading.Thread.Sleep(1000);
 			} catch( Exception e) {
 				Console.WriteLine(e);
 			}
@@ -83,15 +84,15 @@ namespace WodstarMobileApp.Droid
 
 				//Get or create user account in Azure, get data
 				try {
-					Console.WriteLine("About to try to getUserAccount(Util.thisUser");
+					Console.WriteLine("Fetching UserAccount from Azure");
 					Console.WriteLine("Util.thisUser = " + Util.thisUser.firstName + " " + Util.thisUser.lastName);
 					Azure.GetUserAccount (Util.thisUser);
-					Console.WriteLine("Trying to get workouts");
-					//Azure.GetWorkouts();
-					//Azure.GetWorkoutSegments();
-					Console.WriteLine("Trying to get movements");
-					//Azure.GetMovements();
-					//Azure.GetUserJournals(Util.thisUser);
+					Console.WriteLine("Fetching Workouts from Azure");
+					Azure.GetWorkouts();
+					Console.WriteLine("Fetching WorkoutSegments from Azure");
+					Azure.GetWorkoutSegments();
+					Console.WriteLine("Fetching Movements from Azure");
+					Azure.GetMovements();
 				} catch (Exception e) {
 					Console.WriteLine (e);
 				}

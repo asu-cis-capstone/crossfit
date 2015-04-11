@@ -7,10 +7,10 @@ namespace WodstarMobileApp
 	public class UserJournal
 	{
 		[JsonProperty(PropertyName = "id")]
-		public string id { get; set;}
+		public string id { get; set; }
 
 		[JsonProperty(PropertyName = "userAccountId")]
-		public string userAccountId;
+		public String userAccountId { get; set; }
 
 		[JsonProperty(PropertyName = "entryType")]
 		public string entryType { get; set; }
