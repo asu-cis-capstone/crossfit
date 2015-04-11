@@ -65,18 +65,28 @@ namespace WodstarMobileApp
 			nicoleName, lindaName, rosaName, evaName
 		};
 
-		public static String[] stringHeroWods = new String[] { "Johnson", "Roy", "RJ", "Luce", "Abbate",
-			"The Seven", "McCluskey", "Weaver", "Ledesma", "Wittman", "Rankel", "Holbrook", "Whitten",
+		public static String[] stringHeroWods = new String[] { johnsonName, royName, rjName, luceName, abbateName,
+			theSevenName, "McCluskey", "Weaver", "Ledesma", "Wittman", "Rankel", "Holbrook", "Whitten",
 			"Bull", "Collin", "Thompson", "Santora", "Bradshaw", "Santiago", "Carse", "Bradley", "Meadows",
 			"Gator", "Small", "Moon", "Wilmot", "Lumberjack 20", "Strange", "Nick", "Brian", "Jag 28", "Pheezy",
 			"Rahoj", "Desforges", "Paul", "McGhee", "Tyler", "Hansen", "Danny", "DT", "Ryan", "Tommy V", "Garrett",
 			"Mr. Joshua", "JT", "Blake", "Moore", "Brenton", "Murph", "Michael", "Daniel", "Josh", "Jason", "Badger",
-			"Joshie", "Randy", "Griff", "War Frank", "Jerry", "Nate", "Joshua"
+			joshieName, randyName, griffName, warFrankName, jerryName, nateName, joshuaName
 		};
 		
 		public static String[] canadaHeroWods = new String[] { "Stephen", "Nutts", "Erin" };
 		public static String[] australiaHeroWods = new String[] { "Wood" };
 
+
+		public const string johnsonName = "Johnson";
+		public const string royName = "Roy";
+		public const string rjName = "RJ";
+		public const string luceName = "Luce";
+		public const string abbateName = "Abbate";
+		public const string theSevenName = "The Seven";
+		public const string joshieName = "Joshie";
+		public const string randyName = "Randy";
+		public const string nateName = "Nate";
 		public const string amandaId="1";
 		public const string amandaName = "Amanda";
 		public const string jackieId="2";

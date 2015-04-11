@@ -17,18 +17,18 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/menuLayout"
-            android:layout_gravity="top" />
+            android:layout_gravity="center" />
         <ImageView
             android:src="@drawable/wodstar_logo_white"
-            android:layout_width="300dp"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
-            android:id="@+id/imageView1" />
+            android:id="@+id/logoImageView" />
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/menuLayout"
-            android:layout_gravity="top">
+            android:id="@+id/hamburgerLayout"
+            android:layout_gravity="left">
             <Button
                 android:layout_width="49.1dp"
                 android:layout_height="45.6dp"
@@ -40,7 +40,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:id="@+id/iconLayout"
-            android:layout_gravity="top">
+            android:layout_gravity="right">
             <ImageView
                 android:src="@drawable/icon"
                 android:layout_width="wrap_content"

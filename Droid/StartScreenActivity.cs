@@ -25,13 +25,25 @@ namespace WodstarMobileApp.Droid
 			//Show the Main layout
 			SetContentView (Resource.Layout.Main);
 
+			ImageButton wodsButton = FindViewById<ImageButton> (Resource.Id.wodsImageButton);
+
+			//TODO: Remove before launch - demo/testing purposes only.
+			wodsButton.Click += (sender, e) => {
+				string intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.amandaName];
+				string intentWorkoutName = WorkoutUtil.amandaName;
+				var intent = new Intent (this, typeof(WorkoutActivity));
+				intent.PutExtra ("workoutName", intentWorkoutName);
+				intent.PutExtra ("workoutId", intentWorkoutId);
+				StartActivity (intent);
+			};
+
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
 			hamburgerButton.Click += (sender, e) => {
 				menu.AnimatedOpened = !menu.AnimatedOpened;
 			};
 
-			TextView titleButton = FindViewById<TextView> (Resource.Id.titleTextView);
+			ImageView titleButton = FindViewById<ImageView> (Resource.Id.titleTextView);
 			TextView homeButton = FindViewById <TextView> (Resource.Id.homeTextView);
 			TextView profileButton = FindViewById <TextView> (Resource.Id.profileTextView);
 			TextView wodLibraryButton = FindViewById <TextView> (Resource.Id.wodLibraryTextView);

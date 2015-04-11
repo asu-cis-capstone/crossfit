@@ -120,25 +120,31 @@
                     android:textColor="#FFFFFF"
                     android:layout_centerInParent="true"
                     android:text="Start" />
-                <Button
-                    android:text="Add to Log"
-                    android:id="@+id/logButton"
-                    android:background="#00FFFFFF"
-                    android:textColor="#FFFFFF"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/timerButton" />
-                <Button
-                    android:text="Restart"
-                    android:id="@+id/restartButton"
-                    android:background="#00FFFFFF"
-                    android:textColor="#FFFFFF"
-                    android:layout_centerInParent="true"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/timerButton" />
             </RelativeLayout>
+            <LinearLayout
+                android:id="@+id/buttonLayout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_height="45.6dp"
+                    android:background="#73FFFFFF"
+                    android:id="@+id/logButton"
+                    android:text="Log Workout" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:layout_height="45.6dp"
+                    android:background="#73FFFFFF"
+                    android:id="@+id/restartButton"
+                    android:text="Restart" />
+            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
