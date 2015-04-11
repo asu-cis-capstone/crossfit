@@ -185,13 +185,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
-    <Compile Include="Controllers\MovementSegmentController.cs" />
+    <Compile Include="Controllers\WorkoutSegmentController.cs" />
     <Compile Include="Controllers\MovementController.cs" />
     <Compile Include="Controllers\UserAccountController.cs" />
     <Compile Include="Controllers\UserJournalsController.cs" />
     <Compile Include="Controllers\WorkoutController.cs" />
     <Compile Include="DataObjects\Movement.cs" />
-    <Compile Include="DataObjects\MovementSegment.cs" />
+    <Compile Include="DataObjects\WorkoutSegment.cs" />
     <Compile Include="DataObjects\UserAccount.cs" />
     <Compile Include="DataObjects\UserJournal.cs" />
     <Compile Include="DataObjects\Workout.cs" />

@@ -5,22 +5,34 @@ namespace wodstarService.DataObjects
 {
     public class Movement : EntityData
     {
-        public string Classification { get; set; }
+        public String classification { get; set; }
 
-        public string Equipment { get; set; }
+        public String name { get; set; }
 
-        public string Type { get; set; }
+        public String equipment { get; set; }
 
-        public string Name { get; set; }
+        public String type { get; set; }
 
-        public String RxDescription { get; set; }
+        public String blackDiamondDescription { get; set; }
 
-        public String BlackDiamondDescription { get; set; }
+        public String blueSquareDescription { get; set; }
 
-        public String BlueSquareDescription { get; set; }
+        public String greenCircleDescription { get; set; }
 
-        public String GreenCircleDescription { get; set; }
+        public String rxVideoUrl { get; set; }
 
-        public String Url { get; set; }
+        public String rxImageUrl { get; set; }
+
+        public String blackDiamondVideoUrl { get; set; }
+
+        public String blackDiamondImageUrl { get; set; }
+
+        public String blueSquareVideoUrl { get; set; }
+
+        public String blueSquareImageUrl { get; set; }
+
+        public String greenCircleVideoUrl { get; set; }
+
+        public String greenCircleImageUrl { get; set; }
     }
 }

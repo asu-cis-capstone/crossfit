@@ -31,7 +31,7 @@ namespace wodstarService.Models
 
         public DbSet<Movement> Movements { get; set; }
 
-        public DbSet<MovementSegment> MovementSegments { get; set; }
+        public DbSet<WorkoutSegment> MovementSegments { get; set; }
 
         public DbSet<UserJournal> UserJournals { set; get; }
 
