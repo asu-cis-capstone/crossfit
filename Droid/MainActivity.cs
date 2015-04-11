@@ -39,7 +39,9 @@ namespace WodstarMobileApp.Droid
 			//If Facebook session is already open from a previous login, request user info
 			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
 				//Get user info from Facebook
+				Console.WriteLine("Fetching user information from open Facebook session");
 				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
+				Console.WriteLine ("Successfully fetched user information from Facebook");
 			} 
 		}//end OnCreate method
 

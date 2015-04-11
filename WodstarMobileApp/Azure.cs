@@ -65,8 +65,8 @@ namespace WodstarMobileApp
 					GetUserJournals (thisUser);
 				}
 				Console.WriteLine ("Azure GetUserAccount method successful");
-			} catch (System.Net.WebException e) {
-				Console.WriteLine ("NameResolution detected during GetUserAccount(), retrying connection to Azure");
+			} catch (System.Net.WebException) {
+				Console.WriteLine ("NameResolution error detected during GetUserAccount(), retrying connection to Azure");
 				GetUserAccount (thisUser);
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.GetUserAccount(): " + e);
@@ -88,8 +88,8 @@ namespace WodstarMobileApp
 				//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 				GetUserAccount (thisUser);
 				Console.WriteLine ("CreateUserAccount method successful");
-			} catch (System.Net.WebException e) {
-				Console.WriteLine ("NameResolution detected during CreateUserAccount(), retrying connection to Azure");
+			} catch (System.Net.WebException) {
+				Console.WriteLine ("NameResolution error detected during CreateUserAccount(), retrying connection to Azure");
 				CreateUserAccount (thisUser);
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.CreateUserAccount(): " + e);
@@ -118,8 +118,8 @@ namespace WodstarMobileApp
 				}
 
 				Console.WriteLine ("GetWorkouts method successful");
-			} catch (System.Net.WebException e) {
-				Console.WriteLine ("NameResolution detected during GetWorkouts(), retrying connection to Azure");
+			} catch (System.Net.WebException) {
+				Console.WriteLine ("NameResolution error detected during GetWorkouts(), retrying connection to Azure");
 				GetWorkouts ();
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.GetWorkouts(): " + e);
@@ -148,8 +148,8 @@ namespace WodstarMobileApp
 				}
 
 				Console.WriteLine ("GetWorkoutSegments method successful");
-			} catch (System.Net.WebException e) {
-				Console.WriteLine ("NameResolution detected during GetWorkoutSegments(), retrying connection to Azure");
+			} catch (System.Net.WebException) {
+				Console.WriteLine ("NameResolution error detected during GetWorkoutSegments(), retrying connection to Azure");
 				GetWorkoutSegments ();
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.GetWorkoutSegments(): " + e);
@@ -175,8 +175,8 @@ namespace WodstarMobileApp
 				}
 
 				Console.WriteLine ("GetMovements method successful");
-			} catch (System.Net.WebException e) {
-				Console.WriteLine ("NameResolution detected during GetMovements(), retrying connection to Azure");
+			} catch (System.Net.WebException) {
+				Console.WriteLine ("NameResolution error detected during GetMovements(), retrying connection to Azure");
 				GetMovements ();
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.GetMovements(): " + e);
@@ -204,8 +204,8 @@ namespace WodstarMobileApp
 				}
 
 				Console.WriteLine ("GetUserJournal method successful");
-			} catch (System.Net.WebException e) {
-				Console.WriteLine ("NameResolution detected during GetUserJournals(), retrying connection to Azure");
+			} catch (System.Net.WebException) {
+				Console.WriteLine ("NameResolution error detected during GetUserJournals(), retrying connection to Azure");
 				GetUserJournals (thisUser);
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.GetUserJournals(): " + e);
@@ -228,8 +228,8 @@ namespace WodstarMobileApp
 				GetUserJournals (thisUser);
 
 				Console.WriteLine ("CreateUserJournal method successful");
-			} catch (System.Net.WebException e) {
-				Console.WriteLine ("NameResolution detected during CreateUserJournal(), retrying connection to Azure");
+			} catch (System.Net.WebException) {
+				Console.WriteLine ("NameResolution error detected during CreateUserJournal(), retrying connection to Azure");
 				CreateUserJournal (thisUser, journal);
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.CreateUserJournal(): " + e);
