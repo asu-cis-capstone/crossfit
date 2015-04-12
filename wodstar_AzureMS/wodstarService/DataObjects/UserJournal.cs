@@ -16,5 +16,7 @@ namespace wodstarService.DataObjects
         public string EntryType { get; set; }
 
         public string StatId { get; set; }
+
+        public DateTime StatDateTime { get; set; }
     }
 }

@@ -27,6 +27,9 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "statResult")]
 		public string statResult { get; set; }
 
+		[JsonProperty(PropertyName = "statDateTime")]
+		public DateTime statDateTime { get; set; }
+
 		//Default constructor
 		public UserJournal () {
 
