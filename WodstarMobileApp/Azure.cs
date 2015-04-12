@@ -194,7 +194,7 @@ namespace WodstarMobileApp
 				//Fetch all of this user's journals into a List
 				Console.WriteLine("Fetching user's journals from Azure");
 				userJournals = await userJournalTable
-					//.Where (uj => uj.id == thisUser.id)
+					.Where (uj => uj.userAccountId == thisUser.id)
 					.ToListAsync();
 
 				//Debug output to the console

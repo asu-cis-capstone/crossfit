@@ -5,16 +5,16 @@ namespace wodstarService.DataObjects
 {
     public class UserJournal : EntityData
     {
-        public string userAccountId { get; set; }
+        public string UserAccountId { get; set; }
 
-        public string statType { get; set; }
+        public string StatType { get; set; }
 
-        public string statName { get; set; }
+        public string StatName { get; set; }
 
-        public string statResult { get; set; }
+        public string StatResult { get; set; }
 
-        public string entryType { get; set; }
+        public string EntryType { get; set; }
 
-        public string statId { get; set; }
+        public string StatId { get; set; }
     }
 }

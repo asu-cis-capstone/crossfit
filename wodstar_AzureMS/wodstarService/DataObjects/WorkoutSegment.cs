@@ -5,20 +5,20 @@ namespace wodstarService.DataObjects
 {
     public class WorkoutSegment : EntityData
     {
-        public String segmentType { get; set; }
+        public String SegmentType { get; set; }
 
-        public String workoutId { get; set; }
+        public String WorkoutId { get; set; }
 
-        public String segmentMovements { get; set; }
+        public String SegmentMovements { get; set; }
 
-        public String movementDescriptions { get; set; }
+        public String MovementDescriptions { get; set; }
 
-        public String segmentHeader { get; set; }
+        public String SegmentHeader { get; set; }
 
-        public String segmentDescription { get; set; }
+        public String SegmentDescription { get; set; }
 
-        public int repetitions { get; set; }
+        public int Repetitions { get; set; }
 
-        public int time { get; set; }
+        public int Time { get; set; }
     }
 }
