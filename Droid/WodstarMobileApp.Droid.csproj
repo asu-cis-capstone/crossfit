@@ -200,13 +200,13 @@
     <AndroidResource Include="Resources\drawable\canadian.jpg" />
     <AndroidResource Include="Resources\layout\AutcompleteTextViewTemplate.axml" />
     <AndroidResource Include="Resources\drawable\splash.jpg" />
-    <AndroidResource Include="Resources\drawable\camilleButton.png" />
-    <AndroidResource Include="Resources\drawable\heroButton.png" />
     <AndroidResource Include="Resources\drawable\articles.jpg" />
-    <AndroidResource Include="Resources\drawable\girlsButton.png" />
-    <AndroidResource Include="Resources\drawable\wodstarWodsButton.jpg" />
     <AndroidResource Include="Resources\drawable\wodsButton.png" />
     <AndroidResource Include="Resources\drawable\movementsButton.png" />
+    <AndroidResource Include="Resources\drawable\camille.png" />
+    <AndroidResource Include="Resources\drawable\girls.png" />
+    <AndroidResource Include="Resources\drawable\hero.png" />
+    <AndroidResource Include="Resources\drawable\wodstar.jpg" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

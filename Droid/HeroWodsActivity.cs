@@ -28,6 +28,7 @@ namespace WodstarMobileApp.Droid
 			autocompleteHero = FindViewById<AutoCompleteTextView> (Resource.Id.autocompleteHero);
 			var adapter = new ArrayAdapter<String> (this, Resource.Layout.AutcompleteTextViewTemplate, WorkoutUtil.stringHeroWods);
 			autocompleteHero.Adapter = adapter;
+			autocompleteHero.ClearFocus ();
 			autocompleteHero.SetSelectAllOnFocus (true);
 			autocompleteHero.Threshold = 1;
 			autocompleteHero.SetText ("Search", false);

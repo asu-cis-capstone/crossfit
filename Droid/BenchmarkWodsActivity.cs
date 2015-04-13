@@ -29,6 +29,7 @@ namespace WodstarMobileApp.Droid
 			autocompleteBenchmark = FindViewById<AutoCompleteTextView> (Resource.Id.autocompleteBenchmark);
 			var adapter = new ArrayAdapter<String> (this, Resource.Layout.AutcompleteTextViewTemplate, WorkoutUtil.stringBenchmarkWods);
 			autocompleteBenchmark.Adapter = adapter;
+			autocompleteBenchmark.ClearFocus ();
 			autocompleteBenchmark.SetSelectAllOnFocus (true);
 			autocompleteBenchmark.Threshold = 1;
 			autocompleteBenchmark.SetText ("Search", false);
