@@ -70,16 +70,17 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
                 android:id="@+id/progressBarLayout">
                 <ImageButton
                     android:src="@+drawable/girls"
                     android:scaleType="centerCrop"
-                    android:padding="0dp"
+                	android:padding="0dp"
+                	adroid:layout_centerInParent="true"
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
-                    android:id="@+id/benchmarkWodsButton" />
+                    android:id="@+id/benchmarkWodsButton"/>
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="80dp"
@@ -103,8 +104,9 @@
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
                     android:id="@+id/heroWodsButton"
+                    adroid:layout_centerInParent="true"
                     android:scaleType="centerCrop"
-                    android:padding="0dp" />
+                android:padding="0dp"/>
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="80dp"
@@ -120,16 +122,17 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
                 android:layout_height="wrap_content">
                 <ImageButton
                     android:src="@+drawable/camille"
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
                     android:scaleType="centerCrop"
-                    android:padding="0dp"
-                    android:id="@+id/camilleWodsButton" />
+                    adroid:layout_centerInParent="true"
+                android:padding="0dp"
+                    android:id="@+id/camilleWodsButton"/>
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="80dp"
@@ -145,17 +148,17 @@
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_marginRight="30dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginLeft="30dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginLeft="30dp"
                 android:layout_height="wrap_content">
                 <ImageButton
                     android:src="@+drawable/wodstar"
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
                     android:id="@+id/wodstarWodsButton"
-                    android:layout_marginRight="30dp"
+                    adroid:layout_centerInParent="true"
                     android:scaleType="centerCrop"
-                    android:padding="0dp" />
+               		android:padding="0dp" />
                 <TextView
                     android:layout_width="300dp"
                     android:layout_height="80dp"
