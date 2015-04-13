@@ -121,9 +121,7 @@
     <AndroidResource Include="Resources\layout\WodPage.axml" />
     <AndroidResource Include="Resources\drawable\hamburger.png" />
     <AndroidResource Include="Resources\layout\MenuLayout.axml" />
-    <AndroidResource Include="Resources\drawable\camille.png" />
     <AndroidResource Include="Resources\drawable\danim1.png" />
-    <AndroidResource Include="Resources\drawable\graph.png" />
     <AndroidResource Include="Resources\layout\MovementLibraryContent.axml">
       <DependentUpon>MovementLibrary.axml</DependentUpon>
     </AndroidResource>
@@ -176,9 +174,6 @@
     <AndroidResource Include="Resources\drawable\rosa.png" />
     <AndroidResource Include="Resources\drawable\login.png" />
     <AndroidResource Include="Resources\drawable\wodstar_logo_white.png" />
-    <AndroidResource Include="Resources\drawable\wodsImage.png" />
-    <AndroidResource Include="Resources\drawable\movementsImage.png" />
-    <AndroidResource Include="Resources\drawable\articles.png" />
     <AndroidResource Include="Resources\drawable\profileImage.png" />
     <AndroidResource Include="Resources\drawable-hdpi\wodstar_logo_white.png" />
     <AndroidResource Include="Resources\drawable-hdpi\splash.png" />
@@ -205,6 +200,13 @@
     <AndroidResource Include="Resources\drawable\canadian.jpg" />
     <AndroidResource Include="Resources\layout\AutcompleteTextViewTemplate.axml" />
     <AndroidResource Include="Resources\drawable\splash.jpg" />
+    <AndroidResource Include="Resources\drawable\camilleButton.png" />
+    <AndroidResource Include="Resources\drawable\heroButton.png" />
+    <AndroidResource Include="Resources\drawable\articles.jpg" />
+    <AndroidResource Include="Resources\drawable\girlsButton.png" />
+    <AndroidResource Include="Resources\drawable\wodstarWodsButton.jpg" />
+    <AndroidResource Include="Resources\drawable\wodsButton.png" />
+    <AndroidResource Include="Resources\drawable\movementsButton.png" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

@@ -20,45 +20,17 @@ namespace WodstarMobileApp
 		public const String benchmarkType = "benchmark";
 		public const String wodstarType = "wodstar";
 
-		//Sample workouts hardcoded for demo purposes
-		//TODO: Remove before launch
-		public static WorkoutSegment nicoleSegment = new WorkoutSegment(WorkoutUtil.amrapType, WorkoutUtil.nicoleId, "DESCRIPTION", "AMRAP in 20:00 of:", 1, new string[]{"400 meter, Max rep"}, MovementLinks.runMovement, MovementLinks.pullUpMovement);
-		public static WorkoutSegment amandaSegment = new WorkoutSegment (WorkoutUtil.forTimeType, WorkoutUtil.amandaId, "Description", "3 Rounds for time of 9-7-5 reps of:", 
-			1, new String[]{null, null}, new Movement[]{MovementLinks.ringMuscleUpMovement, MovementLinks.squatSnatchMovement});
-		public static WorkoutSegment jackieSegment = new WorkoutSegment (WorkoutUtil.forTimeType, WorkoutUtil.jackieId, "Description", 
-			"Complete the following for time:", 1, new String[]{"1,000 meters ", "50 (45/35)", "30"}, new Movement[] {MovementLinks.rowingMovement, MovementLinks.thrusterMovement, 
-				MovementLinks.pullUpMovement});
-		private static Workout jackieWorkout = new Workout ("Jackie", WorkoutUtil.benchmarkType);
-		private static Workout amandaWorkout = new Workout ("Amanda", WorkoutUtil.benchmarkType);
-		private static Workout nicoleWorkout = new Workout("Nicole", WorkoutUtil.benchmarkType);
+		public static List<WorkoutSegment> allSegments;
 
 		//Id and full workout
-		public static Dictionary<string, Workout> benchmarkWods = new Dictionary<string, Workout>() {
-			{amandaId, amandaWorkout},
-			{jackieId, jackieWorkout},
-			{nicoleId, nicoleWorkout}
-		};
+		public static Dictionary<string, Workout> benchmarkWods = new Dictionary<string, Workout>();
 		public static Dictionary<string, Workout> heroWods = new Dictionary<string, Workout>();
 		public static Dictionary<string, Workout> camilleWods = new Dictionary<string, Workout>();
 		public static Dictionary<string, Workout> wodstarWods = new Dictionary<string, Workout>();
 
 		//Initialized by Azure. Name, Id.
-		public static Dictionary<string, string> benchmarkIds = new Dictionary<string, string>() {
-			{amandaName, amandaId},
-			{jackieName, jackieId},
-			{kellyName, kellyId},
-			{helenName, helenId},
-			{karenName, karenId}
-		};
-    
-		//Name, Id
-		public static Dictionary<string, string> heroIds = new Dictionary<string, string>() {
-			{jerryName, jerryId},
-			{joshuaName, joshuaId},
-			{warFrankName, warFrankId},
-			{garrettName, garrettId},
-			{griffName, griffId}
-		};
+		public static Dictionary<string, string> benchmarkIds = new Dictionary<string, string>();
+		public static Dictionary<string, string> heroIds = new Dictionary<string, string>();
 		public static Dictionary<string, string> camilleIds = new Dictionary<string, string>();
 		public static Dictionary<string, string> wodstarIds = new Dictionary<string, string>();
 

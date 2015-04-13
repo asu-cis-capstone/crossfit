@@ -107,87 +107,87 @@ namespace WodstarMobileApp.Droid
 		}
 
 		void goToAmandaWod(object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.amandaName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.amandaName].id;
 			intentWorkoutName = WorkoutUtil.amandaName;
 			goToWorkout ();
 		}
 		void goToJackieWod(object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.jackieName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.jackieName].id;
 			intentWorkoutName = WorkoutUtil.jackieName;
 			goToWorkout ();
 		}
 		void goToKellyWod(object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.nicoleId];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.nicoleId].id;
 			intentWorkoutName = WorkoutUtil.nicoleName;
 			goToWorkout ();
 		}
 		void goToHelenWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.helenName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.helenName].id;
 			intentWorkoutName = WorkoutUtil.helenName;
 			goToWorkout ();
 		}
 		void goToKarenWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.karenName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.karenName].id;
 			intentWorkoutName = WorkoutUtil.karenName;
 			goToWorkout ();
 		}
 		void goToIsabelWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.isabelName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.isabelName].id;
 			intentWorkoutName = WorkoutUtil.isabelName;
 			goToWorkout ();
 		}
 		void goToGraceWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.graceName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.graceName].id;
 			intentWorkoutName = WorkoutUtil.graceName;
 			goToWorkout ();
 		}
 		void goToFranWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.franName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.franName].id;
 			intentWorkoutName = WorkoutUtil.franName;
 			goToWorkout ();
 		}
 		void goToElizabethWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.elizabethName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.elizabethName].id;
 			intentWorkoutName = WorkoutUtil.elizabethName;
 			goToWorkout ();
 		}
 		void goToDianeWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.dianeName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.dianeName].id;
 			intentWorkoutName = WorkoutUtil.dianeName;
 			goToWorkout ();
 		}
 		void goToCindyWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.cindyName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.cindyName].id;
 			intentWorkoutName = WorkoutUtil.cindyName;
 			goToWorkout ();
 		}
 		void goToChelseaWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.chelseaName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.chelseaName].id;
 			intentWorkoutName = WorkoutUtil.chelseaName;
 			goToWorkout ();
 		}
 		void goToAnnieWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.annieName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.annieName].id;
 			intentWorkoutName = WorkoutUtil.annieName;
 			goToWorkout ();
 		}
 		void goToChristineWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.christineName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.christineName].id;
 			intentWorkoutName = WorkoutUtil.christineName;
 			goToWorkout ();
 		}
 		void goToBarbaraWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.barbaraName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.barbaraName].id;
 			intentWorkoutName = WorkoutUtil.barbaraName;
 			goToWorkout ();
 		}
 		void goToAngieWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.angieName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.angieName].id;
 			intentWorkoutName = WorkoutUtil.angieName;
 			goToWorkout ();
 		}
 		void goToMaryWod (object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.maryName];
+			intentWorkoutId = WorkoutUtil.benchmarkWods [WorkoutUtil.maryName].id;
 			intentWorkoutName = WorkoutUtil.maryName;
 			goToWorkout ();
 		}

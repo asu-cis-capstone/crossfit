@@ -210,16 +210,14 @@ namespace WodstarMobileApp.Droid
 			circularProgressBar.ProgressColor = blueWodstarColor;
 			circularProgressBar.CircleStrokeWidth = 20;
 			circularProgressBar.Progress = 0;
-
-		/*	if(segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
+			if(segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
 				startStopwatchTimer ();
 			} else if (segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
 				startAmrapTimer (segments [thisSegment].time); 
 			} else if (segments[thisSegment].segmentType == WorkoutUtil.emomType) {
+				//TODO: Implement EMOM timer
 			//	startEmomTimer(segments [thisSegment].time, segments[thisSegment].repetitions);
 			}
-		*/
-			startAmrapTimer (2);
 			circularProgressBar.IndeterminateInterval = 320;
 			circularProgressBar.Indeterminate=true;	
 		}//End startTimer()
@@ -312,17 +310,30 @@ namespace WodstarMobileApp.Droid
 				Console.WriteLine ("No ID dictionary found that contains this workoutkey");
 			}
 			getThisWorkoutSegments (workoutId);
-			if (thisWorkout.workoutType == WorkoutUtil.heroType) {
-				if (WorkoutUtil.stringHeroWods.Contains (thisWorkout.workoutName)) {
-					headerLayout.SetBackgroundResource (Resource.Drawable.american);
-				} else if (WorkoutUtil.canadaHeroWods.Contains (thisWorkout.workoutName)) {
-					headerLayout.SetBackgroundResource (Resource.Drawable.canadian);
-				} else {
-					headerLayout.SetBackgroundResource (Resource.Drawable.australian);
+			setHeader ();
+			Console.WriteLine ("This workout: " + thisWorkout.workoutName);
+		}
+			
+		private void getThisWorkoutSegments(string workoutId) {
+			foreach(WorkoutSegment s in WorkoutUtil.allSegments) {
+				if(s.workoutId == thisWorkout.id) {
+					segments.Add (s);
 				}
-			} else if (thisWorkout.workoutType == WorkoutUtil.benchmarkType) {
-				Console.WriteLine ("thisWorkout.workoutType = WorkoutUtil.benchmarkType");
-				switch (workoutId) {
+			}
+		}
+
+		private void setHeader() {
+		if (thisWorkout.workoutType == WorkoutUtil.heroType) {
+			if (WorkoutUtil.stringHeroWods.Contains (thisWorkout.workoutName)) {
+				headerLayout.SetBackgroundResource (Resource.Drawable.american);
+			} else if (WorkoutUtil.canadaHeroWods.Contains (thisWorkout.workoutName)) {
+				headerLayout.SetBackgroundResource (Resource.Drawable.canadian);
+			} else {
+				headerLayout.SetBackgroundResource (Resource.Drawable.australian);
+			}
+		} else if (thisWorkout.workoutType == WorkoutUtil.benchmarkType) {
+			Console.WriteLine ("thisWorkout.workoutType = WorkoutUtil.benchmarkType");
+			switch (workoutId) {
 				case WorkoutUtil.amandaId: //Amanda
 					headerLayout.SetBackgroundResource (Resource.Drawable.amanda);
 					break;
@@ -368,11 +379,12 @@ namespace WodstarMobileApp.Droid
 				case WorkoutUtil.christineId:
 					headerLayout.SetBackgroundResource (Resource.Drawable.christine);
 					break;
-					//TODO: uncomment after adding in barbara photo
-			/*	case WorkoutUtil.barbaraId:
-					headerLayout.SetBackgroundResource (Resource.Drawable.barbara);
-					break;
-			*/	case WorkoutUtil.angieId:
+				//TODO: uncomment after adding in barbara photo
+				/*	case WorkoutUtil.barbaraId:
+						headerLayout.SetBackgroundResource (Resource.Drawable.barbara);
+						break;
+				*/
+				case WorkoutUtil.angieId:
 					headerLayout.SetBackgroundResource (Resource.Drawable.angie);
 					break;
 				case WorkoutUtil.maryId:
@@ -391,26 +403,9 @@ namespace WodstarMobileApp.Droid
 					headerLayout.SetBackgroundResource (Resource.Drawable.rosa);
 					break;
 				default: 
-			//TODO: Add error handling
+					//TODO: Add error handling
 					break;
 				}
-			}
-			Console.WriteLine ("This workout: " + thisWorkout.workoutName);
-		}
-
-		//TODO: Have this call to Azure to get segments corresponding to workout Id
-		private void getThisWorkoutSegments(string workoutId) {
-			switch(workoutId) {
-			case WorkoutUtil.amandaId:
-				segments.Add (WorkoutUtil.amandaSegment);
-				break;
-			case WorkoutUtil.jackieId:
-				segments.Add (WorkoutUtil.jackieSegment);
-				break;
-			case WorkoutUtil.nicoleId:
-				WorkoutUtil.nicoleSegment.time = 2;
-				segments.Add (WorkoutUtil.nicoleSegment);
-				break;
 			}
 		}
 

@@ -100,37 +100,38 @@ namespace WodstarMobileApp
 		public async static void GetWorkouts ()
 		{
 			Console.WriteLine ("GetWorkouts method called");
+			try {
+				//Set Workouts table object
+				workoutTable = azureClient.GetTable<Workout> ();
 
-			//Set Workouts table object
-			workoutTable = azureClient.GetTable<Workout> ();
+				//Fetch all workouts into a List
+				Console.WriteLine("Getting workouts from Azure");
+				workouts = await workoutTable.ToListAsync ();
 
-			//Fetch all workouts into a List
-			Console.WriteLine("Getting workouts from Azure");
-			workouts = await workoutTable.ToListAsync ();
-
-			//Debug output to the console
-			Console.WriteLine ("DEBUG - GetWorkouts");
-			foreach (var workout in workouts) {				
-				if (workouts != null) {
-					Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
-					//Create new Workout object off of data
-					Workout workoutDom = new Workout (workout.workoutName, workout.workoutType);
-					//Add to correct data lists in workoutUtil
-					if (workout.workoutType == WorkoutUtil.benchmarkType) {
-						WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.benchmarkWods.Add (workout.id, workoutDom);					
-					} else if (workout.workoutType == WorkoutUtil.heroType) {
-						WorkoutUtil.heroIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.heroWods.Add (workout.id, workoutDom);	
-					} else if (workout.workoutType == WorkoutUtil.camilleType) {
-						WorkoutUtil.camilleIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.camilleWods.Add (workout.id, workoutDom);	
-					} else if (workout.workoutType == WorkoutUtil.wodstarType) {
-						WorkoutUtil.wodstarIds.Add (workout.workoutName, workout.id);
-						WorkoutUtil.wodstarWods.Add (workout.id, workoutDom);	
+				//Debug output to the console
+				Console.WriteLine ("DEBUG - GetWorkouts");
+				foreach (var workout in workouts) {				
+					if (workouts != null) {
+						Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
+						//Create new Workout object off of data
+						Workout workoutDom = new Workout (workout.workoutName, workout.workoutType);
+						//Add to correct data lists in workoutUtil
+						if (workout.workoutType == WorkoutUtil.benchmarkType) {
+							WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
+							WorkoutUtil.benchmarkWods.Add (workout.id, workoutDom);					
+						} else if (workout.workoutType == WorkoutUtil.heroType) {
+							WorkoutUtil.heroIds.Add (workout.workoutName, workout.id);
+							WorkoutUtil.heroWods.Add (workout.id, workoutDom);	
+						} else if (workout.workoutType == WorkoutUtil.camilleType) {
+							WorkoutUtil.camilleIds.Add (workout.workoutName, workout.id);
+							WorkoutUtil.camilleWods.Add (workout.id, workoutDom);	
+						} else if (workout.workoutType == WorkoutUtil.wodstarType) {
+							WorkoutUtil.wodstarIds.Add (workout.workoutName, workout.id);
+							WorkoutUtil.wodstarWods.Add (workout.id, workoutDom);	
+						}
 					}
+					Console.WriteLine ("GetWorkouts method successful");
 				}
-				Console.WriteLine ("GetWorkouts method successful");
 			} catch (System.Net.WebException) {
 				Console.WriteLine ("NameResolution error detected during GetWorkouts(), retrying connection to Azure");
 				GetWorkouts ();
@@ -154,11 +155,12 @@ namespace WodstarMobileApp
 				//Debug output to the console
 				Console.WriteLine ("DEBUG - GetWorkoutSegments");
 				if (workoutSegments != null) {
+					Console.WriteLine("WorkoutSegments table not null");
+					WorkoutUtil.allSegments = new List<WorkoutSegment>();
 					foreach (var segment in workoutSegments) {
-						Console.WriteLine (string.Format ("ID: {0}\nWorkout: {1}\nType: {2}", segment.id, segment.workoutId, segment.segmentType));
+						WorkoutUtil.allSegments.Add(segment);
 					}
 				}
-
 				Console.WriteLine ("GetWorkoutSegments method successful");
 			} catch (System.Net.WebException) {
 				Console.WriteLine ("NameResolution error detected during GetWorkoutSegments(), retrying connection to Azure");

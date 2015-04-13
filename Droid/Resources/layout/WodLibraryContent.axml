@@ -71,7 +71,7 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/progressBarLayout">
                 <ImageButton
-                    android:src="@+drawable/amanda"
+                    android:src="@+drawable/girlsButton"
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
                     android:id="@+id/benchmarkWodsButton"
@@ -88,13 +88,13 @@
                     android:gravity="center"
                     android:textColor="#FFFFFF"
                     android:layout_centerInParent="true"
-                    android:text="BENCHMARK" />
+                    android:text="GIRLS" />
             </RelativeLayout>
             <RelativeLayout
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <ImageButton
-                    android:src="@+drawable/jackie"
+                    android:src="@+drawable/heroButton"
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
                     android:id="@+id/heroWodsButton"
@@ -117,7 +117,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <ImageButton
-                    android:src="@+drawable/kelly"
+                    android:src="@+drawable/camilleButton"
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
                     android:id="@+id/camilleWodsButton"
@@ -140,7 +140,7 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content">
                 <ImageButton
-                    android:src="@+drawable/helen"
+                    android:src="@+drawable/wodstarWodsButton"
                     android:layout_width="match_parent"
                     android:layout_height="169.1dp"
                     android:id="@+id/wodstarWodsButton"
