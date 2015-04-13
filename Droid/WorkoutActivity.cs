@@ -39,12 +39,15 @@ namespace WodstarMobileApp.Droid
 		LinearLayout buttonLayout;
 		int amrapResult =0;
 
+		private List<WorkoutSegment> segments;
 		int thisSegment =0;
 
 		protected override void OnCreate (Bundle bundle)
 		{
 			base.OnCreate (bundle);
 			SetContentView (Resource.Layout.WodPage);
+
+			segments = new List<WorkoutSegment> ();
 
 			//Get all the changeable sections of the layout.
 			TableLayout workoutDetailsLayout = FindViewById<TableLayout> (Resource.Id.workoutDetailsLayout);
@@ -67,22 +70,22 @@ namespace WodstarMobileApp.Droid
 			setThisWorkout ();
 
 			//Dynamically load workout content
-			for(int i=0;i <thisWorkout.segments.Length; i++) {
+			for(int i=0;i <segments.Count; i++) {
 				TableRow segmentHeader = new TableRow (this);
 				TextView headerText = new TextView (this);
-				headerText.Text =thisWorkout.segments [i].segmentHeader;
+				headerText.Text =segments [i].segmentHeader;
 				headerText.SetTextAppearance (this, global::Android.Resource.Style.TextAppearanceLarge);
 				segmentHeader.AddView (headerText);
 
 				TableRow segmentDescription = new TableRow (this);
 				TextView descriptionText = new TextView (this);
 				descriptionText.SetTextAppearance(this, global::Android.Resource.Style.TextAppearanceMedium);
-				descriptionText.Text = getRxSegmentDescription (thisWorkout.segments [i]);
+				descriptionText.Text = getRxSegmentDescription (segments [i]);
 				Console.WriteLine("Description text: " + descriptionText.Text);
 				segmentDescription.AddView (descriptionText);
 
 				//Initial call to load RX Video Links
-				loadRxVideos (thisWorkout.segments[i]);
+				loadRxVideos (segments[i]);
 				workoutDetailsLayout.AddView (segmentHeader);
 				workoutDetailsLayout.AddView (segmentDescription);
 			}
@@ -208,14 +211,15 @@ namespace WodstarMobileApp.Droid
 			circularProgressBar.CircleStrokeWidth = 20;
 			circularProgressBar.Progress = 0;
 
-			if(thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
+		/*	if(segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
 				startStopwatchTimer ();
-			} else if (thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
-				startAmrapTimer (thisWorkout.segments [thisSegment].time); 
-			} else if (thisWorkout.segments[thisSegment].segmentType == WorkoutUtil.emomType) {
-			//	startEmomTimer(thisWorkout.segments [thisSegment].time, thisWorkout.segments[thisSegment].repetitions);
+			} else if (segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
+				startAmrapTimer (segments [thisSegment].time); 
+			} else if (segments[thisSegment].segmentType == WorkoutUtil.emomType) {
+			//	startEmomTimer(segments [thisSegment].time, segments[thisSegment].repetitions);
 			}
-
+		*/
+			startAmrapTimer (2);
 			circularProgressBar.IndeterminateInterval = 320;
 			circularProgressBar.Indeterminate=true;	
 		}//End startTimer()
@@ -257,6 +261,7 @@ namespace WodstarMobileApp.Droid
 		}
 
 		private void logData(int workoutId, int finalScore) {
+			//TODO: Implement logging functionality
 			//If for time, final score should be passed in seconds with 2 decimal places
 			//If AMRAP, should be passed as total number of reps.
 			//If EMOM, should be total number of completed minutes
@@ -298,7 +303,6 @@ namespace WodstarMobileApp.Droid
 				thisWorkout = WorkoutUtil.benchmarkWods [workoutId];
 			} else if (WorkoutUtil.heroWods.ContainsKey (workoutId)) {
 				Console.WriteLine ("HeroWods contains key for workoutID");
-
 				thisWorkout = WorkoutUtil.heroWods [workoutId];
 			} else if (WorkoutUtil.camilleWods.ContainsKey(workoutId)) {
 				thisWorkout = WorkoutUtil.camilleWods [workoutId];
@@ -307,6 +311,7 @@ namespace WodstarMobileApp.Droid
 			} else {
 				Console.WriteLine ("No ID dictionary found that contains this workoutkey");
 			}
+			getThisWorkoutSegments (workoutId);
 			if (thisWorkout.workoutType == WorkoutUtil.heroType) {
 				if (WorkoutUtil.stringHeroWods.Contains (thisWorkout.workoutName)) {
 					headerLayout.SetBackgroundResource (Resource.Drawable.american);
@@ -391,6 +396,22 @@ namespace WodstarMobileApp.Droid
 				}
 			}
 			Console.WriteLine ("This workout: " + thisWorkout.workoutName);
+		}
+
+		//TODO: Have this call to Azure to get segments corresponding to workout Id
+		private void getThisWorkoutSegments(string workoutId) {
+			switch(workoutId) {
+			case WorkoutUtil.amandaId:
+				segments.Add (WorkoutUtil.amandaSegment);
+				break;
+			case WorkoutUtil.jackieId:
+				segments.Add (WorkoutUtil.jackieSegment);
+				break;
+			case WorkoutUtil.nicoleId:
+				WorkoutUtil.nicoleSegment.time = 2;
+				segments.Add (WorkoutUtil.nicoleSegment);
+				break;
+			}
 		}
 
 		//YOUTUBE METHODS

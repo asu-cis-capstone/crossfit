@@ -93,7 +93,7 @@ namespace WodstarMobileApp
 				if (workouts != null) {
 					Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
 					//Create new Workout object off of data
-					Workout workoutDom = new Workout (workout.workoutName, workout.workoutType, workout.segments);
+					Workout workoutDom = new Workout (workout.workoutName, workout.workoutType);
 					//Add to correct data lists in workoutUtil
 					if (workout.workoutType == WorkoutUtil.benchmarkType) {
 						WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
@@ -124,7 +124,6 @@ namespace WodstarMobileApp
 			//Fetch all workout segments into a List
 			Console.WriteLine("Fetching workout segments from Azure");
 			workoutSegments = await workoutSegmentTable.ToListAsync ();
-
 			//Debug output to the console
 			Console.WriteLine ("DEBUG - GetWorkoutSegments");
 			if (workoutSegments != null) {
