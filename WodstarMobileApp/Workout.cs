@@ -15,10 +15,13 @@ namespace WodstarMobileApp
 		//The type; benchmark, hero, camille, wodstar
 		[JsonProperty(PropertyName = "workoutType")]
 		public String workoutType { get; set;}
-	
-		public Workout (String name, String type) {
+
+		public WorkoutSegment[] segments;
+			
+		public Workout (String name, String type, params WorkoutSegment[] segments) {
 			this.workoutName = name;
 			this.workoutType = type;
+			this.segments = segments;
 		}
 
 		//Default constructor

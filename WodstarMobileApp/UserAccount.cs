@@ -27,13 +27,6 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "age")]
 		public int age { get; set; }
 
-		[JsonProperty(PropertyName = "userImage")] 
-		public Android.Media.Image userImage { get; set; }
-
-		[JsonProperty(PropertyName = "userJournal")]
-		public List<UserJournal> journal { get; set; }
-
-
 		public UserAccount (string id, string username, string type, string fName, string lName, string gender, int age) {
 			this.id = id;
 			this.username = username;
