@@ -11,6 +11,7 @@ namespace WodstarMobileApp
 		};
 
 		public static List<Movement> allMovements;
+		//Id, Movement
 		public static Dictionary<string, Movement> movementDictionary;
 
 		//Types of movements

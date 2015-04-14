@@ -296,7 +296,7 @@ namespace WodstarMobileApp.Droid
 			
 		void setThisWorkout() {
 			Console.WriteLine ("setThisWorkout() called");
-			if (WorkoutUtil.benchmarkWods.ContainsKey (workoutId)) {
+			if (WorkoutUtil.benchmarkWods.ContainsKey (workoutId)) {				
 				Console.WriteLine ("Benchmark Wods contains key for workoutID");
 				thisWorkout = WorkoutUtil.benchmarkWods [workoutId];
 			} else if (WorkoutUtil.heroWods.ContainsKey (workoutId)) {
@@ -315,8 +315,9 @@ namespace WodstarMobileApp.Droid
 		}
 			
 		private void getThisWorkoutSegments(string workoutId) {
-			foreach(WorkoutSegment s in WorkoutUtil.allSegments) {
+			foreach(WorkoutSegment s in WorkoutUtil.allSegments) {;
 				if(s.workoutId == thisWorkout.id) {
+					s.parseMovements ();
 					segments.Add (s);
 				}
 			}

@@ -1,5 +1,6 @@
 ﻿using System;
 using Newtonsoft.Json;
+using System.Collections.Generic;
 
 namespace WodstarMobileApp
 {
@@ -42,15 +43,32 @@ namespace WodstarMobileApp
 
 		public WorkoutSegment (String type, String workoutId, 
 		                       String header, String description, int repetitions, 
-		                       String[] movementDescriptions, params Movement[] movements)
+		                       String movementDescriptions, String movements)
 		{
 			this.segmentType = type;
 			this.workoutId = workoutId;
 			this.segmentHeader = header;
-			this.segmentMovementsArray = movements;
+			this.segmentMovements = movements;
 			this.repetitions = repetitions;
-			this.movementDescriptionsArray = movementDescriptions;
+			this.movementDescriptions = movementDescriptions;
 			this.segmentDescription = description;
+		}
+
+		public void parseMovements() {
+			String[] movementIds = segmentMovements.Split(',');
+			List<Movement> movementList = new List<Movement>();
+			for(int i = 0; i <movementIds.Length; i++) {
+				if(MovementLinks.movementDictionary.ContainsKey(movementIds[i].Trim())) {
+					Console.WriteLine("Movement key found in dictionary");
+					movementList.Add(MovementLinks.movementDictionary[movementIds[i].Trim()]);
+				} else {
+					Console.WriteLine("Movement key not found : " + movementIds[i]);
+				}
+			}
+			this.movementDescriptionsArray = movementDescriptions.Split (',');
+			Console.WriteLine ("This Segment has " + movementDescriptionsArray.Length + " descriptions.");
+			this.segmentMovementsArray = movementList.ToArray ();
+			Console.WriteLine ("This segment has " + segmentMovementsArray.Length + " movements");
 		}
 
 

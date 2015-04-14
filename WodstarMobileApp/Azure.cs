@@ -103,18 +103,16 @@ namespace WodstarMobileApp
 			try {
 				//Set Workouts table object
 				workoutTable = azureClient.GetTable<Workout> ();
-
 				//Fetch all workouts into a List
 				Console.WriteLine("Getting workouts from Azure");
 				workouts = await workoutTable.ToListAsync ();
-
-				//Debug output to the console
-				Console.WriteLine ("DEBUG - GetWorkouts");
+				Console.WriteLine(workouts.ToString());
 				foreach (var workout in workouts) {				
 					if (workouts != null) {
-						Console.WriteLine (string.Format ("ID: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
+						Console.WriteLine (string.Format ("Workout: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
 						//Create new Workout object off of data
 						Workout workoutDom = new Workout (workout.workoutName, workout.workoutType);
+						workoutDom.id = workout.id;
 						//Add to correct data lists in workoutUtil
 						if (workout.workoutType == WorkoutUtil.benchmarkType) {
 							WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
@@ -151,14 +149,17 @@ namespace WodstarMobileApp
 				//Fetch all workout segments into a List
 				Console.WriteLine("Fetching workout segments from Azure");
 				workoutSegments = await workoutSegmentTable.ToListAsync ();
+				Console.WriteLine(workoutSegments.ToString());
 
-				//Debug output to the console
-				Console.WriteLine ("DEBUG - GetWorkoutSegments");
 				if (workoutSegments != null) {
 					Console.WriteLine("WorkoutSegments table not null");
 					WorkoutUtil.allSegments = new List<WorkoutSegment>();
-					foreach (var segment in workoutSegments) {
-						WorkoutUtil.allSegments.Add(segment);
+					foreach (var segment in workoutSegments) {						
+						WorkoutSegment s = new WorkoutSegment(segment.segmentType, segment.workoutId, segment.segmentHeader, segment.segmentDescription,
+							segment.repetitions, segment.movementDescriptions, segment.segmentMovements);	
+						s.id = segment.id; 
+						WorkoutUtil.allSegments.Add(s);
+						Console.WriteLine("Workout Segment Added: " + s.id);
 					}
 				}
 				Console.WriteLine ("GetWorkoutSegments method successful");
@@ -177,15 +178,36 @@ namespace WodstarMobileApp
 				Console.WriteLine ("GetMovements method called");
 				//Set Movements table object
 				movementTable = azureClient.GetTable<Movement> ();
-
+				MovementLinks.allMovements = new List<Movement>();
+				MovementLinks.movementDictionary = new Dictionary<string, Movement>();
 				//Fetch all movements into a List
-				Console.WriteLine("Fetching data from Azure");
+				Console.WriteLine("Fetching movement data from Azure");
 				movements = await movementTable.ToListAsync ();
-
+				Console.WriteLine(movements.ToString());
 				//Debug output to the console
 				Console.WriteLine ("DEBUG - Movements");
-				foreach (var movement in movements) {
-					Console.WriteLine (string.Format ("ID: {0}\nName: {1}", movement.id, movement.name));
+				for(int i = 0; i <movements.Count; i++) {
+					Console.WriteLine (string.Format ("Movmement # " + i + ": ID: {0}\nName: {1}", movements[i].id, movements[i].name));
+					Movement m = new Movement();
+					m.name = movements[i].name;
+					m.id = movements[i].id.Trim();
+					m.rxImageUrl = movements[i].rxImageUrl;
+					m.rxVideoUrl = movements[i].rxVideoUrl;
+					m.blackDiamondDescription = movements[i].blackDiamondDescription;
+					m.blackDiamondImageUrl = movements[i].blackDiamondImageUrl;
+					m.blackDiamondVideoUrl = movements[i].blackDiamondVideoUrl;
+					m.blueSquareDescription = movements[i].blueSquareDescription;
+					m.blueSquareImageUrl = movements[i].blueSquareImageUrl;
+					m.blueSquareVideoUrl = movements[i].blueSquareVideoUrl;
+					m.greenCircleDescription = movements[i].greenCircleDescription;
+					m.greenCircleImageUrl = movements[i].greenCircleImageUrl;
+					m.greenCircleVideoUrl = movements[i].greenCircleVideoUrl;
+					m.classification = movements[i].classification;
+					m.equipment = movements[i].equipment;
+					m.type = movements[i].type;
+					MovementLinks.allMovements.Add(m);
+					MovementLinks.movementDictionary.Add(m.id, m);
+
 				}
 
 				Console.WriteLine ("GetMovements method successful");
@@ -195,6 +217,8 @@ namespace WodstarMobileApp
 			} catch (Exception e) {
 				Console.WriteLine ("ERROR Azure.GetMovements(): " + e);
 			}
+
+
 		}//end GetMovements method
 
 		//Query UserJournal table for this user's journal entries

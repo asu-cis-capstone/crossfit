@@ -75,12 +75,12 @@ namespace WodstarMobileApp.Droid
 					Console.WriteLine("Fetching UserAccount from Azure");
 					Console.WriteLine("Util.thisUser = " + Util.thisUser.firstName + " " + Util.thisUser.lastName);
 					Azure.GetUserAccount (Util.thisUser);
+					Console.WriteLine("Fetching Movements from Azure");
+					Azure.GetMovements();
 					Console.WriteLine("Fetching Workouts from Azure");
 					Azure.GetWorkouts();
 					Console.WriteLine("Fetching WorkoutSegments from Azure");
 					Azure.GetWorkoutSegments();
-					Console.WriteLine("Fetching Movements from Azure");
-					Azure.GetMovements();
 				} catch (Exception e) {
 					Console.WriteLine (e);
 				}
