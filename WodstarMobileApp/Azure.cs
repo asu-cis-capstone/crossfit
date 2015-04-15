@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Threading.Tasks;
 using System.Collections.Generic;
 using Microsoft.WindowsAzure.MobileServices;
 using Microsoft.WindowsAzure.MobileServices.Sync;
@@ -10,28 +11,33 @@ namespace WodstarMobileApp
 		//class variables
 		private static MobileServiceClient azureClient;
 		private static IMobileServiceTable<UserAccount> userAccountTable;
-		private static IMobileServiceTable<Workout> workoutTable;
+		private static IMobileServiceTableQuery<Workout> workoutTable;
 		public static List<Workout> workouts;
-		private static IMobileServiceTable<WorkoutSegment> workoutSegmentTable;
+		private static IMobileServiceTableQuery<WorkoutSegment> workoutSegmentTable;
 		public static List<WorkoutSegment> workoutSegments;
-		private static IMobileServiceTable<Movement> movementTable;
+		private static IMobileServiceTableQuery<Movement> movementTable;
 		public static List<Movement> movements;
-		private static IMobileServiceTable<UserJournal> userJournalTable;
+		private static IMobileServiceTableQuery<UserJournal> userJournalTable;
 		public static List<UserJournal> userJournals;
+		private static IMobileServiceTable<UserJournal> userJournalTableWrite;
 
 
 		//Initialize connection to Azure Mobile Service
 		public static void InitializeAzure ()
 		{
 			try {
+				//Debug output
 				Console.WriteLine ("InitializeAzure method called");
+
 				//connect to Azure
 				azureClient = new MobileServiceClient ("https://wodstar.azure-mobile.net/", "aLMiHItrYdPiUdpjhotOQZAHKLDqVd66");
 				Console.WriteLine ("azureClient = " + azureClient.ApplicationUri);
 				CurrentPlatform.Init ();
-				//DB connect test
+
+				//Debug output
 				Console.WriteLine ("Azure initialization successful");
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.InitializeAzure(): " + e);
 			}
 		}//end initializeAzure method
@@ -40,7 +46,9 @@ namespace WodstarMobileApp
 		public async static void GetUserAccount (UserAccount thisUser)
 		{
 			try {
+				//Debug output
 				Console.WriteLine ("Azure GetUserAccount method called");
+
 				//Set UserAccount table object
 				userAccountTable = azureClient.GetTable<UserAccount> ();
 
@@ -64,11 +72,15 @@ namespace WodstarMobileApp
 					//fetch user's journals from Azure
 					GetUserJournals (thisUser);
 				}
+
+				//Debug output
 				Console.WriteLine ("Azure GetUserAccount method successful");
 			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
 				Console.WriteLine ("NameResolution error detected during GetUserAccount(), retrying connection to Azure");
 				GetUserAccount (thisUser);
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.GetUserAccount(): " + e);
 			}
 		}//end GetUserAccount method
@@ -77,7 +89,9 @@ namespace WodstarMobileApp
 		public async static void CreateUserAccount (UserAccount thisUser)
 		{
 			try {
+				//Debug output
 				Console.WriteLine ("CreateUserAccount method called");
+
 				//Set UserAccount table object
 				userAccountTable = azureClient.GetTable<UserAccount> ();
 
@@ -87,11 +101,15 @@ namespace WodstarMobileApp
 
 				//Call GetUserAccount to fetch the Id for the newly created UserAccount record
 				GetUserAccount (thisUser);
+
+				//Debug output
 				Console.WriteLine ("CreateUserAccount method successful");
 			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
 				Console.WriteLine ("NameResolution error detected during CreateUserAccount(), retrying connection to Azure");
 				CreateUserAccount (thisUser);
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.CreateUserAccount(): " + e);
 			}
 		}//end CreateUserAccount method
@@ -99,41 +117,50 @@ namespace WodstarMobileApp
 		//Query Workout table for all workouts
 		public async static void GetWorkouts ()
 		{
+			//Debug output
 			Console.WriteLine ("GetWorkouts method called");
+
 			try {
 				//Set Workouts table object
-				workoutTable = azureClient.GetTable<Workout> ();
+				workoutTable = azureClient.GetTable<Workout> ().Take(1000);
+
 				//Fetch all workouts into a List
 				Console.WriteLine("Getting workouts from Azure");
-				workouts = await workoutTable.ToListAsync ();
-				Console.WriteLine(workouts.ToString());
-				foreach (var workout in workouts) {				
-					if (workouts != null) {
-						Console.WriteLine (string.Format ("Workout: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
-						//Create new Workout object off of data
-						Workout workoutDom = new Workout (workout.workoutName, workout.workoutType);
-						workoutDom.id = workout.id;
-						//Add to correct data lists in workoutUtil
-						if (workout.workoutType == WorkoutUtil.benchmarkType) {
-							WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
-							WorkoutUtil.benchmarkWods.Add (workout.id, workoutDom);					
-						} else if (workout.workoutType == WorkoutUtil.heroType) {
-							WorkoutUtil.heroIds.Add (workout.workoutName, workout.id);
-							WorkoutUtil.heroWods.Add (workout.id, workoutDom);	
-						} else if (workout.workoutType == WorkoutUtil.camilleType) {
-							WorkoutUtil.camilleIds.Add (workout.workoutName, workout.id);
-							WorkoutUtil.camilleWods.Add (workout.id, workoutDom);	
-						} else if (workout.workoutType == WorkoutUtil.wodstarType) {
-							WorkoutUtil.wodstarIds.Add (workout.workoutName, workout.id);
-							WorkoutUtil.wodstarWods.Add (workout.id, workoutDom);	
-						}
+				workouts = await workoutTable.LoadAllAsync();
+
+				//Loop through the workout list
+				foreach (var workout in workouts) {
+					//Debug output
+					Console.WriteLine (string.Format ("Workout: {0}\nName: {1}\nType: {2}", workout.id, workout.workoutName, workout.workoutType));
+
+					//Create new Workout object from the data
+					Workout workoutDom = new Workout (workout.workoutName, workout.workoutType);
+					workoutDom.id = workout.id;
+
+					//Add to correct data lists in workoutUtil
+					if (workout.workoutType == WorkoutUtil.benchmarkType) {
+						WorkoutUtil.benchmarkIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.benchmarkWods.Add (workout.id, workoutDom);					
+					} else if (workout.workoutType == WorkoutUtil.heroType) {
+						WorkoutUtil.heroIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.heroWods.Add (workout.id, workoutDom);	
+					} else if (workout.workoutType == WorkoutUtil.camilleType) {
+						WorkoutUtil.camilleIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.camilleWods.Add (workout.id, workoutDom);	
+					} else if (workout.workoutType == WorkoutUtil.wodstarType) {
+						WorkoutUtil.wodstarIds.Add (workout.workoutName, workout.id);
+						WorkoutUtil.wodstarWods.Add (workout.id, workoutDom);	
 					}
-					Console.WriteLine ("GetWorkouts method successful");
 				}
+
+				//Debug output
+				Console.WriteLine ("GetWorkouts method successful");
 			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
 				Console.WriteLine ("NameResolution error detected during GetWorkouts(), retrying connection to Azure");
 				GetWorkouts ();
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.GetWorkouts(): " + e);
 			}
 		}//end GetWorkouts method
@@ -142,14 +169,15 @@ namespace WodstarMobileApp
 		public async static void GetWorkoutSegments ()
 		{
 			try {
+				//Debug output
 				Console.WriteLine ("GetWorkoutSegments method called");
+
 				//Set WorkoutSegments table object
-				workoutSegmentTable = azureClient.GetTable<WorkoutSegment> ();
+				workoutSegmentTable = azureClient.GetTable<WorkoutSegment> ().Take(1000);
 
 				//Fetch all workout segments into a List
 				Console.WriteLine("Fetching workout segments from Azure");
-				workoutSegments = await workoutSegmentTable.ToListAsync ();
-				Console.WriteLine(workoutSegments.ToString());
+				workoutSegments = await workoutSegmentTable.LoadAllAsync();
 
 				if (workoutSegments != null) {
 					Console.WriteLine("WorkoutSegments table not null");
@@ -162,11 +190,15 @@ namespace WodstarMobileApp
 						Console.WriteLine("Workout Segment Added: " + s.id);
 					}
 				}
+
+				//Debug output
 				Console.WriteLine ("GetWorkoutSegments method successful");
 			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
 				Console.WriteLine ("NameResolution error detected during GetWorkoutSegments(), retrying connection to Azure");
 				GetWorkoutSegments ();
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.GetWorkoutSegments(): " + e);
 			}
 		}//end GetWorkoutSegments method
@@ -175,17 +207,23 @@ namespace WodstarMobileApp
 		public async static void GetMovements ()
 		{
 			try {
+				//Debug output
 				Console.WriteLine ("GetMovements method called");
+
 				//Set Movements table object
-				movementTable = azureClient.GetTable<Movement> ();
+				movementTable = azureClient.GetTable<Movement> ().Take(1000);
 				MovementLinks.allMovements = new List<Movement>();
 				MovementLinks.movementDictionary = new Dictionary<string, Movement>();
+
 				//Fetch all movements into a List
 				Console.WriteLine("Fetching movement data from Azure");
-				movements = await movementTable.ToListAsync ();
+				movements = await movementTable.LoadAllAsync();
 				Console.WriteLine(movements.ToString());
+
 				//Debug output to the console
 				Console.WriteLine ("DEBUG - Movements");
+
+				//Loop through the movements list
 				for(int i = 0; i <movements.Count; i++) {
 					Console.WriteLine (string.Format ("Movmement # " + i + ": ID: {0}\nName: {1}", movements[i].id, movements[i].name));
 					Movement m = new Movement();
@@ -207,45 +245,52 @@ namespace WodstarMobileApp
 					m.type = movements[i].type;
 					MovementLinks.allMovements.Add(m);
 					MovementLinks.movementDictionary.Add(m.id, m);
-
 				}
 
+				//Debug output
 				Console.WriteLine ("GetMovements method successful");
 			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
 				Console.WriteLine ("NameResolution error detected during GetMovements(), retrying connection to Azure");
 				GetMovements ();
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.GetMovements(): " + e);
 			}
-
-
 		}//end GetMovements method
 
 		//Query UserJournal table for this user's journal entries
 		public async static void GetUserJournals (UserAccount thisUser)
 		{
 			try {
+				//Debug output
 				Console.WriteLine ("GetUserJournals method called");
+
 				//Set UserJournal table object
-				userJournalTable = azureClient.GetTable<UserJournal> ();
+				userJournalTable = azureClient.GetTable<UserJournal> ().Take(1000);
 
 				//Fetch all of this user's journals into a List
 				Console.WriteLine("Fetching user's journals from Azure");
 				userJournals = await userJournalTable
 					.Where (uj => uj.userAccountId == thisUser.id)
-					.ToListAsync();
+					.LoadAllAsync();
 
 				//Debug output to the console
 				Console.WriteLine ("DEBUG - UserJournals");
+
+				//Loop through the journals list
 				foreach (var journal in userJournals) {
 					Console.WriteLine (string.Format ("ID: {0}\nName: {1}", journal.id, journal.statName));
 				}
 
+				//Debug output
 				Console.WriteLine ("GetUserJournal method successful");
 			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
 				Console.WriteLine ("NameResolution error detected during GetUserJournals(), retrying connection to Azure");
 				GetUserJournals (thisUser);
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.GetUserJournals(): " + e);
 			}
 		}//end GetUserJournals method
@@ -254,24 +299,50 @@ namespace WodstarMobileApp
 		public async static void CreateUserJournal (UserAccount thisUser, UserJournal journal)
 		{
 			try {
+				//Debug output
 				Console.WriteLine ("CreateUserJournal method called");
+
 				//Set UserJournal table object
-				userJournalTable = azureClient.GetTable<UserJournal> ();
+				userJournalTable = azureClient.GetTable<UserJournal> ().Take(1000);
 
-				//Insert new record
+				//Insert new journal record
 				Console.WriteLine("Inserting journal record into Azure");
-				await userJournalTable.InsertAsync (journal);
+				await userJournalTableWrite.InsertAsync (journal);
 
-				//Call GetUserAccount to fetch the Id for the newly created UserAccount record
+				//Call GetUserAccount to refresh the user's journals
 				GetUserJournals (thisUser);
 
+				//Debug output
 				Console.WriteLine ("CreateUserJournal method successful");
 			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
 				Console.WriteLine ("NameResolution error detected during CreateUserJournal(), retrying connection to Azure");
 				CreateUserJournal (thisUser, journal);
 			} catch (Exception e) {
+				//Unhandled exception output
 				Console.WriteLine ("ERROR Azure.CreateUserJournal(): " + e);
 			}
 		}//end CreateUserJournal method
+
+		//Fetches data from Azure in pages to get more than the first 50
+		public async static Task<List<T>> LoadAllAsync<T>(this IMobileServiceTableQuery<T> table, int bufferSize = 1000)
+		{
+			var query = table.IncludeTotalCount();
+			var results = await query.ToEnumerableAsync();
+			long count = ((ITotalCountProvider)results).TotalCount;
+			if (results != null && count > 0)
+			{
+				var updates = new List<T>();
+				while (updates.Count < count)
+				{
+
+					var next = await query.Skip(updates.Count).Take(bufferSize).ToListAsync();
+					updates.AddRange(next);
+				}
+				return updates;
+			}
+
+			return null;
+		}//end LoadAllAsync method
 	}
 }
