@@ -124,7 +124,8 @@ namespace WodstarMobileApp.Droid
 			}
 		}
 
-		private void loadVideos(IYouTubePlayer player) {
+		private void loadVideos(IYouTubePlayer player) 
+		{
 			if (!firstPlayer) {
 				player.CueVideo (MovementLinks.MovementUrls [startIndex], 50);
 				firstPlayer = true;
@@ -141,7 +142,7 @@ namespace WodstarMobileApp.Droid
 				player.CueVideo (MovementLinks.MovementUrls[startIndex+4], 50);
 				fifthPlayer=true;
 			}
-			//Console.WriteLine(Yo
+			Console.WriteLine ("YouTube load successful");
 		}
 
 		private void resetBools() {

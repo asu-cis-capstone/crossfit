@@ -1,63 +1,24 @@
-﻿
-using System;
-using System.Drawing;
+﻿using System;
+using MonoTouch;
 
-using MonoTouch.Foundation;
-using MonoTouch.UIKit;
-using MonoTouch.FacebookConnect;
 
 namespace WodstarMobileApp.iOS
 {
-	public partial class Login : UIViewController
+	[Register ("Login")]
+	partial class Login
 	{
-		private string [] ExtendedPermissions = new [] { "user_about_me", "read_stream"};
-
-		FBLoginView loginView;
-		FBProfilePictureView pictureView;
-		IFBGraphUser user;
-		UILabel nameLabel;
-
-		public override void ViewDidLoad ()
+		public Lgoin (IntPtr h): base(h)
 		{
-			base.ViewDidLoad ();
+		}
 
-			// Create the Facebook LogIn View with the needed Permissions
-			// https://developers.facebook.com/ios/login-ui-control/
-			loginView = new FBLoginView (ExtendedPermissions) {
-				Frame = new RectangleF (85, 20, 151, 43)
-			};
+		public Login ()
+		{
+			var arr = NSBundle.MainBundle.LoadNib ("Login", Login, null);			
+			var v = Runtime.GetNSObject(arr.ValueAt(0)) as UIView;
+			v.Frame = new RectangleF(0, 0, Frame.Width, Frame.Height);
+			AddSubview(v);
 
-			// Hook up to FetchedUserInfo event, so you know when
-			// you have the user information available
-			loginView.FetchedUserInfo += (sender, e) => {
-				user = e.User;
-				pictureView.ProfileID = user.GetId ();
-				nameLabel.Text = user.GetName ();
-			};
-
-			// Clean user Picture and label when Logged Out
-			loginView.ShowingLoggedOutUser += (sender, e) => {
-				pictureView.ProfileID = null;
-				nameLabel.Text = string.Empty;
-			};
-
-			// Create view that will display user's profile picture
-			// https://developers.facebook.com/ios/profilepicture-ui-control/
-			pictureView = new FBProfilePictureView () {
-				Frame = new RectangleF (40, 71, 240, 240)
-			};
-
-			// Create the label that will hold user's facebook name
-			nameLabel = new UILabel (new RectangleF (20, 319, 280, 21)) {
-				TextAlignment = UITextAlignment.Center,
-				BackgroundColor = UIColor.Clear
-			};
-
-			// Add views to main view
-			View.AddSubview (loginView);
-			View.AddSubview (pictureView);
-			View.AddSubview (nameLabel);
+			MyLabel.Text = "hello from the SomeView class";
 		}
 	}
 }
-
