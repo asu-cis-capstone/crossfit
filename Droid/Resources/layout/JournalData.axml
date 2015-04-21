@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:telerikChart="clr-namespace:Telerik.XamarinForms.Chart;assembly=Telerik.XamarinForms.Chart"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+    <telerikChart:RadCartesianChart x:Name="barChart">
+	    <telerikChart:RadCartesianChart.BindingContext>
+	        <local:MainViewModel/>
+	    </telerikChart:RadCartesianChart.BindingContext>
+	    <telerikChart:RadCartesianChart.HorizontalAxis>
+	        <telerikChart:CategoricalAxis/>
+	    </telerikChart:RadCartesianChart.HorizontalAxis>
+	    <telerikChart:RadCartesianChart.VerticalAxis>
+	        <telerikChart:NumericalAxis/>
+	    </telerikChart:RadCartesianChart.VerticalAxis>
+	    <telerikChart:RadCartesianChart.Series>
+	        <telerikChart:BarSeries ItemsSource="{Binding Data}">
+	          <telerikChart:BarSeries.ValueBinding>
+	        <telerikChart:PropertyNameDataPointBinding PropertyName="Value"/>
+	      </telerikChart:BarSeries.ValueBinding>
+	      <telerikChart:BarSeries.CategoryBinding>
+	        <telerikChart:PropertyNameDataPointBinding PropertyName="Category"/>
+	      </telerikChart:BarSeries.CategoryBinding>
+	    </telerikChart:BarSeries>
+	  </telerikChart:RadCartesianChart.Series>
+	</telerikChart:RadCartesianChart>
+</LinearLayout

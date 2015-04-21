@@ -277,12 +277,31 @@ namespace WodstarMobileApp
 
 				//Debug output to the console
 				Console.WriteLine ("DEBUG - UserJournals");
-
+				JournalUtil.wodJournalData = new List<List<UserJournal>>();
+				JournalUtil.prJournalData = new List<List<UserJournal>>();
 				//Loop through the journals list
-				foreach (var journal in userJournals) {
-					Console.WriteLine (string.Format ("ID: {0}\nName: {1}", journal.id, journal.statName));
+				if(userJournals!=null) {
+					foreach (var journal in userJournals) {
+						UserJournal j = new UserJournal();
+						j.entryType = journal.entryType;
+						j.id = journal.id;
+						j.userAccountId = journal.userAccountId;
+						j.statType = journal.statType;
+						j.statResult = journal.statResult;
+						j.statId = journal.statId;
+						j.statDateTime = journal.statDateTime;
+						j.statName = journal.statName;
+						Console.WriteLine (string.Format ("ID: {0}\nName: {1}", journal.id, journal.statName));
+						if(WorkoutUtil.benchmarkWods.ContainsKey(j.statId) || WorkoutUtil.heroWods.ContainsKey(j.statId) ||
+								WorkoutUtil.wodstarWods.ContainsKey(j.statId) || WorkoutUtil.camilleWods.ContainsKey(j.statId)) {
+							JournalUtil.wodJournalData.Add(j);
+						} else if(MovementLinks.movementDictionary.ContainsKey(j.statId)){
+							JournalUtil.prJournalData.Add(j);
+						} else {
+							Console.WriteLine("Not found with name: " + j.statName);
+						}
+					}
 				}
-
 				//Debug output
 				Console.WriteLine ("GetUserJournal method successful");
 			} catch (System.Net.WebException) {

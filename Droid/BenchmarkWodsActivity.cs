@@ -118,7 +118,7 @@ namespace WodstarMobileApp.Droid
 			goToWorkout ();
 		}
 		void goToKellyWod(object sender, EventArgs e) {
-			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.nicoleId];
+			intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.nicoleName];
 			intentWorkoutName = WorkoutUtil.nicoleName;
 			goToWorkout ();
 		}

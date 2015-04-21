@@ -15,7 +15,7 @@
     <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
     <AssemblyName>WodstarMobileApp.Droid</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v4.4</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -69,6 +69,27 @@
     <Reference Include="Xamarin.Android.Support.v4">
       <HintPath>..\packages\Xamarin.Android.Support.v4.22.0.0.0\lib\MonoAndroid10\Xamarin.Android.Support.v4.dll</HintPath>
     </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Chart">
+      <HintPath>..\..\..\..\..\Wodstar\Telerik UI\Binaries\Android\Telerik.Xamarin.Android.Chart.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Common">
+      <HintPath>..\..\..\..\..\Wodstar\Telerik UI\Binaries\Android\Telerik.Xamarin.Android.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Data">
+      <HintPath>..\..\..\..\..\Wodstar\Telerik UI\Binaries\Android\Telerik.Xamarin.Android.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Feedback">
+      <HintPath>..\..\..\..\..\Wodstar\Telerik UI\Binaries\Android\Telerik.Xamarin.Android.Feedback.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.List">
+      <HintPath>..\..\..\..\..\Wodstar\Telerik UI\Binaries\Android\Telerik.Xamarin.Android.List.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Input">
+      <HintPath>..\..\..\..\..\Wodstar\Telerik UI\Binaries\Android\Telerik.Xamarin.Android.Input.dll</HintPath>
+    </Reference>
+    <Reference Include="Telerik.Xamarin.Android.Primitives">
+      <HintPath>..\..\..\..\..\Wodstar\Telerik UI\Binaries\Android\Telerik.Xamarin.Android.Primitives.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -85,6 +106,8 @@
     <Compile Include="BenchmarkWodsActivity.cs" />
     <Compile Include="HeroWodsActivity.cs" />
     <Compile Include="CamilleWodsActivity.cs" />
+    <Compile Include="JournalData.cs" />
+    <Compile Include="Calculator.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -208,6 +231,7 @@
     <AndroidResource Include="Resources\drawable\girls.jpg" />
     <AndroidResource Include="Resources\drawable\hero.jpg" />
     <AndroidResource Include="Resources\drawable\barbara.jpg" />
+    <AndroidResource Include="Resources\layout\JournalData.axml" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

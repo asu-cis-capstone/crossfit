@@ -48,7 +48,7 @@ namespace WodstarMobileApp.Droid
 			//TODO: Dynamically retrieve user picture and set.
 
 			//Initialize views to Wods
-			//createWodTable();
+			createWodTable();
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
@@ -75,13 +75,37 @@ namespace WodstarMobileApp.Droid
 		{
 			if (!wodVisible) {
 				wodVisible = true;
+				//TODO: Sort Wod Dictionaries
 				clearTable ();
-				List<UserJournal> wodData = new List<UserJournal>();
-				//TODO: Sort data into new array by the number of entries then by alphabet if necessary
-				//TODO: for each entry, sort for the best value - how? depends on id of workout amrap/time going to be different sorts.
-				//TODO: create string[] of workouts name and the value - create maps of id to name in workout util?
-				String[][] workoutResultInfo = new String[wodData.Count()][];
-				addDataToTable (workoutResultInfo);
+				for(int i = 0; i < WorkoutUtil.benchmarkWods.Count; i++) {
+					String bestPR = 0;
+					int base = 0;
+					foreach(UserJournal j in JournalUtil.wodJournalData) {
+						if(j.statId==WorkoutUtil.benchmarkWods[i].id) {
+							if(j.entryType = JournalUtil.amrapType) {
+								if(j.statResult> base) {
+									base = j.statResult;
+								}
+							}
+						}
+					}
+
+					TableRow dataRow = new TableRow (this);
+					TextView workoutName = new TextView (this);
+					workoutName.Text = WorkoutUtil.benchmarkWods[i].workoutName);
+					workoutName.Gravity = GravityFlags.Left;
+					dataRow.AddView (workoutName);
+
+					if(base!=0) {
+						TextView workoutPr = new TextView (this);
+						workoutPr.Gravity = GravityFlags.Right;
+						dataRow.AddView (workoutPr);
+					} else {
+						//TODO: Create button, add to layout instead to log new 
+					}
+						
+					userDataTable.AddView (dataRow);
+				}
 			}
 			//User WOD data entry successful
 

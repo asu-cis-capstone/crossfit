@@ -11,8 +11,8 @@ using Android.Widget;
 using Android.Content.PM;
 using WodstarMobileApp;
 using Google.YouTube.Player;
-using com.refractored.monodroidtoolkit;
 using System.Threading.Tasks;
+using com.refractored.monodroidtoolkit;
 
 namespace WodstarMobileApp.Droid
 {
@@ -37,7 +37,7 @@ namespace WodstarMobileApp.Droid
 		int redWodstarColor = Android.Graphics.Color.Red;
 		int whiteColor = Android.Graphics.Color.Snow;
 		LinearLayout buttonLayout;
-		int amrapResult =0;
+		public bool isAmrap=false;
 
 		private List<WorkoutSegment> segments;
 		int thisSegment =0;
@@ -62,8 +62,7 @@ namespace WodstarMobileApp.Droid
 			logButton.Visibility = ViewStates.Invisible;
 			restartButton.Visibility = ViewStates.Invisible;
 			restartButton.Click += (sender, e) => {resetTimer();}; 
-			logButton.Click += (sender, e) => {	//logData();
-			};
+			logButton.Click += (sender, e) => {	logData();	};
 
 			//Captures data from starting activity, loads the proper data to the page.
 			workoutId = Intent.GetStringExtra ("workoutId");
@@ -211,10 +210,16 @@ namespace WodstarMobileApp.Droid
 			circularProgressBar.CircleStrokeWidth = 20;
 			circularProgressBar.Progress = 0;
 			if(segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
+				Console.WriteLine ("Segment is for time");
+				isAmrap = false;
 				startStopwatchTimer ();
 			} else if (segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
+				Console.WriteLine ("Segment is amrap");
+				isAmrap = true;
 				startAmrapTimer (segments [thisSegment].time); 
 			} else if (segments[thisSegment].segmentType == WorkoutUtil.emomType) {
+				Console.WriteLine ("Segment is for emom");
+				isAmrap = true;
 				//TODO: Implement EMOM timer
 			//	startEmomTimer(segments [thisSegment].time, segments[thisSegment].repetitions);
 			}
@@ -249,6 +254,7 @@ namespace WodstarMobileApp.Droid
 			circularProgressBar.Indeterminate = false;
 			logButton.Visibility = ViewStates.Visible;
 			restartButton.Visibility = ViewStates.Visible;
+
 		}
 
 		private void resetTimer() {
@@ -258,11 +264,19 @@ namespace WodstarMobileApp.Droid
 			timerButton.Text = "0:00.00";
 		}
 
-		private void logData(int workoutId, int finalScore) {
-			//TODO: Implement logging functionality
-			//If for time, final score should be passed in seconds with 2 decimal places
-			//If AMRAP, should be passed as total number of reps.
-			//If EMOM, should be total number of completed minutes
+		private void logData() {
+			UserJournal newJournalEntry = new UserJournal();
+			newJournalEntry.statType = JournalUtil.wodType;
+			newJournalEntry.statName = thisWorkout.workoutName;
+			//IF FOR TIME.
+			newJournalEntry.statResult = timerButton.Text;
+			newJournalEntry.entryType = JournalUtil.timeType;
+			newJournalEntry.statDateTime = DateTime.Now;
+			newJournalEntry.statId = thisWorkout.id;
+			newJournalEntry.userAccountId = Util.thisUser.id;
+
+			Azure.CreateUserJournal (Util.thisUser, newJournalEntry);
+
 		}
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {
@@ -334,73 +348,71 @@ namespace WodstarMobileApp.Droid
 			}
 		} else if (thisWorkout.workoutType == WorkoutUtil.benchmarkType) {
 			Console.WriteLine ("thisWorkout.workoutType = WorkoutUtil.benchmarkType");
-			switch (workoutId) {
-				case WorkoutUtil.amandaId: //Amanda
+				switch (thisWorkout.workoutName.ToLower()) {
+				case "amanda": 
 					headerLayout.SetBackgroundResource (Resource.Drawable.amanda);
 					break;
-				case WorkoutUtil.jackieId: //Jackie
+				case "jackie":
 					headerLayout.SetBackgroundResource (Resource.Drawable.jackie);
 					break;
-				case WorkoutUtil.kellyId:
+				case "kelly":
 					headerLayout.SetBackgroundResource (Resource.Drawable.kelly);
 					break;
-				case WorkoutUtil.elizabethId:
+				case "elizabeth":
 					headerLayout.SetBackgroundResource (Resource.Drawable.elizabeth);
 					break;
-				case WorkoutUtil.helenId:
+				case "helen":
 					headerLayout.SetBackgroundResource (Resource.Drawable.helen);
 					break;
-				case WorkoutUtil.karenId:
+				case "karen":
 					headerLayout.SetBackgroundResource (Resource.Drawable.karen);
 					break;
-				case WorkoutUtil.isabelId:
+				case "isabel":
 					headerLayout.SetBackgroundResource (Resource.Drawable.isabel);
 					break;
-				case WorkoutUtil.franId:
+				case "fran":
 					headerLayout.SetBackgroundResource (Resource.Drawable.fran);
 					break;
-				case WorkoutUtil.nicoleId:
+				case "nicole":
 					headerLayout.SetBackgroundResource (Resource.Drawable.nicole);
 					break;
-				case WorkoutUtil.graceId:
+				case "grace":
 					headerLayout.SetBackgroundResource (Resource.Drawable.grace);
 					break;
-				case WorkoutUtil.dianeId:
+				case "diane":
 					headerLayout.SetBackgroundResource (Resource.Drawable.diane);
 					break;
-				case WorkoutUtil.cindyId:
+				case "cindy":
 					headerLayout.SetBackgroundResource (Resource.Drawable.cindy);
 					break;
-				case WorkoutUtil.chelseaId:
+				case "chelsea":
 					headerLayout.SetBackgroundResource (Resource.Drawable.chelsea);
 					break;
-				case WorkoutUtil.annieId:
+				case "annie":
 					headerLayout.SetBackgroundResource (Resource.Drawable.annie);
 					break;
-				case WorkoutUtil.christineId:
+				case "christine":
 					headerLayout.SetBackgroundResource (Resource.Drawable.christine);
 					break;
-				//TODO: uncomment after adding in barbara photo
-				/*	case WorkoutUtil.barbaraId:
-						headerLayout.SetBackgroundResource (Resource.Drawable.barbara);
-						break;
-				*/
-				case WorkoutUtil.angieId:
+				case "barbara":
+					headerLayout.SetBackgroundResource (Resource.Drawable.barbara);
+					break;
+				case "angie":
 					headerLayout.SetBackgroundResource (Resource.Drawable.angie);
 					break;
-				case WorkoutUtil.maryId:
+				case "mary":
 					headerLayout.SetBackgroundResource (Resource.Drawable.mary);
 					break;
-				case WorkoutUtil.nancyId:
+				case "nancy":
 					headerLayout.SetBackgroundResource (Resource.Drawable.nancy);
 					break;
-				case WorkoutUtil.evaId:
+				case "eva":
 					headerLayout.SetBackgroundResource (Resource.Drawable.eva);
 					break;
-				case WorkoutUtil.lindaId:
+				case "linda":
 					headerLayout.SetBackgroundResource (Resource.Drawable.linda);
 					break;
-				case WorkoutUtil.rosaId:
+				case "rosa":
 					headerLayout.SetBackgroundResource (Resource.Drawable.rosa);
 					break;
 				default: 
