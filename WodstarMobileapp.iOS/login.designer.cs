@@ -9,24 +9,25 @@ using System.CodeDom.Compiler;
 
 namespace WodstarMobileapp.iOS
 {
-	partial class login
+	[Register ("login")]
+	partial class login 
 	{
 		[Outlet]
-		MonoTouch.UIKit.UILabel helloWorldLabel { get; set; }
+		MonoTouch.UIKit.UIButton facebook { get; set; }
 
 		[Outlet]
-		MonoTouch.UIKit.UIButton heresAButton { get; set; }
+		MonoTouch.UIKit.UIButton skipLogin { get; set; }
 		
 		void ReleaseDesignerOutlets ()
 		{
-			if (heresAButton != null) {
-				heresAButton.Dispose ();
-				heresAButton = null;
+			if (facebook != null) {
+				facebook.Dispose ();
+				facebook = null;
 			}
 
-			if (helloWorldLabel != null) {
-				helloWorldLabel.Dispose ();
-				helloWorldLabel = null;
+			if (skipLogin != null) {
+				skipLogin.Dispose ();
+				skipLogin = null;
 			}
 		}
 	}

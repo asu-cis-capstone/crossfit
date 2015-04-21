@@ -7,27 +7,10 @@ using MonoTouch.UIKit;
 
 namespace WodstarMobileapp.iOS
 {
-	public partial class login : UIViewController
+	public partial class userProfileView : UIViewController
 	{
-		login view;
-
-		public override void LoadView()
+		public userProfileView () : base ("userProfileView", null)
 		{
-			base.LoadView();
-			view = new login();
-
-		}
-
-		public login () : base ("login", null)
-		{
-			facebook.TouchDown += delegate {
-					};
-
-			skipLogin.AllTouchEvents += delegate {
-
-				// mainMenu();
-
-			};
 		}
 
 		public override void DidReceiveMemoryWarning ()

@@ -4,11 +4,11 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProjectTypeGuids>{6BC8ED88-2882-458C-8E55-DFD12B67127B};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    <ProjectGuid>{D832E938-F855-4C64-B40C-EF5DDC2E48F2}</ProjectGuid>
+    <ProjectGuid>{0D04C4A1-85AD-486E-8860-549E3C25EDE7}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>WodstarMobileapp.iOS</RootNamespace>
+    <RootNamespace>main</RootNamespace>
     <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
-    <AssemblyName>WodstarMobileapp.iOS</AssemblyName>
+    <AssemblyName>main</AssemblyName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,8 +22,6 @@
     <MtouchArch>i386</MtouchArch>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <CodesignProvision>badefd46-bb7b-4f83-aaa0-c694d1c9830e</CodesignProvision>
-    <CodesignKey>iPhone Developer: Jeff Adkins (XWS587U4TL)</CodesignKey>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
     <DebugType>full</DebugType>
@@ -102,23 +100,13 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
-    <Compile Include="WodstarMobileapp.iOSViewController.cs" />
-    <Compile Include="WodstarMobileapp.iOSViewController.designer.cs">
-      <DependentUpon>WodstarMobileapp.iOSViewController.cs</DependentUpon>
-    </Compile>
-    <Compile Include="login.cs" />
-    <Compile Include="login.designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
-    </Compile>
-    <Compile Include="mainMenu.cs" />
-    <Compile Include="mainMenu.designer.cs">
-      <DependentUpon>mainMenu.cs</DependentUpon>
+    <Compile Include="mainViewController.cs" />
+    <Compile Include="mainViewController.designer.cs">
+      <DependentUpon>mainViewController.cs</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="MainStoryboard.storyboard" />
-    <InterfaceDefinition Include="login.xib" />
-    <InterfaceDefinition Include="mainMenu.xib" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.MonoTouch.CSharp.targets" />
 </Project>
