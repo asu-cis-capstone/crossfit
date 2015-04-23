@@ -20,6 +20,9 @@ namespace WodstarMobileApp
 		private static IMobileServiceTableQuery<UserJournal> userJournalTable;
 		public static List<UserJournal> userJournals;
 		private static IMobileServiceTable<UserJournal> userJournalTableWrite;
+		private static IMobileServiceTableQuery<UserSubscription> userSubscriptionTable;
+		public static List<UserSubscription> userSubscriptions;
+		private static IMobileServiceTable<UserSubscription> userSubscriptionTableWrite;
 
 
 		//Initialize connection to Azure Mobile Service
@@ -342,6 +345,73 @@ namespace WodstarMobileApp
 				Console.WriteLine ("ERROR Azure.CreateUserJournal(): " + e);
 			}
 		}//end CreateUserJournal method
+
+		//Query UserSubscription table for this user's subscriptions
+		public async static void GetUserSubscriptions (UserAccount thisUser)
+		{
+			try {
+				//Debug output
+				Console.WriteLine ("GetUserSubscriptions method called");
+
+				//Set UserSubscriptions table object
+				userSubscriptionTable = azureClient.GetTable<UserSubscription> ().Take(1000);
+
+				//Fetch all of this user's subscriptions into a List
+				Console.WriteLine("Fetching user's subscriptions from Azure");
+				userSubscriptions = await userSubscriptionTable
+					.Where (us => us.userAccountId == thisUser.id)
+					.LoadAllAsync();
+
+				//Debug output to the console
+				Console.WriteLine ("DEBUG - UserSubscriptions");
+
+				//Loop through the subscriptions list
+				if (userSubscriptions != null) {
+					foreach (var subscription in userSubscriptions) {
+						Console.WriteLine (string.Format ("ID: {0}\nName: {1}", subscription.id, subscription.subName));
+					}
+				}
+
+				//Debug output
+				Console.WriteLine ("GetUserSubscriptions method successful");
+			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
+				Console.WriteLine ("NameResolution error detected during GetUserSubscriptions(), retrying connection to Azure");
+				GetUserSubscriptions (thisUser);
+			} catch (Exception e) {
+				//Unhandled exception output
+				Console.WriteLine ("ERROR Azure.GetUserSubscriptions(): " + e);
+			}
+		}//end GetUserSubscriptions method
+
+		//Create UserSubscription record
+		public async static void CreateUserSubscription (UserAccount thisUser, UserSubscription subscription)
+		{
+			try {
+				//Debug output
+				Console.WriteLine ("CreateUserSubscription method called");
+
+				//Set UserSubscription table object
+				userSubscriptionTable = azureClient.GetTable<UserSubscription> ().Take(1000);
+
+				//Insert new subscription record
+				Console.WriteLine("Inserting subscription record into Azure");
+				await userSubscriptionTableWrite.InsertAsync (subscription);
+
+				//Call GetUserSubscriptions to refresh the user's journals
+				GetUserSubscriptions (thisUser);
+
+				//Debug output
+				Console.WriteLine ("CreateUserSubscription method successful");
+			} catch (System.Net.WebException) {
+				//Handle NameResolution error caused by lack of or poor Internet connectivity
+				Console.WriteLine ("NameResolution error detected during CreateUserSubscription(), retrying connection to Azure");
+				CreateUserSubscription (thisUser, subscription);
+			} catch (Exception e) {
+				//Unhandled exception output
+				Console.WriteLine ("ERROR Azure.CreateUserSubscription(): " + e);
+			}
+		}//end CreateUserSubscription method
 
 		//Fetches data from Azure in pages to get more than the first 50
 		public async static Task<List<T>> LoadAllAsync<T>(this IMobileServiceTableQuery<T> table, int bufferSize = 1000)

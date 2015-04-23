@@ -35,6 +35,8 @@ namespace wodstarService.Models
 
         public DbSet<UserJournal> UserJournals { set; get; }
 
+        public DbSet<UserSubscription> UserSubscriptions { set; get; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             string schema = ServiceSettingsDictionary.GetSchemaName();
