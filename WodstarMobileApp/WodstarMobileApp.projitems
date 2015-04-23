@@ -20,5 +20,6 @@
     <Compile Include="$(MSBuildThisFileDirectory)UserAccount.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Movement.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)JournalUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)journalDataBinding.cs" />
   </ItemGroup>
 </Project>

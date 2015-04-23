@@ -35,7 +35,7 @@ namespace WodstarMobileApp
 
 		}
 
-		public UserJournal (string userId, string entryType, string statId, string type, string name, string result)
+		public UserJournal (string userId, string entryType, string statId, string type, string name, string result, DateTime time)
 		{
 			this.entryType = entryType;
 			this.statId = statId;
@@ -43,6 +43,7 @@ namespace WodstarMobileApp
 			this.statType = type;
 			this.statName = name;
 			this.statResult = result;
+			this.statDateTime = time;
 		}
 	}
 }

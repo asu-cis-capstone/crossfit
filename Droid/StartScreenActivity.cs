@@ -29,12 +29,17 @@ namespace WodstarMobileApp.Droid
 
 			//TODO: Remove before launch - demo/testing purposes only.
 			wodsButton.Click += (sender, e) => {
+
+				StartActivity(JournalData);
+			/*
 				string intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.amandaName];
 				string intentWorkoutName = WorkoutUtil.amandaName;
 				var intent = new Intent (this, typeof(WorkoutActivity));
 				intent.PutExtra ("workoutName", intentWorkoutName);
 				intent.PutExtra ("workoutId", intentWorkoutId);
 				StartActivity (intent);
+
+			*/
 			};
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);

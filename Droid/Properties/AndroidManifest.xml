@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.wodstar.mobile" android:versionName="Initial Release">
-	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="21" />
+	<uses-sdk android:minSdkVersion="21" android:targetSdkVersion="21" />
 	<!--NOTE: Facebook rqeuires that the value point to a string resource in values folder
 	It will not allow you to use the app_id value directly here -->
 	<application android:label="Wodstar" android:icon="@drawable/icon">
