@@ -4,11 +4,11 @@ using System.Drawing;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace WodstarMobileapp.iOS
+namespace WodstarMobileApp.iOS
 {
-	public partial class WodstarMobileapp_iOSViewController : UIViewController
+	public partial class WodstarMobileApp_iOSViewController : UIViewController
 	{
-		public WodstarMobileapp_iOSViewController (IntPtr handle) : base (handle)
+		public WodstarMobileApp_iOSViewController (IntPtr handle) : base (handle)
 		{
 		}
 
