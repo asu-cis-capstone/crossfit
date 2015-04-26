@@ -17,8 +17,11 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="356" translatesAutoresizingMaskIntoConstraints="NO">
-                                <rect key="frame" x="73" y="272" width="173" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="431" translatesAutoresizingMaskIntoConstraints="NO" image="images/splash.png" misplaced="YES">
+                                <rect key="frame" x="-35" y="35" width="380" height="570"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="356" translatesAutoresizingMaskIntoConstraints="NO" misplaced="YES">
+                                <rect key="frame" x="91" y="308" width="173" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                 <state key="normal" title="Skip login">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -31,10 +34,14 @@
                                     <segue id="413" destination="367" kind="custom"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="436" translatesAutoresizingMaskIntoConstraints="NO" image="images/wodstar_logo_white_on_transparent.png" misplaced="YES">
+                                <rect key="frame" x="10" y="121" width="300" height="82"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint id="362" firstItem="353" firstAttribute="bottom" secondItem="356" secondAttribute="bottom" constant="266"/>
                             <constraint id="363" constant="73" firstItem="356" firstAttribute="leading" secondItem="353" secondAttribute="leading"/>
+                            <constraint firstItem="436" firstAttribute="width" secondItem="431" secondAttribute="width" id="437"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -52,7 +59,20 @@
                     <view key="view" contentMode="scaleToFill" id="368">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" customColorSpace="calibratedWhite" colorSpace="calibratedRGB" red="1" green="0" blue="1" alpha="1"/>
+                        <color key="backgroundColor" colorSpace="calibratedWhite" white="0" alpha="1"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="439" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                <rect key="frame" x="-1" y="0.0" width="321" height="566"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="440" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO">
+                                        <rect key="frame" x="51" y="105" width="203" height="92"/>
+                                        <state key="normal" title="Button" backgroundImage="Default-568h.png">
+                                            <color key="titleShadowColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </scrollView>
+                        </subviews>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="369" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -67,5 +87,69 @@
     </simulatedMetricsContainer>
     <resources>
         <image name="Default-568h.png" width="640" height="1136"/>
+        <image name="amanda.png" width="400" height="300"/>
+        <image name="angie.png" width="400" height="300"/>
+        <image name="annie.png" width="400" height="300"/>
+        <image name="camille.png" width="192" height="192"/>
+        <image name="chelsea.png" width="400" height="300"/>
+        <image name="christine.png" width="400" height="300"/>
+        <image name="cindy.png" width="400" height="300"/>
+        <image name="danim1.png" width="192" height="192"/>
+        <image name="diane.png" width="400" height="300"/>
+        <image name="elizabeth.png" width="400" height="300"/>
+        <image name="eva.png" width="400" height="300"/>
+        <image name="forums.png" width="297" height="234"/>
+        <image name="fran.png" width="400" height="300"/>
+        <image name="grace.png" width="400" height="300"/>
+        <image name="graph.png" width="250" height="163"/>
+        <image name="hamburger.png" width="600" height="400"/>
+        <image name="helen.png" width="400" height="300"/>
+        <image name="icon.png" width="72" height="72"/>
+        <image name="img_6063.png" width="1372" height="1060"/>
+        <image name="isabel.png" width="400" height="300"/>
+        <image name="jackie.png" width="400" height="300"/>
+        <image name="karen.png" width="400" height="300"/>
+        <image name="kelly.png" width="400" height="300"/>
+        <image name="leaders.png" width="1280" height="1024"/>
+        <image name="linda.png" width="400" height="300"/>
+        <image name="lynne.png" width="400" height="300"/>
+        <image name="mary.png" width="400" height="300"/>
+        <image name="nancy.png" width="400" height="300"/>
+        <image name="nicole.png" width="400" height="300"/>
+        <image name="rosa.png" width="400" height="300"/>
+        <image name="splash.png" width="480" height="800"/>
+        <image name="wodstar_logo_white_on_transparent.png" width="2540" height="490"/>
+        <image name="images/amanda.png" width="400" height="300"/>
+        <image name="images/angie.png" width="400" height="300"/>
+        <image name="images/annie.png" width="400" height="300"/>
+        <image name="images/camille.png" width="192" height="192"/>
+        <image name="images/chelsea.png" width="400" height="300"/>
+        <image name="images/christine.png" width="400" height="300"/>
+        <image name="images/cindy.png" width="400" height="300"/>
+        <image name="images/danim1.png" width="192" height="192"/>
+        <image name="images/diane.png" width="400" height="300"/>
+        <image name="images/elizabeth.png" width="400" height="300"/>
+        <image name="images/eva.png" width="400" height="300"/>
+        <image name="images/forums.png" width="297" height="234"/>
+        <image name="images/fran.png" width="400" height="300"/>
+        <image name="images/grace.png" width="400" height="300"/>
+        <image name="images/graph.png" width="250" height="163"/>
+        <image name="images/hamburger.png" width="600" height="400"/>
+        <image name="images/helen.png" width="400" height="300"/>
+        <image name="images/icon.png" width="72" height="72"/>
+        <image name="images/img_6063.png" width="1372" height="1060"/>
+        <image name="images/isabel.png" width="400" height="300"/>
+        <image name="images/jackie.png" width="400" height="300"/>
+        <image name="images/karen.png" width="400" height="300"/>
+        <image name="images/kelly.png" width="400" height="300"/>
+        <image name="images/leaders.png" width="1280" height="1024"/>
+        <image name="images/linda.png" width="400" height="300"/>
+        <image name="images/lynne.png" width="400" height="300"/>
+        <image name="images/mary.png" width="400" height="300"/>
+        <image name="images/nancy.png" width="400" height="300"/>
+        <image name="images/nicole.png" width="400" height="300"/>
+        <image name="images/rosa.png" width="400" height="300"/>
+        <image name="images/splash.png" width="480" height="800"/>
+        <image name="images/wodstar_logo_white_on_transparent.png" width="2540" height="490"/>
     </resources>
 </document>
