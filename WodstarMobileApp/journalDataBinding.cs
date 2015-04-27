@@ -14,7 +14,11 @@ namespace WodstarMobileApp
 				Java.Util.Date javaDate = new Java.Util.Date (statTime.Year, statTime.Month, statTime.Day, statTime.Hour, statTime.Minute);
 				return (Java.Lang.Object)(javaDate);
 			} else {
+<<<<<<< HEAD
 				return Int32.Parse(((UserJournal)p0).statResult);
+=======
+				return ((UserJournal)p0).statResult;
+>>>>>>> 559489002ab9c3855d207b08d07869c7ab1540bb
 			}
 		}
 

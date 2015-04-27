@@ -5,7 +5,7 @@ using System.Linq;
 using MonoTouch.Foundation;
 using MonoTouch.UIKit;
 
-namespace WodstarMobileapp.iOS
+namespace WodstarMobileApp.iOS
 {
 	public class Application
 	{

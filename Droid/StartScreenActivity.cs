@@ -31,7 +31,7 @@ namespace WodstarMobileApp.Droid
 			wodsButton.Click += (sender, e) => {
 
 				StartActivity(typeof(JournalData));
-				/*
+			/*
 				string intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.amandaName];
 				string intentWorkoutName = WorkoutUtil.amandaName;
 				var intent = new Intent (this, typeof(WorkoutActivity));
