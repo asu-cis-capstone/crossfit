@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace WodstarMobileApp
 {
-	public class UserJournal
+	public class UserJournal : Java.Lang.Object
 	{
 		[JsonProperty(PropertyName = "id")]
 		public string id { get; set; }

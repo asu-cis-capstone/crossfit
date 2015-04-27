@@ -10,9 +10,11 @@ namespace WodstarMobileApp
 		public override Java.Lang.Object GetValue (Java.Lang.Object p0)
 		{
 			if (propertyName == "Date") {
-				return ((UserJournal)(p0)).statDateTime;
+				DateTime statTime = ((UserJournal) p0).statDateTime;
+				Java.Util.Date javaDate = new Java.Util.Date (statTime.Year, statTime.Month, statTime.Day, statTime.Hour, statTime.Minute);
+				return (Java.Lang.Object)(javaDate);
 			} else {
-				return ((UserJournal)(p0)).statResult;
+				return ((UserJournal)p0).statResult;
 			}
 		}
 			

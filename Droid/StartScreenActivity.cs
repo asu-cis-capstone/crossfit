@@ -30,7 +30,7 @@ namespace WodstarMobileApp.Droid
 			//TODO: Remove before launch - demo/testing purposes only.
 			wodsButton.Click += (sender, e) => {
 
-				StartActivity(JournalData);
+				StartActivity(typeof(JournalData));
 			/*
 				string intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.amandaName];
 				string intentWorkoutName = WorkoutUtil.amandaName;

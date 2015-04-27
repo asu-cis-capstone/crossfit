@@ -280,8 +280,8 @@ namespace WodstarMobileApp
 
 				//Debug output to the console
 				Console.WriteLine ("DEBUG - UserJournals");
-				JournalUtil.wodJournalData = new List<List<UserJournal>>();
-				JournalUtil.prJournalData = new List<List<UserJournal>>();
+				JournalUtil.wodJournalData = new List<UserJournal>();
+				JournalUtil.prJournalData = new List<UserJournal>();
 				//Loop through the journals list
 				if(userJournals!=null) {
 					foreach (var journal in userJournals) {

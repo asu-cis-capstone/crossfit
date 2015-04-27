@@ -5,8 +5,8 @@ namespace WodstarMobileApp
 {
 	public class JournalUtil
 	{
-		public static List<List<UserJournal>> wodJournalData;
-		public static List<List<UserJournal>> prJournalData;
+		public static List<UserJournal> wodJournalData;
+		public static List<UserJournal> prJournalData;
 
 		public const string wodType = "wodType";
 		public const string prType = "prType";

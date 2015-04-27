@@ -9,18 +9,18 @@ namespace WodstarMobileApp.Droid
 		//public static WodstarMobileApp.UserAccount thisUser = new UserAccount("14", "dprovenzano", "user", "Dan", "Provenzano", "Male", 29);
 		public static WodstarMobileApp.UserAccount thisUser = new UserAccount();
 	
-		public static WodstarMobileApp.UserJournal demoentry1 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "3:42.13");
-		public static WodstarMobileApp.UserJournal demoentry2 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "4:12.08");
-		public static WodstarMobileApp.UserJournal demoentry3 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "5:09.16");
-		public static WodstarMobileApp.UserJournal demoentry4 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "3:51.27");
-		public static WodstarMobileApp.UserJournal demoentry5 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "4:39.46");
+		public static WodstarMobileApp.UserJournal demoentry1 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "3:42.13", DateTime.Now);
+		public static WodstarMobileApp.UserJournal demoentry2 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "4:12.08", DateTime.Now.AddDays(1));
+		public static WodstarMobileApp.UserJournal demoentry3 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "5:09.16", DateTime.Now.AddDays(1));
+		public static WodstarMobileApp.UserJournal demoentry4 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "3:51.27", DateTime.Now.AddDays(1));
+		public static WodstarMobileApp.UserJournal demoentry5 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.franId, WorkoutUtil.forTimeType, "Fran", "4:39.46", DateTime.Now.AddDays(1));
 
-		public static WodstarMobileApp.UserJournal demoentry6 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTimeType, "War Frank", "8:21:43");
-		public static WodstarMobileApp.UserJournal demoentry7 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTimeType, "War Frank", "8:21:43");
-		public static WodstarMobileApp.UserJournal demoentry8 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTimeType, "War Frank", "8:21:43");
+			public static WodstarMobileApp.UserJournal demoentry6 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTimeType, "War Frank", "8:21:43", DateTime.Now);
+		public static WodstarMobileApp.UserJournal demoentry7 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTimeType, "War Frank", "8:21:43", DateTime.Now.AddDays(1));
+		public static WodstarMobileApp.UserJournal demoentry8 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.warFrankId, WorkoutUtil.forTimeType, "War Frank", "8:21:43", DateTime.Now.AddDays(2));
 
-		public static WodstarMobileApp.UserJournal demoentry9 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "91");
-		public static WodstarMobileApp.UserJournal demoentry10 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "87");
+				public static WodstarMobileApp.UserJournal demoentry9 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "91", DateTime.Now);
+		public static WodstarMobileApp.UserJournal demoentry10 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "87", DateTime.Now.AddDays(1));
 
 	/*	public static WodstarMobileApp.UserJournal demoentry11 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "345");
 		public static WodstarMobileApp.UserJournal demoentry12 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "312");

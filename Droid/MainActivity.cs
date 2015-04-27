@@ -7,16 +7,17 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Xamarin;
 using Xamarin.Facebook;
 using Xamarin.Facebook.Model;
 using Xamarin.Facebook.Widget;
 using Microsoft.WindowsAzure.MobileServices;
+using Com.Telerik.Widget.Chart;
+using Com.Telerik;
+using Com.Telerik.Widget.Chart.Visualization.CartesianChart;
 
 
 [assembly:MetaData ("com.facebook.sdk.ApplicationId", Value = "@string/facebook_app_id")]
-[assembly: Xamarin.Forms.ExportRenderer(typeof(Telerik.XamarinForms.Chart.RadCartesianChart), typeof(Telerik.XamarinForms.ChartRenderer.Android.CartesianChartRenderer))]
-[assembly: Xamarin.Forms.ExportRenderer(typeof(Telerik.XamarinForms.Chart.RadPieChart), typeof(Telerik.XamarinFormsChartRenderer.Android.PieChartRenderer))]
-
 
 namespace WodstarMobileApp.Droid
 {

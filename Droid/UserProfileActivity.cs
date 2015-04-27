@@ -40,7 +40,9 @@ namespace WodstarMobileApp.Droid
 			wodDataButton = FindViewById<Button> (Resource.Id.wodButton);
 			prDataButton = FindViewById<Button> (Resource.Id.prButton);
 
-			wodDataButton.Click += createWodTable;
+			wodDataButton.Click += (sender, e) => {
+				createWodTable();
+			};
 			prDataButton.Click += createPrTable;
 
 			userNameTextView.Text = Util.thisUser.firstName + " " + Util.thisUser.lastName;
@@ -71,20 +73,21 @@ namespace WodstarMobileApp.Droid
 			logoutButton.Click += goToLogin;
 		}
 
-		void createWodTable(object sender, EventArgs e) 
+		void createWodTable() 
 		{
 			if (!wodVisible) {
 				wodVisible = true;
 				//TODO: Sort Wod Dictionaries
 				clearTable ();
-				for(int i = 0; i < WorkoutUtil.benchmarkWods.Count; i++) {
-					String bestPR = 0;
-					int base = 0;
+				foreach(KeyValuePair<string, Workout> benchmarkWod in WorkoutUtil.benchmarkWods) {
+					int baseInt=0;
 					foreach(UserJournal j in JournalUtil.wodJournalData) {
-						if(j.statId==WorkoutUtil.benchmarkWods[i].id) {
-							if(j.entryType = JournalUtil.amrapType) {
-								if(j.statResult> base) {
-									base = j.statResult;
+						if(j.statId==(benchmarkWod.Value.id)) {
+							Console.Out.WriteLine ("Journal entry matching benchmark wod");
+							if(j.entryType == JournalUtil.amrapType) {
+								Console.Out.WriteLine ("Journal entry is amrap");
+								if(Int32.Parse(j.statResult)> baseInt) {
+									baseInt = Int32.Parse(j.statResult);
 								}
 							}
 						}
@@ -92,13 +95,15 @@ namespace WodstarMobileApp.Droid
 
 					TableRow dataRow = new TableRow (this);
 					TextView workoutName = new TextView (this);
-					workoutName.Text = WorkoutUtil.benchmarkWods[i].workoutName);
+
 					workoutName.Gravity = GravityFlags.Left;
+					workoutName.Text = benchmarkWod.Value.workoutName;
 					dataRow.AddView (workoutName);
 
-					if(base!=0) {
+					if(baseInt!=0) {
 						TextView workoutPr = new TextView (this);
 						workoutPr.Gravity = GravityFlags.Right;
+						workoutPr.Text = baseInt.ToString ();
 						dataRow.AddView (workoutPr);
 					} else {
 						//TODO: Create button, add to layout instead to log new 
