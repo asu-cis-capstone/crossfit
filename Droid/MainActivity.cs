@@ -14,9 +14,6 @@ using Microsoft.WindowsAzure.MobileServices;
 
 
 [assembly:MetaData ("com.facebook.sdk.ApplicationId", Value = "@string/facebook_app_id")]
-[assembly: Xamarin.Forms.ExportRenderer(typeof(Telerik.XamarinForms.Chart.RadCartesianChart), typeof(Telerik.XamarinForms.ChartRenderer.Android.CartesianChartRenderer))]
-[assembly: Xamarin.Forms.ExportRenderer(typeof(Telerik.XamarinForms.Chart.RadPieChart), typeof(Telerik.XamarinFormsChartRenderer.Android.PieChartRenderer))]
-
 
 namespace WodstarMobileApp.Droid
 {

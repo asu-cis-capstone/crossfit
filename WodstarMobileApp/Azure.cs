@@ -65,7 +65,7 @@ namespace WodstarMobileApp
 				if (users.Count == 0) {
 					Console.WriteLine ("No user account found, calling CreateUserAccount method");
 					CreateUserAccount (thisUser);
-				//Otherwise populate thisUser object with the fetched details
+					//Otherwise populate thisUser object with the fetched details
 				} else {
 					Console.WriteLine ("User account found, populating details");
 					thisUser.id = users [0].id;
@@ -280,8 +280,8 @@ namespace WodstarMobileApp
 
 				//Debug output to the console
 				Console.WriteLine ("DEBUG - UserJournals");
-				JournalUtil.wodJournalData = new List<List<UserJournal>>();
-				JournalUtil.prJournalData = new List<List<UserJournal>>();
+				JournalUtil.wodJournalData = new List<UserJournal>();
+				JournalUtil.prJournalData = new List<UserJournal>();
 				//Loop through the journals list
 				if(userJournals!=null) {
 					foreach (var journal in userJournals) {
@@ -296,7 +296,7 @@ namespace WodstarMobileApp
 						j.statName = journal.statName;
 						Console.WriteLine (string.Format ("ID: {0}\nName: {1}", journal.id, journal.statName));
 						if(WorkoutUtil.benchmarkWods.ContainsKey(j.statId) || WorkoutUtil.heroWods.ContainsKey(j.statId) ||
-								WorkoutUtil.wodstarWods.ContainsKey(j.statId) || WorkoutUtil.camilleWods.ContainsKey(j.statId)) {
+							WorkoutUtil.wodstarWods.ContainsKey(j.statId) || WorkoutUtil.camilleWods.ContainsKey(j.statId)) {
 							JournalUtil.wodJournalData.Add(j);
 						} else if(MovementLinks.movementDictionary.ContainsKey(j.statId)){
 							JournalUtil.prJournalData.Add(j);
