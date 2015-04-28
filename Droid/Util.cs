@@ -22,10 +22,7 @@ namespace WodstarMobileApp.Droid
 		public static WodstarMobileApp.UserJournal demoentry9 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "91", DateTime.Now);
 		public static WodstarMobileApp.UserJournal demoentry10 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "87", DateTime.Now.AddDays(1));
 
-		public static WodstarMobileApp.UserJournal demoentry9 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "91", DateTime.Now);
-		public static WodstarMobileApp.UserJournal demoentry10 = new UserJournal (thisUser.id, WorkoutUtil.wodType, WorkoutUtil.nicoleId, WorkoutUtil.amrapType, "Nicole", "87", DateTime.Now.AddDays(1));
-
-		/*	public static WodstarMobileApp.UserJournal demoentry11 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "345");
+	/*	public static WodstarMobileApp.UserJournal demoentry11 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "345");
 		public static WodstarMobileApp.UserJournal demoentry12 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.backSquatId, WorkoutUtil.strengthType, "Back Squat", "312");
 
 		public static WodstarMobileApp.UserJournal demoentry13 = new UserJournal (thisUser.id, WorkoutUtil.prType, MovementLinks.squatCleanId, WorkoutUtil.strengthType, "Squat Clean", "217");

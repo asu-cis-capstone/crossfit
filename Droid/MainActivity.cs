@@ -37,13 +37,16 @@ namespace WodstarMobileApp.Droid
 			} catch( Exception e) {
 				Console.WriteLine(e);
 			}
+				
 
 			//If Facebook session is already open from a previous login, request user info
 			if (Session.ActiveSession != null && Session.ActiveSession.IsOpened) {
 				//Get user info from Facebook
 				Console.WriteLine("Fetching user information from open Facebook session");
-				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
+				Request.NewMeRequest (Session.ActiveSession, this).ExecuteAsync ();
 				Console.WriteLine ("Successfully fetched user information from Facebook");
+				Console.WriteLine ("Attempting to get picture");
+				new Request(Session.ActiveSession, "/me/picture", null, Xamarin.Facebook.HttpMethod.Get).ExecuteAsync();
 			} 
 		}//end OnCreate method
 
@@ -57,7 +60,7 @@ namespace WodstarMobileApp.Droid
 
 			//If a Facebook session is open, request the user's information an		
 			if (Session.ActiveSession.IsOpened) {
-				Request.ExecuteMeRequestAsync (Session.ActiveSession, this);
+				Request.NewMeRequest (Session.ActiveSession, this).ExecuteAsync ();
 			}
 		}//end OnActivityResult method
 
@@ -71,6 +74,7 @@ namespace WodstarMobileApp.Droid
 				Util.thisUser.username = user.Id;
 				Util.thisUser.firstName = user.FirstName;
 				Util.thisUser.lastName = user.LastName;
+				Console.WriteLine ("Facebook user link = " + user.Link);
 
 				//Get or create user account in Azure, get data
 				try {

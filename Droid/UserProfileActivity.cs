@@ -11,6 +11,8 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.Content.PM;
+using Xamarin.Facebook;
+using Xamarin.Facebook.Widget;
 
 namespace WodstarMobileApp.Droid
 {
@@ -19,11 +21,12 @@ namespace WodstarMobileApp.Droid
 	{
 		private TextView userNameTextView;
 		private TextView userInfoTextView;
-		private ImageView userProfilePicture;
 		private TableLayout userDataTable;
 		private Button wodDataButton;
 		private Button prDataButton;
 		private bool wodVisible;
+		private FrameLayout headerLayout;
+		private ProfilePictureView profilePicture;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -31,22 +34,40 @@ namespace WodstarMobileApp.Droid
 
 			// Create your application here
 			SetContentView (Resource.Layout.Journal);
-
-			//Get instances of variable layout components
-			userNameTextView = FindViewById<TextView> (Resource.Id.userNameTextView);
-			userInfoTextView = FindViewById<TextView> (Resource.Id.userInfoTextView);
-			userProfilePicture = FindViewById<ImageView> (Resource.Id.profilePictureImageView);
+		
+			//Get instances of variable layout components		
 			userDataTable = FindViewById<TableLayout> (Resource.Id.userDataTable);
 			wodDataButton = FindViewById<Button> (Resource.Id.wodButton);
 			prDataButton = FindViewById<Button> (Resource.Id.prButton);
+			headerLayout = FindViewById<FrameLayout> (Resource.Id.headerLayout);
+
+			//TODO: check and see if user has uploaded their own, then set background accordingly. 
+			headerLayout.SetBackgroundResource (Resource.Drawable.fillerDefaultCoverPhoto);
+			LinearLayout profileLayout = new LinearLayout (this);
+			profileLayout.Orientation = Orientation.Vertical;
+			userNameTextView = new TextView (this);
+			userInfoTextView = new TextView (this);
+			userNameTextView.Text = Util.thisUser.firstName + " " + Util.thisUser.lastName;
+			userNameTextView.SetTextColor (Android.Graphics.Color.White);
+			userInfoTextView.SetTextColor (Android.Graphics.Color.White);
+			userInfoTextView.Text= "\nGender: " + Util.thisUser.gender;
+			userNameTextView.Gravity = GravityFlags.CenterHorizontal;
+			userInfoTextView.Gravity = GravityFlags.CenterHorizontal;
+			profilePicture = new ProfilePictureView (this);
+			profilePicture.ProfileId = Util.thisUser.id;
+
+
+			profileLayout.AddView (profilePicture);
+			profileLayout.AddView (userNameTextView);
+			profileLayout.AddView (userInfoTextView);
+			headerLayout.AddView (profileLayout);
 
 			wodDataButton.Click += (sender, e) => {
 				createWodTable();
 			};
 			prDataButton.Click += createPrTable;
 
-			userNameTextView.Text = Util.thisUser.firstName + " " + Util.thisUser.lastName;
-			userInfoTextView .Text= "Age: " + Util.thisUser.age + "\nGender: " + Util.thisUser.gender;
+
 			//TODO: Dynamically retrieve user picture and set.
 
 			//Initialize views to Wods
@@ -94,7 +115,10 @@ namespace WodstarMobileApp.Droid
 					}
 
 					TableRow dataRow = new TableRow (this);
+					dataRow.SetPadding (0, 30, 0, 30);
 					TextView workoutName = new TextView (this);
+					workoutName.SetPadding (20, 0, 0, 0);
+					workoutName.SetTextSize (Android.Util.ComplexUnitType.Sp, 20);
 
 					workoutName.Gravity = GravityFlags.Left;
 					workoutName.Text = benchmarkWod.Value.workoutName;
@@ -104,9 +128,16 @@ namespace WodstarMobileApp.Droid
 						TextView workoutPr = new TextView (this);
 						workoutPr.Gravity = GravityFlags.Right;
 						workoutPr.Text = baseInt.ToString ();
+						workoutPr.SetTextColor (Android.Graphics.Color.White);
 						dataRow.AddView (workoutPr);
 					} else {
-						//TODO: Create button, add to layout instead to log new 
+						Button logButton = new Button (this);
+						logButton.Text = "Log";
+						logButton.Gravity = GravityFlags.Right;
+						logButton.SetBackgroundColor (Android.Graphics.Color.Transparent);
+						logButton.SetTextColor (Android.Graphics.Color.White);
+						dataRow.AddView (logButton);
+						//TODO: Add logging functionality
 					}
 
 					userDataTable.AddView (dataRow);
