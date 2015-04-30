@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<resources>
+ <drawable name="wodstar_blue">#2E4359</drawable>
+ <drawable name="wodstar_red">#B5191D</drawable>
+ <drawable name="wodstar_grey">#707070</drawable>
+ <drawable name="wodstar_transparent">#00000000</drawable>
+ <drawable name="wodstar_royalBlue">#0000FF</drawable>
+ <drawable name="table_select">#E6FFFFFF</drawable> 
+</resources>

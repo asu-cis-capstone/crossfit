@@ -29,6 +29,7 @@ namespace WodstarMobileApp.Droid
 		private Java.Util.ArrayList journalData;
 		private LinearLayout mainLayout;
 		RadCartesianChartView chartView;
+		private LinearLayout graphLayout;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -36,12 +37,7 @@ namespace WodstarMobileApp.Droid
 
 			base.SetContentView(Resource.Layout.TestJournalContent);
 			journalData = new Java.Util.ArrayList();
-			journalData.Add(new UserJournal(Util.thisUser.id, JournalUtil.prType, MovementLinks.allMovements[2].id, JournalUtil.prType, MovementLinks.allMovements[2].name, "60", System.DateTime.Now));
-			journalData.Add(new UserJournal(Util.thisUser.id, JournalUtil.prType, MovementLinks.allMovements[2].id, JournalUtil.prType, MovementLinks.allMovements[2].name, "47", System.DateTime.Now.AddDays(1)));
-			journalData.Add(new UserJournal(Util.thisUser.id, JournalUtil.prType, MovementLinks.allMovements[2].id, JournalUtil.prType, MovementLinks.allMovements[2].name, "71", System.DateTime.Now.AddDays(2)));
-			journalData.Add(new UserJournal(Util.thisUser.id, JournalUtil.prType, MovementLinks.allMovements[2].id, JournalUtil.prType, MovementLinks.allMovements[2].name, "85", System.DateTime.Now.AddDays(3)));
-			journalData.Add(new UserJournal(Util.thisUser.id, JournalUtil.prType, MovementLinks.allMovements[2].id, JournalUtil.prType, MovementLinks.allMovements[2].name, "80", System.DateTime.Now.AddDays(4)));
-			mainLayout = FindViewById<LinearLayout>(Resource.Id.FlyOutContent);
+			graphLayout = FindViewById<LinearLayout> (Resource.Id.graphContent);
 
 			chartView = new RadCartesianChartView (this);
 			ChartTooltipBehavior toolTipBehavior = new ChartTooltipBehavior (this);
@@ -56,25 +52,19 @@ namespace WodstarMobileApp.Droid
 			lineSeries.CategoryBinding = new journalDataBinding ("Date");
 			lineSeries.ValueBinding = new journalDataBinding ("Result");
 			lineSeries.Data = this.journalData;
-			lineSeries.StrokeThickness = 15;
+			lineSeries.StrokeThickness = 12;
 			chartView.Series.Add (lineSeries);
 
-			DateTimeCategoricalAxis hAxis = new DateTimeCategoricalAxis ();
+			DateTimeContinuousAxis hAxis = new DateTimeContinuousAxis ();
 
 			chartView.HorizontalAxis = hAxis;
 			LinearAxis vAxis = new LinearAxis ();
 			chartView.VerticalAxis = vAxis;
-			hAxis.DateTimeComponent = DateTimeComponent.Month;
-			hAxis.SetDateTimeFormat(new SimpleDateFormat("MMM-yyyy"));
-			hAxis.LabelValueToStringConverter = new XLabelValueConverter();
+			hAxis.MajorStepUnit = TimeInterval.Day;
+			hAxis.MajorStep = 1;
 			vAxis.LabelValueToStringConverter = new YLabelValueConverter ();
 
-			mainLayout.AddView (chartView);
-
-			//Get intents to figure out which movement to pull
-			//Parse data from the list of all journal data to pull this workout's data
-			//Turn into list of numeric points for graph
-			//Create graph
+			graphLayout.AddView (chartView);
 		}
 	}
 
@@ -99,13 +89,14 @@ namespace WodstarMobileApp.Droid
 			return String.Format (format, labelValue);
 		}
 	}
-	class XLabelValueConverter: Java.Lang.Object, IFunction {
+	/*class XLabelValueConverter: Java.Lang.Object, IFunction {
 		public Java.Lang.Object Apply(Java.Lang.Object argument) {
-			double labelValue = argument.JavaCast<MajorTickModel> ().Value();
+			var labelValue = argument.JavaCast<MajorTickModel> ().Value();
 			SimpleDateFormat format = new SimpleDateFormat ("MMM dd");
-			return format.Format (((Java.Util.Date)argument).Time);
+			return format.Format (((IJavaObject)labelValue).JavaCast<Java.Util.Date>().Time);
 		}
 
 	}
+*/
 }
 

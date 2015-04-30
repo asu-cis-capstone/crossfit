@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--This selctor is applied to the icons in the journal to give them a
+	custom Wodstar blue blackground when selected, as opposed to Android
+	standard gold color -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+   <item android:drawable="@drawable/wodstar_blue" android:state_selected="true">
+   		<shape>
+	   		<corners 
+			    	android:bottomLeftRadius="10dp"
+			    	android:bottomRightRadius="10dp"
+			    	android:topLeftRadius="10dp"
+			    	android:topRightRadius="10dp"/>
+   		</shape>
+   </item>
+   <item android:drawable="@drawable/wodstar_transparent" />
+ </selector>

@@ -9,24 +9,7 @@
         android:orientation="vertical"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_marginBottom="7.9dp"
         android:id="@+id/headerLayout">
-        <LinearLayout
-            android:orientation="horizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/menuLayout"
-            android:layout_gravity="top">
-            <TextView
-                android:text="My Journal"
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/journalHeaderText"
-                android:layout_marginLeft="135dp"
-                android:layout_marginTop="10dp" />
-        </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="fill_parent"
@@ -34,8 +17,8 @@
             android:id="@+id/menuLayout"
             android:layout_gravity="top">
             <Button
-                android:layout_width="49.1dp"
-                android:layout_height="45.6dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:id="@+id/hamburgerButton"
                 android:background="@drawable/hamburger" />
         </LinearLayout>
@@ -60,71 +43,64 @@
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
-        android:layout_height="65.1dp"
-        android:layout_weight="1"
-        android:minWidth="25px"
-        android:minHeight="25px"
-        android:id="@+id/userHeaderLayout">
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:minWidth="25px"
-            android:minHeight="25px"
-            android:id="@+id/userInfoLayout">
-            <TextView
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceLarge"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/userNameTextView"
-                android:layout_marginLeft="8.8dp" />
-            <TextView
-                android:text=""
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/userInfoTextView"
-                android:layout_marginLeft="8.8dp" />
-        </LinearLayout>
-    </LinearLayout>
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_width="374dp"
         android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:minWidth="25px"
-        android:minHeight="25px"
         android:layout_marginBottom="0.0dp"
-        android:background="#73FFFFFF"
+        android:background="@null"
+        android:layout_marginTop="5dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp">
-        <Button
-            android:text="WODs"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/wodButton"
-            android:layout_marginRight="72.7dp"
-            android:layout_marginLeft="23.6dp"
-            android:layout_marginTop="20dp"
-            android:textColor="#707070"
-            android:textStyle="bold" />
-        <Button
-            android:text="PRs"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/prButton"
-            android:layout_marginRight="72.7dp"
-            android:layout_marginLeft="23.6dp"
-            android:layout_marginTop="20dp"
-            android:textColor="#707070"
-            android:textStyle="bold" />
+        <ImageButton
+            android:src="@drawable/female"
+            android:layout_width="75dp"
+            android:scaleType="fitCenter"
+            android:layout_height="75dp"
+            android:bottomRightRadius="10dp"
+            android:bottomLeftRadius="10dp"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/buttonSelector"
+            android:layout_weight="1"
+            android:id="@+id/girlsButton" />
+        <ImageButton
+            android:src="@drawable/renamedHeroIcon"
+            android:layout_width="75dp"
+            android:scaleType="fitCenter"
+            android:bottomRightRadius="10dp"
+            android:bottomLeftRadius="10dp"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp"
+            android:gravity="center_vertical"
+            android:background="@drawable/buttonSelector"
+            android:layout_height="75dp"
+            android:layout_weight="1"
+            android:id="@+id/heroButton" />
+        <ImageButton
+            android:src="@drawable/barbell"
+            android:background="@drawable/buttonSelector"
+            android:layout_width="75dp"
+            android:scaleType="fitCenter"
+            android:gravity="center_vertical"
+            android:bottomRightRadius="10dp"
+            android:bottomLeftRadius="10dp"
+            android:topLeftRadius="10dp"
+            android:topRightRadius="10dp"
+            android:layout_weight="1"
+            android:layout_height="75dp"
+            android:id="@+id/prButton" />
     </LinearLayout>
-    <TableLayout
-        android:layout_width="match_parent"
-        android:layout_height="262.3dp"
-        android:id="@+id/userDataTable" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="30px"
+        android:background="#707070" />
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/userDataTable" />
+    </ScrollView>
 </LinearLayout>

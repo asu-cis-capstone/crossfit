@@ -15,7 +15,7 @@ namespace WodstarMobileApp
 		public static Dictionary<string, Movement> movementDictionary;
 
 		//Types of movements
-		public const String strength = "strength";
+		public const String strength = "Strength";
 		public const String bodyweight = "bodyweight";
 		public const String cardio = "cardio";
 

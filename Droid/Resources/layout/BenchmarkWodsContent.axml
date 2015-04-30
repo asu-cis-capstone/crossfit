@@ -10,7 +10,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginBottom="7.9dp"
+        android:layout_marginBottom="5dp"
         android:id="@+id/headerLayout">
         <LinearLayout
             android:orientation="horizontal"
@@ -34,8 +34,8 @@
             android:id="@+id/menuLayout"
             android:layout_gravity="top">
             <Button
-                android:layout_width="49.1dp"
-                android:layout_height="45.6dp"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
                 android:id="@+id/hamburgerButton"
                 android:background="@drawable/hamburger" />
         </LinearLayout>

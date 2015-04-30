@@ -45,7 +45,7 @@
         <TextView
             android:text="Home"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:id="@+id/homeTextView"
             android:layout_gravity="center"

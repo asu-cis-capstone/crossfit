@@ -190,7 +190,7 @@ namespace WodstarMobileApp
 							segment.repetitions, segment.movementDescriptions, segment.segmentMovements);	
 						s.id = segment.id; 
 						WorkoutUtil.allSegments.Add(s);
-						Console.WriteLine("Workout Segment Added: " + s.id);
+						Console.WriteLine("Workout Segment Added: " + segment.id + "Workout Id: " + segment.workoutId);
 					}
 				}
 

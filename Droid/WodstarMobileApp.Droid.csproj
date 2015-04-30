@@ -108,12 +108,8 @@
     <Reference Include="com.refractored.monodroidtoolkit">
       <HintPath>..\packages\MonoDroid.Toolkit.1.1.0.0\lib\MonoAndroid10\com.refractored.monodroidtoolkit.dll</HintPath>
     </Reference>
-    <Reference Include="Xamarin.Android.Support.v7.RecyclerView">
-      <HintPath>..\packages\Xamarin.Android.Support.v7.RecyclerView.22.0.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v7.RecyclerView.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SplashActivity.cs" />
     <Compile Include="StartScreenActivity.cs" />
@@ -129,6 +125,7 @@
     <Compile Include="CamilleWodsActivity.cs" />
     <Compile Include="JournalData.cs" />
     <Compile Include="Calculator.cs" />
+    <Compile Include="Resources\Resource.designer.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -250,6 +247,12 @@
     <AndroidResource Include="Resources\drawable\barbara.jpg" />
     <AndroidResource Include="Resources\layout\TestJournalContent.axml" />
     <AndroidResource Include="Resources\drawable\fillerDefaultCoverPhoto.jpg" />
+    <AndroidResource Include="Resources\drawable\barbell.png" />
+    <AndroidResource Include="Resources\drawable\female.png" />
+    <AndroidResource Include="Resources\drawable\renamedHeroIcon.png" />
+    <AndroidResource Include="Resources\drawable\buttonSelector.xml" />
+    <AndroidResource Include="Resources\values\Colors.xml" />
+    <AndroidResource Include="Resources\drawable\TableViewGradient.xml" />
   </ItemGroup>
   <Import Project="..\WodstarMobileApp\WodstarMobileApp.projitems" Label="Shared" Condition="Exists('..\WodstarMobileApp\WodstarMobileApp.projitems')" />
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />

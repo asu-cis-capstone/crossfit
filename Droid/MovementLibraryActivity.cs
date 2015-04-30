@@ -8,6 +8,7 @@ using Android.Widget;
 using Android.Runtime;
 using Google.YouTube.Player;
 using Android.Content.PM;
+using System.Collections.Generic;
 
 namespace WodstarMobileApp.Droid
 {
@@ -20,6 +21,7 @@ namespace WodstarMobileApp.Droid
 		public Boolean thirdPlayer=false;
 		public Boolean fourthPlayer=false;
 		public Boolean fifthPlayer=false;
+		AutoCompleteTextView autocomplete;
 
 		protected override void OnCreate (Bundle bundle)
 		{
@@ -29,6 +31,22 @@ namespace WodstarMobileApp.Droid
 			base.OnCreate (bundle);
 			//Show the MovementLibrary layout
 			SetContentView (Resource.Layout.MovementLibrary);
+			autocomplete = FindViewById<AutoCompleteTextView> (Resource.Id.autocomplete);
+			List<String> movementsWithUrls = new List<String> ();
+			foreach(Movement m in MovementLinks.allMovements) {
+				if(m.rxVideoUrl!=null) {
+					movementsWithUrls.Add (m.name);
+				}
+			}
+			var adapter = new ArrayAdapter<String> (this, Resource.Layout.AutcompleteTextViewTemplate, movementsWithUrls);
+			autocomplete.Adapter = null;
+			autocomplete.SetText ("Search", false);
+			autocomplete.Adapter = adapter;
+			autocomplete.SetSelectAllOnFocus (true);
+			autocomplete.Threshold = 1;
+			autocomplete.DismissDropDown ();
+			autocomplete.Click += (sender, e) => {searchItemSelected(autocomplete.Text);};
+			autocomplete.ClearFocus ();
 
 			YouTubePlayerFragment youtubePlayer1 = (YouTubePlayerFragment) FragmentManager.FindFragmentById (Resource.Id.youtubePlayer1);
 			youtubePlayer1.Initialize (DeveloperKey.key, this);
@@ -62,6 +80,10 @@ namespace WodstarMobileApp.Droid
 			logoutButton.Click += goToLogin;
 
 
+		}
+
+		void searchItemSelected(String movementName) {
+			//TODO: Filter and reload the correct YouTube video.
 		}
 
 		protected override IYouTubePlayerProvider GetYouTubePlayerProvider ()

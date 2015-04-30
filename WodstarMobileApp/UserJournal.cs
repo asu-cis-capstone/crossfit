@@ -30,6 +30,7 @@ namespace WodstarMobileApp
 		[JsonProperty(PropertyName = "statDateTime")]
 		public DateTime statDateTime { get; set; }
 
+		public Java.Util.Calendar cal;
 		//Default constructor
 		public UserJournal () {
 
@@ -44,6 +45,17 @@ namespace WodstarMobileApp
 			this.statName = name;
 			this.statResult = result;
 			this.statDateTime = time;
+		}
+
+		public UserJournal (string userId, string entryType, string statId, string type, string name, string result, Java.Util.Calendar date)
+		{
+			this.entryType = entryType;
+			this.statId = statId;
+			this.userAccountId = userId; 
+			this.statType = type;
+			this.statName = name;
+			this.statResult = result;
+			this.cal = date;
 		}
 	}
 }

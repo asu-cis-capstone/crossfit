@@ -10,48 +10,56 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:layout_marginBottom="7.9dp"
+        android:layout_marginBottom="5dp"
         android:id="@+id/headerLayout">
         <LinearLayout
             android:orientation="horizontal"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_weight="1"
             android:id="@+id/menuLayout"
-            android:layout_gravity="center" />
-        <ImageView
-            android:src="@drawable/wodstar_logo_white"
-            android:layout_width="250dp"
-            android:layout_height="wrap_content"
-            android:id="@+id/logoImageView" />
-        <LinearLayout
-            android:orientation="vertical"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/hamburgerLayout"
-            android:layout_gravity="left">
+            android:layout_gravity="top">
             <Button
-                android:layout_width="49.1dp"
-                android:layout_height="45.6dp"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:layout_marginTop="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_weight="10"
                 android:id="@+id/hamburgerButton"
                 android:background="@drawable/hamburger" />
+            <ImageView
+                android:src="@drawable/wodstar_logo_white"
+                android:layout_width="0dp"
+                android:scaleType="centerInside"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:layout_weight="75"
+                android:layout_height="match_parent"
+                android:id="@+id/logoImageView" />
+            <ImageView
+                android:src="@drawable/icon"
+                android:layout_weight="10"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:id="@+id/wodstarImage"
+                android:layout_gravity="right" />
         </LinearLayout>
         <LinearLayout
             android:orientation="vertical"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/hamburgerLayout"
+            android:layout_gravity="left" />
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
             android:layout_height="wrap_content"
             android:id="@+id/iconLayout"
-            android:layout_gravity="right">
-            <ImageView
-                android:src="@drawable/icon"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:id="@+id/wodstarImage"
-                android:layout_marginRight="0dp"
-                android:layout_marginLeft="0.0dp"
-                android:layout_marginBottom="0.0dp"
-                android:layout_marginTop="0.0dp"
-                android:layout_gravity="right" />
-        </LinearLayout>
+            android:layout_gravity="right" />
     </FrameLayout>
     <ScrollView
         android:id="@+id/scroll"

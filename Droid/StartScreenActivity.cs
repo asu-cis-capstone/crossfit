@@ -26,12 +26,13 @@ namespace WodstarMobileApp.Droid
 			SetContentView (Resource.Layout.Main);
 
 			ImageButton wodsButton = FindViewById<ImageButton> (Resource.Id.wodsImageButton);
+			ImageButton movementsImageButton = FindViewById<ImageButton> (Resource.Id.movementsImageButton);
+			ImageButton myProfileImageButton = FindViewById<ImageButton> (Resource.Id.myProfileImageButton);
+
 
 			//TODO: Remove before launch - demo/testing purposes only.
 			wodsButton.Click += (sender, e) => {
 
-				StartActivity(typeof(JournalData));
-			/*
 				string intentWorkoutId = WorkoutUtil.benchmarkIds [WorkoutUtil.amandaName];
 				string intentWorkoutName = WorkoutUtil.amandaName;
 				var intent = new Intent (this, typeof(WorkoutActivity));
@@ -39,8 +40,10 @@ namespace WodstarMobileApp.Droid
 				intent.PutExtra ("workoutId", intentWorkoutId);
 				StartActivity (intent);
 
-			*/
 			};
+			movementsImageButton.Click += (sender, e) => StartActivity(typeof(MovementLibraryActivity));
+			myProfileImageButton.Click += (sender, e) => StartActivity(typeof(UserProfileActivity));
+
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);

@@ -68,6 +68,7 @@ namespace WodstarMobileApp.Droid
 			workoutId = Intent.GetStringExtra ("workoutId");
 			setThisWorkout ();
 
+			Console.WriteLine ("Number of segments in workout: " + segments.Count);
 			//Dynamically load workout content
 			for(int i=0;i <segments.Count; i++) {
 				TableRow segmentHeader = new TableRow (this);
@@ -91,7 +92,7 @@ namespace WodstarMobileApp.Droid
 
 			//Has to be at the end to add to video cue.
 			movementVideos.Initialize (DeveloperKey.key, this);
-
+			circularProgressBar.ProgressColor = blueWodstarColor;
 			timerButton.Click += timerButtonClick;
 
 			//MENU METHODS
@@ -206,25 +207,25 @@ namespace WodstarMobileApp.Droid
 		private void startTimer() {
 			resetTimer ();
 			timerStarted = true;
-			circularProgressBar.ProgressColor = blueWodstarColor;
-			circularProgressBar.CircleStrokeWidth = 20;
 			circularProgressBar.Progress = 0;
-			if(segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
-				Console.WriteLine ("Segment is for time");
-				isAmrap = false;
-				startStopwatchTimer ();
-			} else if (segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
-				Console.WriteLine ("Segment is amrap");
-				isAmrap = true;
-				startAmrapTimer (segments [thisSegment].time); 
-			} else if (segments[thisSegment].segmentType == WorkoutUtil.emomType) {
-				Console.WriteLine ("Segment is for emom");
-				isAmrap = true;
-				//TODO: Implement EMOM timer
-			//	startEmomTimer(segments [thisSegment].time, segments[thisSegment].repetitions);
+			if (segments != null) {
+				if (segments [thisSegment].segmentType == WorkoutUtil.forTimeType) {
+					Console.WriteLine ("Segment is for time");
+					isAmrap = false;
+					startStopwatchTimer ();
+				} else if (segments [thisSegment].segmentType == WorkoutUtil.amrapType) {
+					Console.WriteLine ("Segment is amrap");
+					isAmrap = true;
+					startAmrapTimer (segments [thisSegment].time); 
+				} else if (segments [thisSegment].segmentType == WorkoutUtil.emomType) {
+					Console.WriteLine ("Segment is for emom");
+					isAmrap = true;
+					//TODO: Implement EMOM timer
+					//	startEmomTimer(segments [thisSegment].time, segments[thisSegment].repetitions);
+				}
+				circularProgressBar.IndeterminateInterval = 320;
+				circularProgressBar.Indeterminate = true;	
 			}
-			circularProgressBar.IndeterminateInterval = 320;
-			circularProgressBar.Indeterminate=true;	
 		}//End startTimer()
 
 		private async void startStopwatchTimer() {
@@ -265,27 +266,34 @@ namespace WodstarMobileApp.Droid
 		}
 
 		private void logData() {
-			UserJournal newJournalEntry = new UserJournal();
-			newJournalEntry.statType = JournalUtil.wodType;
-			newJournalEntry.statName = thisWorkout.workoutName;
 			//IF FOR TIME.
-			newJournalEntry.statResult = timerButton.Text;
-			newJournalEntry.entryType = JournalUtil.timeType;
-			newJournalEntry.statDateTime = DateTime.Now;
-			newJournalEntry.statId = thisWorkout.id;
-			newJournalEntry.userAccountId = Util.thisUser.id;
-
-			Azure.CreateUserJournal (Util.thisUser, newJournalEntry);
-
+			if(segments[thisSegment].segmentType == WorkoutUtil.forTimeType) {
+				JournalUtil.logForTimeData (thisWorkout, timerButton.Text);
+				//TODO: Create popup notification
+			} else if (segments[thisSegment].segmentType == WorkoutUtil.amrapType) {
+				//TODO: get input from user, log data
+			} else if (segments[thisSegment].segmentType == WorkoutUtil.emomType) {
+				//TODO: Implement EMOM timer
+				//	startEmomTimer(segments [thisSegment].time, segments[thisSegment].repetitions);
+			}
 		}
 
 		private String getRxSegmentDescription(WorkoutSegment segment) {
 			String s = segment.segmentDescription;
 			for(int j = 0; j< segment.segmentMovementsArray.Length; j++) {
-				s = s + "\n \t\u2022 " + segment.movementDescriptionsArray[j]+ " " + segment.segmentMovementsArray [j].name;
+					s = s + "\n \t\u2022 ";
+				try {
+					if(segment.movementDescriptionsArray.Count() >= j+1) {
+						s = s + segment.movementDescriptionsArray[j] + " ";
+					}
+				s = s + segment.segmentMovementsArray [j].name;
 				Console.WriteLine ("Movement name: " + segment.segmentMovementsArray [j].name);
 				Console.WriteLine ("j = " + j.ToString ());
 				Console.WriteLine ("Segment Description: " + s);
+				} catch (Exception e)
+				{
+					Console.WriteLine (e);
+				}
 			}
 			return s;
 		}
@@ -312,6 +320,7 @@ namespace WodstarMobileApp.Droid
 			Console.WriteLine ("setThisWorkout() called");
 			if (WorkoutUtil.benchmarkWods.ContainsKey (workoutId)) {				
 				Console.WriteLine ("Benchmark Wods contains key for workoutID");
+				Console.WriteLine ("This Workout Id: " + workoutId);
 				thisWorkout = WorkoutUtil.benchmarkWods [workoutId];
 			} else if (WorkoutUtil.heroWods.ContainsKey (workoutId)) {
 				Console.WriteLine ("HeroWods contains key for workoutID");
@@ -329,10 +338,17 @@ namespace WodstarMobileApp.Droid
 		}
 			
 		private void getThisWorkoutSegments(string workoutId) {
-			foreach(WorkoutSegment s in WorkoutUtil.allSegments) {;
-				if(s.workoutId == thisWorkout.id) {
-					s.parseMovements ();
-					segments.Add (s);
+			Console.WriteLine ("All segments length: " + WorkoutUtil.allSegments.Count);
+			foreach(WorkoutSegment s in WorkoutUtil.allSegments) {
+				Console.WriteLine ("Segment workout id: " + s.workoutId);
+				if (s.workoutId !=null && WorkoutUtil.benchmarkWods.ContainsKey (s.workoutId)) {
+					Console.WriteLine ("This workout: " + thisWorkout.workoutName + " Segment workout: " + WorkoutUtil.benchmarkWods [s.workoutId].workoutName);
+					if (s.workoutId == thisWorkout.id) {
+						Console.WriteLine ("Workout matches.");
+						s.parseMovements ();
+						Console.WriteLine ("Movements parsed");
+						segments.Add (s);
+					}
 				}
 			}
 		}
