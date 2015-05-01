@@ -72,6 +72,7 @@ namespace WodstarMobileApp.Droid
 			//Initialize views to Wods
 			showGirlsTable();
 			girlsVisible = true;
+			girlsButton.Selected = true;
 
 			var menu = FindViewById<FlyOutContainer> (Resource.Id.FlyOutContainer);
 			var hamburgerButton = FindViewById (Resource.Id.hamburgerButton);
